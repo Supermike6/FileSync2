@@ -20,7 +20,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
-import Experiments.Classes.Brick;
+
+
 
 public class BrickGame extends JPanel implements KeyListener
 {
