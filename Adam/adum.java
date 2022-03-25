@@ -11,7 +11,7 @@ public class adum
         {
             i = (int)(Math.random()*400000);
             System.out.println(i);
-            count++;
+            count+=3;
         }
 
         System.out.println("It took "+count+" tries!");
