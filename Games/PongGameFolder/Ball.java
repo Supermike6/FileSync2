@@ -1,5 +1,4 @@
-package PongGameFolder;
-
+package Games.PongGameFolder;
 
 
 import java.awt.Color;

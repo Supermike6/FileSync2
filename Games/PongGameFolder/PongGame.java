@@ -1,4 +1,4 @@
-package PongGameFolder;
+package Games.PongGameFolder;
 
 
 import java.awt.Color;
@@ -69,15 +69,15 @@ public class PongGame extends JPanel implements KeyListener
       
       try {
          //Open an audio input stream
-         File file = new File("/Users/gbancroft25/Documents/GitHub/fileSync/Games/PongGameFolder/pongHit.wav");
+         File file = new File("Games/PongGameFolder/pongHit.wav");
          AudioInputStream audio = AudioSystem.getAudioInputStream(file);
          collisionSound = AudioSystem.getClip();
          collisionSound.open(audio);
-         file = new File("/Users/gbancroft25/Documents/GitHub/fileSync/Games/PongGameFolder/match.wav");
+         file = new File("Games/PongGameFolder/match.wav");
          audio = AudioSystem.getAudioInputStream(file);
          match = AudioSystem.getClip();
          match.open(audio);
-         file = new File("/Users/gbancroft25/Documents/GitHub/fileSync/Games/PongGameFolder/win.wav");
+         file = new File("Games/PongGameFolder/win.wav");
          audio = AudioSystem.getAudioInputStream(file);
          win = AudioSystem.getClip();
          win.open(audio);
