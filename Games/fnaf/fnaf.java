@@ -1,4 +1,4 @@
-package fnaf;
+package Games.fnaf;
 
 import java.awt.Color;
 import java.awt.Dimension;

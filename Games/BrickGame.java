@@ -1,3 +1,5 @@
+package Games;
+
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -20,6 +22,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
+
+import Experiments.Classes.Brick;
 
 
 

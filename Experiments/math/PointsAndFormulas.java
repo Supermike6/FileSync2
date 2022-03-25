@@ -1,3 +1,5 @@
+package Experiments.math;
+
 public class PointsAndFormulas {
 
 	public static void main(String[] args)

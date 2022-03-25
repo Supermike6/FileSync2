@@ -1,3 +1,5 @@
+package Experiments.Graphics;
+
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -15,6 +17,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
+
 import Experiments.Classes.Brick;
 
 
