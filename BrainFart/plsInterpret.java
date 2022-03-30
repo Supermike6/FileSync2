@@ -35,14 +35,12 @@ public class plsInterpret
         skip = false;
         inBrace = false;
         //Brace counting
-        for(int i = 0; i<source.length(); i++)
-        {
+        for(int i = 0; i<source.length(); i++){
             func = source.substring(i, i+1);
             if(func.equals("[")) braceCheck++;
             if(func.equals("]")) braceCheck--;
         }
-        if(braceCheck != 0)
-        {
+        if(braceCheck != 0){
             System.out.println("Problem with braces");
         }
 
@@ -64,7 +62,6 @@ public class plsInterpret
                     cellNum = source.indexOf("]")+1;
                 } else {inBrace = true;}
             }
-
 
             if(func.equals("]"))
             {
@@ -130,5 +127,4 @@ public class plsInterpret
         System.out.println();
         
     }
-
 }

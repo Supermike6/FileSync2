@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.RenderingHints;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -13,6 +14,7 @@ import java.awt.event.MouseMotionListener;
 import java.io.IOException;
 import java.awt.Rectangle;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -26,7 +28,9 @@ public class quoobe extends JPanel implements MouseListener, MouseMotionListener
 	private int mainX = PREF_W/2-mainSideLength/2;
 	private int mainY = PREF_H/2-mainSideLength/2;
 	private Rectangle mainRect = new Rectangle(mainX,mainY,mainSideLength,mainSideLength);
-
+	private int rotation = 0;
+	private boolean sp = false;
+	private int rX,rY;
 	// private int minorSideLength = 150;
 	// private int minorX = PREF_W/2-minorSideLength/2;
 	// private int minorY = PREF_H/2-minorSideLength/2;
@@ -46,17 +50,21 @@ public class quoobe extends JPanel implements MouseListener, MouseMotionListener
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
-
+		// Image guide = new ImageIcon(this.getClass().getResource("guide.png")).getImage();
 		g2.drawString(mainSideLength+"",50,50);
 
+		mainRect = new Rectangle(mainX,mainY,mainSideLength,mainSideLength);
 		g2.drawLine(PREF_W/2, PREF_H/2,(int)mainRect.getX(),(int)mainRect.getY());
 		g2.drawLine(PREF_W/2, PREF_H/2,(int)(mainRect.getX()+mainRect.getWidth()),(int)(mainRect.getY()));
 		g2.drawLine(PREF_W/2, PREF_H/2,(int)(mainRect.getX()),(int)(mainRect.getY()+mainRect.getHeight()));
 		g2.drawLine(PREF_W/2, PREF_H/2,(int)(mainRect.getX()+mainRect.getWidth()),(int)(mainRect.getY()+mainRect.getHeight()));
-		mainRect = new Rectangle(mainX,mainY,mainSideLength,mainSideLength);
+		g2.rotate(rotation*(Math.PI/180),rX,rY);
 		g2.draw(mainRect);
-		// g2.draw(minorRect);
+		// g2.drawImage(guide, mainX, mainY, mainSideLength, mainSideLength, this);
+		g2.rotate(-rotation*(Math.PI/180),rX,rY);
 		
+		// g2.drawOval(rX-mainSideLength,rY-mainSideLength,(int) Math.sqrt(2*(Math.pow(mainSideLength,2))),(int) Math.sqrt(2*(Math.pow(mainSideLength,2))));
+
 		repaint();
 	}
 
@@ -121,9 +129,20 @@ public class quoobe extends JPanel implements MouseListener, MouseMotionListener
 	@Override
 	public void mouseMoved(MouseEvent e)
 	{
+
+		if(sp)
+		{
 		mainX = PREF_W-e.getX()-mainSideLength/2;
 		mainY = PREF_H-e.getY()-mainSideLength/2;
-		System.out.println(mainRect.getLocation());
+		} else {
+		mainX = e.getX()-mainSideLength/2;
+		mainY = e.getY()-mainSideLength/2;	
+		}
+
+		rX=e.getX();
+		rY=e.getY();
+
+		System.out.println(rotation);
 
 		repaint();
 	}
@@ -161,6 +180,18 @@ public class quoobe extends JPanel implements MouseListener, MouseMotionListener
 			{
 				mainSideLength-=5;
 			}
+		}
+		if(keyCode == KeyEvent.VK_LEFT)
+		{
+			rotation-=30;
+		}
+		if(keyCode == KeyEvent.VK_RIGHT)
+		{
+			rotation+=30;
+		}
+		if(keyCode == KeyEvent.VK_SPACE)
+		{
+			sp=!sp;
 		}
 		
 	}
