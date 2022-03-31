@@ -1,4 +1,3 @@
-package BrainFart;
 
 import java.io.IOException;
 import java.nio.file.Files;
