@@ -13,7 +13,7 @@ public class adum
             System.out.println(i);
             count+=3;
         }
-
+/
         System.out.println("It took "+count+" tries!");
     }  
 }
