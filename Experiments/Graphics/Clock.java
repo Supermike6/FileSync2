@@ -34,9 +34,7 @@ public class Clock extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				
 				repaint();	
-				
 			}
 		 });
 		 timer.start();
