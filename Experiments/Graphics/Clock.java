@@ -23,20 +23,17 @@ public class Clock extends JPanel {
 	public static final int PREF_W = 250;
 	public static final int PREF_H = 250;
 	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
-	private Timer timer;
-
+	Timer timer;
 	Clock()
 	{
 		this.setFocusable(true);
 		this.setBackground(Color.WHITE);
-		timer = new javax.swing.Timer(1000, new ActionListener() {
+		Timer timer = new javax.swing.Timer(1000, new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				
 				repaint();	
-				
 			}
 		 });
 		 timer.start();
@@ -59,6 +56,7 @@ public class Clock extends JPanel {
 		rn = java.time.Instant.now().atZone(ZoneId.systemDefault());
 
         // g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getNano()/10000000)*3.6))*100+125), (int)(Math.cos(Math.toRadians(-(rn.getNano()/10000000)*3.6+180))*100+125));
+		// g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getSecond())*6))*99+125), (int)(Math.cos(Math.toRadians((rn.getSecond())*6+180))*99+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getMinute())*6))*85+125), (int)(Math.cos(Math.toRadians((rn.getMinute())*6+180))*85+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((-rn.getHour())*6))*60+125), (int)(Math.cos(Math.toRadians((rn.getHour())*6+180))*60+125));
 
