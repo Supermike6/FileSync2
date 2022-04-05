@@ -94,10 +94,19 @@ public class Brick
     {
         this.x+=this.dx;
         if(this.x+this.w>this.xmax || x<=0)
-            this.dx = -this.dx;
+            this.x -=this.dx;
         this.y+=this.dy;
         if(this.y+this.h>this.ymax || y<=0)
-            this.dy = 0;
+            this.y-=this.dy;
+    }
+    public void noBounceUpdate()
+    {
+        this.x+=this.dx;
+        if(this.x+this.w>this.xmax || x<xmin)
+            this.x -= this.dx;
+        this.y+=this.dy;
+        if(this.y+this.h>this.ymax || y<ymin)
+            this.y -= this.dy;
     }
     public void updateList(ArrayList<Brick> bricks)
     {

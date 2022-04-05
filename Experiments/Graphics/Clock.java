@@ -53,13 +53,19 @@ public class Clock extends JPanel {
 		g2.setColor(new Color(219,200,175));
 
 		rn = java.time.Instant.now().atZone(ZoneId.systemDefault());
+		
+		g2.drawOval(PREF_W/2-100, PREF_W/2-100, 200, 200);
 
         // g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getNano()/10000000)*3.6))*100+125), (int)(Math.cos(Math.toRadians(-(rn.getNano()/10000000)*3.6+180))*100+125));
-		// g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getSecond())*6))*99+125), (int)(Math.cos(Math.toRadians((rn.getSecond())*6+180))*99+125));
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getSecond())*6))*99+125), (int)(Math.cos(Math.toRadians((rn.getSecond())*6+180))*99+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getMinute())*6))*85+125), (int)(Math.cos(Math.toRadians((rn.getMinute())*6+180))*85+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((-rn.getHour())*6))*60+125), (int)(Math.cos(-Math.toRadians((rn.getHour())*6))*60+125));
+		g2.setColor(Color.RED);
+		// g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians(-rn.getHour()*6+rn.getMinute()))*60+125), (int)(Math.cos(-Math.toRadians(rn.getHour()*6+rn.getMinute()))*60+125));
 
-		g2.drawOval(PREF_W/2-100, PREF_W/2-100, 200, 200);
+
+
+
 
 		// repaint();
 	}
