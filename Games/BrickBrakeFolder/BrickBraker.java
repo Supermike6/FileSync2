@@ -52,19 +52,19 @@ public class BrickBraker extends JPanel implements KeyListener
     }
    
    public Dimension getPreferredSize()
-   {
-      return new Dimension(PREF_W, PREF_H);
-   }
+    {
+        return new Dimension(PREF_W, PREF_H);
+    }
    
-   @Override
-   public void paintComponent(Graphics g)
-   {
+    @Override
+    public void paintComponent(Graphics g)
+    {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
         player.fill(g2);
         g2.draw(rplayer);
-   }
+    }
 
     @Override
     public void keyPressed(KeyEvent e)
@@ -85,9 +85,9 @@ public class BrickBraker extends JPanel implements KeyListener
         }
     }
 
-   @Override
-   public void keyReleased(KeyEvent e)
-   {
+    @Override
+    public void keyReleased(KeyEvent e)
+    {
         int key = e.getKeyCode();
 
         if(key == KeyEvent.VK_A)
@@ -98,42 +98,44 @@ public class BrickBraker extends JPanel implements KeyListener
         {
             player.setDx(0);
         }
-   }
+    }
 
-   @Override
-   public void keyTyped(KeyEvent e)
-   {
+    @Override
+    public void keyTyped(KeyEvent e)
+    {
 
-      
-   }
+    }
    
-   private static void createAndShowGUI() {
-      BrickBraker gamePanel = new BrickBraker();
-      JFrame frame = new JFrame("My Frame");
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      frame.getContentPane().add(gamePanel);
-      frame.pack();
-      frame.setLocationRelativeTo(null);
-      frame.setBackground(Color.WHITE);
-      frame.setVisible(true);
-   }
+    private static void createAndShowGUI() {
+        BrickBraker gamePanel = new BrickBraker();
+        JFrame frame = new JFrame("My Frame");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(gamePanel);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setBackground(Color.WHITE);
+        frame.setVisible(true);
+    }
 
-      public static void main(String[] args) {
-      SwingUtilities.invokeLater(new Runnable() {
-         public void run() {
-            createAndShowGUI();
-         }
-      });
-   }
-      public void playSound(Clip sound)
-      {
-         sound.setFramePosition(0);
-         sound.start();
-      }
-      public int getSign(int num)
-      {
-         if(num<0) return -1;
-         return 1;
+    public static void main(String[] args)
+    {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });
+    }
+    
+    public void playSound(Clip sound)
+    {
+        sound.setFramePosition(0);
+        sound.start();
+    }
+    
+    public int getSign(int num)
+    {
+        if(num<0) return -1;
+        return 1;
 
-      }
+    }
 }
