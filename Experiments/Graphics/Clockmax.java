@@ -43,6 +43,7 @@ public class Clockmax extends JPanel {
 		rn = java.time.Instant.now().atZone(ZoneId.systemDefault());
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getMinute())*6))*85+125), (int)(Math.cos(Math.toRadians((rn.getMinute())*6+180))*85+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((-rn.getHour())*6))*60+125), (int)(Math.cos(Math.toRadians((rn.getHour())*6+180))*60+125));
+		g2.drawOval(PREF_W/2-100, PREF_W/2-100, 200, 200);
 	}
 	public Dimension getPreferredSize() {
 		return new Dimension(PREF_W, PREF_H);
