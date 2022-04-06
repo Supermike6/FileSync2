@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,37 +20,34 @@ import Experiments.Classes.Brick;
 
 public class BrickBraker extends JPanel implements KeyListener
 {
-   private static final long serialVersionUID = 1L;
-   private static final int PREF_W = 1000;
-   private static final int PREF_H = 700;
-   private RenderingHints hints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-   private Timer timer;
-   Brick player = new Brick(20, 200, 80, 40, Color.PINK);
-   int playerSpeed = 5, ballSpeed = 2;
-   boolean debug;
-   Rectangle rplayer = new Rectangle(10, 10, 80, 30);
-   
-   public BrickBraker()
-   {
+    private static final long serialVersionUID = 1L;
+    private static final int PREF_W = 1000;
+    private static final int PREF_H = 700;
+    private RenderingHints hints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+    private Timer timer;
+    int playerSpeed = 5, ballSpeed = 2;
+    boolean debug;
+    Brick player = new Brick(10, 660, 80, 30, 0, 0, 0, PREF_W, 0, PREF_H, Color.PINK);
+    public BrickBraker()
+    {
         addKeyListener(this);
         setFocusable(true);
         requestFocus();
-        player.setXmax(PREF_W);
-        player.setYmax(PREF_H);
       
         timer = new Timer(16, new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 player.noBounceUpdate();
+                
+                
+                
                 repaint();
-            
-            
             }
         });
         timer.start();
     }
    
-   public Dimension getPreferredSize()
+    public Dimension getPreferredSize()
     {
         return new Dimension(PREF_W, PREF_H);
     }
@@ -62,8 +58,11 @@ public class BrickBraker extends JPanel implements KeyListener
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
+        
+        g2.setBackground(Color.WHITE);
+
         player.fill(g2);
-        g2.draw(rplayer);
+
     }
 
     @Override
@@ -108,7 +107,7 @@ public class BrickBraker extends JPanel implements KeyListener
    
     private static void createAndShowGUI() {
         BrickBraker gamePanel = new BrickBraker();
-        JFrame frame = new JFrame("My Frame");
+        JFrame frame = new JFrame("Breakout");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(gamePanel);
         frame.pack();
