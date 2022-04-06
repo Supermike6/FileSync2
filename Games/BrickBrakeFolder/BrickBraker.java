@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 import javax.sound.sampled.Clip;
 import javax.swing.JFrame;
@@ -27,19 +28,24 @@ public class BrickBraker extends JPanel implements KeyListener
     private Timer timer;
     int playerSpeed = 5, ballSpeed = 2;
     boolean debug;
-    Brick player = new Brick(10, 660, 80, 30, 0, 0, 0, PREF_W, 0, PREF_H, Color.PINK);
+    Brick ball = new Brick(PREF_W/2, PREF_H/2-300, 16, 16, (int) (Math.random()*5+1), (int) (Math.random()*5+1), 0, PREF_W, 0, PREF_H, Color.black);
+    Brick player = new Brick(10, 660, 80, 30, 0, 0, 0, PREF_W, 0, PREF_H-30, Color.PINK);
+    ArrayList<Brick> bricks = new ArrayList<Brick>(20);
     public BrickBraker()
     {
         addKeyListener(this);
         setFocusable(true);
         requestFocus();
+        for(int j = 0; j<6;j++)
+        for(int i = 0; i<20;i++)
+        bricks.add(new Brick(i*(PREF_W/20), 50+j*50, (1000/20), 50, Color.CYAN));
       
         timer = new Timer(16, new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 player.noBounceUpdate();
-                
-                
+                ball.update();
+                ball.checkAndReactToCollisionWith(player);
                 
                 repaint();
             }
@@ -61,7 +67,11 @@ public class BrickBraker extends JPanel implements KeyListener
         
         g2.setBackground(Color.WHITE);
 
+        for(int i = 0; i<bricks.size();i++)
+        bricks.get(i).fill(g2);
+
         player.fill(g2);
+        ball.fillOval(g2);
 
     }
 
