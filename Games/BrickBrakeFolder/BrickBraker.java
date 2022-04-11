@@ -27,7 +27,7 @@ public class BrickBraker extends JPanel implements KeyListener
     private RenderingHints hints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
     private Timer timer;
     int playerSpeed = 5, ballSpeed = 2;
-    boolean debug;
+    boolean debug, bot;
     Brick ball = new Brick(PREF_W/2, PREF_H/2-300, 16, 16, (int) (Math.random()*5+1), (int) (Math.random()*5+1), 0, PREF_W, 0, PREF_H, Color.black);
     Brick player = new Brick(10, 660, 80, 30, 0, 0, 0, PREF_W, 0, PREF_H-30, Color.PINK);
     ArrayList<Brick> bricks = new ArrayList<Brick>(20);
@@ -36,11 +36,11 @@ public class BrickBraker extends JPanel implements KeyListener
         addKeyListener(this);
         setFocusable(true);
         requestFocus();
-        for(int j = 0; j<6;j++)
-        for(int i = 0; i<20;i++)
-        bricks.add(new Brick(i*(PREF_W/20), 50+j*50, (1000/20), 50, Color.CYAN));
+        for(int j = 0; j<10;j++)
+            for(int i = 0; i<20;i++)
+                bricks.add(new Brick(i*(PREF_W/20), 50+j*50, (1000/20), 50, new Color((int) Math.random()*255,(int)Math.random()*255,(int)Math.random()*255)));
       
-        timer = new Timer(16, new ActionListener() {
+        timer = new Timer(10, new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 player.noBounceUpdate();
@@ -48,6 +48,22 @@ public class BrickBraker extends JPanel implements KeyListener
                 ball.checkAndReactToCollisionWith(player);
                 
                 repaint();
+            
+                for(int i = 0; i<bricks.size();i++)
+                {
+                    if(ball.checkAndReactToCollisionWith(bricks.get(i)))
+                    bricks.remove(i);
+                }
+                if(bricks.size()==0)
+                {
+                    for(int j = 0; j<6;j++)
+            for(int i = 0; i<20;i++)
+                bricks.add(new Brick(i*(PREF_W/20), 50+j*50, (1000/20), 50, new Color((int) Math.random()*255,(int)Math.random()*255,(int)Math.random()*255)));
+                }
+                if(bot)
+                {
+                player.setX(ball.getX());
+                }
             }
         });
         timer.start();
@@ -91,6 +107,10 @@ public class BrickBraker extends JPanel implements KeyListener
         if(key == KeyEvent.VK_F)
         {
             debug = !debug;
+        }
+        if(key == KeyEvent.VK_B)
+        {
+            bot = !bot;
         }
     }
 

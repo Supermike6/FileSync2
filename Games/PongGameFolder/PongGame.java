@@ -25,6 +25,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
+import Experiments.Classes.Ball;
+
 public class PongGame extends JPanel implements KeyListener
 {
    private static final long serialVersionUID = 1L;
