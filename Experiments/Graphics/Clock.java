@@ -67,8 +67,8 @@ public class Clock extends JPanel implements MouseListener, MouseMotionListener,
 		// g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getSecond())*6))*99+125), (int)(Math.cos(Math.toRadians((rn.getSecond())*6+180))*99+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getMinute())*6))*85+125), (int)(Math.cos(Math.toRadians((rn.getMinute())*6+180))*85+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(rn.getHour()*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(rn.getHour()*30)+180))*60+125));
-		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(rn.getHour()*30))*60+125+(int)(rn.getMinute())+125)), (int)(Math.cos(Math.toRadians((double)(rn.getHour()*30)+180))*60+125)+(int)Math.cos(Math.toRadians((double)(rn.getMinute()))*60+125));
 		g2.setColor(Color.RED);
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(rn.getHour()*30))*60+125+(int)(rn.getMinute())+125)), (int)(Math.cos(Math.toRadians((double)(rn.getHour()*30)+180))*60+125)+(int)Math.cos(Math.toRadians((double)(rn.getMinute()))*60+125));
 
 		// g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians(-rn.getHour()*6+rn.getMinute()))*60+125), (int)(Math.cos(-Math.toRadians(rn.getHour()*6+rn.getMinute()))*60+125));
 		
