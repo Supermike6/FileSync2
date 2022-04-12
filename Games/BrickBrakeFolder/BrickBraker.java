@@ -26,22 +26,25 @@ public class BrickBraker extends JPanel implements KeyListener
     private static final int PREF_H = 700;
     private RenderingHints hints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
     private Timer timer;
-    int playerSpeed = 5, ballSpeed = 2;
+    int playerSpeed = 7, ballSpeed = 3, level = 0;
     boolean debug, bot;
-    Brick ball = new Brick(PREF_W/2, PREF_H/2-300, 16, 16, (int) (Math.random()*5+1), (int) (Math.random()*5+1), 0, PREF_W, 0, PREF_H, Color.black);
-    Brick player = new Brick(PREF_W/2, 660, 80, 30, 0, 0, 0, PREF_W, 0, PREF_H-30, Color.PINK);
-    ArrayList<Brick> bricks = new ArrayList<Brick>(20);
+    Color prevColor;
+    String state, message;
+    Brick ball = new Brick(PREF_W/2, PREF_H/2-300, 16, 16, ballSpeed, ballSpeed, 0, PREF_W, 0, PREF_H, Color.black);
+    Brick player = new Brick(PREF_W/2, 660, 80, 30, 0, 0, 0, PREF_W, 0, PREF_H-30, Color.CYAN);
+    ArrayList<Brick> bricks = new ArrayList<Brick>(0);
+
     public BrickBraker()
     {
-        player.setX(PREF_W/2-player.getW()/2);
         addKeyListener(this);
         setFocusable(true);
         requestFocus();
-        for(int j = 0; j<10;j++)
-            for(int i = 0; i<20;i++)
-                bricks.add(new Brick(i*(PREF_W/20), 50+j*50, (1000/20), 50, Color.red));
+
+        player.setX(PREF_W/2-player.getW()/2);
+        ball.setY(player.getY()-ball.getH());
+        ball.setYmax(PREF_H+ball.getH()+5);
       
-        timer = new Timer(10, new ActionListener() {
+        timer = new Timer(16, new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 player.noBounceUpdate();
@@ -55,15 +58,17 @@ public class BrickBraker extends JPanel implements KeyListener
                     if(ball.checkAndReactToCollisionWith(bricks.get(i)))
                     bricks.remove(i);
                 }
+
                 if(bricks.size()==0)
                 {
-                    for(int j = 0; j<6;j++)
-                        for(int i = 0; i<20;i++)
-                            bricks.add(new Brick(i*(PREF_W/20), 50+j*50, (1000/20), 50, Color.red));
+                    level++;
+                    for(int j = 0; j<level;j++)
+                        for(int i = 0; i<18;i++)
+                            bricks.add(new Brick(PREF_W/20+i*(PREF_W/20), 50+j*50, (PREF_W/20), 50, new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255))));
                 }
                 if(bot)
                 {
-                player.setX(ball.getX());
+                    player.setX(ball.getX());
                 }
                 repaint();
             }
@@ -88,9 +93,10 @@ public class BrickBraker extends JPanel implements KeyListener
         for(int i = 0; i<bricks.size();i++)
         {
             bricks.get(i).fill(g2);
+            prevColor = bricks.get(i).getColor();
             bricks.get(i).setColor(Color.black);
             bricks.get(i).draw(g2);
-            bricks.get(i).setColor(Color.red);
+            bricks.get(i).setColor(prevColor);
         }
 
         player.fill(g2);
@@ -106,6 +112,10 @@ public class BrickBraker extends JPanel implements KeyListener
         if(key == KeyEvent.VK_A)
         {
             player.setDx(-playerSpeed);
+        }
+        if(key == KeyEvent.VK_D)
+        {
+            player.setDx(playerSpeed);
         }
         if(key == KeyEvent.VK_UP)
         {
