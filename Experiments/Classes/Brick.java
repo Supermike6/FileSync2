@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Brick
 {
 // Variables for the class's object (instance variables)
-    private int x, y, w, h, dx, dy, xmin, xmax, ymin, ymax;
+    private int x, y, w, h, dx, dy, xmin, xmax, ymin, ymax, health;
     private Color color;
 
     //This is the constructor... it allows us to define values to the brick object
@@ -50,6 +50,17 @@ public class Brick
         this.dy = dy;
         this.color = color;
     }
+    public Brick(int x, int y, int w, int h, Color color, int health)
+    {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.dx = dx;
+        this.dy = dy;
+        this.color = color;
+        this.health = health;
+    }
     public Brick(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color)
     {
         this.x = x;
@@ -63,6 +74,21 @@ public class Brick
         this.xmax = xmax;
         this.ymin = ymin;
         this.ymax = ymax;
+    }
+    public Brick(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color, int health)
+    {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.dx = dx;
+        this.dy = dy;
+        this.color = color;
+        this.xmin = xmin;
+        this.xmax = xmax;
+        this.ymin = ymin;
+        this.ymax = ymax;
+        this.health = health;
     }
 
     //Methods for brick
@@ -175,7 +201,11 @@ public class Brick
     {
         this.ymin=num;
     }
-
+    public void setHealth(int num)
+    {
+        this.health=num;
+    }
+    
     //Getter Methods
     public int getX()
     {
@@ -220,6 +250,10 @@ public class Brick
     public int getYmax()
     {
         return this.ymax;
+    }
+    public int getHealth()
+    {
+        return this.health;
     }
 
     /** Determines the intersecting side for the brick in relation to another brick

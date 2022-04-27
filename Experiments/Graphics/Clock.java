@@ -8,34 +8,51 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Instant;
+import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-
+import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class Clock extends JPanel{
+public class Clock extends JPanel implements KeyListener{
 	private static final long serialVersionUID = 1L;
-	public static final int PREF_W = 250;
-	public static final int PREF_H = 250;
-	public boolean sp = false;
-	public Timer timer;
+	private static final int PREF_W = 250;
+	private static final int PREF_H = 250;
+	private Timer timer;
 	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
+	private LocalTime current = LocalTime.now();
+	private String message;
+	private boolean sp;
+	
 	Clock()
 	{
 		this.setFocusable(true);
 		this.setBackground(Color.WHITE);
+		this.addKeyListener(this);
+
+		try (Scanner sc = new Scanner(new File("Experiments/Graphics/schedule.txt"))) {
+		} catch (FileNotFoundException e1)
+		{
+			e1.printStackTrace();
+		}
+
 		timer = new Timer(1000, new ActionListener()
 		{
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				rn = java.time.Instant.now().atZone(ZoneId.systemDefault());
+				rn = Instant.now().atZone(ZoneId.systemDefault());
 				repaint();	
+
 			}
 		});
 		timer.start();
@@ -56,13 +73,21 @@ public class Clock extends JPanel{
 		
 		g2.drawOval(PREF_W/2-100, PREF_W/2-100, 200, 200);
 
-		double hr = rn.getHour()%12+((double)rn.getMinute())/60+((double)rn.getSecond()/(60*60));
-		
-		// g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getNano()/10000000)*3.6))*100+125), (int)(Math.cos(Math.toRadians(-(rn.getNano()/10000000)*3.6+180))*100+125));
-		// g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getSecond())*6))*99+125), (int)(Math.cos(Math.toRadians((rn.getSecond())*6+180))*99+125));
-		
-		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getMinute())*6))*85+125), (int)(Math.cos(Math.toRadians((rn.getMinute())*6+180))*85+125));
+		double min = rn.getMinute()%60+((double)rn.getSecond()/60);
+		double hr = rn.getHour()%12+(min/60);
+
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
+	
+		if(sp)
+
+		if(rn.getDayOfWeek().toString().equals("Monday"))
+			if(current.compareTo(LocalTime.parse("08:00:00"))>0) System.out.println("later then 8");
+		;
+
+		System.out.println(Instant.now());
+
+
 	}
 
 	public Dimension getPreferredSize() {
@@ -77,6 +102,7 @@ public class Clock extends JPanel{
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
+		frame.setAlwaysOnTop(true);
 	}
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
@@ -89,4 +115,22 @@ public class Clock extends JPanel{
 		});
 	}
 
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e)
+	{
+		if(e.getKeyCode() == KeyEvent.VK_SPACE) sp = !sp;
+		repaint();
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 }

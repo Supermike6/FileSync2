@@ -2,6 +2,7 @@ package Games.BrickBrakeFolder;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -29,8 +30,8 @@ public class BrickBraker extends JPanel implements KeyListener
     int playerSpeed = 7, ballSpeed = 3, level = 0;
     boolean debug, bot;
     Color prevColor;
-    String state, message;
-    Brick ball = new Brick(PREF_W/2, PREF_H/2-300, 16, 16, ballSpeed, ballSpeed, 0, PREF_W, 0, PREF_H, Color.black);
+    String state;
+    Brick ball = new Brick(PREF_W/2, PREF_H/2-300, 16, 16, ballSpeed, ballSpeed, 0, PREF_W, 0, PREF_H, Color.WHITE);
     Brick player = new Brick(PREF_W/2, 660, 80, 30, 0, 0, 0, PREF_W, 0, PREF_H-30, Color.CYAN);
     ArrayList<Brick> bricks = new ArrayList<Brick>(0);
 
@@ -56,6 +57,9 @@ public class BrickBraker extends JPanel implements KeyListener
                 for(int i = 0; i<bricks.size();i++)
                 {
                     if(ball.checkAndReactToCollisionWith(bricks.get(i)))
+                    bricks.get(i).setHealth(bricks.get(i).getHealth()-1);
+
+                    if(bricks.get(i).getHealth()==0)
                     bricks.remove(i);
                 }
 
@@ -64,7 +68,7 @@ public class BrickBraker extends JPanel implements KeyListener
                     level++;
                     for(int j = 0; j<level;j++)
                         for(int i = 0; i<18;i++)
-                            bricks.add(new Brick(PREF_W/20+i*(PREF_W/20), 50+j*50, (PREF_W/20), 50, new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255))));
+                            bricks.add(new Brick(PREF_W/20+i*(PREF_W/20), 50+j*50, (PREF_W/20), 50, new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255)), (int)(Math.random()*level+1)));
                 }
                 if(bot)
                 {
@@ -89,6 +93,8 @@ public class BrickBraker extends JPanel implements KeyListener
         g2.setRenderingHints(hints);
         
         g2.setBackground(Color.WHITE);
+        g2.setColor(Color.BLACK);
+        g2.fillRect(0, 0, getWidth(), getHeight());
 
         for(int i = 0; i<bricks.size();i++)
         {
@@ -97,10 +103,24 @@ public class BrickBraker extends JPanel implements KeyListener
             bricks.get(i).setColor(Color.black);
             bricks.get(i).draw(g2);
             bricks.get(i).setColor(prevColor);
+
+            FontMetrics fm = g2.getFontMetrics(); 
+            int messageWidth = fm.stringWidth(bricks.get(i).getHealth()+"");
+            int startX = bricks.get(i).getX() + bricks.get(i).getW()/2 - messageWidth/2;
+            g2.drawString(bricks.get(i).getHealth()+"", startX, (int) (bricks.get(i).getY()+bricks.get(i).getH()/1.7));
         }
 
         player.fill(g2);
         ball.fillOval(g2);
+
+        g2.setColor(Color.WHITE);
+        if(debug)
+        {
+            ball.draw(g2);
+            Color c = player.getColor();
+            player.setColor(Color.WHITE);
+            player.draw(g2);
+        }
 
     }
 
