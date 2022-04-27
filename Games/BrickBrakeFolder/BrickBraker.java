@@ -117,7 +117,6 @@ public class BrickBraker extends JPanel implements KeyListener
         if(debug)
         {
             ball.draw(g2);
-            Color c = player.getColor();
             player.setColor(Color.WHITE);
             player.draw(g2);
         }
