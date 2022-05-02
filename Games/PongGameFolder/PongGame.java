@@ -1,6 +1,5 @@
 package Games.PongGameFolder;
 
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -369,7 +368,6 @@ public class PongGame extends JPanel implements KeyListener
       frame.setBackground(Color.WHITE);
       frame.setVisible(true);
    }
-
       public static void main(String[] args) {
       SwingUtilities.invokeLater(new Runnable() {
          public void run() {

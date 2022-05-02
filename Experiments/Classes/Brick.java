@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Brick
 {
 // Variables for the class's object (instance variables)
-    private int x, y, w, h, dx, dy, xmin, xmax, ymin, ymax, health;
+    private int x, y, w, h, dx, dy, xmin, xmax, ymin, ymax, health, Enum;
     private Color color;
 
     //This is the constructor... it allows us to define values to the brick object
@@ -50,16 +50,16 @@ public class Brick
         this.dy = dy;
         this.color = color;
     }
-    public Brick(int x, int y, int w, int h, Color color, int health)
+    public Brick(int x, int y, int w, int h, Color color, int health, int Enum)
     {
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
-        this.dx = dx;
-        this.dy = dy;
         this.color = color;
         this.health = health;
+        this.Enum = Enum;
+
     }
     public Brick(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color)
     {
@@ -205,7 +205,10 @@ public class Brick
     {
         this.health=num;
     }
-    
+    public void setExnum(int num)
+    {
+        this.Enum=num;
+    }
     //Getter Methods
     public int getX()
     {
@@ -254,6 +257,10 @@ public class Brick
     public int getHealth()
     {
         return this.health;
+    }
+    public int getEnum()
+    {
+        return this.Enum;
     }
 
     /** Determines the intersecting side for the brick in relation to another brick

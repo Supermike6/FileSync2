@@ -9,12 +9,12 @@ import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Instant;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -30,8 +30,14 @@ public class Clock extends JPanel implements KeyListener{
 	private Timer timer;
 	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
 	private LocalTime current = LocalTime.now();
-	private String message;
+	private String message = "";
 	private boolean sp;
+	private int per = 0;
+	private Scanner sc;
+	private Double hr, min;
+	private ArrayList<String> cls = new ArrayList<>(8);
+	private LocalTime tempTime;
+	
 	
 	Clock()
 	{
@@ -39,12 +45,17 @@ public class Clock extends JPanel implements KeyListener{
 		this.setBackground(Color.WHITE);
 		this.addKeyListener(this);
 
-		try (Scanner sc = new Scanner(new File("Experiments/Graphics/schedule.txt"))) {
-		} catch (FileNotFoundException e1)
+		try {
+			sc = new Scanner(new File("Experiments/Graphics/schedule.txt"));
+		} catch (Exception e){e.printStackTrace();}
+		
+		int i = 0;
+		while(sc.hasNextLine())
 		{
-			e1.printStackTrace();
+			cls.add(i, sc.nextLine());
+			i++;
 		}
-
+		
 		timer = new Timer(1000, new ActionListener()
 		{
 			@Override
@@ -62,7 +73,7 @@ public class Clock extends JPanel implements KeyListener{
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
-       	
+
 		g2.setStroke(new BasicStroke(3));
 
 		g2.setColor(Color.black);
@@ -73,20 +84,48 @@ public class Clock extends JPanel implements KeyListener{
 		
 		g2.drawOval(PREF_W/2-100, PREF_W/2-100, 200, 200);
 
-		double min = rn.getMinute()%60+((double)rn.getSecond()/60);
-		double hr = rn.getHour()%12+(min/60);
+		if(sp)
+		System.out.println(rn.getDayOfWeek().toString());
+
+		tempTime = LocalTime.parse("08:00:00");
+		if(!rn.getDayOfWeek().toString().equals("MONDAY"))
+		{
+			if(current.compareTo(LocalTime.parse("08:00:00"))>0)
+			{
+				
+				if(current.compareTo(LocalTime.parse("08:56:00"))>0&&current.compareTo(LocalTime.parse("09:00:00"))<0)
+				{
+					
+				} else {
+					tempTime = LocalTime.parse("08:56:00");
+				}
+			} else {
+				message = "Before School";
+			}
+
+		} else {
+
+		}
+
+		
+
+		tempTime = LocalTime.parse("13:53:00");
+
+		min = tempTime.getMinute()%60+((double)tempTime.getSecond()/60);
+		hr = tempTime.getHour()%12+(min/60);
+
+		g2.setColor(Color.RED);
 
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
-	
-		if(sp)
 
-		if(rn.getDayOfWeek().toString().equals("Monday"))
-			if(current.compareTo(LocalTime.parse("08:00:00"))>0) System.out.println("later then 8");
-		;
+		min = rn.getMinute()%60+((double)rn.getSecond()/60);
+		hr = rn.getHour()%12+(min/60);
 
-		System.out.println(Instant.now());
+		g2.setColor(new Color(219,200,175));
 
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
 
 	}
 
