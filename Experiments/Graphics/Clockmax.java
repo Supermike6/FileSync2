@@ -20,6 +20,7 @@ public class Clockmax extends JPanel {
 	private static final long serialVersionUID = 1L;
 	public static final int PREF_W = 250;
 	public static final int PREF_H = 250;
+
 	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
 	Clockmax()
 	{
@@ -41,8 +42,9 @@ public class Clockmax extends JPanel {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 		rn = java.time.Instant.now().atZone(ZoneId.systemDefault());
-		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getMinute())*6))*85+125), (int)(Math.cos(Math.toRadians((rn.getMinute())*6+180))*85+125));
-		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((-rn.getHour())*6))*60+125), (int)(Math.cos(Math.toRadians((rn.getHour())*6+180))*60+125));
+
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getMinute()%60+((double)rn.getSecond()/60))*6))*85+125), (int)(Math.cos(Math.toRadians((rn.getMinute()%60+((double)rn.getSecond()/60))*6+180))*85+125));
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(rn.getHour()%12+(rn.getMinute()%60+((double)rn.getSecond()/60)/60)*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(rn.getHour()%12+(rn.getMinute()%60+((double)rn.getSecond()/60)/60)*30)+180))*60+125));
 		g2.drawOval(PREF_W/2-100, PREF_W/2-100, 200, 200);
 	}
 	public Dimension getPreferredSize() {
