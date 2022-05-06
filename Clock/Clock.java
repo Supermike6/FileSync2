@@ -299,7 +299,7 @@ public class Clock extends JPanel implements KeyListener{
 			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
 			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
 
-
+			System.out.println("change");
 
 			int tempInt1 = (tempTime.getMinute()-rn.getMinute())*60+(-tempTime.getSecond()-rn.getSecond());
 			int tempInt2 = tempInt1%60;
