@@ -85,14 +85,14 @@ public class Clock extends JPanel implements KeyListener{
 				if(rn.getMonthValue()<10)
 					tempString = "0"+rn.getMonthValue()+"/"+rn.getDayOfMonth()+"/"+rn.getYear();
 		}
-			tempString = rotation.get(times.indexOf(tempString));
-			System.out.println(tempString);
+		tempString = rotation.get(times.indexOf(tempString));
 
 		timer = new Timer(1000, new ActionListener()
 		{
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
+				current = LocalTime.now();
 				rn = Instant.now().atZone(ZoneId.systemDefault());
 				repaint();	
 			}
@@ -294,22 +294,28 @@ public class Clock extends JPanel implements KeyListener{
 			sec = (double) (rn.getSecond()-tempTime.getSecond());
 			min = tempTime.getMinute()%60+((double)tempTime.getSecond()/60);
 			hr = tempTime.getHour()%12+(min/60);
-			System.out.println(sec);
 			g2.setColor(Color.RED);
 
 			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
 			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
 
-			
 
-			int tempInt1 = tempTime.getMinute()-rn.getMinute()-1;
-			int tempInt2 = 60-tempTime.getSecond()-rn.getSecond();
+
+			int tempInt1 = (tempTime.getMinute()-rn.getMinute())*60+(-tempTime.getSecond()-rn.getSecond());
+			int tempInt2 = tempInt1%60;
+			int tempInt3 = (tempInt1-tempInt2)/60;
 			fm = g2.getFontMetrics(); 
-			messageWidth = fm.stringWidth(tempInt1+":"+tempInt2);
-			startX = PREF_W/2-messageWidth/2;
-			g2.drawString(tempInt1+":"+tempInt2, startX, PREF_H-7);
-		}
+			if(tempInt2<10){
+				messageWidth = fm.stringWidth(tempInt3+":0"+tempInt2);
+				startX = PREF_W/2-messageWidth/2;
+				g2.drawString(tempInt3+":0"+tempInt2, startX, PREF_H-7);
+			} else {
+				messageWidth = fm.stringWidth(tempInt3+":"+tempInt2);
+				startX = PREF_W/2-messageWidth/2;
+				g2.drawString(tempInt3+":"+tempInt2, startX, PREF_H-7);
+			}
 
+		}
 		min = rn.getMinute()%60+((double)rn.getSecond()/60);
 		hr = rn.getHour()%12+(min/60);
 
@@ -353,13 +359,12 @@ public class Clock extends JPanel implements KeyListener{
 	@Override
 	public void keyPressed(KeyEvent e)
 	{
+	}
+	
+	@Override
+	public void keyReleased(KeyEvent e)
+	{
 		if(e.getKeyCode() == KeyEvent.VK_SPACE) sp = !sp;
 		repaint();
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
 	}
 }
