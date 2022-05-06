@@ -305,16 +305,11 @@ public class Clock extends JPanel implements KeyListener{
 			int tempInt2 = tempInt1%60;
 			int tempInt3 = (tempInt1-tempInt2)/60;
 			fm = g2.getFontMetrics(); 
-			if(tempInt2<10){
-				messageWidth = fm.stringWidth(tempInt3+":0"+tempInt2);
-				startX = PREF_W/2-messageWidth/2;
-				g2.drawString(tempInt3+":0"+tempInt2, startX, PREF_H-7);
-			} else {
-				messageWidth = fm.stringWidth(tempInt3+":"+tempInt2);
-				startX = PREF_W/2-messageWidth/2;
-				g2.drawString(tempInt3+":"+tempInt2, startX, PREF_H-7);
-			}
 
+			messageWidth = fm.stringWidth("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2);
+			startX = PREF_W/2-messageWidth/2;
+			g2.drawString("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2, startX, PREF_H-7);
+			
 		}
 		min = rn.getMinute()%60+((double)rn.getSecond()/60);
 		hr = rn.getHour()%12+(min/60);
