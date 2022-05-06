@@ -301,7 +301,7 @@ public class Clock extends JPanel implements KeyListener{
 
 			System.out.println("change");
 
-			int tempInt1 = (tempTime.getMinute()-rn.getMinute())*60+(-tempTime.getSecond()-rn.getSecond());
+			int tempInt1 = (tempTime.getHour()-rn.getHour())*3600+(tempTime.getMinute()-rn.getMinute())*60+(-tempTime.getSecond()-rn.getSecond());
 			int tempInt2 = tempInt1%60;
 			int tempInt3 = (tempInt1-tempInt2)/60;
 			fm = g2.getFontMetrics(); 

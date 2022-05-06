@@ -138,7 +138,10 @@ public class SpaceEnvaders extends JPanel implements KeyListener
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
         
-        g2.setBackground(Color.WHITE);
+        g2.setBackground(Color.black);
+
+        g2.setColor(Color.black);
+        g2.fillRect(0, 0, 1000, 1000);
 
         for(int i = 0; i<gameObjects.size();i++)
         {
