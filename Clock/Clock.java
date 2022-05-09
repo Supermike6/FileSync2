@@ -139,17 +139,17 @@ public class Clock extends JPanel implements KeyListener{
 																if(current.compareTo(LocalTime.parse("14:53:00"))>0){
 																	message = "School Over";tempTime = LocalTime.parse("00:00:00");
 																}else{message = "In "+cls.get(6);tempTime = LocalTime.parse("14:53:00");}
-															}else{message = "Imbetween "+cls.get(5)+" and "+cls.get(6);tempTime = LocalTime.parse("13:57:00");}
+															}else{message = "Inbetween "+cls.get(5)+" and "+cls.get(6);tempTime = LocalTime.parse("13:57:00");}
 														}else{message = "In "+cls.get(5);tempTime = LocalTime.parse("13:53:00");}
-													}else{message = "Imbetween "+cls.get(4)+" and "+cls.get(5);tempTime = LocalTime.parse("12:57:00");}
+													}else{message = "Inbetween "+cls.get(4)+" and "+cls.get(5);tempTime = LocalTime.parse("12:57:00");}
 												}else{message = "In "+cls.get(4);tempTime = LocalTime.parse("12:53:00");}
-											}else{message = "Imbetween Lunch and "+cls.get(4);tempTime = LocalTime.parse("11:57:00");}
+											}else{message = "Inbetween Lunch and "+cls.get(4);tempTime = LocalTime.parse("11:57:00");}
 										}else{message = "In Lunch";tempTime = LocalTime.parse("11:53:00");}
-									}else{message = "Imbetween "+cls.get(2)+" and Lunch";tempTime = LocalTime.parse("11:02:00");}			
+									}else{message = "Inbetween "+cls.get(2)+" and Lunch";tempTime = LocalTime.parse("11:02:00");}			
 								}else{message = "In "+cls.get(2);tempTime = LocalTime.parse("10:58:00");}
-							}else{message = "Imbetween "+cls.get(1)+" and "+cls.get(2);tempTime = LocalTime.parse("10:02:00");}
+							}else{message = "Inbetween "+cls.get(1)+" and "+cls.get(2);tempTime = LocalTime.parse("10:02:00");}
 						}else{message = "In "+cls.get(1);tempTime = LocalTime.parse("09:58:00");}
-					}else{message = "Imbetween "+cls.get(0)+" and "+cls.get(1);tempTime = LocalTime.parse("09:00:00");}
+					}else{message = "Inbetween "+cls.get(0)+" and "+cls.get(1);tempTime = LocalTime.parse("09:00:00");}
 				}else{message = "In "+cls.get(0);tempTime = LocalTime.parse("08:56:00");}
 			}else{message = "Before School";tempTime = LocalTime.parse("08:00:00");}
 		}
@@ -170,17 +170,17 @@ public class Clock extends JPanel implements KeyListener{
 																if(current.compareTo(LocalTime.parse("14:53:00"))>0){
 																	message = "School Over";tempTime = LocalTime.parse("00:00:00");
 																}else{message = "In "+cls.get(5);tempTime = LocalTime.parse("14:53:00");}
-															}else{message = "Imbetween "+cls.get(4)+" and "+cls.get(5);tempTime = LocalTime.parse("13:57:00");}
+															}else{message = "Inbetween "+cls.get(4)+" and "+cls.get(5);tempTime = LocalTime.parse("13:57:00");}
 														}else{message = "In "+cls.get(4);tempTime = LocalTime.parse("13:53:00");}
-													}else{message = "Imbetween "+cls.get(7)+" and "+cls.get(4);tempTime = LocalTime.parse("12:57:00");}
+													}else{message = "Inbetween "+cls.get(7)+" and "+cls.get(4);tempTime = LocalTime.parse("12:57:00");}
 												}else{message = "In "+cls.get(7);tempTime = LocalTime.parse("12:53:00");}
-											}else{message = "Imbetween Lunch and "+cls.get(7);tempTime = LocalTime.parse("11:57:00");}
+											}else{message = "Inbetween Lunch and "+cls.get(7);tempTime = LocalTime.parse("11:57:00");}
 										}else{message = "In Lunch";tempTime = LocalTime.parse("11:53:00");}
-									}else{message = "Imbetween "+cls.get(1)+" and Lunch";tempTime = LocalTime.parse("11:02:00");}			
+									}else{message = "Inbetween "+cls.get(1)+" and Lunch";tempTime = LocalTime.parse("11:02:00");}			
 								}else{message = "In "+cls.get(1);tempTime = LocalTime.parse("10:58:00");}
-							}else{message = "Imbetween "+cls.get(0)+" and "+cls.get(1);tempTime = LocalTime.parse("10:02:00");}
+							}else{message = "Inbetween "+cls.get(0)+" and "+cls.get(1);tempTime = LocalTime.parse("10:02:00");}
 						}else{message = "In "+cls.get(0);tempTime = LocalTime.parse("09:58:00");}
-					}else{message = "Imbetween "+cls.get(3)+" and "+cls.get(0);tempTime = LocalTime.parse("09:00:00");}
+					}else{message = "Inbetween "+cls.get(3)+" and "+cls.get(0);tempTime = LocalTime.parse("09:00:00");}
 				}else{message = "In "+cls.get(3);tempTime = LocalTime.parse("08:56:00");}
 			}else{message = "Before School";tempTime = LocalTime.parse("08:00:00");}
 		}
@@ -201,17 +201,17 @@ public class Clock extends JPanel implements KeyListener{
 																if(current.compareTo(LocalTime.parse("14:53:00"))>0){
 																	message = "School Over";tempTime = LocalTime.parse("00:00:00");
 																}else{message = "In "+cls.get(4);tempTime = LocalTime.parse("14:53:00");}
-															}else{message = "Imbetween "+cls.get(7)+" and "+cls.get(4);tempTime = LocalTime.parse("14:57:00");}
+															}else{message = "Inbetween "+cls.get(7)+" and "+cls.get(4);tempTime = LocalTime.parse("14:57:00");}
 														}else{message = "In "+cls.get(7);tempTime = LocalTime.parse("13:53:00");}
-													}else{message = "Imbetween "+cls.get(6)+" and "+cls.get(7);tempTime = LocalTime.parse("12:57:00");}
+													}else{message = "Inbetween "+cls.get(6)+" and "+cls.get(7);tempTime = LocalTime.parse("12:57:00");}
 												}else{message = "In "+cls.get(6);tempTime = LocalTime.parse("12:53:00");}
-											}else{message = "Imbetween Lunch and "+cls.get(6);tempTime = LocalTime.parse("11:57:00");}
+											}else{message = "Inbetween Lunch and "+cls.get(6);tempTime = LocalTime.parse("11:57:00");}
 										}else{message = "In Lunch";tempTime = LocalTime.parse("11:53:00");}
-									}else{message = "Imbetween "+cls.get(0)+" and Lunch";tempTime = LocalTime.parse("11:02:00");}			
+									}else{message = "Inbetween "+cls.get(0)+" and Lunch";tempTime = LocalTime.parse("11:02:00");}			
 								}else{message = "In "+cls.get(0);tempTime = LocalTime.parse("10:58:00");}
-							}else{message = "Imbetween "+cls.get(3)+" and "+cls.get(0);tempTime = LocalTime.parse("10:02:00");}
+							}else{message = "Inbetween "+cls.get(3)+" and "+cls.get(0);tempTime = LocalTime.parse("10:02:00");}
 						}else{message = "In "+cls.get(3);tempTime = LocalTime.parse("09:58:00");}
-					}else{message = "Imbetween "+cls.get(2)+" and "+cls.get(3);tempTime = LocalTime.parse("09:00:00");}
+					}else{message = "Inbetween "+cls.get(2)+" and "+cls.get(3);tempTime = LocalTime.parse("09:00:00");}
 				}else{message = "In "+cls.get(2);tempTime = LocalTime.parse("08:56:00");}
 			}else{message = "Before School";tempTime = LocalTime.parse("08:00:00");}
 		}
@@ -232,17 +232,17 @@ public class Clock extends JPanel implements KeyListener{
 																if(current.compareTo(LocalTime.parse("14:53:00"))>0){
 																	message = "School Over";tempTime = LocalTime.parse("00:00:00");
 																}else{message = "In "+cls.get(7);tempTime = LocalTime.parse("14:53:00");}
-															}else{message = "Imbetween "+cls.get(6)+" and "+cls.get(7);tempTime = LocalTime.parse("13:57:00");}
+															}else{message = "Inbetween "+cls.get(6)+" and "+cls.get(7);tempTime = LocalTime.parse("13:57:00");}
 														}else{message = "In "+cls.get(6);tempTime = LocalTime.parse("13:53:00");}
-													}else{message = "Imbetween "+cls.get(5)+" and "+cls.get(6);tempTime = LocalTime.parse("12:57:00");}
+													}else{message = "Inbetween "+cls.get(5)+" and "+cls.get(6);tempTime = LocalTime.parse("12:57:00");}
 												}else{message = "In "+cls.get(5);tempTime = LocalTime.parse("12:53:00");}
-											}else{message = "Imbetween Lunch and "+cls.get(5);tempTime = LocalTime.parse("11:57:00");}
+											}else{message = "Inbetween Lunch and "+cls.get(5);tempTime = LocalTime.parse("11:57:00");}
 										}else{message = "In Lunch";tempTime = LocalTime.parse("11:53:00");}
-									}else{message = "Imbetween "+cls.get(3)+" and Lunch";tempTime = LocalTime.parse("11:02:00");}			
+									}else{message = "Inbetween "+cls.get(3)+" and Lunch";tempTime = LocalTime.parse("11:02:00");}			
 								}else{message = "In "+cls.get(3);tempTime = LocalTime.parse("10:58:00");}
-							}else{message = "Imbetween "+cls.get(2)+" and "+cls.get(3);tempTime = LocalTime.parse("10:02:00");}
+							}else{message = "Inbetween "+cls.get(2)+" and "+cls.get(3);tempTime = LocalTime.parse("10:02:00");}
 						}else{message = "In "+cls.get(2);tempTime = LocalTime.parse("09:58:00");}
-					}else{message = "Imbetween "+cls.get(1)+" and "+cls.get(2);tempTime = LocalTime.parse("09:00:00");}
+					}else{message = "Inbetween "+cls.get(1)+" and "+cls.get(2);tempTime = LocalTime.parse("09:00:00");}
 				}else{message = "In "+cls.get(1);tempTime = LocalTime.parse("08:56:00");}
 			}else{message = "Before School";tempTime = LocalTime.parse("08:00:00");}
 		}
@@ -267,21 +267,21 @@ public class Clock extends JPanel implements KeyListener{
 																				if(current.compareTo(LocalTime.parse("14:53:00"))>0){
 																					message = "School Over";tempTime = LocalTime.parse("00:00:00");
 																				}else{message = "In "+cls.get(7);tempTime = LocalTime.parse("14:53:00");}
-																			}else{message = "Imbetween "+cls.get(6)+" and "+cls.get(7);tempTime = LocalTime.parse("14:12:00");}
+																			}else{message = "Inbetween "+cls.get(6)+" and "+cls.get(7);tempTime = LocalTime.parse("14:12:00");}
 																		}else{message = "In "+cls.get(6);tempTime = LocalTime.parse("14:08:00");}
-																	}else{message = "Imbetween "+cls.get(5)+" and "+cls.get(6);tempTime = LocalTime.parse("13:27:00");}
+																	}else{message = "Inbetween "+cls.get(5)+" and "+cls.get(6);tempTime = LocalTime.parse("13:27:00");}
 																}else{message = "In "+cls.get(5);tempTime = LocalTime.parse("13:23:00");}
-															}else{message = "Imbetween "+cls.get(4)+" and "+cls.get(5);tempTime = LocalTime.parse("13:42:00");}
+															}else{message = "Inbetween "+cls.get(4)+" and "+cls.get(5);tempTime = LocalTime.parse("13:42:00");}
 														}else{message = "In "+cls.get(4);tempTime = LocalTime.parse("12:38:00");}
-													}else{message = "Imbetween Lunch and "+cls.get(4);tempTime = LocalTime.parse("11:57:00");}
+													}else{message = "Inbetween Lunch and "+cls.get(4);tempTime = LocalTime.parse("11:57:00");}
 												}else{message = "In Lunch";tempTime = LocalTime.parse("11:53:00");}
-											}else{message = "Imbetween "+cls.get(3)+" and Lunch";tempTime = LocalTime.parse("11:02:00");}
+											}else{message = "Inbetween "+cls.get(3)+" and Lunch";tempTime = LocalTime.parse("11:02:00");}
 										}else{message = "In "+cls.get(3);tempTime = LocalTime.parse("10:58:00");}
-									}else{message = "Imbetween "+cls.get(2)+" and "+cls.get(3);tempTime = LocalTime.parse("10:17:00");}			
+									}else{message = "Inbetween "+cls.get(2)+" and "+cls.get(3);tempTime = LocalTime.parse("10:17:00");}			
 								}else{message = "In "+cls.get(2);tempTime = LocalTime.parse("10:13:00");}
-							}else{message = "Imbetween "+cls.get(1)+" and "+cls.get(2);tempTime = LocalTime.parse("09:32:00");}
+							}else{message = "Inbetween "+cls.get(1)+" and "+cls.get(2);tempTime = LocalTime.parse("09:32:00");}
 						}else{message = "In "+cls.get(1);tempTime = LocalTime.parse("09:28:00");}
-					}else{message = "Imbetween "+cls.get(0)+" and "+cls.get(1);tempTime = LocalTime.parse("08:45:00");}
+					}else{message = "Inbetween "+cls.get(0)+" and "+cls.get(1);tempTime = LocalTime.parse("08:45:00");}
 				}else{message = "In "+cls.get(0);tempTime = LocalTime.parse("08:41:00");}
 			}else{message = "Before School";tempTime = LocalTime.parse("08:00:00");}
 		}
