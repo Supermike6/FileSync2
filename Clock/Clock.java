@@ -37,6 +37,7 @@ public class Clock extends JPanel implements KeyListener{
 	private Double hr, min,sec;
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0);
 	private LocalTime tempTime;
+	int i = 0;
 	
 	
 	Clock()
@@ -105,8 +106,10 @@ public class Clock extends JPanel implements KeyListener{
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
 
-		g2.setStroke(new BasicStroke(3));
-
+			g2.setStroke(new BasicStroke(3));
+		
+		i++;
+		g2.rotate(Math.toRadians(i), PREF_W/2, PREF_H/2);
 		g2.setColor(Color.black);
 		
 		g2.fillRect(0,0,PREF_W,PREF_H);
