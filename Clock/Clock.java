@@ -34,7 +34,7 @@ public class Clock extends JPanel implements KeyListener{
 	private String message = "", tempString = "";
 	private boolean sp;
 	private Scanner sc,sc1;
-	private Double hr, min,sec;
+	private Double hr, min, sec;
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0);
 	private LocalTime tempTime;
 	int i = 0;
