@@ -102,16 +102,16 @@ public class bruteForce extends JPanel
             if(passwd.equals(guess.strip()))
             {
                 System.out.println("Runs: "+cycles);
-                System.out.println("hello");
                 endTime = System.currentTimeMillis()+0.0;
                 Double timeneeded = (endTime - startTime);
                 System.out.println("Time taken(s): "+timeneeded/1000);
                 String s = "LLLLLLLLLLLLL";
-                SwingUtilities.invokeLater(new Runnable() {
-                    public void run() {
-                       createAndShowGUI();
-                    }
-                });
+                // SwingUtilities.invokeLater(new Runnable() {
+                //     public void run() {
+                //        createAndShowGUI();
+                //     }
+                // });
+
                 while(true)s+=s;
             }
         }
