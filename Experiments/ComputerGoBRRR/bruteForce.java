@@ -83,7 +83,6 @@ public class bruteForce extends JPanel
 
         Double startTime = System.currentTimeMillis()+0.0;
         Double endTime;
-
         
         for(temp11 = 0; temp11<95;temp11++)
         for(temp10 = 0; temp10<95;temp10++)
