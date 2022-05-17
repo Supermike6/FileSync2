@@ -1,4 +1,4 @@
-package Experiments.Robot;
+package Experiments.ComputerGoBRRR.Robot;
 
 import java.awt.AWTException;
 import java.awt.Robot;

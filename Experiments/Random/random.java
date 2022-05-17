@@ -7,7 +7,8 @@ public class random
     public static void main(String[] args)
     {
 
-        System.out.println((int) 5.8 / 2);
+        for(int i = 0; i<90;i++)
+        System.out.println(i%2);
 
     }    
 }

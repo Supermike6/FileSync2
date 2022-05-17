@@ -1,4 +1,4 @@
-package Experiments.Random;
+package Experiments.ComputerGoBRRR;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
