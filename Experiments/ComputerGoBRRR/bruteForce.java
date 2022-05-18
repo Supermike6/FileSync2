@@ -71,7 +71,6 @@ public class bruteForce extends JPanel
         for(int i = 0;i<passwdLength;i++)
             passwd+=(char)((int)(Math.random()*94+32));
         
-            
             fw = new FileWriter("Experiments/ComputerGoBRRR/output.txt", true);
             bw = new BufferedWriter(fw);
             pw = new PrintWriter(bw);
