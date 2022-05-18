@@ -31,6 +31,7 @@ public class Clockmax extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
+				rn = java.time.Instant.now().atZone(ZoneId.systemDefault());
 				repaint();	
 			}
 		 });
@@ -41,10 +42,9 @@ public class Clockmax extends JPanel {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
-		rn = java.time.Instant.now().atZone(ZoneId.systemDefault());
 
-		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((rn.getMinute()%60+((double)rn.getSecond()/60))*6))*85+125), (int)(Math.cos(Math.toRadians((rn.getMinute()%60+((double)rn.getSecond()/60))*6+180))*85+125));
-		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(rn.getHour()%12+(rn.getMinute()%60+((double)rn.getSecond()/60)/60)*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(rn.getHour()%12+(rn.getMinute()%60+((double)rn.getSecond()/60)/60)*30)+180))*60+125));
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians(((rn.getMinute()%60+((double)rn.getSecond()/60)))*6))*85+125), (int)(Math.cos(Math.toRadians(((rn.getMinute()%60+((double)rn.getSecond()/60)))*6+180))*85+125));
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)((rn.getHour()%12+((rn.getMinute()%60+((double)rn.getSecond()/60))/60))*30)))*60+125), (int)(Math.cos(Math.toRadians((double)((rn.getHour()%12+((rn.getMinute()%60+((double)rn.getSecond()/60))/60))*30)+180))*60+125));
 		g2.drawOval(PREF_W/2-100, PREF_W/2-100, 200, 200);
 	}
 	public Dimension getPreferredSize() {
