@@ -13,8 +13,12 @@ body {
     padding-right: 24px;
 }
 html{
-
+    background-color: #EBEBDD;
 }
 h1{
     background-color: C0C0FF;
+}
+nav{
+    background-color: #FFFF00;
+    border: 2px solid grey;
 }
