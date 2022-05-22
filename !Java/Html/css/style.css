@@ -1,5 +1,7 @@
 body {
-    background-color: #EBEBDD;
+    /* background-color: #EBEBDD; */
+    background-color: thistle;
+    border: 2px solid grey;
     font-family: sans-serif;
     margin-left: auto;
     margin-right: auto;
@@ -7,6 +9,12 @@ body {
     min-width: 256px;
     padding-top: 8px;
     padding-bottom: 24px;
-    padding-left: 24px;
+    padding-left: 24px; 
     padding-right: 24px;
+}
+html{
+
+}
+h1{
+    background-color: C0C0FF;
 }
