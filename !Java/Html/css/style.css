@@ -13,12 +13,16 @@ body {
     padding-right: 24px;
 }
 html{
-    background-color: #EBEBDD;
+    background: radial-gradient(circle,skyblue, skyblue 50%,lightcyan 50%,skyblue);
+    background-size: 64px 64px;
+    
+    
+
 }
 h1{
     background-color: C0C0FF;
 }
 nav{
-    background-color: #FFFF00;
+    background-color: purple;
     border: 2px solid grey;
 }
