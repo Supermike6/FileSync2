@@ -150,7 +150,7 @@ public class quoobe extends JPanel implements MouseListener, MouseMotionListener
 	@Override
 	public void keyTyped(KeyEvent e)
 	{
-		// TODO Auto-generated method stub
+
 		
 	}
 
@@ -199,7 +199,7 @@ public class quoobe extends JPanel implements MouseListener, MouseMotionListener
 	@Override
 	public void keyReleased(KeyEvent e)
 	{
-		// TODO Auto-generated method stub
+
 		
 	}
 

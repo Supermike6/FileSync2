@@ -101,6 +101,14 @@ public class Clock extends JPanel implements KeyListener{
 		timer.start();
 	}
 	
+	public Double getSec() {
+		return sec;
+	}
+
+	public void setSec(Double sec) {
+		this.sec = sec;
+	}
+
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
@@ -294,7 +302,7 @@ public class Clock extends JPanel implements KeyListener{
 
 		if(sp)
 		{
-			sec = (double) (rn.getSecond()-tempTime.getSecond());
+			setSec((double) (rn.getSecond()-tempTime.getSecond()));
 			min = tempTime.getMinute()%60+((double)tempTime.getSecond()/60);
 			hr = tempTime.getHour()%12+(min/60);
 			g2.setColor(Color.RED);
@@ -350,7 +358,6 @@ public class Clock extends JPanel implements KeyListener{
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 

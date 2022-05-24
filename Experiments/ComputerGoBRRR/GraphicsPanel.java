@@ -159,7 +159,6 @@ public class GraphicsPanel extends JPanel implements MouseListener, MouseMotionL
 
 @Override
 	public void mouseDragged(MouseEvent e) {
-	// TODO Auto-generated method stub
 	
 }
 

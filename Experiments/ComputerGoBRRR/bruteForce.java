@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
+
 
 public class bruteForce extends JPanel
 {
