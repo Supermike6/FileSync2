@@ -31,7 +31,7 @@ public class Clock extends JPanel implements KeyListener{
 	private Timer timer;
 	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
 	private LocalTime current = LocalTime.now();
-	private String message = "", tempString = "";
+	private String message = "", tempString = "", today = rn.getDayOfWeek()+"";
 	private boolean sp;
 	private Scanner sc,sc1;
 	private Double hr, min, sec;
@@ -47,7 +47,7 @@ public class Clock extends JPanel implements KeyListener{
 		this.addKeyListener(this);
 
 		try {
-			sc = new Scanner(new File("Clock/schedule.txt"));
+			sc = new Scanner(new File("Clock/Schedules/"+today+".txt"));
 			sc1 = new Scanner(new File("Clock/calendar.ics")); 
 		} catch (Exception e){e.printStackTrace();}
 		
@@ -95,6 +95,8 @@ public class Clock extends JPanel implements KeyListener{
 			{
 				current = LocalTime.now();
 				rn = Instant.now().atZone(ZoneId.systemDefault());
+				today = ""+rn.getDayOfWeek();
+				today = "MONDAY";
 				repaint();	
 			}
 		});
@@ -116,8 +118,6 @@ public class Clock extends JPanel implements KeyListener{
 
 			g2.setStroke(new BasicStroke(3));
 		
-		i++;
-		g2.rotate(Math.toRadians(i), PREF_W/2, PREF_H/2);
 		g2.setColor(Color.black);
 		
 		g2.fillRect(0,0,PREF_W,PREF_H);
@@ -310,8 +310,6 @@ public class Clock extends JPanel implements KeyListener{
 			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
 			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
 
-			System.out.println("change");
-
 			int tempInt1 = (tempTime.getHour()-rn.getHour())*3600+(tempTime.getMinute()-rn.getMinute())*60+(-tempTime.getSecond()-rn.getSecond());
 			int tempInt2 = tempInt1%60;
 			int tempInt3 = (tempInt1-tempInt2)/60;
@@ -370,6 +368,54 @@ public class Clock extends JPanel implements KeyListener{
 	public void keyReleased(KeyEvent e)
 	{
 		if(e.getKeyCode() == KeyEvent.VK_SPACE) sp = !sp;
+		if(e.getKeyCode() == KeyEvent.VK_R)
+		{
+			try {
+				sc = new Scanner(new File("Clock/Schedules/"+today+".txt"));
+				sc1 = new Scanner(new File("Clock/calendar.ics")); 
+			} catch (Exception o){o.printStackTrace();}
+			
+			int i = 0;
+			while(sc.hasNextLine())
+			{
+				cls.add(i, sc.nextLine());
+				i++;
+			}
+			i=0;
+			while(sc1.hasNextLine())
+			{
+				fileLines.add(i, sc1.nextLine());
+				i++;
+			}
+	
+			for(int k = 0; k<fileLines.size();k++)
+			{
+				if(fileLines.get(k).contains("DTEND;VALUE=DATE:"))
+				{
+					if(fileLines.get(k+4).contains("[HillsRotation]"))
+					{
+						rotation.add(""+fileLines.get(k+4).subSequence(8, fileLines.get(k+4).indexOf(" ")));
+						times.add(fileLines.get(k).subSequence(21, 23)+"/"+fileLines.get(k).subSequence(23, 25)+"/"+fileLines.get(k).subSequence(17, 21));
+					}
+				}
+			}
+	
+			if(rn.getDayOfMonth()<10)
+			{
+				tempString = rn.getMonthValue()+"/0"+rn.getDayOfMonth()+"/"+rn.getYear();
+				if(rn.getMonthValue()<10)
+					tempString = "0"+rn.getMonthValue()+"/0"+rn.getDayOfMonth()+"/"+rn.getYear();
+			} else {
+					tempString = rn.getMonthValue()+"/"+rn.getDayOfMonth()+"/"+rn.getYear();
+					if(rn.getMonthValue()<10)
+						tempString = "0"+rn.getMonthValue()+"/"+rn.getDayOfMonth()+"/"+rn.getYear();
+			}
+			tempString = rotation.get(times.indexOf(tempString));
+		
+			current = LocalTime.now();
+			rn = Instant.now().atZone(ZoneId.systemDefault());
+			System.out.println("Updated");
+		}
 		repaint();
 	}
 }

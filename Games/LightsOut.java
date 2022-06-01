@@ -1,8 +1,9 @@
-package Experiments.Graphics;
+package Games;
 
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,21 +19,52 @@ import javax.swing.SwingUtilities;
 //             or a paintComponent method can be added for painting on the panel
 public class LightsOut extends JPanel
 {
+   private JPanel other;
+   private JPanel game;
    private static final long serialVersionUID = 1L;
-   private static int rows = 8;
-   private static int cols = 8;
-   private static final int PREF_W = cols*100;
-   private static final int PREF_H = rows*100;
+   private static int rows = 4;
+   private static int cols = 4;
+   private static final int PREF_W = cols*102;
+   private static final int PREF_H = rows*102;
    private int r = 0;
    private int c = 0;
    private int j = 0;
-   private static int ranMove = 11;
+   private static int ranMove = 10;
    private JButton[][] b;
 
    public LightsOut()
    {
-      this.setLayout(new GridLayout(rows,cols,2,2));
-      this.setBackground(Color.black);
+      this.setBackground(Color.blue);
+      
+      game = new JPanel(new GridLayout(rows,cols,2,2))
+      {
+         @Override
+         public Dimension getPreferredSize() {
+            return new Dimension(PREF_W, PREF_H);
+         }
+      };
+
+      other = new JPanel(new GridLayout(1, 3, 2, 0))
+      {
+         @Override
+         public Dimension getPreferredSize() {
+            return new Dimension(PREF_W, 25);
+         }
+      };
+
+      this.setLayout(new BorderLayout());
+      this.add(game, BorderLayout.CENTER);
+      this.add(other, BorderLayout.SOUTH);
+      JButton restart = new JButton("Restart");
+      restart.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e)
+         {
+            makeBoard(ranMove);
+         }
+      }); 
+      other.add(restart);
+      
 
       b = new JButton[rows][cols];
       for(r = 0; r<b.length;r++)
@@ -58,17 +90,11 @@ public class LightsOut extends JPanel
                }
             }); 
 
-            this.add(b[r][c]);
+            game.add(b[r][c]);
          }
       }
       makeBoard(ranMove);
    }
-   
-   public Dimension getPreferredSize()
-   {
-      return new Dimension(PREF_W, PREF_H);
-   }
-
    public static void createAndShowGUI()
    {
       JFrame frame = new JFrame("Frame Title");
