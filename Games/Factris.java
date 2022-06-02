@@ -17,7 +17,7 @@ import javax.swing.SwingUtilities;
 //Description: A simple template for constructing a basic JPanel class
 //             This can be used to add other panels and buttons
 //             or a paintComponent method can be added for painting on the panel
-public class LightsOut extends JPanel
+public class Factris extends JPanel
 {
    private JPanel other;
    private JPanel game;
@@ -29,11 +29,10 @@ public class LightsOut extends JPanel
    private int r = 0;
    private int c = 0;
    private int j = 0;
-   
-   private static int ranMove = 10000;
+   private static int ranMove = 20;
    private JButton[][] b;
 
-   public LightsOut()
+   public Factris()
    {
       this.setBackground(Color.blue);
       
