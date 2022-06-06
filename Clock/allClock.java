@@ -25,23 +25,23 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
-public class Clock extends JPanel implements KeyListener{
+public class allClock extends JPanel implements KeyListener{
 	private static final long serialVersionUID = 1L;
 	private static final int PREF_W = 250;
 	private static final int PREF_H = 250;
 	private Timer timer;
 	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
-	private String message = "";
+	private String message = "", tempString = "", today = rn.getDayOfWeek()+"";
 	private boolean sp;
 	private Scanner sc,sc1;
 	private Double hr, min, sec;
-	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0),v = new ArrayList<>(0);
+	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0);
 	private LocalTime tempTime;
 	private int i = 0;
 
 	
 	
-	Clock()
+	allClock()
 	{
 		this.setFocusable(true);
 		this.setBackground(Color.WHITE);
@@ -52,7 +52,7 @@ public class Clock extends JPanel implements KeyListener{
 			sc1 = new Scanner(new File("Clock/calendar.ics")); 
 		} catch (Exception e){e.printStackTrace();}
 		
-		i = 0;
+		int i = 0;
 		while(sc.hasNextLine())
 		{
 			cls.add(i, sc.nextLine());
@@ -74,37 +74,14 @@ public class Clock extends JPanel implements KeyListener{
 				{
 					rotation.add(""+fileLines.get(k+4).subSequence(8, fileLines.get(k+4).indexOf(" ")));
 					times.add(fileLines.get(k).subSequence(21, 23)+"/"+fileLines.get(k).subSequence(23, 25)+"/"+fileLines.get(k).subSequence(17, 21));
+					System.out.println(fileLines.get(k+4).subSequence(8, fileLines.get(k+4).indexOf(" "))+" - "+fileLines.get(k).subSequence(21, 23)+"/"+fileLines.get(k).subSequence(23, 25)+"/"+fileLines.get(k).subSequence(17, 21));
 				}
 			}
 		}
-		
-		for(int x = 0; x<cls.size();x++)
-		{
-			for(int y = 0; y<cls.get(x).split(" ").length;y++)
-			{
-				for(int z = 0; z<cls.get(x).split(" ")[y].split("-").length;z++)
-				{
-					if(cls.get(x).split(" ")[y].split("-")[z].contains(":"))
-					{
-						String t = cls.get(x).split(" ")[y].split("-")[z].split(":")[0];
-						int ti = Integer.parseInt(t);
-						if(ti<8) ti+=12;
-						String u = cls.get(x).split(" ")[y].split("-")[z].split(":")[1];
-						String s = fix0(ti)+":"+fix0(Integer.parseInt(u));
-						v.add(s);
-					}
-
-				}
-
-			}
-		}
-			
 
 
 
-		
-
-		String tempString = fix0(rn.getMonthValue())+"/"+fix0(rn.getDayOfMonth())+"/"+rn.getYear();
+		tempString = fix0(rn.getMonthValue())+"/"+fix0(rn.getDayOfMonth())+"/"+rn.getYear();
 		
 		// tempString = rotation.get(times.indexOf(tempString));
 		timer = new Timer(1000, new ActionListener()
@@ -113,6 +90,7 @@ public class Clock extends JPanel implements KeyListener{
 			public void actionPerformed(ActionEvent e)
 			{
 				rn = Instant.now().atZone(ZoneId.systemDefault());
+				today = ""+rn.getDayOfWeek();
 			}
 		});
 		timer.start();
@@ -135,19 +113,7 @@ public class Clock extends JPanel implements KeyListener{
 
 		//put schedule code here
 
-		for(i=0;i<v.size();i++)
-		{
-			System.out.println(v.get(i));
-			if(LocalTime.parse(v.get(i)+":00").compareTo(rn.toLocalTime())<0)
-			{
-				System.out.println(i);
-				System.out.println(LocalTime.parse(v.get(i)+":00").compareTo(rn.toLocalTime()));
-				tempTime = LocalTime.parse(v.get(i)+":00");
-				
-				System.out.println(tempTime.toString());
-			}
-		}
-		
+
 		
 		FontMetrics fm = g2.getFontMetrics(); 
 		int messageWidth = fm.stringWidth(message);
@@ -192,7 +158,7 @@ public class Clock extends JPanel implements KeyListener{
 
 	public static void createAndShowGUI() throws IOException {
 		JFrame frame = new JFrame("Clock");
-		JPanel gamePanel = new Clock();
+		JPanel gamePanel = new allClock();
 		frame.getContentPane().add(gamePanel);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
