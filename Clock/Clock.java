@@ -98,13 +98,6 @@ public class Clock extends JPanel implements KeyListener{
 
 			}
 		}
-			
-
-
-
-		
-
-		String tempString = fix0(rn.getMonthValue())+"/"+fix0(rn.getDayOfMonth())+"/"+rn.getYear();
 		
 		// tempString = rotation.get(times.indexOf(tempString));
 		timer = new Timer(1000, new ActionListener()
@@ -113,6 +106,7 @@ public class Clock extends JPanel implements KeyListener{
 			public void actionPerformed(ActionEvent e)
 			{
 				rn = Instant.now().atZone(ZoneId.systemDefault());
+				repaint();
 			}
 		});
 		timer.start();
@@ -134,21 +128,23 @@ public class Clock extends JPanel implements KeyListener{
 		g2.drawOval(PREF_W/2-100, PREF_H/2-100, 200, 200);
 
 		//put schedule code here
-
+		int num = 0;
 		for(i=0;i<v.size();i++)
 		{
-			System.out.println(v.get(i));
 			if(LocalTime.parse(v.get(i)+":00").compareTo(rn.toLocalTime())<0)
 			{
-				System.out.println(i);
-				System.out.println(LocalTime.parse(v.get(i)+":00").compareTo(rn.toLocalTime()));
-				tempTime = LocalTime.parse(v.get(i)+":00");
-				
-				System.out.println(tempTime.toString());
+				tempTime = LocalTime.parse(v.get(i+1)+":00");
+				num = i;
 			}
 		}
-		
-		
+		for(i = 0; i<cls.size();i++)
+		{
+			System.out.println(cls.get(i)+" - "+v.get(num));
+			if(cls.get(i).contains(v.get(num).substring(1)))
+			{
+				message = cls.get(i).split(" ")[0];
+			}
+		}
 		FontMetrics fm = g2.getFontMetrics(); 
 		int messageWidth = fm.stringWidth(message);
 		int startX = PREF_W/2-messageWidth/2;
