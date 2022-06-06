@@ -143,6 +143,12 @@ public class Clock extends JPanel implements KeyListener{
 			if(cls.get(i).contains(v.get(num).substring(1)))
 			{
 				message = cls.get(i).split(" ")[0];
+				if(cls.get(i-1).split(" ")[1].split(":")[0].equals(v.get(num).substring(1))) {
+					message = "Inbetween "+cls.get(i).split(" ")[0]+" and "+cls.get(i).split(" ")[0];
+				} else {
+					message = "In "+cls.get(i).split(" ")[0];
+				}
+
 			}
 		}
 		FontMetrics fm = g2.getFontMetrics(); 
@@ -152,9 +158,9 @@ public class Clock extends JPanel implements KeyListener{
 
 		if(sp)
 		{
-			sec = rn.getSecond()-tempTime.getSecond()+0.00;
-			min = tempTime.getMinute()%60+((double)tempTime.getSecond()/60);
-			hr = tempTime.getHour()%12+(min/60);
+			sec = (rn.getSecond()-tempTime.getSecond()+0.00);
+			min = (tempTime.getMinute()%60+((double)tempTime.getSecond()/60));
+			hr = (tempTime.getHour()%12+(min/60));
 			g2.setColor(Color.RED);
 
 			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
@@ -166,20 +172,13 @@ public class Clock extends JPanel implements KeyListener{
 			fm = g2.getFontMetrics(); 
 
 			messageWidth = fm.stringWidth("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2);
-			startX = PREF_W/2-messageWidth/2;
-			g2.drawString("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2, startX, PREF_H-7);
+			g2.drawString("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2, PREF_W/2-messageWidth/2, PREF_H-7);
 			
 		}
-
 		
-		min = rn.getMinute()%60+((double)rn.getSecond()/60);
-		hr = rn.getHour()%12+(min/60);
-		
-
 		g2.setColor(new Color(219,200,175));
-
-		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
-		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians(((rn.getMinute()%60+((double)rn.getSecond()/60)))*6))*85+125), (int)(Math.cos(Math.toRadians(((rn.getMinute()%60+((double)rn.getSecond()/60)))*6+180))*85+125));
+		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)((rn.getHour()%12+((rn.getMinute()%60+((double)rn.getSecond()/60))/60))*30)))*60+125), (int)(Math.cos(Math.toRadians((double)((rn.getHour()%12+((rn.getMinute()%60+((double)rn.getSecond()/60))/60))*30)+180))*60+125));
 	}
 
 	public Dimension getPreferredSize() {
@@ -223,7 +222,59 @@ public class Clock extends JPanel implements KeyListener{
 		if(e.getKeyCode() == KeyEvent.VK_SPACE) sp = !sp;
 		if(e.getKeyCode() == KeyEvent.VK_R)
 		{
+			try {
+				sc = new Scanner(new File("Clock/Schedules/Monday.txt"));
+				sc1 = new Scanner(new File("Clock/calendar.ics")); 
+			} catch (Exception pooo){pooo.printStackTrace();}
 			
+			i = 0;
+			while(sc.hasNextLine())
+			{
+				cls.add(i, sc.nextLine());
+				i++;
+			}
+			i=0;
+			while(sc1.hasNextLine())
+			{
+				fileLines.add(i, sc1.nextLine());
+				i++;
+			}
+			i=0;
+	
+			for(int k = 0; k<fileLines.size();k++)
+			{
+				if(fileLines.get(k).contains("DTEND;VALUE=DATE:"))
+				{
+					if(fileLines.get(k+4).contains("[HillsRotation]"))
+					{
+						rotation.add(""+fileLines.get(k+4).subSequence(8, fileLines.get(k+4).indexOf(" ")));
+						times.add(fileLines.get(k).subSequence(21, 23)+"/"+fileLines.get(k).subSequence(23, 25)+"/"+fileLines.get(k).subSequence(17, 21));
+					}
+				}
+			}
+			
+			for(String st:v)v.remove(st);
+
+			for(int x = 0; x<cls.size();x++)
+			{
+				for(int y = 0; y<cls.get(x).split(" ").length;y++)
+				{
+					for(int z = 0; z<cls.get(x).split(" ")[y].split("-").length;z++)
+					{
+						if(cls.get(x).split(" ")[y].split("-")[z].contains(":"))
+						{
+							String t = cls.get(x).split(" ")[y].split("-")[z].split(":")[0];
+							int ti = Integer.parseInt(t);
+							if(ti<8) ti+=12;
+							String u = cls.get(x).split(" ")[y].split("-")[z].split(":")[1];
+							String s = fix0(ti)+":"+fix0(Integer.parseInt(u));
+							v.add(s);
+						}
+	
+					}
+	
+				}
+			}
 		}
 		repaint();	
 	}
