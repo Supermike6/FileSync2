@@ -1,8 +1,7 @@
-Biology 8:00-
-CompSci
-S.S.
-L.A.
-Gym
-French
-Math
-Pascack
+L.A. 8:00-8:56
+Biology 9:00-9:58
+ComSci 10:02-10:58
+Lunch 11:02-11:53
+Pascack 11:57-12:53
+Gym 12:57- 1:53
+French 1:57-2:53

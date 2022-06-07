@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
 import java.time.Instant;
@@ -37,6 +38,7 @@ public class Clock extends JPanel implements KeyListener{
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0),v = new ArrayList<>(0);
 	private LocalTime tempTime;
 	private int i = 0;
+	private static Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
 
 	
 	
@@ -76,7 +78,6 @@ public class Clock extends JPanel implements KeyListener{
 				}
 			}
 		}
-		
 		for(int x = 0; x<cls.size();x++)
 		{
 			for(int y = 0; y<cls.get(x).split(" ").length;y++)
@@ -186,7 +187,7 @@ public class Clock extends JPanel implements KeyListener{
 		JPanel gamePanel = new Clock();
 		frame.getContentPane().add(gamePanel);
 		frame.pack();
-		frame.setLocationRelativeTo(null);
+		frame.setLocation((int) (size.getWidth()-PREF_W),(int) (size.getHeight()-PREF_H));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.setAlwaysOnTop(true);
