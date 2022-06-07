@@ -34,7 +34,6 @@ public class Clock extends JPanel implements KeyListener{
 	private String message = "";
 	private boolean sp;
 	private Scanner sc,sc1;
-	private Double hr, min, sec;
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0),v = new ArrayList<>(0);
 	private LocalTime tempTime;
 	private int i = 0;
@@ -48,7 +47,7 @@ public class Clock extends JPanel implements KeyListener{
 		this.addKeyListener(this);
 		
 		try {
-			sc = new Scanner(new File("Clock/Schedules/Monday.txt"));
+			sc = new Scanner(new File("Clock/Schedules/Tuesday.txt"));
 			sc1 = new Scanner(new File("Clock/calendar.ics")); 
 		} catch (Exception e){e.printStackTrace();}
 		
@@ -143,7 +142,7 @@ public class Clock extends JPanel implements KeyListener{
 			if(cls.get(i).contains(v.get(num).substring(1)))
 			{
 				message = cls.get(i).split(" ")[0];
-				if(cls.get(i-1).split(" ")[1].split(":")[0].equals(v.get(num).substring(1))) {
+				if(cls.get(i).split(" ")[1].split(":")[0].equals(v.get(num).substring(1))) {
 					message = "Inbetween "+cls.get(i).split(" ")[0]+" and "+cls.get(i).split(" ")[0];
 				} else {
 					message = "In "+cls.get(i).split(" ")[0];
@@ -158,13 +157,10 @@ public class Clock extends JPanel implements KeyListener{
 
 		if(sp)
 		{
-			sec = (rn.getSecond()-tempTime.getSecond()+0.00);
-			min = (tempTime.getMinute()%60+((double)tempTime.getSecond()/60));
-			hr = (tempTime.getHour()%12+(min/60));
 			g2.setColor(Color.RED);
 
-			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
-			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
+			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians(((tempTime.getMinute()%60+((double)tempTime.getSecond()/60)))*6))*85+125), (int)(Math.cos(Math.toRadians(((tempTime.getMinute()%60+((double)tempTime.getSecond()/60)))*6+180))*85+125));
+			g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)((tempTime.getHour()%12+((tempTime.getMinute()%60+((double)tempTime.getSecond()/60))/60))*30)))*60+125), (int)(Math.cos(Math.toRadians((double)((tempTime.getHour()%12+((tempTime.getMinute()%60+((double)tempTime.getSecond()/60))/60))*30)+180))*60+125));
 
 			int tempInt1 = (tempTime.getHour()-rn.getHour())*3600+(tempTime.getMinute()-rn.getMinute())*60+(-tempTime.getSecond()-rn.getSecond());
 			int tempInt2 = tempInt1%60;
