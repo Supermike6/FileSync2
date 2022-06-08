@@ -86,21 +86,21 @@ public class tictactoe extends JPanel
                   if(b[rows][cols].getText().equals(""))
                   {
                      if(player)
-                  {
-                     b[rows][cols].setText("X");
-                     b[rows][cols].setBackground(Color.red);
-                     b[rows][cols].setForeground(Color.white);
-                     player = false;
-                     j++;
-                  }
-                  else
-                  {
-                     b[rows][cols].setText("O");
-                     b[rows][cols].setBackground(Color.blue);
-                     b[rows][cols].setForeground(Color.white);
-                     player = true;
-                     j++;
-                  }
+                     {
+                        b[rows][cols].setText("X");
+                        b[rows][cols].setBackground(Color.red);
+                        b[rows][cols].setForeground(Color.white);
+                        player = false;
+                        j++;
+                     }
+                     else
+                     {
+                        b[rows][cols].setText("O");
+                        b[rows][cols].setBackground(Color.blue);
+                        b[rows][cols].setForeground(Color.white);
+                        player = true;
+                        j++;
+                     }
                      j++;
                      if(j==9)
                      {
@@ -109,60 +109,104 @@ public class tictactoe extends JPanel
                      }
                      else if(checkWin())
                      {
-                        JOptionPane.showMessageDialog(null, "Player "+(player?"X":"O")+" wins!");
-                        // reset();*
+                        JOptionPane.showMessageDialog(null, "Player "+(player?"O":"X")+" wins!", "Winner!", 3);
+                        reset();
                      }
-                  }
-                  
-                  
-               }
-
-               
+                  } 
+               }  
             }); 
-
             game.add(b[r][c]);
          }
       }
       reset();
    }
-   private boolean checkWin() //return true if X wins and true if O wins
+   private boolean checkWin() 
    {
-      
+      //return true if X wins and true if O wins
+      //return false if no winner
+      //return false if tie
+      //return false if game is not over
+      if(b[0][0].getText().equals("X") && b[0][1].getText().equals("X") && b[0][2].getText().equals("X"))
+      {
+         return true;
+      }
+      else if(b[1][0].getText().equals("X") && b[1][1].getText().equals("X") && b[1][2].getText().equals("X"))
+      {
+         return true;
+      }
+      else if(b[2][0].getText().equals("X") && b[2][1].getText().equals("X") && b[2][2].getText().equals("X"))
+      {
+         return true;
+      }
+      else if(b[0][0].getText().equals("X") && b[1][0].getText().equals("X") && b[2][0].getText().equals("X"))
+      {
+         return true;
+      }
+      else if(b[0][1].getText().equals("X") && b[1][1].getText().equals("X") && b[2][1].getText().equals("X"))
+      {
+         return true;
+      }
+      else if(b[0][2].getText().equals("X") && b[1][2].getText().equals("X") && b[2][2].getText().equals("X"))
+      {
+         return true;
+      }
+      else if(b[0][0].getText().equals("X") && b[1][1].getText().equals("X") && b[2][2].getText().equals("X"))
+      {
+         return true;
+      }
+      else if(b[0][2].getText().equals("X") && b[1][1].getText().equals("X") && b[2][0].getText().equals("X"))
+      {
+         return true;
+      }
+      else if(b[0][0].getText().equals("O") && b[0][1].getText().equals("O") && b[0][2].getText().equals("O"))
+      {
+         return true;
+      }
+      else if(b[1][0].getText().equals("O") && b[1][1].getText().equals("O") && b[1][2].getText().equals("O"))
+      {
+         return true;
+      }
+      else if(b[2][0].getText().equals("O") && b[2][1].getText().equals("O") && b[2][2].getText().equals("O"))
+      {
+         return true;
+      }
+      else if(b[0][0].getText().equals("O") && b[1][0].getText().equals("O") && b[2][0].getText().equals("O"))
+      {
+         return true;
+      }
+      else if(b[0][1].getText().equals("O") && b[1][1].getText().equals("O") && b[2][1].getText().equals("O"))
+      {
+         return true;
+      }
+      else if(b[0][2].getText().equals("O") && b[1][2].getText().equals("O") && b[2][2].getText().equals("O"))
+      {
+         return true;
+      }
+      else if(b[0][0].getText().equals("O") && b[1][1].getText().equals("O") && b[2][2].getText().equals("O"))
+      {
+         return true;
+      }
+      else if(b[0][2].getText().equals("O") && b[1][1].getText().equals("O") && b[2][0].getText().equals("O"))
+      {
+         return true;
+      }
+      return false;
    }
-
-   
    public static void createAndShowGUI()
    {
-      JFrame frame = new JFrame("Frame Title");
+      JFrame frame = new JFrame("Tic Tac Toe");
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       frame.getContentPane().add(new tictactoe());
       frame.pack();
       frame.setLocationRelativeTo(null);
       frame.setVisible(true);
-      
    }
-
    public static void main(String[] args) {
       SwingUtilities.invokeLater(new Runnable() {
          public void run() {
             createAndShowGUI();
          }
       });
-   }
-
-   private void switchLight(int r, int c)
-   {
-      if(b[r][c].getBackground().equals(Color.red))
-      {
-         b[r][c].setBackground(new Color(238,238,238));
-      } else {
-         b[r][c].setBackground(Color.red);
-      }
-      
-   }
-   private void makeMove(int r, int c)
-   {
-      switchLight(r, c);//clicked light
    }
    public void reset()
    {
