@@ -37,7 +37,7 @@ public class Clock extends JPanel implements KeyListener{
 	private Scanner sc,sc1;
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0),v = new ArrayList<>(0);
 	private LocalTime tempTime;
-	private int i = 0;
+	private int i = 0, ticks = 0, tickCount = 12;
 	private static Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
 
 	
@@ -49,7 +49,7 @@ public class Clock extends JPanel implements KeyListener{
 		this.addKeyListener(this);
 		
 		try {
-			sc = new Scanner(new File("Clock/Schedules/Tuesday.txt"));
+			sc = new Scanner(new File("Clock/Schedules/"+rn.getDayOfWeek()+".txt"));
 			sc1 = new Scanner(new File("Clock/calendar.ics")); 
 		} catch (Exception e){e.printStackTrace();}
 		
@@ -126,12 +126,20 @@ public class Clock extends JPanel implements KeyListener{
 		g2.setColor(new Color(219,200,175));
 		
 		g2.drawOval(PREF_W/2-100, PREF_H/2-100, 200, 200);
-		g2.drawLine(PREF_W/2, PREF_H/2-100, PREF_W/2, PREF_H/2-90);
-		g2.drawLine(PREF_W/2, PREF_H/2+100, PREF_W/2, PREF_H/2+90);
-		g2.drawLine(PREF_W/2-100, PREF_H/2, PREF_W/2-90, PREF_H/2);
-		g2.drawLine(PREF_W/2+100, PREF_H/2, PREF_W/2+90, PREF_H/2);
-		// g2.drawLine(150, 150, 150, 78);
-		
+		if(ticks == 1) {
+			for(int t = 0;t<4; t++)
+			{
+				g2.drawLine((int)(125+90*Math.cos((t*Math.PI)/2)),(int)(125+90*Math.sin((t*Math.PI)/2)),(int)(125+100*Math.cos((t*Math.PI)/2)),(int)(125+100*Math.sin((t*Math.PI)/2)));
+			}
+		}
+		if(ticks == 2) {
+			for(int t = 0;t<tickCount; t++)
+			{
+				g2.drawLine((int)(125+90*Math.cos((t*Math.PI)/6)),(int)(125+90*Math.sin((t*Math.PI)/6)),(int)(125+99*Math.cos((t*Math.PI)/6)),(int)(125+99*Math.sin((t*Math.PI)/6)));
+			}
+		}
+		// g2.setColor(Color.black);
+		// g2.fillOval(PREF_W/2-90, PREF_H/2-90, 180, 180);
 
 		//put schedule code here
 		int num = 0;
@@ -283,6 +291,11 @@ public class Clock extends JPanel implements KeyListener{
 	
 				}
 			}
+		}
+		if(e.getKeyCode() == KeyEvent.VK_T)
+		{
+			ticks++;
+			ticks%=3;
 		}
 		repaint();	
 	}
