@@ -126,6 +126,12 @@ public class Clock extends JPanel implements KeyListener{
 		g2.setColor(new Color(219,200,175));
 		
 		g2.drawOval(PREF_W/2-100, PREF_H/2-100, 200, 200);
+		g2.drawLine(PREF_W/2, PREF_H/2-100, PREF_W/2, PREF_H/2-90);
+		g2.drawLine(PREF_W/2, PREF_H/2+100, PREF_W/2, PREF_H/2+90);
+		g2.drawLine(PREF_W/2-100, PREF_H/2, PREF_W/2-90, PREF_H/2);
+		g2.drawLine(PREF_W/2+100, PREF_H/2, PREF_W/2+90, PREF_H/2);
+		// g2.drawLine(150, 150, 150, 78);
+		
 
 		//put schedule code here
 		int num = 0;
@@ -133,13 +139,18 @@ public class Clock extends JPanel implements KeyListener{
 		{
 			if(LocalTime.parse(v.get(i)+":00").compareTo(rn.toLocalTime())<0)
 			{
+				if(i>=v.size()-1) {
+					tempTime = LocalTime.parse("00:00:00");
+					message = "Out Of School";
+				} else {
 				tempTime = LocalTime.parse(v.get(i+1)+":00");
+				}
 				num = i;
 			}
 		}
+		if(i<=v.size())
 		for(i = 0; i<cls.size();i++)
 		{
-			System.out.println(cls.get(i)+" - "+v.get(num));
 			if(cls.get(i).contains(v.get(num).substring(1)))
 			{
 				message = cls.get(i).split(" ")[0];
