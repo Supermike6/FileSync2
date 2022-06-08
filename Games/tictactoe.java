@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
@@ -22,16 +23,15 @@ public class tictactoe extends JPanel
    private JPanel other;
    private JPanel game;
    private static final long serialVersionUID = 1L;
-   private static int rows = 8;
-   private static int cols = 8;
+   private static int rows = 3;
+   private static int cols = 3;
    private static final int PREF_W = cols*102;
    private static final int PREF_H = rows*102;
    private int r = 0;
    private int c = 0;
    private int j = 0;
-   
-   private static int ranMove = 10000;
    private JButton[][] b;
+   private boolean player = true; //true = X, false = O
 
    public tictactoe()
    {
@@ -62,7 +62,7 @@ public class tictactoe extends JPanel
          public void actionPerformed(ActionEvent e)
          {
             j=0;
-            makeBoard(ranMove);
+            reset();
          }
       }); 
       other.add(restart);
@@ -78,25 +78,59 @@ public class tictactoe extends JPanel
             b[r][c]=new JButton();
             b[r][c].setOpaque(true);
             b[r][c].setBorderPainted(false);
+            b[r][c].setText((char)((int)(Math.random()*r*c))+"");
             b[r][c].addActionListener(new ActionListener() {
-               
-               
                @Override
                public void actionPerformed(ActionEvent e)
                {
-                  j++;
-                  System.out.println(j);
-                  makeMove(rows, cols);
-
+                  if(b[rows][cols].getText().equals(""))
+                  {
+                     if(player)
+                  {
+                     b[rows][cols].setText("X");
+                     b[rows][cols].setBackground(Color.red);
+                     b[rows][cols].setForeground(Color.white);
+                     player = false;
+                     j++;
+                  }
+                  else
+                  {
+                     b[rows][cols].setText("O");
+                     b[rows][cols].setBackground(Color.blue);
+                     b[rows][cols].setForeground(Color.white);
+                     player = true;
+                     j++;
+                  }
+                     j++;
+                     if(j==9)
+                     {
+                        JOptionPane.showMessageDialog(null, "Tie!");
+                        reset();
+                     }
+                     else if(checkWin())
+                     {
+                        JOptionPane.showMessageDialog(null, "Player "+(player?"X":"O")+" wins!");
+                        // reset();*
+                     }
+                  }
+                  
                   
                }
+
+               
             }); 
 
             game.add(b[r][c]);
          }
       }
-      makeBoard(ranMove);
+      reset();
    }
+   private boolean checkWin() //return true if X wins and true if O wins
+   {
+      
+   }
+
+   
    public static void createAndShowGUI()
    {
       JFrame frame = new JFrame("Frame Title");
@@ -129,18 +163,16 @@ public class tictactoe extends JPanel
    private void makeMove(int r, int c)
    {
       switchLight(r, c);//clicked light
-      if(r-1>=0)
-      switchLight(r-1, c);//above
-      if(r+1<rows)
-      switchLight(r+1, c);//bellow
-      if(c+1<cols)
-      switchLight(r, c+1);//right
-      if(c-1>=0)
-      switchLight(r, c-1);//left
    }
-   public void makeBoard(int ranMove)
+   public void reset()
    {
-      for(int i = 0; i<ranMove;i++)
-         makeMove((int)(Math.random()*rows), (int)(Math.random()*cols));
+      for(r = 0; r<b.length;r++)
+      {
+         for(c = 0; c < b[r].length;c++)
+         {
+            b[r][c].setBackground(new Color(238,238,238));
+            b[r][c].setText("");
+         }
+      }
    }
 }
