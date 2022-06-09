@@ -37,10 +37,8 @@ public class Clock extends JPanel implements KeyListener{
 	private Scanner sc,sc1;
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0),v = new ArrayList<>(0);
 	private LocalTime tempTime;
-	private int i = 0, ticks = 0, tickCount = 12;
+	private int i = 0, ticks = 0, tickCount = 60;
 	private static Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
-
-	
 	
 	Clock()
 	{
@@ -100,7 +98,7 @@ public class Clock extends JPanel implements KeyListener{
 		}
 		
 		// tempString = rotation.get(times.indexOf(tempString));
-		timer = new Timer(1000, new ActionListener()
+		timer = new Timer(16, new ActionListener()
 		{
 			@Override
 			public void actionPerformed(ActionEvent e)
@@ -117,7 +115,7 @@ public class Clock extends JPanel implements KeyListener{
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
 
-			g2.setStroke(new BasicStroke(3));
+		g2.setStroke(new BasicStroke(3));
 		
 		g2.setColor(Color.black);
 		
@@ -135,9 +133,17 @@ public class Clock extends JPanel implements KeyListener{
 		if(ticks == 2) {
 			for(int t = 0;t<tickCount; t++)
 			{
-				g2.drawLine((int)(125+90*Math.cos((t*Math.PI)/6)),(int)(125+90*Math.sin((t*Math.PI)/6)),(int)(125+99*Math.cos((t*Math.PI)/6)),(int)(125+99*Math.sin((t*Math.PI)/6)));
+				if(Math.cos((t*Math.PI)/(tickCount/2))==1||Math.cos((t*Math.PI)/(tickCount/2))==-1||Math.sin((t*Math.PI)/(tickCount/2))==1||Math.sin((t*Math.PI)/(tickCount/2))==-1) {
+					g2.setStroke(new BasicStroke(3));
+					g2.drawLine((int)(125+90*Math.cos((t*Math.PI)/(tickCount/2))),(int)(125+90*Math.sin((t*Math.PI)/(tickCount/2))),(int)(125+99*Math.cos((t*Math.PI)/(tickCount/2))),(int)(125+99*Math.sin((t*Math.PI)/(tickCount/2))));
+				} else {
+					g2.setStroke(new BasicStroke(1));
+					g2.drawLine((int)(PREF_W/2+90*Math.cos((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+90*Math.sin((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+99*Math.cos((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+99*Math.sin((t*Math.PI)/(tickCount/2))));
+				}
+				
 			}
 		}
+		g2.setStroke(new BasicStroke(3));
 		// g2.setColor(Color.black);
 		// g2.fillOval(PREF_W/2-90, PREF_H/2-90, 180, 180);
 
@@ -269,7 +275,7 @@ public class Clock extends JPanel implements KeyListener{
 				}
 			}
 			
-			for(String st:v)v.remove(st);
+			for(String st:v) v.remove(st);
 
 			for(int x = 0; x<cls.size();x++)
 			{

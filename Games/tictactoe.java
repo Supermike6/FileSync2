@@ -107,11 +107,11 @@ public class tictactoe extends JPanel
                         JOptionPane.showMessageDialog(null, "Tie!");
                         reset();
                      }
-                     else if(checkWin())
-                     {
-                        JOptionPane.showMessageDialog(null, "Player "+(player?"X":"O")+" wins!");
-                        // reset();*
-                     }
+                     // else if(checkWin())
+                     // {
+                     //    JOptionPane.showMessageDialog(null, "Player "+(player?"X":"O")+" wins!");
+                     //    // reset();*
+                     // }
                   }
                   
                   
@@ -125,10 +125,10 @@ public class tictactoe extends JPanel
       }
       reset();
    }
-   private boolean checkWin() //return true if X wins and true if O wins
-   {
+   // private boolean checkWin() //return true if X wins and true if O wins
+   // {
       
-   }
+   // }
 
    
    public static void createAndShowGUI()
@@ -150,20 +150,20 @@ public class tictactoe extends JPanel
       });
    }
 
-   private void switchLight(int r, int c)
-   {
-      if(b[r][c].getBackground().equals(Color.red))
-      {
-         b[r][c].setBackground(new Color(238,238,238));
-      } else {
-         b[r][c].setBackground(Color.red);
-      }
+   // private void switchLight(int r, int c)
+   // {
+   //    if(b[r][c].getBackground().equals(Color.red))
+   //    {
+   //       b[r][c].setBackground(new Color(238,238,238));
+   //    } else {
+   //       b[r][c].setBackground(Color.red);
+   //    }
       
-   }
-   private void makeMove(int r, int c)
-   {
-      switchLight(r, c);//clicked light
-   }
+   // }
+   // private void makeMove(int r, int c)
+   // {
+   //    switchLight(r, c);//clicked light
+   // }
    public void reset()
    {
       for(r = 0; r<b.length;r++)

@@ -90,9 +90,6 @@ public class drawing extends JPanel implements MouseListener, MouseMotionListene
       	// cloud2X = 200;
 		// snowmanVisible = true;
 		birdx = 100;
-      	birdy = 75;
-     	dx = 0;
-      	dy = 0;
      	isFacingRight = true;
       	birdSpeed = 5;
      	w = 65;
