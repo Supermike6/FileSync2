@@ -12,12 +12,6 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-
-
-//Mr. Uhl's Honors Computer Science
-//Description: A simple template for constructing a basic JPanel class
-//             This can be used to add other panels and buttons
-//             or a paintComponent method can be added for painting on the panel
 public class tictactoe extends JPanel
 {
    private JPanel other;
@@ -91,7 +85,6 @@ public class tictactoe extends JPanel
                         b[rows][cols].setBackground(Color.red);
                         b[rows][cols].setForeground(Color.white);
                         player = false;
-                        j++;
                      }
                      else
                      {
@@ -99,7 +92,6 @@ public class tictactoe extends JPanel
                         b[rows][cols].setBackground(Color.blue);
                         b[rows][cols].setForeground(Color.white);
                         player = true;
-                        j++;
                      }
                      j++;
                      if(j==9)
@@ -122,10 +114,6 @@ public class tictactoe extends JPanel
    }
    private boolean checkWin() 
    {
-      //return true if X wins and true if O wins
-      //return false if no winner
-      //return false if tie
-      //return false if game is not over
       if(b[0][0].getText().equals("X") && b[0][1].getText().equals("X") && b[0][2].getText().equals("X"))
       {
          return true;
@@ -218,5 +206,6 @@ public class tictactoe extends JPanel
             b[r][c].setText("");
          }
       }
+      j=0;
    }
 }
