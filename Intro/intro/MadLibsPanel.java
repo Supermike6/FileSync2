@@ -38,9 +38,6 @@ public class MadLibsPanel {
 		
 		Object noun3 = JOptionPane.showInputDialog(null, "Enter a noun: ", "Madlib", 0, icon, null, "Noun");
 		
-		
-		
-		
 		Object result = "Old mother Hubbard went to the " + ((String) noun1).toUpperCase()
 				+ " \nto get her " + ((String) adj1).toUpperCase() + " " + ((String) noun2).toUpperCase() + " a " + ((String) noun3).toUpperCase() + ". \nWhen she got to the "
 				+ ((String) noun1).toUpperCase() + " the " + ((String) noun3).toUpperCase() + " was not there, \nand so her "+ ((String) adj1).toUpperCase() + " " + ((String) noun1).toUpperCase() + " had none.";
