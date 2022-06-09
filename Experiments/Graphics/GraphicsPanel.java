@@ -1,4 +1,4 @@
-package Experiments.ComputerGoBRRR;
+package Experiments.Graphics;
 
 
 import java.awt.BasicStroke;

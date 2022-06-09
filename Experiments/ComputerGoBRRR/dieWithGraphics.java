@@ -162,7 +162,7 @@ public class dieWithGraphics extends JPanel implements KeyListener
    public static void main(String[] args)
    {
        ArrayList<String> arrayList = new ArrayList<String>();
-      for(int i = 0; i<1; i++)
+      for(int i = 0; i<100; i++)
       {
       SwingUtilities.invokeLater(new Runnable() {
          public void run()  {

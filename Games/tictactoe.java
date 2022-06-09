@@ -77,8 +77,8 @@ public class tictactoe extends JPanel
                @Override
                public void actionPerformed(ActionEvent e)
                {
-                  if(b[rows][cols].getText().equals(""))
-                  {
+                  // if(b[rows][cols].getText().equals(""))
+                  // {
                      if(player)
                      {
                         b[rows][cols].setText("X");
@@ -93,7 +93,7 @@ public class tictactoe extends JPanel
                         b[rows][cols].setForeground(Color.white);
                         player = true;
                      }
-                     j++;
+                     // j++;
                      if(j==9)
                      {
                         JOptionPane.showMessageDialog(null, "Tie!");
@@ -104,7 +104,7 @@ public class tictactoe extends JPanel
                         JOptionPane.showMessageDialog(null, "Player "+(player?"O":"X")+" wins!", "Winner!", 3);
                         reset();
                      }
-                  } 
+                  // } 
                }  
             }); 
             game.add(b[r][c]);
