@@ -37,7 +37,7 @@ public class Clock extends JPanel implements KeyListener{
 	private Scanner sc,sc1;
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0),v = new ArrayList<>(0);
 	private LocalTime tempTime;
-	private int i = 0, ticks = 0, tickCount = 12;
+	private int i = 0, ticks = 0, tickCount = 60;
 	private static Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
 	
 	Clock()
