@@ -13,6 +13,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.Toolkit;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Instant;
 import java.time.LocalTime;
@@ -34,7 +35,7 @@ public class Clock extends JPanel implements KeyListener{
 	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
 	private String message = "";
 	private boolean sp;
-	private Scanner sc,sc1;
+	private Scanner sc;
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0),v = new ArrayList<>(0);
 	private LocalTime tempTime;
 	private int i = 0, ticks = 0, tickCount = 12;
@@ -45,25 +46,28 @@ public class Clock extends JPanel implements KeyListener{
 		this.setFocusable(true);
 		this.setBackground(Color.WHITE);
 		this.addKeyListener(this);
-		
+
 		try {
 			sc = new Scanner(new File("Clock/Schedules/"+rn.getDayOfWeek()+".txt"));
-			sc1 = new Scanner(new File("Clock/calendar.ics")); 
-		} catch (Exception e){e.printStackTrace();}
+			i = 0;
+			while(sc.hasNextLine())
+			{
+				cls.add(i, sc.nextLine());
+				i++;
+			}
+			
+			sc.reset();
+			
+			sc = new Scanner(new File("Clock/calendar.ics")); 
+			i=0;
+			while(sc.hasNextLine())
+			{
+				fileLines.add(i, sc.nextLine());
+				i++;
+			}
+			i=0;
 		
-		i = 0;
-		while(sc.hasNextLine())
-		{
-			cls.add(i, sc.nextLine());
-			i++;
-		}
-		i=0;
-		while(sc1.hasNextLine())
-		{
-			fileLines.add(i, sc1.nextLine());
-			i++;
-		}
-		i=0;
+		} catch (FileNotFoundException e1) {e1.printStackTrace();}
 
 		for(int k = 0; k<fileLines.size();k++)
 		{
@@ -91,14 +95,12 @@ public class Clock extends JPanel implements KeyListener{
 						String s = fix0(ti)+":"+fix0(Integer.parseInt(u));
 						v.add(s);
 					}
-
 				}
-
 			}
 		}
-		
+
 		// tempString = rotation.get(times.indexOf(tempString));
-		timer = new Timer(16, new ActionListener()
+		timer = new Timer(1000, new ActionListener()
 		{
 			@Override
 			public void actionPerformed(ActionEvent e)
@@ -129,8 +131,19 @@ public class Clock extends JPanel implements KeyListener{
 			{
 				g2.drawLine((int)(125+90*Math.cos((t*Math.PI)/2)),(int)(125+90*Math.sin((t*Math.PI)/2)),(int)(125+100*Math.cos((t*Math.PI)/2)),(int)(125+100*Math.sin((t*Math.PI)/2)));
 			}
-		}
-		if(ticks == 2) {
+		} else if(ticks == 2) {
+			for(int t = 0;t<12; t++)
+			{
+				if(Math.cos((t*Math.PI)/(tickCount/2))==1||Math.cos((t*Math.PI)/(tickCount/2))==-1||Math.sin((t*Math.PI)/(tickCount/2))==1||Math.sin((t*Math.PI)/(tickCount/2))==-1) {
+					g2.setStroke(new BasicStroke(3));
+					g2.drawLine((int)(125+90*Math.cos((t*Math.PI)/(tickCount/2))),(int)(125+90*Math.sin((t*Math.PI)/(tickCount/2))),(int)(125+99*Math.cos((t*Math.PI)/(tickCount/2))),(int)(125+99*Math.sin((t*Math.PI)/(tickCount/2))));
+				} else {
+					g2.setStroke(new BasicStroke(1));
+					g2.drawLine((int)(PREF_W/2+90*Math.cos((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+90*Math.sin((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+99*Math.cos((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+99*Math.sin((t*Math.PI)/(tickCount/2))));
+				}
+				
+			}
+		} else if(ticks == 3) {
 			for(int t = 0;t<tickCount; t++)
 			{
 				if(Math.cos((t*Math.PI)/(tickCount/2))==1||Math.cos((t*Math.PI)/(tickCount/2))==-1||Math.sin((t*Math.PI)/(tickCount/2))==1||Math.sin((t*Math.PI)/(tickCount/2))==-1) {
@@ -245,24 +258,27 @@ public class Clock extends JPanel implements KeyListener{
 		if(e.getKeyCode() == KeyEvent.VK_R)
 		{
 			try {
-				sc = new Scanner(new File("Clock/Schedules/Monday.txt"));
-				sc1 = new Scanner(new File("Clock/calendar.ics")); 
-			} catch (Exception pooo){pooo.printStackTrace();}
+				sc = new Scanner(new File("Clock/Schedules/"+rn.getDayOfWeek()+".txt"));
+				i = 0;
+				while(sc.hasNextLine())
+				{
+					cls.add(i, sc.nextLine());
+					i++;
+				}
+				
+				sc.reset();
+				
+				sc = new Scanner(new File("Clock/calendar.ics")); 
+				i=0;
+				while(sc.hasNextLine())
+				{
+					fileLines.add(i, sc.nextLine());
+					i++;
+				}
+				i=0;
 			
-			i = 0;
-			while(sc.hasNextLine())
-			{
-				cls.add(i, sc.nextLine());
-				i++;
-			}
-			i=0;
-			while(sc1.hasNextLine())
-			{
-				fileLines.add(i, sc1.nextLine());
-				i++;
-			}
-			i=0;
-	
+			} catch (FileNotFoundException e1) {e1.printStackTrace();}
+		
 			for(int k = 0; k<fileLines.size();k++)
 			{
 				if(fileLines.get(k).contains("DTEND;VALUE=DATE:"))
@@ -301,7 +317,7 @@ public class Clock extends JPanel implements KeyListener{
 		if(e.getKeyCode() == KeyEvent.VK_T)
 		{
 			ticks++;
-			ticks%=3;
+			ticks%=4;
 		}
 		repaint();	
 	}
