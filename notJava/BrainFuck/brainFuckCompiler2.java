@@ -10,16 +10,22 @@ public class brainFuckCompiler2
     
     public static void main(String[] args) throws FileNotFoundException
     {
+        //initializing variables
         File file = new File("notJava/BrainFuck/testcode.bf");
         Scanner sc = new Scanner(file);
         String line;
         int[] memory = new int[256];
         int memoryHead = 0;
         ArrayList<String> instructions = new ArrayList<>(0);
+        
+        //populating memory array
         for(int i = 0; i<256; i++)
         {
             memory[i] = 0;
         }
+
+
+        //populating instructions list
         while(sc.hasNextLine())
         {
             line = sc.nextLine();
@@ -27,6 +33,9 @@ public class brainFuckCompiler2
                 instructions.add(line.split("")[i]);
             }
         }
+
+
+        //basic instructions loop
         while(instructions.size()>0)
         {
             String instruction = instructions.get(0);
@@ -38,33 +47,38 @@ public class brainFuckCompiler2
                     memory[memoryHead] = 0;
                 }
             }
-            if(instruction.equals("-"))
-            {
+            if(instruction.equals("-")){
                 memory[memoryHead]--;
                 if(memory[memoryHead]<0)
                 {
                     memory[memoryHead] = 255;
                 }
             }
-            if(instruction.equals(">"))
-            {
+            if(instruction.equals(">")){
                 memoryHead++;
                 
                 
             }
-            if(instruction.equals("<"))
-            {
+            if(instruction.equals("<")){
                 memoryHead--;
             }
-            if(instruction.equals("."))
-            {
+            if(instruction.equals(".")){
                 System.out.print((char)memory[memoryHead]);
             }
+            
             instructions.remove(0);
         }
 
 
+        //display the Memory Array
+        printMemory(memory);
+    
+    
+        System.out.println();
+    }
 
+    public static void printMemory(int[] memory)
+    {
         int count = 0;
         for(int i = 0; i<32; i++) {
             count%=8;
@@ -75,8 +89,7 @@ public class brainFuckCompiler2
             count++;
             System.out.print(memory[i]+" ");
         }
-    
-    
         System.out.println();
     }
+
 }
