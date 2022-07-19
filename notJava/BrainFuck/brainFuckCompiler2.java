@@ -7,24 +7,29 @@ import java.util.Scanner;
 
 public class brainFuckCompiler2 
 {
-    
+    // private static String line;
+    // private static Integer[] memory = new Integer[256];
+    // private static int memoryHead = 0;
+    // private static ArrayList<String> instructions = new ArrayList<>(0);
+    // private static String instruction = "";
+    // private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws FileNotFoundException
     {
         //initializing variables
-        File file = new File("notJava/BrainFuck/testcode.bf");
-        Scanner sc = new Scanner(file);
-        String line;
+        String line="";
         Integer[] memory = new Integer[256];
         int memoryHead = 0;
         ArrayList<String> instructions = new ArrayList<>(0);
-        
+        String instruction = "";
+        File file = new File("notJava/BrainFuck/testcode.bf");
+        Scanner sc = new Scanner(file);
+
         //populating memory array
         for(int i = 0; i<256; i++)
         {
             memory[i] = 0;
         }
-
-
+    
         //populating instructions list
         while(sc.hasNextLine())
         {
@@ -34,15 +39,25 @@ public class brainFuckCompiler2
             }
         }
 
+        compipleAndRun(memory, memoryHead, instructions);
 
-        //basic instructions loop
+        //display the Memory Array
+        printMemory(memory, memoryHead);
+    
+        System.out.println();
+    }
+
+    public static void compipleAndRun(Integer[] memory, int memoryHead, ArrayList<String> instructions) throws FileNotFoundException
+    {
+        String instruction = "";
+        Scanner sc = new Scanner(System.in);
+    //basic instructions loop
         while(instructions.size()>0)
         {
-            String instruction = instructions.get(0);
-            if(instruction.equals("+"))
-            {
+            instruction = instructions.get(0);
+            if(instruction.equals("+")){
                 memory[memoryHead]++;
-                if(memory[memoryHead]>=256)
+                if(memory[memoryHead]>255)
                 {
                     memory[memoryHead] = 0;
                 }
@@ -56,8 +71,6 @@ public class brainFuckCompiler2
             }
             if(instruction.equals(">")){
                 memoryHead++;
-                
-                
             }
             if(instruction.equals("<")){
                 memoryHead--;
@@ -70,25 +83,17 @@ public class brainFuckCompiler2
                 sc = new Scanner(System.in);
                 memory[memoryHead] = sc.nextInt();
             }
-            
+            looping(instructions, memory, memoryHead, sc);
             instructions.remove(0);
         }
-
-
-        //display the Memory Array
-        printMemory(memory,memoryHead);
-    
-    
-        System.out.println();
     }
-
     public static void printMemory(Integer[] memory, int memoryHead)
     {
         ArrayList<String> tempList = new ArrayList<>(32);
         for(Integer i = 0; i<32; i++)
         {
             String tempString = "";
-            for(int j = 0; j<digits(memory[i]); j++){
+            for(int j = 0; j<=digits(memory[i]); j++){
                 tempString+=" ";
             }
             tempList.add(tempString);
@@ -115,4 +120,24 @@ public class brainFuckCompiler2
         return count;
     }
 
+    public static void looping(ArrayList<String> instructions, Integer[] memory, int memoryHead, Scanner sc) throws FileNotFoundException
+    {
+
+        int tempInt = memory[memoryHead];
+        int tempMemH = memoryHead;
+        if(instructions.get(0).equals("["))
+        System.out.println(tempInt);
+        String instS = "";
+        for(String s: instructions) instS+=s;
+        System.out.println(instS);
+        while(tempInt!=0)
+        {
+            compipleAndRun(memory, memoryHead, instructions);
+            tempInt = memory[memoryHead];
+            tempMemH = memoryHead;
+        }
+        
+        
+
+    }
 }
