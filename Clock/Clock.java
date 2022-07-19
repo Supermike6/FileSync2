@@ -225,7 +225,8 @@ public class Clock extends JPanel implements KeyListener{
 		JPanel gamePanel = new Clock();
 		frame.getContentPane().add(gamePanel);
 		frame.pack();
-		frame.setLocation((int) (size.getWidth()-PREF_W),(int) (size.getHeight()-PREF_H));
+		// frame.setLocation((int) (size.getWidth()-PREF_W),(int) (size.getHeight()-PREF_H));
+		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.setAlwaysOnTop(true);
