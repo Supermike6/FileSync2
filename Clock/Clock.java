@@ -38,7 +38,7 @@ public class Clock extends JPanel implements KeyListener{
 	private Scanner sc;
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0),v = new ArrayList<>(0);
 	private LocalTime tempTime;
-	private int i = 0, ticks = 0, tickCount = 12;
+	private int i = 0, ticks = 0, tickCount = 14;
 	private static Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
 	
 	Clock()
@@ -131,8 +131,8 @@ public class Clock extends JPanel implements KeyListener{
 			{
 				g2.drawLine((int)(125+90*Math.cos((t*Math.PI)/2)),(int)(125+90*Math.sin((t*Math.PI)/2)),(int)(125+100*Math.cos((t*Math.PI)/2)),(int)(125+100*Math.sin((t*Math.PI)/2)));
 			}
-		} else if(ticks == 2) {
-			for(int t = 0;t<12; t++)
+		} else if(ticks == 3) {
+			for(int t = 0;t<tickCount; t++)
 			{
 				if(Math.cos((t*Math.PI)/(tickCount/2))==1||Math.cos((t*Math.PI)/(tickCount/2))==-1||Math.sin((t*Math.PI)/(tickCount/2))==1||Math.sin((t*Math.PI)/(tickCount/2))==-1) {
 					g2.setStroke(new BasicStroke(3));
@@ -143,7 +143,8 @@ public class Clock extends JPanel implements KeyListener{
 				}
 				
 			}
-		} else if(ticks == 3) {
+		} else if(ticks == 2) {
+			tickCount = 12;
 			for(int t = 0;t<tickCount; t++)
 			{
 				if(Math.cos((t*Math.PI)/(tickCount/2))==1||Math.cos((t*Math.PI)/(tickCount/2))==-1||Math.sin((t*Math.PI)/(tickCount/2))==1||Math.sin((t*Math.PI)/(tickCount/2))==-1) {
