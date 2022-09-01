@@ -6,1818 +6,2685 @@ METHOD:PUBLISH
 X-WR-CALNAME:Grant Bancroft Calendar (Canvas)
 X-WR-CALDESC:Calendar events for the user\, Grant Bancroft
 BEGIN:VEVENT
-DTSTAMP:20210812T183300Z
-UID:event-calendar-event-253692
-DTSTART;VALUE=DATE:20220404T000000
-DTEND;VALUE=DATE:20220404T000000
+DTSTAMP:20220829T155200Z
+UID:event-calendar-event-293346
+DTSTART;VALUE=DATE;VALUE=DATE:20220831
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:ALL [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253692
+ onth=08&year=2022#calendar_event_293346
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220401T193400Z
-UID:event-assignment-356621
-DTSTART:20220404T120000Z
-DTEND:20220404T120000Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Rd 218-221 take notes [Honors Biology]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6300&m
- onth=04&year=2022#assignment_356621
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220401T134200Z
-UID:event-assignment-override-52632
-DTSTART:20220404T133200Z
-DTEND:20220404T133200Z
-CLASS:PUBLIC
-DESCRIPTION:Read Opium War: https://worldhistory.abc-clio.com/Topics/Displa
- y/1185829?sid=1185829&cid=41&subId=9&useConcept=False\n\nRead Boxer Rebell
- ion: https://worldhistory.abc-clio.com/Search/Display/309593?sTypeId=2\n\n
- * username: pascackhills\n\n* password: Hills!2022\n\nAnswer: [Opium War 
- and Boxer Rebellion NOTES.docx] (https://pascack.instructure.com/courses/6
- 385/files/1566588/download?wrap=1)
-SEQUENCE:0
-SUMMARY:Opium War & Boxer Rebellion (World History P3) [CP World History]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6385&m
- onth=04&year=2022#assignment_303908
-X-ALT-DESC;FMTTYPE=text/html:<p><strong>Read Opium War</strong>: <a class="
- inline_disabled" href="https://worldhistory.abc-clio.com/Topics/Display/11
- 85829?sid=1185829&amp\;cid=41&amp\;subId=9&amp\;useConcept=False" target="
- _blank">https://worldhistory.abc-clio.com/Topics/Display/1185829?sid=11858
- 29&amp\;cid=41&amp\;subId=9&amp\;useConcept=False</a></p>\n<p><strong>Read
-  Boxer Rebellion</strong>: <a class="inline_disabled" href="https://worldh
- istory.abc-clio.com/Search/Display/309593?sTypeId=2" target="_blank">https
- ://worldhistory.abc-clio.com/Search/Display/309593?sTypeId=2</a></p>\n<ul>
- \n<li><strong>username</strong>:<span>&nbsp\;</span><span>pascackhills</sp
- an></li>\n<li><strong>password</strong>: Hills!2022</li>\n</ul>\n<p><stron
- g>Answer</strong>: <a class="instructure_file_link instructure_scribd_file
- " title="Opium War and Boxer Rebellion NOTES.docx" href="https://pascack.i
- nstructure.com/courses/6385/files/1566588/download?wrap=1" data-api-endpoi
- nt="https://pascack.instructure.com/api/v1/courses/6385/files/1566588" dat
- a-api-returntype="File">Opium War and Boxer Rebellion NOTES.docx</a></p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220318T123900Z
-UID:event-assignment-353293
-DTSTART;VALUE=DATE:20220404T000000
-DTEND;VALUE=DATE:20220404T000000
-CLASS:PUBLIC
-DESCRIPTION: \n\n[Manie Musicale:  Vote 15 (Final!) ] (https://www.manie
- musicale.info/vote-here-2022) \n\n \n\n 
-SEQUENCE:0
-SUMMARY:Manie Musicale:  Vote 15 (Final!)  (du 4 au 5 avril)  [French 2 CP
-  (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_353293
-X-ALT-DESC;FMTTYPE=text/html:<p>&nbsp\;</p>\n<p><a class="inline_disabled" 
- href="https://www.maniemusicale.info/vote-here-2022" target="_blank">Manie
-  Musicale:&nbsp\; Vote 15 (Final!)&nbsp\;</a>&nbsp\;</p>\n<p>&nbsp\;</p>\n
- <p>&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183400Z
-UID:event-calendar-event-253694
-DTSTART;VALUE=DATE:20220405T000000
-DTEND;VALUE=DATE:20220405T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R1 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253694
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220331T133100Z
-UID:event-assignment-357610
-DTSTART:20220405T120000Z
-DTEND:20220405T120000Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Genetics problems #5-18  [Honors Biology]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6300&m
- onth=04&year=2022#assignment_357610
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220404T142700Z
-UID:event-assignment-override-52636
-DTSTART:20220405T140200Z
-DTEND:20220405T140200Z
-CLASS:PUBLIC
-DESCRIPTION:Read: East Meets West\n\nAnswer: Questions for Review #1-5 and 
- Understanding the Story Part A #1-7
-SEQUENCE:0
-SUMMARY:East Meets West (World History P3) [CP World History]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6385&m
- onth=04&year=2022#assignment_303861
-X-ALT-DESC;FMTTYPE=text/html:<p><strong>Read</strong>: East Meets West</p>\
- n<p><strong>Answer</strong>: Questions for Review #1-5 and Understanding t
- he Story Part A #1-7</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220405T171000Z
-UID:event-assignment-322706
-DTSTART;VALUE=DATE:20220405T000000
-DTEND;VALUE=DATE:20220405T000000
-CLASS:PUBLIC
-DESCRIPTION:Ecoutez et lisez les informations sur Paris. Puis\, complétez 
- cette feuille. \n\nhttps://www.podcastfrancaisfacile.com/texte/paris-text
- e-francais-facile.html \n\n [Paris Podcast Reading (1).docx] (https://pa
- scack.instructure.com/courses/6441/files/1596259?wrap=1)  \n\n  \n\nDi
- scussion/Breakout Rooms \n\n* Quelle est la capitale de la France? \n\n*
-  Qu'est-ce qu'il y a dans Paris? \n\n* Qu'est-ce que tu voudrais voir à 
- Paris?  Pourquoi? \n\n*  Pourquoi est-ce que Paris est une ville import
- ante en France?  (élargir cette réponse) 
-SEQUENCE:0
-SUMMARY:Dans Paris  [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_322706
-X-ALT-DESC;FMTTYPE=text/html:<p>Ecoutez et lisez les informations sur Paris
- . Puis\, complétez cette feuille.&nbsp\;</p>\n<p><a href="https://www.pod
- castfrancaisfacile.com/texte/paris-texte-francais-facile.html" target="_bl
- ank">https://www.podcastfrancaisfacile.com/texte/paris-texte-francais-faci
- le.html</a>&nbsp\;</p>\n<p>&nbsp\;<a class="instructure_file_link instruct
- ure_scribd_file" title="Paris Podcast Reading (1).docx" href="https://pasc
- ack.instructure.com/courses/6441/files/1596259?wrap=1" target="_blank" dat
- a-canvas-previewable="false" data-api-endpoint="https://pascack.instructur
- e.com/api/v1/courses/6441/files/1596259" data-api-returntype="File">Paris 
- Podcast Reading (1).docx</a>&nbsp\;&nbsp\;</p>\n<p><iframe style="width: 3
- 20px\; height: 14.25rem\; display: inline-block\;" title="Audio player for
-  paris__=1.mp3" data-media-type="audio" src="https://pascack.instructure.c
- om/media_objects_iframe/m-3GXVvV6VsJWD4XA3BioG1AJFfgc9hgF6?type=audio" dat
- a-media-id="m-3GXVvV6VsJWD4XA3BioG1AJFfgc9hgF6"></iframe>&nbsp\;&nbsp\;</p
- >\n<p><strong>Discussion/Breakout Rooms&nbsp\;</strong></p>\n<ol>\n<li>Que
- lle est la capitale de la France?&nbsp\;</li>\n<li>Qu'est-ce qu'il y a dan
- s Paris?&nbsp\;</li>\n<li>Qu'est-ce que tu voudrais voir à Paris?&nbsp\; 
- Pourquoi?&nbsp\;</li>\n<li>&nbsp\;Pourquoi est-ce que Paris est une ville 
- importante en France?&nbsp\; (élargir cette réponse)&nbsp\;</li>\n</ol>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183400Z
-UID:event-calendar-event-253695
-DTSTART;VALUE=DATE:20220406T000000
-DTEND;VALUE=DATE:20220406T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R4 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253695
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220406T171800Z
-UID:event-assignment-override-52719
-DTSTART:20220406T120000Z
-DTEND:20220406T120000Z
-CLASS:PUBLIC
-DESCRIPTION:Read: Pages 353-357\n\nAnswer: "Questions for Review" #1-5 and 
- "Understanding the Story" Part A #1-8
-SEQUENCE:0
-SUMMARY:The Riches of Africa (World History P3) [CP World History]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6385&m
- onth=04&year=2022#assignment_303837
-X-ALT-DESC;FMTTYPE=text/html:<p><strong>Read</strong>: Pages 353-357</p>\n<
- p><strong>Answer</strong>: "Questions for Review" #1-5 and "Understanding 
- the Story" Part A #1-8</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220406T130900Z
-UID:event-assignment-358113
-DTSTART:20220406T185900Z
-DTEND:20220406T185900Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Chapter 24 Questions [English I]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6197&m
- onth=04&year=2022#assignment_358113
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220324T183400Z
-UID:event-assignment-356862
-DTSTART;VALUE=DATE:20220406T000000
-DTEND;VALUE=DATE:20220406T000000
-CLASS:PUBLIC
-DESCRIPTION:https://docs.google.com/presentation/d/1O7J1OquJkwBJ6iIoRdibICv
- WuNlBwPuyt1kfoPiyDdI/edit#slide=id.g100be9eaab6_0_56 
-SEQUENCE:0
-SUMMARY:Check-In: Personal Dictionary #3 (Due on Fri.\, 4/8)   [French 2 CP
-  (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_356862
-X-ALT-DESC;FMTTYPE=text/html:<p><a href="https://docs.google.com/presentati
- on/d/1O7J1OquJkwBJ6iIoRdibICvWuNlBwPuyt1kfoPiyDdI/edit#slide=id.g100be9eaa
- b6_0_56" target="_blank">https://docs.google.com/presentation/d/1O7J1OquJk
- wBJ6iIoRdibICvWuNlBwPuyt1kfoPiyDdI/edit#slide=id.g100be9eaab6_0_56</a>&nbs
- p\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220502T160000Z
-UID:event-assignment-357946
-DTSTART;VALUE=DATE:20220406T000000
-DTEND;VALUE=DATE:20220406T000000
-CLASS:PUBLIC
-DESCRIPTION:Submit your one-page\, double-spaced review of the Mr. Pascack 
- Hills Contest here. 
-SEQUENCE:0
-SUMMARY:Mr. PH Review [English I]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6197&m
- onth=04&year=2022#assignment_357946
-X-ALT-DESC;FMTTYPE=text/html:<p>Submit your one-page\, double-spaced review
-  of the Mr. Pascack Hills Contest here.&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183400Z
-UID:event-calendar-event-253696
-DTSTART;VALUE=DATE:20220407T000000
-DTEND;VALUE=DATE:20220407T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R3 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253696
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210831T130300Z
-UID:event-calendar-event-252961
-DTSTART;VALUE=DATE:20220408T000000
-DTEND;VALUE=DATE:20220408T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:Fashion Show [Hills]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=04&year=2022#calendar_event_252961
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183400Z
-UID:event-calendar-event-253697
-DTSTART;VALUE=DATE:20220408T000000
-DTEND;VALUE=DATE:20220408T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R2 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253697
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220407T142900Z
-UID:event-assignment-358129
-DTSTART:20220408T190000Z
-DTEND:20220408T190000Z
-CLASS:PUBLIC
-DESCRIPTION:1. Read the handout titled "Supplementary Topic 7" that I passe
- d out in class yesterday\n\n2. Write a one paragraph summary (in your own 
- words) explaining what makes an allele dominant and not recessive\n\n3. An
- swers the 3 questions on the handout\n\n4. Submit these to Canvas by the e
- nd of class
-SEQUENCE:0
-SUMMARY:April 8 Sub Plan - Per 8 [Honors Biology]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6300&m
- onth=04&year=2022#assignment_358129
-X-ALT-DESC;FMTTYPE=text/html:<p>1. Read the handout titled "Supplementary T
- opic 7" that I passed out in class yesterday</p>\n<p>2. Write a one paragr
- aph summary (in your own words) explaining what makes an allele dominant a
- nd not recessive</p>\n<p>3. Answers the 3 questions on the handout</p>\n<p
- >4. Submit these to Canvas by the end of class</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220318T133100Z
-UID:event-assignment-356215
-DTSTART;VALUE=DATE:20220408T000000
-DTEND;VALUE=DATE:20220408T000000
-CLASS:PUBLIC
-DESCRIPTION:Today\, please choose any book from our FVR (Free Voluntary Rea
- ding) Library. Read for 10-15 minutes. \n\nThen\, in your journal\, summa
- rize in 8-10 sentences (in French) of what you read. Include today's date 
- and the title of the reader.  In addition to the summary\; state your opi
- nion about the story\, characters\, etc.  \n\n 
-SEQUENCE:0
-SUMMARY:FVR Library & Journal Writing (In Class: Fri.\, April 8)       [Fre
- nch 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_356215
-X-ALT-DESC;FMTTYPE=text/html:<p>Today\, please choose any book from our FVR
-  (Free Voluntary Reading) Library. Read for 10-15 minutes.&nbsp\;</p>\n<p>
- Then\, in your journal\, summarize in 8-10 sentences (in French) of what y
- ou read. Include <span style="text-decoration: underline\;">today's date</
- span> and the <span style="text-decoration: underline\;">title</span> of t
- he reader.&nbsp\; In addition to the summary\; state your opinion about th
- e story\, characters\, etc.&nbsp\;&nbsp\;</p>\n<p>&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220411T171400Z
-UID:event-assignment-322760
-DTSTART;VALUE=DATE:20220408T000000
-DTEND;VALUE=DATE:20220408T000000
-CLASS:PUBLIC
-DESCRIPTION:[Personal Dictionary 2020-2021] (https://pascack.instructure.co
- m/courses/6441/pages/personal-dictionary-2020-2021)\n\n 
-SEQUENCE:0
-SUMMARY:Personal Dictionary #3 [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_322760
-X-ALT-DESC;FMTTYPE=text/html:<p><a title="Personal Dictionary  2020-2021" h
- ref="https://pascack.instructure.com/courses/6441/pages/personal-dictionar
- y-2020-2021" data-api-endpoint="https://pascack.instructure.com/api/v1/cou
- rses/6441/pages/personal-dictionary-2020-2021" data-api-returntype="Page">
- Personal Dictionary 2020-2021</a></p>\n<p>&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183400Z
-UID:event-calendar-event-253698
-DTSTART;VALUE=DATE:20220411T000000
-DTEND;VALUE=DATE:20220411T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R1 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253698
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220412T183600Z
-UID:event-assignment-358510
-DTSTART;VALUE=DATE:20220411T000000
-DTEND;VALUE=DATE:20220411T000000
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Interro (Quiz) Unité 3B: En Ville (Interpretive)  [French 2 CP (Hi
- lls)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_358510
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220404T154500Z
-UID:event-assignment-322659
-DTSTART;VALUE=DATE:20220411T000000
-DTEND;VALUE=DATE:20220411T000000
-CLASS:PUBLIC
-DESCRIPTION: \n\nStudents will complete an interactive activity about Pari
- s\, of previously learned vocabulary and expressions (giving & receiving d
- irections in a city) and grammar (useful verbs\, present tense\, command f
- orm) in preparation for their IPA\, in Communities & Cultures.  This is a
- lso an opportunity to learn about the neighborhoods\, streets\, and sites 
- in Paris.  Students are requested to take and submit a screenshot(s) of t
- heir responses for the activities.  [Dans la rue] (http://tourismefle.fre
- e.fr/dans_la_rue.htm?_tmc=kHcFDlQHpox8NJc0Y8C5Seq5uGVEN9LTcBlI1ioBzeY#comm
- ent)\n\n \n\nStudents will then demonstrate what they have learned in a p
- ractice quiz on Canvas\, in which will identify major sites\, general info
- rmation about Paris\; as well as write a dialogue giving and receiving dir
- ections based on a map of a Parisian neighborhood.\n\n[Dans la rue (Paris)
- : Practice Quiz] (https://pascack.instructure.com/courses/3505/quizzes/881
- 4)\n\n \n\nIf time permits\, students will also listen and complete a son
- g\, Champs Elysées\, a  traditional song about the famous street\, in a 
- new version by a contemporary French artist\, Zaz.\n\n[Champs Elysées\, Z
- az] (https://lyricstraining.com/fr/play/zaz/champs-elysees/H6w0ZDLnp6#b7c)
- \n\n \n\n \n\n 
-SEQUENCE:0
-SUMMARY:3B: À Paris (Review for IPA #3)  [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_322659
-X-ALT-DESC;FMTTYPE=text/html:<p>&nbsp\;</p>\n<p>Students will complete an i
- nteractive activity about Paris\, of previously learned vocabulary and exp
- ressions (giving &amp\; receiving directions in a city) and grammar (usefu
- l verbs\, present tense\, command form) in preparation for their IPA\, in 
- <em>Communities &amp\; Cultures</em>.&nbsp\; This is also an opportunity t
- o learn about the neighborhoods\, streets\, and sites in Paris.&nbsp\; Stu
- dents are requested to take and submit a screenshot(s) of their responses 
- for the activities.&nbsp\; <span><a href="http://tourismefle.free.fr/dans_
- la_rue.htm?_tmc=kHcFDlQHpox8NJc0Y8C5Seq5uGVEN9LTcBlI1ioBzeY#comment">Dans 
- la rue</a></span></p>\n<p>&nbsp\;</p>\n<p>Students will then demonstrate w
- hat they have learned in a practice quiz on Canvas\, in which will identif
- y major sites\, general information about Paris\; as well as write a dialo
- gue giving and receiving directions based on a map of a Parisian neighborh
- ood.</p>\n<p><span><a href="https://pascack.instructure.com/courses/3505/q
- uizzes/8814" data-api-endpoint="https://pascack.instructure.com/api/v1/cou
- rses/3505/quizzes/8814" data-api-returntype="Quiz">Dans la rue (Paris): Pr
- actice Quiz</a></span></p>\n<p>&nbsp\;</p>\n<p>If time permits\, students 
- will also listen and complete a song\, <em>Champs Elysées</em>\, a&nbsp\;
-  traditional song about the famous street\, in a new version by a contempo
- rary French artist\, Zaz.</p>\n<p><span><a href="https://lyricstraining.co
- m/fr/play/zaz/champs-elysees/H6w0ZDLnp6#b7c">Champs Elysées\, Zaz</a></sp
- an></p>\n<p>&nbsp\;</p>\n<p>&nbsp\;</p>\n<p>&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220411T122700Z
-UID:event-assignment-356043
-DTSTART;VALUE=DATE:20220411T000000
-DTEND;VALUE=DATE:20220411T000000
-CLASS:PUBLIC
-DESCRIPTION:Interro 3B: En Ville (Quiz)\n\n \n\nhttps://quizlet.com/tdelgi
- udice/folders/french-2-2-h-communities-cultures/sets \n\nStudy Guide\n\n*
-  buildings\, stores\, streets\, etc. in the town \n\n* methods of transpo
- rtation  \n\n* giving & receiving directions \n\n* running errands in t
- own\n\n* command form of verbs (l'impératif)  
-SEQUENCE:0
-SUMMARY:Interro 3B: En Ville (Quiz) Study Guide [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_356043
-X-ALT-DESC;FMTTYPE=text/html:<p>Interro 3B: En Ville (Quiz)</p>\n<p>&nbsp\;
- </p>\n<p><a href="https://quizlet.com/tdelgiudice/folders/french-2-2-h-com
- munities-cultures/sets" target="_blank">https://quizlet.com/tdelgiudice/fo
- lders/french-2-2-h-communities-cultures/sets</a>&nbsp\;</p>\n<p>Study Guid
- e</p>\n<ul>\n<li>buildings\, stores\, streets\, etc. in the town&nbsp\;</l
- i>\n<li>methods of transportation&nbsp\;&nbsp\;</li>\n<li>giving &amp\; re
- ceiving directions&nbsp\;</li>\n<li>running errands in town</li>\n<li>comm
- and form of verbs (<em>l'impératif</em>)&nbsp\;&nbsp\;</li>\n</ul>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183400Z
-UID:event-calendar-event-253699
-DTSTART;VALUE=DATE:20220412T000000
-DTEND;VALUE=DATE:20220412T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R4 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253699
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220411T124800Z
-UID:event-assignment-358497
-DTSTART:20220412T120000Z
-DTEND:20220412T120000Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Per 1 pedigree submission [Honors Biology]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6300&m
- onth=04&year=2022#assignment_358497
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220218T172700Z
-UID:event-calendar-event-277644
-DTSTART:20220412T230000Z
-DTEND:20220413T010000Z
-CLASS:PUBLIC
-LOCATION:Auditorium
-SEQUENCE:0
-SUMMARY:Talent Night [Hills]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=04&year=2022#calendar_event_277644
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183400Z
-UID:event-calendar-event-253700
-DTSTART;VALUE=DATE:20220413T000000
-DTEND;VALUE=DATE:20220413T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R3 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253700
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220410T152400Z
-UID:event-assignment-358133
-DTSTART:20220413T120000Z
-DTEND:20220413T120000Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Rd 248-258 and notes [Honors Biology]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6300&m
- onth=04&year=2022#assignment_358133
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210831T130400Z
-UID:event-calendar-event-252962
-DTSTART:20220413T230000Z
-DTEND:20220414T020000Z
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:College Admissions Panel [Hills]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=04&year=2022#calendar_event_252962
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220412T160100Z
-UID:event-assignment-356779
-DTSTART;VALUE=DATE:20220413T000000
-DTEND;VALUE=DATE:20220413T000000
-CLASS:PUBLIC
-DESCRIPTION:IPA #3  Study Guide \n\n[Quizlet: Communities & Cultures] (ht
- tps://quizlet.com/tdelgiudice/folders/french-2-2-h-communities-cultures/se
- ts) \n\n* Locations in a town/city\n\n* Spending time in a a city  (orde
- ring food\, purchasing items\, getting money\, etc.)\n\n* Modes of public 
- transportation \n\n* Giving & receiving directions \n\n \n\nReading & C
- omprehension Questions (20 points)\n\nPresentational Writing  (20 points)
- \n\nInterpersonal Speaking  (20 points)\n\nTotal: (60 points)\n\n 
-SEQUENCE:0
-SUMMARY:IPA #3 (Tues.\, April 12) Study Guide  [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_356779
-X-ALT-DESC;FMTTYPE=text/html:<p>IPA #3&nbsp\; Study Guide&nbsp\;</p>\n<p><a
-  href="https://quizlet.com/tdelgiudice/folders/french-2-2-h-communities-cu
- ltures/sets" target="_blank">Quizlet: Communities &amp\; Cultures</a>&nbsp
- \;</p>\n<ul>\n<li>Locations in a town/city</li>\n<li>Spending time in a a 
- city&nbsp\; (ordering food\, purchasing items\, getting money\, etc.)</li>
- \n<li>Modes of public transportation&nbsp\;</li>\n<li>Giving &amp\; receiv
- ing directions&nbsp\;</li>\n</ul>\n<p>&nbsp\;</p>\n<p>Reading &amp\; Compr
- ehension Questions (20 points)</p>\n<p>Presentational Writing&nbsp\; (20 p
- oints)</p>\n<p>Interpersonal Speaking&nbsp\; (20 points)</p>\n<p>Total: (6
- 0 points)</p>\n<p>&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183400Z
-UID:event-calendar-event-253701
-DTSTART;VALUE=DATE:20220414T000000
-DTEND;VALUE=DATE:20220414T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R2 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253701
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220412T135500Z
-UID:event-assignment-358691
-DTSTART:20220414T120000Z
-DTEND:20220414T120000Z
-CLASS:PUBLIC
-DESCRIPTION:Test will be the Thursday AFTER vacation (4/28)
-SEQUENCE:0
-SUMMARY:Next Unit Test ANNOUNCEMENT [Honors Biology]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6300&m
- onth=04&year=2022#assignment_358691
-X-ALT-DESC;FMTTYPE=text/html:<p><span style="font-size: 14pt\;"><strong>Tes
- t will be the Thursday AFTER vacation (4/28)</strong></span></p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183500Z
-UID:event-calendar-event-253702
-DTSTART;VALUE=DATE:20220425T000000
-DTEND;VALUE=DATE:20220425T000000
+DTSTAMP:20220829T155300Z
+UID:event-calendar-event-293347
+DTSTART;VALUE=DATE;VALUE=DATE:20220901
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:ALL [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253702
+ onth=09&year=2022#calendar_event_293347
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220425T141200Z
-UID:event-assignment-override-53011
-DTSTART:20220425T141300Z
-DTEND:20220425T141300Z
+DTSTAMP:20220830T163000Z
+UID:event-assignment-390148
+DTSTART:20220901T115900Z
+DTEND:20220901T115900Z
 CLASS:PUBLIC
-DESCRIPTION:Directions: Carefully read\, examine\, and then answer the ques
- tions for each of the 9 DBQ documents.  \n\nSubmission Details:  You ha
- ve two options for submission\n\n* You can type up your question responses
-  and upload your typed responses as a document.\n\n* Or you can write your
-  responses on paper by hand\, or onto the DBQ packet (that you printed out
- )\, take photos\, and then upload the photos onto canvas as proof of compl
- etion. \n\n* If you have the Canvas App you can easily take photos and up
- load the assignment from your phone.\n\n* If you are uploading multiple im
- ages from the computer please make sure you choose the first image\, then 
- click on "+ Add Another File" to upload each additional image.  Then subm
- it all images at once as one Canvas submission.\n\n[Multiple Submissions P
- hoto.png] (https://pascack.instructure.com/courses/6385/files/1566475/prev
- iew)
+DESCRIPTION:Precalculus (Yellow Textbook)\n\n* Page 13-14 #73\, 79-82\n\nAd
+ vanced Math (Purple Textbook)\n\n* Page 5 #18\, 29\n\n* Page 16 #16\, 22\n
+ \n \n\n[Solutions to check] (https://pascack.instructure.com/courses/6952
+ /assignments/399071)
 SEQUENCE:0
-SUMMARY:DBQ 16: New Imperialism Causes [Documents] (World History P3) [CP W
- orld History]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6385&m
- onth=04&year=2022#assignment_303853
-X-ALT-DESC;FMTTYPE=text/html:<p><strong>Directions</strong>: Carefully read
- \, examine\, and then answer the questions for each of the 9 DBQ documents
- .&nbsp\;&nbsp\;</p>\n<p><strong>Submission Details</strong>:&nbsp\; You ha
- ve two options for submission</p>\n<ol>\n<li>You can type up your question
-  responses and upload your typed responses as a document.</li>\n<li>Or you
-  can write your responses on paper by hand\, or onto the DBQ packet (that 
- you printed out)\, take photos\, and then upload the photos onto canvas as
-  proof of completion.&nbsp\;\n<ul>\n<li>If you have the Canvas App you can
-  easily take photos and upload the assignment from your phone.</li>\n<li>I
- f you are uploading multiple images from the computer please make sure you
-  choose the first image\, then click on "+ Add Another File" to upload eac
- h additional image.&nbsp\; Then submit all images at once as one Canvas su
- bmission.</li>\n</ul>\n</li>\n</ol>\n<p><img src="https://pascack.instruct
- ure.com/courses/6385/files/1566475/preview" alt="Multiple Submissions Phot
- o.png" width="704" height="294" data-api-endpoint="https://pascack.instruc
- ture.com/api/v1/courses/6385/files/1566475" data-api-returntype="File"></p
- >
+SUMMARY:PRF HW 1 [Pre-Calculus]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_6952&m
+ onth=09&year=2022#assignment_390148
+X-ALT-DESC;FMTTYPE=text/html:<p>Precalculus (Yellow Textbook)</p>\n<ul>\n<l
+ i>Page 13-14 #73\, 79-82</li>\n</ul>\n<p>Advanced Math (Purple Textbook)</
+ p>\n<ul>\n<li>Page 5 #18\, 29</li>\n<li>Page 16 #16\, 22</li>\n</ul>\n<p>&
+ nbsp\;</p>\n<p><a title="SOL PRF HW 1" href="https://pascack.instructure.c
+ om/courses/6952/assignments/399071" data-api-endpoint="https://pascack.ins
+ tructure.com/api/v1/courses/6952/assignments/399071" data-api-returntype="
+ Assignment">Solutions to check</a></p>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220413T173500Z
-UID:event-assignment-358807
-DTSTART:20220425T190000Z
-DTEND:20220425T190000Z
-CLASS:PUBLIC
-DESCRIPTION:Unit test on Chromosomes and Human Genetics on Thursday (4/28)
-SEQUENCE:0
-SUMMARY:Test REMINDER [Honors Biology]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6300&m
- onth=04&year=2022#assignment_358807
-X-ALT-DESC;FMTTYPE=text/html:<p>Unit test on Chromosomes and Human Genetics
-  on Thursday (4/28)</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220425T164700Z
-UID:event-assignment-322657
-DTSTART;VALUE=DATE:20220425T000000
-DTEND;VALUE=DATE:20220425T000000
-CLASS:PUBLIC
-DESCRIPTION:Write the definitions and study the terms. If you wish\, you ca
- n create a "picture dictionary."  \n\n[Vocabulaire_ Voyager dans le mond
- e.docx] (https://pascack.instructure.com/courses/6441/files/1596276/downlo
- ad?wrap=1)\n\n[Quizlet ] (https://quizlet.com/293310792/4a-vocabulaire-voy
- ager-dans-le-monde-la-valise-lhotel-flash-cards/) \n\n \n\nOù est-ce qu
- e tu vas pour les vacances?   / Je vais .... \n\nQu'est-ce que tu vas p
- rendre?  /  Je vais mettre ..... dans ma valise. \n\nN'oublie pas ... 
-  ( le passeport\, le parapluie\,  les billets\, une trousse de toilette .
- .. )\n\n \n\nmon/ ma/ mes\n\nton/ ta / tes
-SEQUENCE:0
-SUMMARY:3A:  Voyager dans le monde  (Vocabulaire) [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_322657
-X-ALT-DESC;FMTTYPE=text/html:<p>Write the definitions and study the terms. 
- If you wish\, you can create a "picture dictionary."&nbsp\;&nbsp\;</p>\n<p
- ><a class="instructure_file_link instructure_scribd_file" title="Vocabulai
- re_ Voyager dans le monde.docx" href="https://pascack.instructure.com/cour
- ses/6441/files/1596276/download?wrap=1" data-api-endpoint="https://pascack
- .instructure.com/api/v1/courses/6441/files/1596276" data-api-returntype="F
- ile">Vocabulaire_ Voyager dans le monde.docx</a></p>\n<p><a href="https://
- quizlet.com/293310792/4a-vocabulaire-voyager-dans-le-monde-la-valise-lhote
- l-flash-cards/" target="_blank">Quizlet </a>&nbsp\;</p>\n<p>&nbsp\;</p>\n<
- p><em>Où est-ce que tu vas pour les vacances?&nbsp\; &nbsp\;/ Je vais ...
- .&nbsp\;</em></p>\n<p><em>Qu'est-ce que tu vas prendre?&nbsp\; /&nbsp\; </
- em><em>Je vais mettre ..... dans ma valise.&nbsp\;</em></p>\n<p><em>N'oubl
- ie pas ...&nbsp\; </em><em>( le passeport\, le parapluie\,&nbsp\; les bill
- ets\, une trousse de toilette ... )</em></p>\n<p>&nbsp\;</p>\n<p><em>mon/ 
- ma/ mes</em></p>\n<p><em>ton/ ta / tes</em></p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220408T132700Z
-UID:event-calendar-event-281437
-DTSTART;VALUE=DATE:20220426T000000
-DTEND;VALUE=DATE:20220426T000000
+DTSTAMP:20220829T155300Z
+UID:event-calendar-event-293348
+DTSTART;VALUE=DATE;VALUE=DATE:20220902
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
-SUMMARY:Imperialism Jeopardy [CP World History]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6385&m
- onth=04&year=2022#calendar_event_281437
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_293348
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183500Z
-UID:event-calendar-event-253703
-DTSTART;VALUE=DATE:20220426T000000
-DTEND;VALUE=DATE:20220426T000000
+DTSTAMP:20220830T164700Z
+UID:event-assignment-390153
+DTSTART:20220902T115900Z
+DTEND:20220902T115900Z
+CLASS:PUBLIC
+DESCRIPTION:Advanced Math Textbook\n\n* Page 41 #1bc\, 4\, 5\, 18\, 22\, 27
+ \n\n               AND\n\n[Linear Functions Part 2] (https://pasca
+ ck.instructure.com/courses/6952/files/1911080?wrap=1)\n\n \n\n[Solutions]
+  (https://pascack.instructure.com/courses/6952/assignments/399073)
+SEQUENCE:0
+SUMMARY:PRF HW 2 [Pre-Calculus]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_6952&m
+ onth=09&year=2022#assignment_390153
+X-ALT-DESC;FMTTYPE=text/html:<p>Advanced Math Textbook</p>\n<ul>\n<li>Page 
+ 41 #1bc\, 4\, 5\, 18\, 22\, 27</li>\n</ul>\n<p>&nbsp\; &nbsp\; &nbsp\; &nb
+ sp\; &nbsp\; &nbsp\; &nbsp\; &nbsp\;AND</p>\n<p><a class="instructure_file
+ _link instructure_scribd_file inline_disabled" title="linear functions par
+ t 2 (date 10.27.06) CM.doc" href="https://pascack.instructure.com/courses/
+ 6952/files/1911080?wrap=1" target="_blank" data-canvas-previewable="false"
+  data-api-endpoint="https://pascack.instructure.com/api/v1/courses/6952/fi
+ les/1911080" data-api-returntype="File">Linear Functions Part 2</a></p>\n<
+ p>&nbsp\;</p>\n<p><a title="SOL PRF HW2" href="https://pascack.instructure
+ .com/courses/6952/assignments/399073" data-api-endpoint="https://pascack.i
+ nstructure.com/api/v1/courses/6952/assignments/399073" data-api-returntype
+ ="Assignment">Solutions</a></p>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220831T120000Z
+UID:event-assignment-377266
+DTSTART:20220902T120000Z
+DTEND:20220902T120000Z
+CLASS:PUBLIC
+DESCRIPTION:Please follow the expected procedure and protocol for preparing
+  for a class lecture. Copy the CQ into your notebook so that we can begin 
+ the lecture without delay. View the accompanying PowerPoint and take notes
+  from each slide in order to gain pre-knowledge for the lecture. Do NOT an
+ swer the CQ prior to our class discussion.\n\nCQ: What is a CQ? For what i
+ s CQ an abbreviation? What is the proper procedure and protocol for taking
+  notes in United States History I? According to the article given as an ac
+ companiment to the PowerPoint\, why is writing notes a more academically s
+ ound technique than typing or copying and pasting?\n\n[Handwriting beats t
+ yping when it comes to taking class notes.docx] (https://pascack.instructu
+ re.com/courses/7035/files/1934103?wrap=1) \n\n[Note Taking Procedure and 
+ Protocol.pptx] (https://pascack.instructure.com/courses/7035/files/1934095
+ ?wrap=1) 
+SEQUENCE:0
+SUMMARY: Pre-Lecture Protocol: CQ (Proper Note Taking) with PowerPoint [Uni
+ ted States History I]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_7035&m
+ onth=09&year=2022#assignment_377266
+X-ALT-DESC;FMTTYPE=text/html:<p><em><strong>Please follow the expected proc
+ edure and protocol for preparing for a class lecture. Copy the CQ into you
+ r notebook so that we can begin the lecture without delay. View the accomp
+ anying PowerPoint and take notes from each slide in order to gain pre-know
+ ledge for the lecture. Do NOT answer the CQ prior to our class discussion.
+ </strong></em></p>\n<p>CQ: What is a CQ? For what is CQ an abbreviation? W
+ hat is the proper procedure and protocol for taking notes in United States
+  History I? According to the article given as an accompaniment to the Powe
+ rPoint\, why is writing notes a more academically sound technique than typ
+ ing or copying and pasting?</p>\n<p><a class="instructure_file_link instru
+ cture_scribd_file inline_disabled" title="Handwriting beats typing when it
+  comes to taking class notes.docx" href="https://pascack.instructure.com/c
+ ourses/7035/files/1934103?wrap=1" target="_blank" data-canvas-previewable=
+ "false" data-api-endpoint="https://pascack.instructure.com/api/v1/courses/
+ 7035/files/1934103" data-api-returntype="File">Handwriting beats typing wh
+ en it comes to taking class notes.docx</a>&nbsp\;</p>\n<p><a class="instru
+ cture_file_link instructure_scribd_file inline_disabled" title="Note Takin
+ g Procedure and Protocol.pptx" href="https://pascack.instructure.com/cours
+ es/7035/files/1934095?wrap=1" target="_blank" data-canvas-previewable="fal
+ se" data-api-endpoint="https://pascack.instructure.com/api/v1/courses/7035
+ /files/1934095" data-api-returntype="File">Note Taking Procedure and Proto
+ col.pptx</a>&nbsp\;</p>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220831T020100Z
+UID:event-assignment-392892
+DTSTART:20220902T190000Z
+DTEND:20220902T190000Z
+CLASS:PUBLIC
+DESCRIPTION:A Survey of Your Thoughts And Ideas\n\nThere are a number of it
+ ems for which I am interested in each student's individual input\, so plea
+ se take the time to consider these questions carefully when responding.\n\
+ nWith your help\, I can provide better experiences and practices this year
+  for everyone in the class.\n\n 
+SEQUENCE:0
+SUMMARY:APCS - School Opening Survey [AP Computer Science A]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_7033&m
+ onth=09&year=2022#assignment_392892
+X-ALT-DESC;FMTTYPE=text/html:<p><strong><span style="font-size: 14pt\;">A S
+ urvey of Your Thoughts And Ideas</span></strong></p>\n<p><span style="font
+ -size: 14pt\;"><span>There are a number of items for which I am interested
+  in each student's individual input\, so please take the time to consider 
+ these questions carefully when responding.<br></span></span></p>\n<p><span
+  style="font-size: 14pt\;"><span>With your help\, I can provide better exp
+ eriences and practices this year for everyone in the class.<br></span></sp
+ an></p>\n<p>&nbsp\;</p>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T172400Z
+UID:event-calendar-event-285216
+DTSTART;VALUE=DATE;VALUE=DATE:20220906
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R1 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253703
+ onth=09&year=2022#calendar_event_285216
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220414T122800Z
-UID:event-assignment-override-52809
-DTSTART:20220426T140200Z
-DTEND:20220426T140200Z
+DTSTAMP:20220831T132800Z
+UID:event-assignment-390154
+DTSTART:20220906T115900Z
+DTEND:20220906T115900Z
 CLASS:PUBLIC
-DESCRIPTION:Read: P. 632-681\n\nAnswer: [Imperialism Review Questions - CP
- .docx] (https://pascack.instructure.com/courses/6385/files/1566590/downloa
- d?wrap=1)\n\n* Answers to the questions should be based on the text in thi
- s reading packet (or class notes if applicable)\, not the internet.\n\n* T
- he reading packet was given out in class.  Please see me if you need anot
- her copy.
+DESCRIPTION:Advanced Math Textbook\n\n* Page 41 #29\, 30\, 31\, 34\n\n* Pag
+ e 47 #15\n\n* Page 72 #12\n\n \n\nPre-Calculus Textbook\n\n* Page 99 #27\
+ , 28\, 54\n\n \n\n[Solutions] (https://pascack.instructure.com/courses/69
+ 52/assignments/404307)
 SEQUENCE:0
-SUMMARY:Imperialism Review Questions (World History P3) [CP World History]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6385&m
- onth=04&year=2022#assignment_303886
-X-ALT-DESC;FMTTYPE=text/html:<p><strong>Read</strong>: P. 632-681</p>\n<p><
- strong>Answer</strong>:&nbsp\;<a id="" class=" instructure_scribd_file ins
- tructure_file_link" title="Imperialism Review Questions - CP.docx" href="h
- ttps://pascack.instructure.com/courses/6385/files/1566590/download?wrap=1"
-  target="" data-api-endpoint="https://pascack.instructure.com/api/v1/cours
- es/6385/files/1566590" data-api-returntype="File">Imperialism Review Quest
- ions - CP.docx</a></p>\n<ul>\n<li>Answers to the questions should be based
-  on the text in this reading packet (or class notes if applicable)\, not t
- he internet.</li>\n<li>The reading packet was given out in class.&nbsp\; P
- lease see me if you need another copy.</li>\n</ul>
+SUMMARY:PRF HW 3 [Pre-Calculus]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_6952&m
+ onth=09&year=2022#assignment_390154
+X-ALT-DESC;FMTTYPE=text/html:<p>Advanced Math Textbook</p>\n<ul>\n<li>Page 
+ 41 #29\, 30\, 31\, 34</li>\n<li>Page 47 #15</li>\n<li>Page 72 #12</li>\n</
+ ul>\n<p>&nbsp\;</p>\n<p>Pre-Calculus Textbook</p>\n<ul>\n<li>Page 99 #27\,
+  28\, 54</li>\n</ul>\n<p>&nbsp\;</p>\n<p><a title="SOL PRF HW3" href="http
+ s://pascack.instructure.com/courses/6952/assignments/404307" data-api-endp
+ oint="https://pascack.instructure.com/api/v1/courses/6952/assignments/4043
+ 07" data-api-returntype="Assignment">Solutions</a></p>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220427T180100Z
-UID:event-assignment-322687
-DTSTART;VALUE=DATE:20220426T000000
-DTEND;VALUE=DATE:20220426T000000
+DTSTAMP:20220828T205700Z
+UID:event-assignment-380073
+DTSTART;VALUE=DATE;VALUE=DATE:20220906
 CLASS:PUBLIC
-DESCRIPTION: \n\n \n\n[Quizlet: Chapitre 1] (https://quizlet.com/68678133
- 3/brandon-brown-quebec-ch-1-passe-flash-cards/) \n\nStudy Guide: [BBQ-TG-
- Ch.1.pdf] (https://pascack.instructure.com/courses/6441/files/1596182/down
- load?wrap=1)\n\n[Kahoot: Chapitre 1] (https://play.kahoot.it/v2/?quizId=16
- 5fcb97-0e9f-467a-a79d-14692abdf67b) \n\nVoici 'hôtel où Brandon et sa f
- amille ont passé leurs vacances!  [Le Château Frontenac de Québec] (ht
- tps://www.fairmont.com/frontenac-quebec/?goto=fiche_hotel&code_hotel=A572&
- merchantid=seo-maps-FR-A572&sourceid=aw-cen&utm_medium=seo+maps&utm_source
- =google+Maps&utm_campaign=seo+maps%3Fgoto%3Dfiche_hotel&code_hotel=A572&me
- rchantid=seo-maps-CA-A572&sourceid=aw-cen&utm_medium=seo+maps&utm_source=g
- oogle+Maps&utm_campaign=seo+maps&y_source=1_MTIzNjE0MDAtNzE1LWxvY2F0aW9uLm
- dvb2dsZV93ZWJzaXRlX292ZXJyaWRl)  \n\n \n\nDiscussion  \n\n* Où était
-  Brandon?\n\n* Avec qui était Brandon?  \n\n* Comment était l'hôtel?\
- n\n* Qu'est-ce que Brandon voulait faire? \n\n* Qu'est-ce que la maman de
-  Brandon voudrait faire demain? 
+DESCRIPTION:On Thursday and Friday:\n\nIn-Person\, we complete the Getting 
+ To Know You Questionnaire\, we collect your answers\, only Mrs. Marootian-
+ Miller and Mrs. Adams will read them. We will not share your answers with 
+ other students.\n\nHere is the link to the [Questionnaire.] (https://docs.
+ google.com/forms/d/e/1FAIpQLScRO0Kn2cw80_U72q8_TH1kHFWVfVvfxTy3h3uZn0GvAz-
+ LLg/viewform?usp=sf_link) Please fill it out by Thursday 9/6/221.\n\n 
 SEQUENCE:0
-SUMMARY:Brandon Brown Québec: Chapitre 1 [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_322687
-X-ALT-DESC;FMTTYPE=text/html:<p class="p1">&nbsp\;</p>\n<p class="p2">&nbsp
- \;</p>\n<p class="p2"><a class="inline_disabled" href="https://quizlet.com
- /686781333/brandon-brown-quebec-ch-1-passe-flash-cards/" target="_blank">Q
- uizlet: Chapitre 1</a>&nbsp\;</p>\n<p class="p2"><span class="s1">Study Gu
- ide: <a class="instructure_file_link instructure_scribd_file" title="BBQ-T
- G-Ch.1.pdf" href="https://pascack.instructure.com/courses/6441/files/15961
- 82/download?wrap=1" data-api-endpoint="https://pascack.instructure.com/api
- /v1/courses/6441/files/1596182" data-api-returntype="File">BBQ-TG-Ch.1.pdf
- </a></span></p>\n<p class="p2"><a class="inline_disabled" href="https://pl
- ay.kahoot.it/v2/?quizId=165fcb97-0e9f-467a-a79d-14692abdf67b" target="_bla
- nk">Kahoot: Chapitre 1</a>&nbsp\;</p>\n<p class="p2">Voici 'hôtel où Bra
- ndon et sa famille ont passé leurs vacances!&nbsp\; <a class="inline_disa
- bled" href="https://www.fairmont.com/frontenac-quebec/?goto=fiche_hotel&am
- p\;code_hotel=A572&amp\;merchantid=seo-maps-FR-A572&amp\;sourceid=aw-cen&a
- mp\;utm_medium=seo+maps&amp\;utm_source=google+Maps&amp\;utm_campaign=seo+
- maps%3Fgoto%3Dfiche_hotel&amp\;code_hotel=A572&amp\;merchantid=seo-maps-CA
- -A572&amp\;sourceid=aw-cen&amp\;utm_medium=seo+maps&amp\;utm_source=google
- +Maps&amp\;utm_campaign=seo+maps&amp\;y_source=1_MTIzNjE0MDAtNzE1LWxvY2F0a
- W9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl" target="_blank">Le Château Frontenac
-  de Québec</a> &nbsp\;</p>\n<p class="p2">&nbsp\;</p>\n<p class="p1"><spa
- n class="s1">Discussion&nbsp\;&nbsp\;</span></p>\n<ol class="ol1">\n<li cl
- ass="li2"><span class="s3">Où était Brandon?</span></li>\n<li class="li2
- "><span class="s3">Avec qui était Brandon?&nbsp\;&nbsp\;</span></li>\n<li
-  class="li2"><span class="s3">Comment était l'hôtel?</span></li>\n<li cl
- ass="li2"><span class="s3">Qu'est-ce que Brandon voulait faire?&nbsp\;</sp
- an></li>\n<li class="li2"><span class="s3">Qu'est-ce que la maman de Brand
- on voudrait faire demain?&nbsp\;</span></li>\n</ol>
+SUMMARY:September 2nd: Getting to Know You [English II]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_6954&m
+ onth=09&year=2022#assignment_380073
+X-ALT-DESC;FMTTYPE=text/html:<p>On Thursday and Friday:</p>\n<p>In-Person\,
+  we complete the Getting To Know You Questionnaire\, we collect your answe
+ rs\, only Mrs. Marootian-Miller and Mrs. Adams will read them. We will not
+  share your answers with other students.</p>\n<p>Here is the link to the <
+ a href="https://docs.google.com/forms/d/e/1FAIpQLScRO0Kn2cw80_U72q8_TH1kHF
+ WVfVvfxTy3h3uZn0GvAz-LLg/viewform?usp=sf_link">Questionnaire.</a><strong>&
+ nbsp\;</strong>Please fill it out by Thursday 9/6/221.</p>\n<p>&nbsp\;</p>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183500Z
-UID:event-calendar-event-253704
-DTSTART;VALUE=DATE:20220427T000000
-DTEND;VALUE=DATE:20220427T000000
+DTSTAMP:20220802T172400Z
+UID:event-calendar-event-285217
+DTSTART;VALUE=DATE;VALUE=DATE:20220907
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R4 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253704
+ onth=09&year=2022#calendar_event_285217
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220404T161100Z
-UID:event-assignment-357918
-DTSTART:20220427T120000Z
-DTEND:20220427T120000Z
-CLASS:PUBLIC
-DESCRIPTION:Here is the 2nd semester extra credit option. Create and submit
-  an analogy poster (pics or drawings only - nothing 3-D!) for the two Gene
- tics units. Posters can be any size. Do up to 15 analogies. Points earned 
- will be UP TO 10 pts based on quantity AND quality AND originality of anal
- ogies\n\nPossible topics for analogies:\n\n* Sexual reproduction life cycl
- e details like haploid/diploid\, gametes etc\n\n* Meiosis\n\n* Flower part
- s and reproduction\n\n* Mendel's ideas\, principles and experiments\n\n* P
- unnett Squares etc\n\n* Probability in heredity\n\n* Chromosomes\n\n* Huma
- n genetic disorders\n\n* Karyotypes\n\n* Human blood types\n\n* Crossing o
- ver\n\n* Pedigrees\n\n* Human Genome Project\n\nDue by: April 27\n\n 
-SEQUENCE:0
-SUMMARY:Extra Credit Option [Honors Biology]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6300&m
- onth=04&year=2022#assignment_357918
-X-ALT-DESC;FMTTYPE=text/html:<p>Here is the 2nd semester extra credit optio
- n. Create and submit an analogy poster (<strong>pics or drawings only - no
- thing 3-D!)</strong> for the two Genetics units. Posters can be any size. 
- Do up to 15 analogies. Points earned will be <strong>UP TO 10 pts </strong
- >based on <strong>quantity AND quality AND originality</strong> of analogi
- es</p>\n<p>Possible topics for analogies:</p>\n<ul>\n<li>Sexual reproducti
- on life cycle details like haploid/diploid\, gametes etc</li>\n<li>Meiosis
- </li>\n<li>Flower parts and reproduction</li>\n<li>Mendel's ideas\, princi
- ples and experiments</li>\n<li>Punnett Squares etc</li>\n<li>Probability i
- n heredity</li>\n<li>Chromosomes</li>\n<li>Human genetic disorders</li>\n<
- li>Karyotypes</li>\n<li>Human blood types</li>\n<li>Crossing over</li>\n<l
- i>Pedigrees</li>\n<li>Human Genome Project</li>\n</ul>\n<p><strong>Due by:
-  April 27</strong></p>\n<p>&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210831T130400Z
-UID:event-calendar-event-252969
-DTSTART:20220427T230000Z
-DTEND:20220428T010000Z
+DTSTAMP:20220802T172500Z
+UID:event-calendar-event-285218
+DTSTART;VALUE=DATE;VALUE=DATE:20220908
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
-SUMMARY:NHS Induction [Hills]
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285218
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T172500Z
+UID:event-calendar-event-285219
+DTSTART;VALUE=DATE;VALUE=DATE:20220909
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285219
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T172500Z
+UID:event-calendar-event-285220
+DTSTART;VALUE=DATE;VALUE=DATE:20220912
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285220
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220822T152800Z
+UID:event-calendar-event-287066
+DTSTART:20220912T120000Z
+DTEND:20220912T190000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Senior Retakes [Hills]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=04&year=2022#calendar_event_252969
+ onth=09&year=2022#calendar_event_287066
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183500Z
-UID:event-calendar-event-253705
-DTSTART;VALUE=DATE:20220428T000000
-DTEND;VALUE=DATE:20220428T000000
+DTSTAMP:20220822T174500Z
+UID:event-calendar-event-284782
+DTSTART:20220912T130000Z
+DTEND:20220912T150000Z
 CLASS:PUBLIC
-LOCATION:
+LOCATION:2nd Floor Conference Rm.
 SEQUENCE:0
-SUMMARY:R3 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253705
+SUMMARY:PFA Meeting: [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=09&year=2022#calendar_event_284782
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220427T122100Z
-UID:event-assignment-356927
-DTSTART;VALUE=DATE:20220428T000000
-DTEND;VALUE=DATE:20220428T000000
+DTSTAMP:20220822T152700Z
+UID:event-calendar-event-287065
+DTSTART:20220912T230000Z
+DTEND:20220913T010000Z
 CLASS:PUBLIC
-DESCRIPTION:Your focus should be written in the same manner as the samples 
- in the handout. You should identify the issue and appropriately phrase i
- t so that it is clear whether you will be examining the causes or the effe
- cts - not both!\n\n \n\n 
+LOCATION:PHHS Media Center
 SEQUENCE:0
-SUMMARY:Essay Topic And Focus [English I]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6197&m
- onth=04&year=2022#assignment_356927
-X-ALT-DESC;FMTTYPE=text/html:<p>Your focus should be written in the same ma
- nner as the samples in the handout. You should identify the&nbsp\;<strong>
- issue&nbsp\;</strong>and appropriately phrase it so that it is clear wheth
- er you will be examining the <strong>causes</strong> or the <strong>effect
- s&nbsp\;</strong>- not both!</p><p>&nbsp\;</p><p>&nbsp\;</p>
+SUMMARY:Meet the Superintendent Night [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=09&year=2022#calendar_event_287065
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183500Z
-UID:event-calendar-event-253706
-DTSTART;VALUE=DATE:20220429T000000
-DTEND;VALUE=DATE:20220429T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R2 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=04&year=2022#calendar_event_253706
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220411T135300Z
-UID:event-assignment-358513
-DTSTART;VALUE=DATE:20220429T000000
-DTEND;VALUE=DATE:20220429T000000
-CLASS:PUBLIC
-DESCRIPTION:Today\, please choose any book from our FVR (Free Voluntary Rea
- ding) Library. Read for 10-15 minutes. \n\nThen\, in your journal\, summa
- rize in 8-10 sentences (in French) of what you read. Include today's date 
- and the title of the reader.  In addition to the summary\; state your opi
- nion about the story\, characters\, etc.  \n\n 
-SEQUENCE:0
-SUMMARY:FVR Library & Journal Writing (In Class: Fri.\, April 29)       [Fr
- ench 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_358513
-X-ALT-DESC;FMTTYPE=text/html:<p>Today\, please choose any book from our FVR
-  (Free Voluntary Reading) Library. Read for 10-15 minutes.&nbsp\;</p>\n<p>
- Then\, in your journal\, summarize in 8-10 sentences (in French) of what y
- ou read. Include <span style="text-decoration: underline\;">today's date</
- span> and the <span style="text-decoration: underline\;">title</span> of t
- he reader.&nbsp\; In addition to the summary\; state your opinion about th
- e story\, characters\, etc.&nbsp\;&nbsp\;</p>\n<p>&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220429T223800Z
-UID:event-assignment-359324
-DTSTART;VALUE=DATE:20220429T000000
-DTEND;VALUE=DATE:20220429T000000
-CLASS:PUBLIC
-DESCRIPTION:BRICKBREAKER SUMMARY VIDEO\n\nSubmit a screen-recorded video su
- mmarizing your completed BrickBreaker game and code.\n\nYour video should 
- address:\n\n   1) Gameplay:\n          - Custom images for the game
-  pieces... there is a theme for your game.\n          - The ball foll
- ows the paddle before the serve.\n          - A "number of hits per b
- rick" is displayed and works appropriately. \n          - A sound is
-  played when the ball collides with the paddle.\n          - The seco
- nd and subsequent levels correspond to the number of rows of bricks.\n  
-         - The score\, level\, and remaining "lives" are displayed appr
- opriately.\n          - The game ends and prompts for a restart.\n  
-         - The game restart correctly resets the values of the score\, 
- lives\, and bricks.\n          - Show and describe any individual gam
- e personalizations you made.\n\n   2) Code:\n          - Code is ne
- at and organized (formatting has been considered!).\n          - Desc
- ribe how the number of hits is detected and used to remove bricks and scor
- e points.\n          - Describe any additional code features that you
-  are particularly proud of.
-SEQUENCE:0
-SUMMARY:Java - BrickBreaker Video Summary (Game and Code Demo) [Honors Comp
- uter Science (21-22)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6189&m
- onth=04&year=2022#assignment_359324
-X-ALT-DESC;FMTTYPE=text/html:<p><strong><span style="font-size: 14pt\;">BRI
- CKBREAKER SUMMARY VIDEO</span></strong></p>\n<p><span style="font-size: 14
- pt\;">Submit a screen-recorded video summarizing your completed BrickBreak
- er game and code.</span></p>\n<p><span style="font-size: 14pt\;">Your vide
- o should address:<br></span></p>\n<p><span style="font-size: 14pt\;">&nbsp
- \; &nbsp\;1) Gameplay:<br><span style="color: var(--ic-brand-font-color-da
- rk)\; font-family: inherit\; font-size: 14pt\;">&nbsp\; &nbsp\; &nbsp\; &n
- bsp\; &nbsp\; - Custom images for the game pieces... there is a theme for 
- your game.</span><br>&nbsp\; &nbsp\; &nbsp\; &nbsp\; &nbsp\; - The ball fo
- llows the paddle before the serve.</span><span style="color: var(--ic-bran
- d-font-color-dark)\; font-family: inherit\; font-size: 14pt\;"><br>&nbsp\;
-  &nbsp\; &nbsp\; &nbsp\; &nbsp\; - A "number of hits per brick" is display
- ed and works appropriately.&nbsp\;<br></span><span style="color: var(--ic-
- brand-font-color-dark)\; font-family: inherit\; font-size: 14pt\;">&nbsp\;
-  &nbsp\; &nbsp\; &nbsp\; &nbsp\; - A sound is played when the ball collide
- s with the paddle.</span><span style="color: var(--ic-brand-font-color-dar
- k)\; font-family: inherit\; font-size: 14pt\;"><br></span><span style="fon
- t-size: 14pt\;">&nbsp\; &nbsp\; &nbsp\; &nbsp\; &nbsp\; - The second and s
- ubsequent levels correspond to the number of rows of bricks.<br>&nbsp\; &n
- bsp\; &nbsp\; &nbsp\; &nbsp\; - The score\, level\, and remaining "lives" 
- are displayed appropriately.<br>&nbsp\; &nbsp\; &nbsp\; &nbsp\; &nbsp\; - 
- The game ends and prompts for a restart.<br>&nbsp\; &nbsp\; &nbsp\; &nbsp\
- ; &nbsp\; - The game restart correctly resets the values of the <span styl
- e="color: var(--ic-brand-font-color-dark)\; font-family: inherit\; font-si
- ze: 14pt\;">score\, lives\, and bricks.<br></span></span><span style="colo
- r: var(--ic-brand-font-color-dark)\; font-family: inherit\; font-size: 14p
- t\;">&nbsp\; &nbsp\; &nbsp\; &nbsp\; &nbsp\; - Show and describe any indiv
- idual game personalizations you made.<br></span></p>\n<p><span style="colo
- r: var(--ic-brand-font-color-dark)\; font-family: inherit\; font-size: 14p
- t\;">&nbsp\; &nbsp\;2) Code:<br>&nbsp\; &nbsp\; &nbsp\; &nbsp\; &nbsp\; - 
- Code is neat and organized (formatting has been considered!).<br>&nbsp\; &
- nbsp\; &nbsp\; &nbsp\; &nbsp\; - Describe how the number of hits is detect
- ed and used to remove bricks and score points.<br>&nbsp\; &nbsp\; &nbsp\; 
- &nbsp\; &nbsp\; - Describe any additional code features that you are parti
- cularly proud of.<br><br><br></span></p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220324T164700Z
-UID:event-assignment-322709
-DTSTART;VALUE=DATE:20220430T000000
-DTEND;VALUE=DATE:20220430T000000
-CLASS:PUBLIC
-DESCRIPTION:Earn 100 XP monthly on Duolingo.com (Topic: Travel) towards Dai
- ly Preparation & Responsibilities (15%). \n\n[https://www.duolingo.com] (
- https://www.duolingo.com/learn)
-SEQUENCE:0
-SUMMARY:Duolingo.: April [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=04&year=2022#assignment_322709
-X-ALT-DESC;FMTTYPE=text/html:<p class="p1"><span class="s1"><span>Earn 100 
- XP monthly on Duolingo.com (Topic: Travel) towards Daily Preparation &amp\
- ; Responsibilities (15%).&nbsp\;</span></span></p>\n<p class="p2"><a class
- ="external" href="https://www.duolingo.com/learn" target="_blank"><span>ht
- tps://www.duolingo.com</span></a></p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220426T185300Z
-UID:event-assignment-359301
-DTSTART;VALUE=DATE:20220501T000000
-DTEND;VALUE=DATE:20220501T000000
-CLASS:PUBLIC
-DESCRIPTION:For this month\, earn XP on Duolingo.com (Topic: Travel 2) towa
- rds "Daily Preparation & Responsibilities" (15%).  
-SEQUENCE:0
-SUMMARY:Begin Duolingo for May (Due 5/31)  [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=05&year=2022#assignment_359301
-X-ALT-DESC;FMTTYPE=text/html:<p><span>For this month\, earn XP on Duolingo.
- com (Topic: Travel 2) towards "Daily Preparation &amp\; Responsibilities" 
- (15%).&nbsp\;&nbsp\;</span></p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210825T180300Z
-UID:event-calendar-event-256877
-DTSTART;VALUE=DATE:20220502T000000
-DTEND;VALUE=DATE:20220502T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:ALL (Delayed) [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_256877
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220502T143900Z
-UID:event-assignment-359811
-DTSTART:20220502T185900Z
-DTEND:20220502T185900Z
-CLASS:PUBLIC
-DESCRIPTION:Use [this Google Doc] (https://docs.google.com/document/d/10PTr
- 35aoqJJ_Td1m9Af5wVFKgsNsgrFzr2E1qHavjFE/edit?usp=sharing) to complete your
-  source analysis. \n\n \n\nFor each column\, you need to write a brief e
- xplanation. \n\n \n\n 
-SEQUENCE:0
-SUMMARY:Source Analysis [English I]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6197&m
- onth=05&year=2022#assignment_359811
-X-ALT-DESC;FMTTYPE=text/html:<p>Use <a class="inline_disabled" href="https:
- //docs.google.com/document/d/10PTr35aoqJJ_Td1m9Af5wVFKgsNsgrFzr2E1qHavjFE/
- edit?usp=sharing" target="_blank">this Google Doc</a> to complete your sou
- rce analysis.&nbsp\;</p>\n<p>&nbsp\;</p>\n<p>For each column\, you need to
-  write a brief explanation.&nbsp\;</p>\n<p>&nbsp\;</p>\n<p>&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220408T132800Z
-UID:event-calendar-event-281439
-DTSTART;VALUE=DATE:20220503T000000
-DTEND;VALUE=DATE:20220503T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:Imperialism Test [CP World History]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6385&m
- onth=05&year=2022#calendar_event_281439
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183700Z
-UID:event-calendar-event-253708
-DTSTART;VALUE=DATE:20220503T000000
-DTEND;VALUE=DATE:20220503T000000
+DTSTAMP:20220802T172500Z
+UID:event-calendar-event-285221
+DTSTART;VALUE=DATE;VALUE=DATE:20220913
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R1 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253708
+ onth=09&year=2022#calendar_event_285221
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220426T134600Z
-UID:event-assignment-322689
-DTSTART;VALUE=DATE:20220503T000000
-DTEND;VALUE=DATE:20220503T000000
-CLASS:PUBLIC
-DESCRIPTION: \n\n[Quizlet: Chapitre 2] (https://quizlet.com/_bgy2a4?x=1jqt
- &i=1biff) \n\n[Ch. 2 Study Guide BBQ.pdf] (https://pascack.instructure.co
- m/courses/6441/files/1596167/download?wrap=1)\n\n[Kahoot: Chapitre 2] (htt
- ps://create.kahoot.it/collection/403443a3-1e3d-40ce-83e3-bba5fbecd831)  
- \n\n \n\nDiscussion \n\n* Qu'est-ce que la maman de Brandon a fait le ma
- tin? \n\n* Quelle était la réaction de Brandon quand il s'est réveill
- é?\n\n* Qu'est-ce qu'ils ont visité?  Avec quel mode de transport?\n\n*
-  Comment était Brandon? (3 mots) \n\n* Comment était Katie? (3 mots) \
- n\n* Qu'est-ce que la maman voudrait faire? Quelle était la réaction de 
- Brandon? \n\n \n\nComplete the crossword puzzle on paper. \n\n[Ch 2 Les
-  Consequences Passe.pdf] (https://pascack.instructure.com/courses/6441/fil
- es/1596177?wrap=1) \n\n 
-SEQUENCE:0
-SUMMARY:Brandon Brown Québec: Chapitre 2 [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=05&year=2022#assignment_322689
-X-ALT-DESC;FMTTYPE=text/html:<p>&nbsp\;</p>\n<p><span style="font-size: 1re
- m\;"><a class="inline_disabled" href="https://quizlet.com/_bgy2a4?x=1jqt&a
- mp\;i=1biff" target="_blank">Quizlet: Chapitre 2</a>&nbsp\;</span></p>\n<p
- ><a class="instructure_file_link instructure_scribd_file" title="Ch. 2 Stu
- dy Guide BBQ.pdf" href="https://pascack.instructure.com/courses/6441/files
- /1596167/download?wrap=1" data-api-endpoint="https://pascack.instructure.c
- om/api/v1/courses/6441/files/1596167" data-api-returntype="File">Ch. 2 Stu
- dy Guide BBQ.pdf</a></p>\n<p><a class="inline_disabled" href="https://crea
- te.kahoot.it/collection/403443a3-1e3d-40ce-83e3-bba5fbecd831" target="_bla
- nk">Kahoot: Chapitre 2</a>&nbsp\;&nbsp\;</p>\n<p>&nbsp\;</p>\n<p class="p2
- "><span class="s1"><strong>Discussion</strong>&nbsp\;</span></p>\n<ol clas
- s="ol1">\n<li class="li3"><span class="s1">Qu'est-ce que la maman de Brand
- on a fait le matin?&nbsp\;</span></li>\n<li class="li3"><span class="s1">Q
- uelle était la réaction de Brandon quand il s'est réveillé?</span></li
- >\n<li class="li3"><span class="s1">Qu'est-ce qu'ils ont visité?&nbsp\; A
- vec quel mode de transport?</span></li>\n<li class="li3"><span class="s1">
- Comment était Brandon? (3 mots)&nbsp\;</span></li>\n<li class="li3"><span
-  class="s1">Comment était Katie? (3 mots)&nbsp\;</span></li>\n<li class="
- li3"><span class="s1">Qu'est-ce que la maman voudrait faire? Quelle était
-  la réaction de Brandon?&nbsp\;</span></li>\n</ol>\n<p class="p1">&nbsp\;
- </p>\n<p><span>Complete the crossword puzzle on paper.&nbsp\;</span></p>\n
- <p><a id="1399949" class="instructure_file_link instructure_scribd_file" h
- ref="https://pascack.instructure.com/courses/6441/files/1596177?wrap=1" ta
- rget="_blank" data-canvas-previewable="true" data-api-endpoint="https://pa
- scack.instructure.com/api/v1/courses/6441/files/1596177" data-api-returnty
- pe="File">Ch 2 Les Consequences Passe.pdf</a>&nbsp\;</p>\n<p>&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183700Z
-UID:event-calendar-event-253709
-DTSTART;VALUE=DATE:20220504T000000
-DTEND;VALUE=DATE:20220504T000000
+DTSTAMP:20220802T172600Z
+UID:event-calendar-event-285222
+DTSTART;VALUE=DATE;VALUE=DATE:20220914
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R4 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253709
+ onth=09&year=2022#calendar_event_285222
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220430T005400Z
-UID:event-assignment-359585
-DTSTART:20220504T120000Z
-DTEND:20220504T120000Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Rd 356-359 and take notes [Honors Biology]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6300&m
- onth=05&year=2022#assignment_359585
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183700Z
-UID:event-calendar-event-253710
-DTSTART;VALUE=DATE:20220505T000000
-DTEND;VALUE=DATE:20220505T000000
+DTSTAMP:20220802T172600Z
+UID:event-calendar-event-285223
+DTSTART;VALUE=DATE;VALUE=DATE:20220915
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R3 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253710
+ onth=09&year=2022#calendar_event_285223
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183700Z
-UID:event-calendar-event-253711
-DTSTART;VALUE=DATE:20220506T000000
-DTEND;VALUE=DATE:20220506T000000
+DTSTAMP:20220802T172600Z
+UID:event-calendar-event-285224
+DTSTART;VALUE=DATE;VALUE=DATE:20220916
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R2 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253711
+ onth=09&year=2022#calendar_event_285224
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220429T163100Z
-UID:event-assignment-322690
-DTSTART;VALUE=DATE:20220506T000000
-DTEND;VALUE=DATE:20220506T000000
+DTSTAMP:20220802T172600Z
+UID:event-calendar-event-285225
+DTSTART;VALUE=DATE;VALUE=DATE:20220919
 CLASS:PUBLIC
-DESCRIPTION: \n\n Review the vocabulary and study guide before reading th
- e chapter. \n\n[Quizlet: Chapitre 3] (https://quizlet.com/594857072/brand
- on-brown-a-quebec-chapitre-3-flash-cards/) \n\n[Ch. 3 Study Guide BBQ.pdf
- ] (https://pascack.instructure.com/courses/6441/files/1596165/download?wra
- p=1)\n\n \n\nDiscussion\n\n* Comment s’appelle la belle fontaine devant
-  laquelle les gens prennent des photos  D’où est venue cette fontaine
-  ? Qui a offert la fontaine à la ville de Québec?\n\n* Pourquoi est-ce q
- ue Brandon ne voulait pas prendre une photo devant la fontaine?\n\n* Comme
- nt était l’humeur* de Brandon ? (3 mots).    *l'humeur: mood\n\n* Qui
-  est monté dans le bus? Pourquoi Brandon avait-t-il peur* de cette person
- ne?    *avoir peur: to fear \n\n* Brandon a pensé que cette personne 
- était un criminel. Pourquoi ? \n\n* Brandon était dans le bus avec son 
- nouveau copain. Où sont-ils allés\, selon le chauffeur?\n\n \n\nComplet
- e the crossword puzzle and save to your notebook or Google Drive.[Ch 3 Un 
- Homme Etrange Passe.pdf] (https://pascack.instructure.com/courses/6441/fil
- es/1596174?wrap=1) 
+LOCATION:
 SEQUENCE:0
-SUMMARY:Brandon Brown Québec: Chapitre 3 [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=05&year=2022#assignment_322690
-X-ALT-DESC;FMTTYPE=text/html:<p>&nbsp\;</p>\n<p class="p2">&nbsp\;Review th
- e vocabulary and study guide before reading the chapter.&nbsp\;</p>\n<p><a
-  class="inline_disabled" href="https://quizlet.com/594857072/brandon-brown
- -a-quebec-chapitre-3-flash-cards/" target="_blank">Quizlet: Chapitre 3</a>
- &nbsp\;</p>\n<p><a class="instructure_file_link instructure_scribd_file" t
- itle="Ch. 3 Study Guide BBQ.pdf" href="https://pascack.instructure.com/cou
- rses/6441/files/1596165/download?wrap=1" data-api-endpoint="https://pascac
- k.instructure.com/api/v1/courses/6441/files/1596165" data-api-returntype="
- File">Ch. 3 Study Guide BBQ.pdf</a></p>\n<p>&nbsp\;</p>\n<p class="p1"><st
- rong>Discussion</strong></p>\n<ol class="ol1">\n<li class="li2"><span clas
- s="s3">Comment s’appelle la belle fontaine devant laquelle les gens pren
- nent des photos&nbsp\;&nbsp\;D’où est venue cette fontaine ? Qui a offe
- rt la fontaine à la ville de Québec?</span><span class="s1"><br></span><
- /li>\n<li class="li3"><span class="s3">Pourquoi est-ce que Brandon ne voul
- ait pas prendre une photo devant la fontaine?</span><span class="s4"><br><
- /span></li>\n<li class="li3"><span class="s3">Comment était l’humeur* d
- e Brandon ? (3 mots).&nbsp\; &nbsp\; <em>*l'humeur: mood</em></span><span 
- class="s4"><br></span></li>\n<li class="li3"><span class="s3">Qui est mont
- é dans le bus? Pourquoi Brandon avait-t-il peur* de cette personne?&nbsp\
- ; &nbsp\;<em> *avoir peur: to fear&nbsp\;</em></span><span class="s4"><br>
- </span></li>\n<li class="li3"><span class="s3">Brandon a pensé que cette 
- personne était un criminel. Pourquoi ?&nbsp\;</span><span class="s4"><br>
- </span></li>\n<li class="li3"><span class="s3">Brandon était dans le bus 
- avec son nouveau copain. Où sont-ils allés\, selon le chauffeur?</span><
- span class="s4"><br></span></li>\n</ol>\n<p>&nbsp\;</p>\n<p><span>Complete
-  the crossword puzzle and save to your notebook or Google Drive.</span><a 
- class="instructure_file_link instructure_scribd_file" title="Ch 3 Un Homme
-  Etrange Passe.pdf" href="https://pascack.instructure.com/courses/6441/fil
- es/1596174?wrap=1" target="_blank" data-api-endpoint="https://pascack.inst
- ructure.com/api/v1/courses/6441/files/1596174" data-api-returntype="File">
- Ch 3 Un Homme Etrange Passe.pdf</a>&nbsp\;</p>
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285225
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220426T211200Z
-UID:event-assignment-359307
-DTSTART;VALUE=DATE:20220506T000000
-DTEND;VALUE=DATE:20220506T000000
+DTSTAMP:20220728T133100Z
+UID:event-calendar-event-284784
+DTSTART:20220919T120000Z
+DTEND:20220919T190000Z
 CLASS:PUBLIC
-DESCRIPTION:Today\, please choose any book from our FVR (Free Voluntary Rea
- ding) Library. Read for 10-15 minutes. \n\nThen\, in your journal\, summa
- rize in 8-10 sentences (in French) of what you read. Include today's date 
- and the title of the reader.  In addition to the summary\; state your opi
- nion about the story\, characters\, etc.  \n\n 
+LOCATION:
 SEQUENCE:0
-SUMMARY:FVR Library & Journal Writing (In Class: Fri.\,May 6)       [French
-  2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=05&year=2022#assignment_359307
-X-ALT-DESC;FMTTYPE=text/html:<p>Today\, please choose any book from our FVR
-  (Free Voluntary Reading) Library. Read for 10-15 minutes.&nbsp\;</p>\n<p>
- Then\, in your journal\, summarize in 8-10 sentences (in French) of what y
- ou read. Include <span style="text-decoration: underline\;">today's date</
- span> and the <span style="text-decoration: underline\;">title</span> of t
- he reader.&nbsp\; In addition to the summary\; state your opinion about th
- e story\, characters\, etc.&nbsp\;&nbsp\;</p>\n<p>&nbsp\;</p>
+SUMMARY:Yearbook Pictures [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=09&year=2022#calendar_event_284784
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210831T130500Z
-UID:event-calendar-event-252970
-DTSTART;VALUE=DATE:20220507T000000
-DTEND;VALUE=DATE:20220507T000000
+DTSTAMP:20220802T172600Z
+UID:event-calendar-event-285226
+DTSTART;VALUE=DATE;VALUE=DATE:20220920
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285226
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T172600Z
+UID:event-calendar-event-285227
+DTSTART;VALUE=DATE;VALUE=DATE:20220921
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285227
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T133100Z
+UID:event-calendar-event-284785
+DTSTART;VALUE=DATE;VALUE=DATE:20220922
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Back to School Night [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=09&year=2022#calendar_event_284785
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T172600Z
+UID:event-calendar-event-285228
+DTSTART;VALUE=DATE;VALUE=DATE:20220922
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285228
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T172600Z
+UID:event-calendar-event-285229
+DTSTART;VALUE=DATE;VALUE=DATE:20220923
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285229
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T172700Z
+UID:event-calendar-event-285230
+DTSTART;VALUE=DATE;VALUE=DATE:20220928
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL/Testing [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285230
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T172700Z
+UID:event-calendar-event-285231
+DTSTART;VALUE=DATE;VALUE=DATE:20220929
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL/Testing [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285231
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T172700Z
+UID:event-calendar-event-285232
+DTSTART;VALUE=DATE;VALUE=DATE:20220930
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL/Testing [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=09&year=2022#calendar_event_285232
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T153100Z
+UID:event-calendar-event-284786
+DTSTART;VALUE=DATE;VALUE=DATE:20221001
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:SAT Exam [Hills]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=05&year=2022#calendar_event_252970
+ onth=10&year=2022#calendar_event_284786
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183800Z
-UID:event-calendar-event-253712
-DTSTART;VALUE=DATE:20220509T000000
-DTEND;VALUE=DATE:20220509T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:ALL [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253712
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220429T171500Z
-UID:event-assignment-359677
-DTSTART:20220509T120000Z
-DTEND:20220509T120000Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Electrophoresis Lab due [Honors Biology]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6300&m
- onth=05&year=2022#assignment_359677
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183800Z
-UID:event-calendar-event-253713
-DTSTART;VALUE=DATE:20220510T000000
-DTEND;VALUE=DATE:20220510T000000
+DTSTAMP:20220802T172800Z
+UID:event-calendar-event-285233
+DTSTART;VALUE=DATE;VALUE=DATE:20221003
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R1 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253713
+ onth=10&year=2022#calendar_event_285233
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183800Z
-UID:event-calendar-event-253714
-DTSTART;VALUE=DATE:20220511T000000
-DTEND;VALUE=DATE:20220511T000000
+DTSTAMP:20220802T172900Z
+UID:event-calendar-event-285234
+DTSTART;VALUE=DATE;VALUE=DATE:20221004
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R4 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253714
+ onth=10&year=2022#calendar_event_285234
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183800Z
-UID:event-calendar-event-253715
-DTSTART;VALUE=DATE:20220512T000000
-DTEND;VALUE=DATE:20220512T000000
+DTSTAMP:20220802T172900Z
+UID:event-calendar-event-285235
+DTSTART;VALUE=DATE;VALUE=DATE:20221006
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R3 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253715
+ onth=10&year=2022#calendar_event_285235
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210831T130500Z
-UID:event-calendar-event-252971
-DTSTART;VALUE=DATE:20220513T000000
-DTEND;VALUE=DATE:20220513T000000
+DTSTAMP:20220802T172900Z
+UID:event-calendar-event-285236
+DTSTART;VALUE=DATE;VALUE=DATE:20221007
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
-SUMMARY:Junior Prom [Hills]
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285236
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T135500Z
+UID:event-calendar-event-284789
+DTSTART:20221008T140000Z
+DTEND:20221008T140000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Marching Band Festival [Hills]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=05&year=2022#calendar_event_252971
+ onth=10&year=2022#calendar_event_284789
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183800Z
-UID:event-calendar-event-253716
-DTSTART;VALUE=DATE:20220513T000000
-DTEND;VALUE=DATE:20220513T000000
+DTSTAMP:20220802T173000Z
+UID:event-calendar-event-285237
+DTSTART;VALUE=DATE;VALUE=DATE:20221010
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
-SUMMARY:R2 [HillsRotation]
+SUMMARY:Half Day/ALL [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253716
+ onth=10&year=2022#calendar_event_285237
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220427T175100Z
-UID:event-assignment-359518
-DTSTART;VALUE=DATE:20220513T000000
-DTEND;VALUE=DATE:20220513T000000
-CLASS:PUBLIC
-DESCRIPTION:Today\, please choose any book from our FVR (Free Voluntary Rea
- ding) Library. Read for 10-15 minutes. \n\nThen\, in your journal\, summa
- rize in 8-10 sentences (in French) of what you read. Include today's date 
- and the title of the reader.  In addition to the summary\; state your opi
- nion about the story\, characters\, etc.  \n\n 
-SEQUENCE:0
-SUMMARY:FVR Library & Journal Writing (In Class: Fri.\,May 13)       [Frenc
- h 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=05&year=2022#assignment_359518
-X-ALT-DESC;FMTTYPE=text/html:<p>Today\, please choose any book from our FVR
-  (Free Voluntary Reading) Library. Read for 10-15 minutes.&nbsp\;</p>\n<p>
- Then\, in your journal\, summarize in 8-10 sentences (in French) of what y
- ou read. Include <span style="text-decoration: underline\;">today's date</
- span> and the <span style="text-decoration: underline\;">title</span> of t
- he reader.&nbsp\; In addition to the summary\; state your opinion about th
- e story\, characters\, etc.&nbsp\;&nbsp\;</p>\n<p>&nbsp\;</p>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183800Z
-UID:event-calendar-event-253717
-DTSTART;VALUE=DATE:20220516T000000
-DTEND;VALUE=DATE:20220516T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:ALL [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253717
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20220427T125800Z
-UID:event-assignment-356928
-DTSTART;VALUE=DATE:20220516T000000
-DTEND;VALUE=DATE:20220516T000000
-CLASS:PUBLIC
-DESCRIPTION:The Cause and Effect essay is a straight-forward\, analytical 
- essay that is easy to organize. As we will learn\, a cause and effect essa
- y can analyze either the multiple causes of a particular effect\, or the 
- multiple effects of a particular cause. \n\nYou will choose a topic about
-  which to write a cause and effect essay. Use [THIS RESOURCE] (https://owl
- .excelsior.edu/rhetorical-styles/cause-and-effect-essay/) for a guide duri
- ng your pre-writing stages.\n\nDuring this process\, we will focus on the 
- following:\n\n* Individual weak areas in writing that you will identify\n\
- n* Grammar: Pronoun clarity and Sentence Structure\n\n* The Rhetorical Tri
- angle\n\n* The revision process\n\nThis writing assignment will be a proce
- ss. You will be permitted to submit up to three drafts. \n\nYou will also
-  deliver a SPEECH on your topic for a separate grade. More details on this
-  as we progress. Speeches will be scheduled during the week prior to final
-  submission. \n\nTimeline:\n\n* Topic Chosen - Thursday 4/28\n\n* Researc
- h and Works Cited complete - Wednesday 5/4\n\n* First Draft Complete and S
- ubmitted - Friday 5/6\n\n* [Speeches - Tuesday 5/11 through Monday 5/16] (
- https://docs.google.com/document/d/1uNOJxqACmhYi0Bg3Sp2XULo0FdnUES2sRQBRFF
- rWdzU/edit)\n\n* Final Draft Complete - Monday 5/16
-SEQUENCE:0
-SUMMARY:Cause and Effect Essay [English I]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6197&m
- onth=05&year=2022#assignment_356928
-X-ALT-DESC;FMTTYPE=text/html:<p>The&nbsp\;<strong>Cause and Effect</strong>
-  essay is a straight-forward\, analytical essay that is easy to organize. 
- As we will learn\, a cause and effect essay can analyze either the <strong
- >multiple causes&nbsp\;</strong>of a particular effect\, or the <strong>mu
- ltiple effects</strong> of a particular cause.&nbsp\;</p>\n<p>You will cho
- ose a topic about which to write a cause and effect essay. Use <a class="i
- nline_disabled" href="https://owl.excelsior.edu/rhetorical-styles/cause-an
- d-effect-essay/" target="_blank">THIS RESOURCE</a> for a guide during your
-  pre-writing stages.</p>\n<p>During this process\, we will focus on the fo
- llowing:</p>\n<ol>\n<li>Individual weak areas in writing that you will ide
- ntify</li>\n<li>Grammar: Pronoun clarity and Sentence Structure</li>\n<li>
- The Rhetorical Triangle</li>\n<li>The revision process</li>\n</ol>\n<p>Thi
- s writing assignment will be a process. You will be permitted to submit up
-  to three drafts.&nbsp\;</p>\n<p>You will also deliver a SPEECH on your to
- pic for a separate grade. More details on this as we progress. Speeches wi
- ll be scheduled during the week prior to final submission.&nbsp\;</p>\n<p>
- Timeline:</p>\n<ol>\n<li>Topic Chosen - Thursday 4/28</li>\n<li>Research a
- nd Works Cited complete - Wednesday 5/4</li>\n<li>First Draft Complete and
-  Submitted - Friday 5/6</li>\n<li><a href="https://docs.google.com/documen
- t/d/1uNOJxqACmhYi0Bg3Sp2XULo0FdnUES2sRQBRFFrWdzU/edit">Speeches - Tuesday 
- 5/11 through Monday 5/16</a></li>\n<li>Final Draft Complete - Monday 5/16<
- /li>\n</ol>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T183800Z
-UID:event-calendar-event-253718
-DTSTART;VALUE=DATE:20220517T000000
-DTEND;VALUE=DATE:20220517T000000
+DTSTAMP:20220802T173000Z
+UID:event-calendar-event-285238
+DTSTART;VALUE=DATE;VALUE=DATE:20221011
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R1 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253718
+ onth=10&year=2022#calendar_event_285238
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183800Z
-UID:event-calendar-event-253719
-DTSTART;VALUE=DATE:20220518T000000
-DTEND;VALUE=DATE:20220518T000000
+DTSTAMP:20220802T173000Z
+UID:event-calendar-event-285239
+DTSTART;VALUE=DATE;VALUE=DATE:20221012
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R4 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253719
+ onth=10&year=2022#calendar_event_285239
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210831T130500Z
-UID:event-calendar-event-252972
-DTSTART:20220518T230000Z
-DTEND:20220519T013000Z
+DTSTAMP:20220728T135400Z
+UID:event-calendar-event-284787
+DTSTART:20221012T230000Z
+DTEND:20221013T013000Z
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
-SUMMARY:Graduation Concert [Hills]
+SUMMARY:Financial Aid Night [Hills]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=05&year=2022#calendar_event_252972
+ onth=10&year=2022#calendar_event_284787
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183900Z
-UID:event-calendar-event-253720
-DTSTART;VALUE=DATE:20220519T000000
-DTEND;VALUE=DATE:20220519T000000
+DTSTAMP:20220802T173000Z
+UID:event-calendar-event-285240
+DTSTART;VALUE=DATE;VALUE=DATE:20221013
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R3 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253720
+ onth=10&year=2022#calendar_event_285240
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183900Z
-UID:event-calendar-event-253721
-DTSTART;VALUE=DATE:20220520T000000
-DTEND;VALUE=DATE:20220520T000000
+DTSTAMP:20220802T173000Z
+UID:event-calendar-event-285241
+DTSTART;VALUE=DATE;VALUE=DATE:20221014
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R2 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253721
+ onth=10&year=2022#calendar_event_285241
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T183900Z
-UID:event-calendar-event-253722
-DTSTART;VALUE=DATE:20220523T000000
-DTEND;VALUE=DATE:20220523T000000
+DTSTAMP:20220728T153100Z
+UID:event-calendar-event-284826
+DTSTART;VALUE=DATE;VALUE=DATE:20221015
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
-SUMMARY:ALL [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253722
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184000Z
-UID:event-calendar-event-253723
-DTSTART;VALUE=DATE:20220524T000000
-DTEND;VALUE=DATE:20220524T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R1 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253723
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184000Z
-UID:event-calendar-event-253724
-DTSTART;VALUE=DATE:20220525T000000
-DTEND;VALUE=DATE:20220525T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R4 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253724
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184000Z
-UID:event-calendar-event-253725
-DTSTART;VALUE=DATE:20220526T000000
-DTEND;VALUE=DATE:20220526T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R3 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253725
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184000Z
-UID:event-calendar-event-253726
-DTSTART;VALUE=DATE:20220527T000000
-DTEND;VALUE=DATE:20220527T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R2 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253726
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184000Z
-UID:event-calendar-event-253727
-DTSTART;VALUE=DATE:20220531T000000
-DTEND;VALUE=DATE:20220531T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R1 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=05&year=2022#calendar_event_253727
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20211011T121600Z
-UID:event-assignment-322714
-DTSTART;VALUE=DATE:20220531T000000
-DTEND;VALUE=DATE:20220531T000000
-CLASS:PUBLIC
-SEQUENCE:0
-SUMMARY:Duolingo: May [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=05&year=2022#assignment_322714
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184600Z
-UID:event-calendar-event-253728
-DTSTART;VALUE=DATE:20220601T000000
-DTEND;VALUE=DATE:20220601T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R4 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253728
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184600Z
-UID:event-calendar-event-253729
-DTSTART;VALUE=DATE:20220602T000000
-DTEND;VALUE=DATE:20220602T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R3 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253729
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184600Z
-UID:event-calendar-event-253730
-DTSTART;VALUE=DATE:20220603T000000
-DTEND;VALUE=DATE:20220603T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:R2 [HillsRotation]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253730
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210831T130500Z
-UID:event-calendar-event-252974
-DTSTART;VALUE=DATE:20220604T000000
-DTEND;VALUE=DATE:20220604T000000
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:SAT Exam [Hills]
+SUMMARY:PSAT Exam  [Hills]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=06&year=2022#calendar_event_252974
+ onth=10&year=2022#calendar_event_284826
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T184700Z
-UID:event-calendar-event-253731
-DTSTART;VALUE=DATE:20220606T000000
-DTEND;VALUE=DATE:20220606T000000
+DTSTAMP:20220802T173000Z
+UID:event-calendar-event-285242
+DTSTART;VALUE=DATE;VALUE=DATE:20221017
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:ALL [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253731
+ onth=10&year=2022#calendar_event_285242
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210831T130600Z
-UID:event-calendar-event-252975
-DTSTART:20220606T130000Z
-DTEND:20220606T150000Z
+DTSTAMP:20220802T173100Z
+UID:event-calendar-event-285243
+DTSTART;VALUE=DATE;VALUE=DATE:20221018
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285243
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173100Z
+UID:event-calendar-event-285244
+DTSTART;VALUE=DATE;VALUE=DATE:20221019
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285244
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173100Z
+UID:event-calendar-event-285245
+DTSTART;VALUE=DATE;VALUE=DATE:20221020
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285245
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173100Z
+UID:event-calendar-event-285246
+DTSTART;VALUE=DATE;VALUE=DATE:20221021
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285246
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173100Z
+UID:event-calendar-event-285247
+DTSTART;VALUE=DATE;VALUE=DATE:20221024
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285247
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T141100Z
+UID:event-calendar-event-284792
+DTSTART:20221024T120000Z
+DTEND:20221024T190000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Yearbook ID/Picture Retakes [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=10&year=2022#calendar_event_284792
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173100Z
+UID:event-calendar-event-285248
+DTSTART;VALUE=DATE;VALUE=DATE:20221025
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285248
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T141000Z
+UID:event-calendar-event-284791
+DTSTART:20221025T230000Z
+DTEND:20221026T010000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:NHS Fall Induction [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=10&year=2022#calendar_event_284791
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173100Z
+UID:event-calendar-event-285249
+DTSTART;VALUE=DATE;VALUE=DATE:20221026
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285249
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173200Z
+UID:event-calendar-event-285250
+DTSTART;VALUE=DATE;VALUE=DATE:20221027
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285250
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T140900Z
+UID:event-calendar-event-284790
+DTSTART:20221027T230000Z
+DTEND:20221028T020000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Best College Fit Night [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=10&year=2022#calendar_event_284790
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173300Z
+UID:event-calendar-event-285251
+DTSTART;VALUE=DATE;VALUE=DATE:20221028
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285251
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173300Z
+UID:event-calendar-event-285252
+DTSTART;VALUE=DATE;VALUE=DATE:20221031
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=10&year=2022#calendar_event_285252
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173600Z
+UID:event-calendar-event-285253
+DTSTART;VALUE=DATE;VALUE=DATE:20221101
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285253
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173600Z
+UID:event-calendar-event-285257
+DTSTART;VALUE=DATE;VALUE=DATE:20221102
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285257
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173600Z
+UID:event-calendar-event-285255
+DTSTART;VALUE=DATE;VALUE=DATE:20221103
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285255
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T173700Z
+UID:event-calendar-event-285256
+DTSTART;VALUE=DATE;VALUE=DATE:20221104
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285256
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T174300Z
+UID:event-calendar-event-285263
+DTSTART;VALUE=DATE;VALUE=DATE:20221107
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:10 AM Arrival/All [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285263
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T174200Z
+UID:event-calendar-event-285262
+DTSTART;VALUE=DATE;VALUE=DATE:20221108
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285262
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T174300Z
+UID:event-calendar-event-285264
+DTSTART;VALUE=DATE;VALUE=DATE:20221109
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285264
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T174400Z
+UID:event-calendar-event-285265
+DTSTART;VALUE=DATE;VALUE=DATE:20221114
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285265
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T143300Z
+UID:event-calendar-event-284793
+DTSTART:20221114T140000Z
+DTEND:20221114T160000Z
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:PFA Meeting [Hills]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=06&year=2022#calendar_event_252975
+ onth=11&year=2022#calendar_event_284793
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T184700Z
-UID:event-calendar-event-253732
-DTSTART;VALUE=DATE:20220607T000000
-DTEND;VALUE=DATE:20220607T000000
+DTSTAMP:20220802T174600Z
+UID:event-calendar-event-285266
+DTSTART;VALUE=DATE;VALUE=DATE:20221115
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R1 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253732
+ onth=11&year=2022#calendar_event_285266
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220425T134200Z
-UID:event-assignment-359077
-DTSTART;VALUE=DATE:20220607T000000
-DTEND;VALUE=DATE:20220607T000000
-CLASS:PUBLIC
-SEQUENCE:0
-SUMMARY:IPA #4: Traveling The World  (Study Guide)  [French 2 CP (Hills)]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_6441&m
- onth=06&year=2022#assignment_359077
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184700Z
-UID:event-calendar-event-253733
-DTSTART;VALUE=DATE:20220608T000000
-DTEND;VALUE=DATE:20220608T000000
+DTSTAMP:20220802T174600Z
+UID:event-calendar-event-285267
+DTSTART;VALUE=DATE;VALUE=DATE:20221116
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R4 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253733
+ onth=11&year=2022#calendar_event_285267
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210716T140400Z
-UID:event-calendar-event-252976
-DTSTART:20220608T220000Z
-DTEND:20220608T220000Z
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:Senior awards [Hills]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=06&year=2022#calendar_event_252976
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184700Z
-UID:event-calendar-event-253734
-DTSTART;VALUE=DATE:20220609T000000
-DTEND;VALUE=DATE:20220609T000000
+DTSTAMP:20220802T174600Z
+UID:event-calendar-event-285268
+DTSTART;VALUE=DATE;VALUE=DATE:20221117
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R3 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253734
+ onth=11&year=2022#calendar_event_285268
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210716T140400Z
-UID:event-calendar-event-252977
-DTSTART;VALUE=DATE:20220609T000000
-DTEND;VALUE=DATE:20220609T000000
+DTSTAMP:20220728T143400Z
+UID:event-calendar-event-284795
+DTSTART:20221118T000000Z
+DTEND:20221118T020000Z
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
-SUMMARY:Senior prom [Hills]
+SUMMARY:Fall Musical [Hills]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=06&year=2022#calendar_event_252977
+ onth=11&year=2022#calendar_event_284795
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T184700Z
-UID:event-calendar-event-253735
-DTSTART;VALUE=DATE:20220610T000000
-DTEND;VALUE=DATE:20220610T000000
+DTSTAMP:20220802T174700Z
+UID:event-calendar-event-285269
+DTSTART;VALUE=DATE;VALUE=DATE:20221118
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:R2 [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253735
+ onth=11&year=2022#calendar_event_285269
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210716T141000Z
-UID:event-calendar-event-252978
-DTSTART:20220610T163000Z
-DTEND:20220610T163000Z
+DTSTAMP:20220728T143500Z
+UID:event-calendar-event-284796
+DTSTART:20221119T000000Z
+DTEND:20221119T020000Z
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
-SUMMARY:Class of 2023 senior portraits [Hills]
+SUMMARY:Fall Musical [Hills]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=06&year=2022#calendar_event_252978
+ onth=11&year=2022#calendar_event_284796
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T184700Z
-UID:event-calendar-event-253736
-DTSTART;VALUE=DATE:20220613T000000
-DTEND;VALUE=DATE:20220613T000000
+DTSTAMP:20220728T143500Z
+UID:event-calendar-event-284797
+DTSTART:20221120T000000Z
+DTEND:20221120T020000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Fall Musical [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=11&year=2022#calendar_event_284797
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T143400Z
+UID:event-calendar-event-284794
+DTSTART:20221120T190000Z
+DTEND:20221120T210000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Fall Musical [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=11&year=2022#calendar_event_284794
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T174900Z
+UID:event-calendar-event-285270
+DTSTART;VALUE=DATE;VALUE=DATE:20221121
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:ALL [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253736
+ onth=11&year=2022#calendar_event_285270
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210831T130600Z
-UID:event-calendar-event-252980
-DTSTART:20220613T110000Z
-DTEND:20220613T110000Z
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:Senior Trip - White Water Rafting [Hills]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=06&year=2022#calendar_event_252980
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210831T130700Z
-UID:event-calendar-event-252979
-DTSTART:20220613T163000Z
-DTEND:20220613T163000Z
-CLASS:PUBLIC
-LOCATION:
-SEQUENCE:0
-SUMMARY:Class of 2023 Senior Portraits [Hills]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=06&year=2022#calendar_event_252979
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20210812T184700Z
-UID:event-calendar-event-253737
-DTSTART;VALUE=DATE:20220614T000000
-DTEND;VALUE=DATE:20220614T000000
+DTSTAMP:20220802T174900Z
+UID:event-calendar-event-285271
+DTSTART;VALUE=DATE;VALUE=DATE:20221122
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:ALL [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253737
+ onth=11&year=2022#calendar_event_285271
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210831T130700Z
-UID:event-calendar-event-252981
-DTSTART:20220614T163000Z
-DTEND:20220614T163000Z
+DTSTAMP:20220802T175000Z
+UID:event-calendar-event-285272
+DTSTART;VALUE=DATE;VALUE=DATE:20221123
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
-SUMMARY:Class of 2023 Senior Portraits [Hills]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=06&year=2022#calendar_event_252981
+SUMMARY:Half Day/ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285272
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210812T184700Z
-UID:event-calendar-event-253738
-DTSTART;VALUE=DATE:20220615T000000
-DTEND;VALUE=DATE:20220615T000000
+DTSTAMP:20220802T175100Z
+UID:event-calendar-event-285275
+DTSTART;VALUE=DATE;VALUE=DATE:20221128
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:ALL [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_253738
+ onth=11&year=2022#calendar_event_285275
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20210831T130700Z
-UID:event-calendar-event-252982
-DTSTART:20220615T163000Z
-DTEND:20220615T163000Z
+DTSTAMP:20220802T175100Z
+UID:event-calendar-event-285276
+DTSTART;VALUE=DATE;VALUE=DATE:20221129
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
-SUMMARY:Class of 2023 Senior Portraits [Hills]
-URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
- onth=06&year=2022#calendar_event_252982
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285276
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20220414T134100Z
-UID:event-calendar-event-281677
-DTSTART;VALUE=DATE:20220616T000000
-DTEND;VALUE=DATE:20220616T000000
+DTSTAMP:20220802T175100Z
+UID:event-calendar-event-285277
+DTSTART;VALUE=DATE;VALUE=DATE:20221130
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=11&year=2022#calendar_event_285277
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T145300Z
+UID:event-calendar-event-284798
+DTSTART:20221201T000000Z
+DTEND:20221201T013000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Celebrate Languages Ceremony [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=11&year=2022#calendar_event_284798
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T175100Z
+UID:event-calendar-event-285278
+DTSTART;VALUE=DATE;VALUE=DATE:20221201
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285278
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T175100Z
+UID:event-calendar-event-285279
+DTSTART;VALUE=DATE;VALUE=DATE:20221202
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285279
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T175600Z
+UID:event-calendar-event-285281
+DTSTART;VALUE=DATE;VALUE=DATE:20221205
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL/10 AM Arrival [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285281
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T175700Z
+UID:event-calendar-event-285282
+DTSTART;VALUE=DATE;VALUE=DATE:20221206
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285282
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180200Z
+UID:event-calendar-event-285283
+DTSTART;VALUE=DATE;VALUE=DATE:20221207
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285283
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180300Z
+UID:event-calendar-event-285284
+DTSTART;VALUE=DATE;VALUE=DATE:20221208
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285284
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180300Z
+UID:event-calendar-event-285285
+DTSTART;VALUE=DATE;VALUE=DATE:20221209
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285285
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180400Z
+UID:event-calendar-event-285286
+DTSTART;VALUE=DATE;VALUE=DATE:20221212
 CLASS:PUBLIC
 LOCATION:
 SEQUENCE:0
 SUMMARY:ALL [HillsRotation]
 URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
- onth=06&year=2022#calendar_event_281677
+ onth=12&year=2022#calendar_event_285286
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180600Z
+UID:event-calendar-event-285287
+DTSTART;VALUE=DATE;VALUE=DATE:20221213
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285287
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180600Z
+UID:event-calendar-event-285288
+DTSTART;VALUE=DATE;VALUE=DATE:20221214
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285288
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T145600Z
+UID:event-calendar-event-284799
+DTSTART:20221215T000000Z
+DTEND:20221215T020000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Winter Concert [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=12&year=2022#calendar_event_284799
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180700Z
+UID:event-calendar-event-285289
+DTSTART;VALUE=DATE;VALUE=DATE:20221215
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285289
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220809T165000Z
+UID:event-calendar-event-285738
+DTSTART;VALUE=DATE;VALUE=DATE:20221216
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285738
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180700Z
+UID:event-calendar-event-285291
+DTSTART;VALUE=DATE;VALUE=DATE:20221219
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285291
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180800Z
+UID:event-calendar-event-285292
+DTSTART;VALUE=DATE;VALUE=DATE:20221220
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285292
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180800Z
+UID:event-calendar-event-285293
+DTSTART;VALUE=DATE;VALUE=DATE:20221221
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285293
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T180800Z
+UID:event-calendar-event-285294
+DTSTART;VALUE=DATE;VALUE=DATE:20221222
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285294
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181100Z
+UID:event-calendar-event-285295
+DTSTART;VALUE=DATE;VALUE=DATE:20221223
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Half Day/ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=12&year=2022#calendar_event_285295
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181200Z
+UID:event-calendar-event-285296
+DTSTART;VALUE=DATE;VALUE=DATE:20230103
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285296
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181300Z
+UID:event-calendar-event-285297
+DTSTART;VALUE=DATE;VALUE=DATE:20230104
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285297
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181300Z
+UID:event-calendar-event-285298
+DTSTART;VALUE=DATE;VALUE=DATE:20230105
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285298
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181300Z
+UID:event-calendar-event-285299
+DTSTART;VALUE=DATE;VALUE=DATE:20230106
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285299
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181500Z
+UID:event-calendar-event-285300
+DTSTART;VALUE=DATE;VALUE=DATE:20230109
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285300
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T145700Z
+UID:event-calendar-event-284800
+DTSTART:20230109T140000Z
+DTEND:20230109T160000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:PFA Meeting [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=01&year=2023#calendar_event_284800
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181400Z
+UID:event-calendar-event-285301
+DTSTART;VALUE=DATE;VALUE=DATE:20230110
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285301
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181500Z
+UID:event-calendar-event-285302
+DTSTART;VALUE=DATE;VALUE=DATE:20230111
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285302
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181500Z
+UID:event-calendar-event-285303
+DTSTART;VALUE=DATE;VALUE=DATE:20230112
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285303
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181600Z
+UID:event-calendar-event-285304
+DTSTART;VALUE=DATE;VALUE=DATE:20230113
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285304
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181600Z
+UID:event-calendar-event-285305
+DTSTART;VALUE=DATE;VALUE=DATE:20230117
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285305
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181700Z
+UID:event-calendar-event-285306
+DTSTART;VALUE=DATE;VALUE=DATE:20230118
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285306
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181700Z
+UID:event-calendar-event-285307
+DTSTART;VALUE=DATE;VALUE=DATE:20230119
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285307
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181700Z
+UID:event-calendar-event-285308
+DTSTART;VALUE=DATE;VALUE=DATE:20230120
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285308
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181700Z
+UID:event-calendar-event-285309
+DTSTART;VALUE=DATE;VALUE=DATE:20230123
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285309
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T134800Z
+UID:event-calendar-event-285653
+DTSTART;VALUE=DATE;VALUE=DATE:20230124
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:MT 1/5 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285653
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135100Z
+UID:event-calendar-event-285654
+DTSTART;VALUE=DATE;VALUE=DATE:20230125
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:MT 2/6 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285654
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135100Z
+UID:event-calendar-event-285655
+DTSTART;VALUE=DATE;VALUE=DATE:20230126
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:MT 3/7 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285655
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135100Z
+UID:event-calendar-event-285656
+DTSTART;VALUE=DATE;VALUE=DATE:20230127
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:MT 4/8 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285656
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T181900Z
+UID:event-calendar-event-285310
+DTSTART;VALUE=DATE;VALUE=DATE:20230130
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285310
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182000Z
+UID:event-calendar-event-285311
+DTSTART;VALUE=DATE;VALUE=DATE:20230131
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=01&year=2023#calendar_event_285311
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182000Z
+UID:event-calendar-event-285312
+DTSTART;VALUE=DATE;VALUE=DATE:20230201
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285312
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182000Z
+UID:event-calendar-event-285313
+DTSTART;VALUE=DATE;VALUE=DATE:20230202
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285313
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182000Z
+UID:event-calendar-event-285314
+DTSTART;VALUE=DATE;VALUE=DATE:20230203
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285314
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220809T165600Z
+UID:event-calendar-event-285740
+DTSTART;VALUE=DATE;VALUE=DATE:20230206
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL/10 AM  [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285740
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182200Z
+UID:event-calendar-event-285316
+DTSTART;VALUE=DATE;VALUE=DATE:20230207
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285316
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182200Z
+UID:event-calendar-event-285317
+DTSTART;VALUE=DATE;VALUE=DATE:20230208
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285317
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182200Z
+UID:event-calendar-event-285318
+DTSTART;VALUE=DATE;VALUE=DATE:20230209
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285318
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182200Z
+UID:event-calendar-event-285319
+DTSTART;VALUE=DATE;VALUE=DATE:20230210
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285319
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182300Z
+UID:event-calendar-event-285320
+DTSTART;VALUE=DATE;VALUE=DATE:20230213
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285320
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182300Z
+UID:event-calendar-event-285321
+DTSTART;VALUE=DATE;VALUE=DATE:20230214
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285321
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220809T165400Z
+UID:event-calendar-event-285739
+DTSTART;VALUE=DATE;VALUE=DATE:20230215
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285739
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T150100Z
+UID:event-calendar-event-284801
+DTSTART:20230216T000000Z
+DTEND:20230216T020000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Tri-M Induction Ceremony [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=02&year=2023#calendar_event_284801
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182300Z
+UID:event-calendar-event-285323
+DTSTART;VALUE=DATE;VALUE=DATE:20230216
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285323
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182700Z
+UID:event-calendar-event-285325
+DTSTART;VALUE=DATE;VALUE=DATE:20230217
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285325
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182700Z
+UID:event-calendar-event-285327
+DTSTART;VALUE=DATE;VALUE=DATE:20230222
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285327
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182800Z
+UID:event-calendar-event-285328
+DTSTART;VALUE=DATE;VALUE=DATE:20230223
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285328
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182800Z
+UID:event-calendar-event-285329
+DTSTART;VALUE=DATE;VALUE=DATE:20230224
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285329
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182800Z
+UID:event-calendar-event-285330
+DTSTART;VALUE=DATE;VALUE=DATE:20230227
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285330
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182900Z
+UID:event-calendar-event-285331
+DTSTART;VALUE=DATE;VALUE=DATE:20230228
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=02&year=2023#calendar_event_285331
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182900Z
+UID:event-calendar-event-285332
+DTSTART;VALUE=DATE;VALUE=DATE:20230301
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285332
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182900Z
+UID:event-calendar-event-285333
+DTSTART;VALUE=DATE;VALUE=DATE:20230302
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285333
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T182900Z
+UID:event-calendar-event-285334
+DTSTART;VALUE=DATE;VALUE=DATE:20230303
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285334
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T150500Z
+UID:event-calendar-event-284805
+DTSTART;VALUE=DATE;VALUE=DATE:20230304
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ACT Exam at PV [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=03&year=2023#calendar_event_284805
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T183000Z
+UID:event-calendar-event-285335
+DTSTART;VALUE=DATE;VALUE=DATE:20230306
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285335
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T150200Z
+UID:event-calendar-event-284802
+DTSTART:20230306T140000Z
+DTEND:20230306T160000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:PFA Meeting [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=03&year=2023#calendar_event_284802
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T183800Z
+UID:event-calendar-event-285336
+DTSTART;VALUE=DATE;VALUE=DATE:20230307
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285336
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T183800Z
+UID:event-calendar-event-285337
+DTSTART;VALUE=DATE;VALUE=DATE:20230308
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285337
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T183800Z
+UID:event-calendar-event-285338
+DTSTART;VALUE=DATE;VALUE=DATE:20230309
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285338
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T150300Z
+UID:event-calendar-event-284803
+DTSTART;VALUE=DATE;VALUE=DATE:20230310
+CLASS:PUBLIC
+LOCATION:Park Ridge Marriott
+SEQUENCE:0
+SUMMARY:Junior Prom [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=03&year=2023#calendar_event_284803
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T183800Z
+UID:event-calendar-event-285339
+DTSTART;VALUE=DATE;VALUE=DATE:20230310
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285339
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T150400Z
+UID:event-calendar-event-284804
+DTSTART;VALUE=DATE;VALUE=DATE:20230311
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:SAT Exam at PV [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=03&year=2023#calendar_event_284804
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220809T165700Z
+UID:event-calendar-event-285741
+DTSTART;VALUE=DATE;VALUE=DATE:20230313
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL/10 AM  [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285741
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135400Z
+UID:event-calendar-event-285657
+DTSTART;VALUE=DATE;VALUE=DATE:20230314
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285657
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135400Z
+UID:event-calendar-event-285658
+DTSTART;VALUE=DATE;VALUE=DATE:20230315
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285658
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135400Z
+UID:event-calendar-event-285659
+DTSTART;VALUE=DATE;VALUE=DATE:20230316
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285659
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135500Z
+UID:event-calendar-event-285660
+DTSTART;VALUE=DATE;VALUE=DATE:20230317
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285660
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T183900Z
+UID:event-calendar-event-285341
+DTSTART;VALUE=DATE;VALUE=DATE:20230320
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285341
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184000Z
+UID:event-calendar-event-285342
+DTSTART;VALUE=DATE;VALUE=DATE:20230321
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285342
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184100Z
+UID:event-calendar-event-285343
+DTSTART;VALUE=DATE;VALUE=DATE:20230322
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285343
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184100Z
+UID:event-calendar-event-285344
+DTSTART;VALUE=DATE;VALUE=DATE:20230323
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285344
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T150700Z
+UID:event-calendar-event-284807
+DTSTART:20230323T230000Z
+DTEND:20230324T010000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Spring Musical [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=03&year=2023#calendar_event_284807
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184100Z
+UID:event-calendar-event-285345
+DTSTART;VALUE=DATE;VALUE=DATE:20230324
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285345
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T150800Z
+UID:event-calendar-event-284808
+DTSTART:20230324T230000Z
+DTEND:20230325T010000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Spring Musical [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=03&year=2023#calendar_event_284808
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T150800Z
+UID:event-calendar-event-284809
+DTSTART:20230325T230000Z
+DTEND:20230326T010000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Spring Musical  [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=03&year=2023#calendar_event_284809
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T150700Z
+UID:event-calendar-event-284806
+DTSTART:20230326T180000Z
+DTEND:20230326T200000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Spring Musical  [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=03&year=2023#calendar_event_284806
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184200Z
+UID:event-calendar-event-285346
+DTSTART;VALUE=DATE;VALUE=DATE:20230327
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285346
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184200Z
+UID:event-calendar-event-285347
+DTSTART;VALUE=DATE;VALUE=DATE:20230328
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285347
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T150900Z
+UID:event-calendar-event-284810
+DTSTART:20230328T230000Z
+DTEND:20230329T010000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Talent Night Show [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=03&year=2023#calendar_event_284810
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184200Z
+UID:event-calendar-event-285348
+DTSTART;VALUE=DATE;VALUE=DATE:20230329
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285348
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T151000Z
+UID:event-calendar-event-284811
+DTSTART:20230329T230000Z
+DTEND:20230330T010000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:College Admissions Panel [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=03&year=2023#calendar_event_284811
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184400Z
+UID:event-calendar-event-285349
+DTSTART;VALUE=DATE;VALUE=DATE:20230330
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285349
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184400Z
+UID:event-calendar-event-285350
+DTSTART;VALUE=DATE;VALUE=DATE:20230331
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=03&year=2023#calendar_event_285350
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184400Z
+UID:event-calendar-event-285351
+DTSTART;VALUE=DATE;VALUE=DATE:20230411
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285351
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184500Z
+UID:event-calendar-event-285352
+DTSTART;VALUE=DATE;VALUE=DATE:20230412
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285352
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184500Z
+UID:event-calendar-event-285353
+DTSTART;VALUE=DATE;VALUE=DATE:20230413
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285353
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184500Z
+UID:event-calendar-event-285354
+DTSTART;VALUE=DATE;VALUE=DATE:20230414
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285354
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T151100Z
+UID:event-calendar-event-284812
+DTSTART;VALUE=DATE;VALUE=DATE:20230415
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ACT Exam at PV [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=04&year=2023#calendar_event_284812
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184500Z
+UID:event-calendar-event-285355
+DTSTART;VALUE=DATE;VALUE=DATE:20230417
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285355
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184500Z
+UID:event-calendar-event-285356
+DTSTART;VALUE=DATE;VALUE=DATE:20230418
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285356
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184600Z
+UID:event-calendar-event-285357
+DTSTART;VALUE=DATE;VALUE=DATE:20230419
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285357
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184700Z
+UID:event-calendar-event-285358
+DTSTART;VALUE=DATE;VALUE=DATE:20230420
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285358
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184700Z
+UID:event-calendar-event-285359
+DTSTART;VALUE=DATE;VALUE=DATE:20230421
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285359
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T151100Z
+UID:event-calendar-event-284813
+DTSTART;VALUE=DATE;VALUE=DATE:20230422
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ACT Exam [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=04&year=2023#calendar_event_284813
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184700Z
+UID:event-calendar-event-285360
+DTSTART;VALUE=DATE;VALUE=DATE:20230424
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285360
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184700Z
+UID:event-calendar-event-285361
+DTSTART;VALUE=DATE;VALUE=DATE:20230425
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285361
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184700Z
+UID:event-calendar-event-285362
+DTSTART;VALUE=DATE;VALUE=DATE:20230426
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285362
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184800Z
+UID:event-calendar-event-285363
+DTSTART;VALUE=DATE;VALUE=DATE:20230427
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285363
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T151600Z
+UID:event-calendar-event-284815
+DTSTART:20230427T230000Z
+DTEND:20230428T010000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:NHS Induction Ceremony [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=04&year=2023#calendar_event_284815
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T184800Z
+UID:event-calendar-event-285364
+DTSTART;VALUE=DATE;VALUE=DATE:20230428
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=04&year=2023#calendar_event_285364
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220809T165800Z
+UID:event-calendar-event-285742
+DTSTART;VALUE=DATE;VALUE=DATE:20230501
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL/10 AM  [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285742
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185600Z
+UID:event-calendar-event-285368
+DTSTART;VALUE=DATE;VALUE=DATE:20230502
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285368
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185700Z
+UID:event-calendar-event-285369
+DTSTART;VALUE=DATE;VALUE=DATE:20230503
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285369
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185700Z
+UID:event-calendar-event-285370
+DTSTART;VALUE=DATE;VALUE=DATE:20230504
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285370
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185700Z
+UID:event-calendar-event-285371
+DTSTART;VALUE=DATE;VALUE=DATE:20230505
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285371
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T152000Z
+UID:event-calendar-event-284816
+DTSTART;VALUE=DATE;VALUE=DATE:20230506
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:SAT Exam at PV [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=05&year=2023#calendar_event_284816
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185700Z
+UID:event-calendar-event-285372
+DTSTART;VALUE=DATE;VALUE=DATE:20230508
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285372
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185700Z
+UID:event-calendar-event-285373
+DTSTART;VALUE=DATE;VALUE=DATE:20230509
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285373
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185800Z
+UID:event-calendar-event-285374
+DTSTART;VALUE=DATE;VALUE=DATE:20230510
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285374
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185800Z
+UID:event-calendar-event-285375
+DTSTART;VALUE=DATE;VALUE=DATE:20230511
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285375
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185800Z
+UID:event-calendar-event-285376
+DTSTART;VALUE=DATE;VALUE=DATE:20230512
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285376
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185900Z
+UID:event-calendar-event-285377
+DTSTART;VALUE=DATE;VALUE=DATE:20230515
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285377
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135500Z
+UID:event-calendar-event-285661
+DTSTART;VALUE=DATE;VALUE=DATE:20230516
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285661
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135500Z
+UID:event-calendar-event-285662
+DTSTART;VALUE=DATE;VALUE=DATE:20230517
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285662
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T152200Z
+UID:event-calendar-event-284817
+DTSTART:20230517T230000Z
+DTEND:20230518T013000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Graduation Concert [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=05&year=2023#calendar_event_284817
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135600Z
+UID:event-calendar-event-285663
+DTSTART;VALUE=DATE;VALUE=DATE:20230518
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285663
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135600Z
+UID:event-calendar-event-285664
+DTSTART;VALUE=DATE;VALUE=DATE:20230519
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285664
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T185900Z
+UID:event-calendar-event-285378
+DTSTART;VALUE=DATE;VALUE=DATE:20230522
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285378
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T152200Z
+UID:event-calendar-event-284818
+DTSTART;VALUE=DATE;VALUE=DATE:20230523
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Arts Festival [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=05&year=2023#calendar_event_284818
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T190000Z
+UID:event-calendar-event-285379
+DTSTART;VALUE=DATE;VALUE=DATE:20230523
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285379
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T190000Z
+UID:event-calendar-event-285380
+DTSTART;VALUE=DATE;VALUE=DATE:20230524
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285380
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T190000Z
+UID:event-calendar-event-285381
+DTSTART;VALUE=DATE;VALUE=DATE:20230525
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285381
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T190000Z
+UID:event-calendar-event-285382
+DTSTART;VALUE=DATE;VALUE=DATE:20230526
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285382
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T190100Z
+UID:event-calendar-event-285383
+DTSTART;VALUE=DATE;VALUE=DATE:20230530
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R1 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285383
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T190100Z
+UID:event-calendar-event-285384
+DTSTART;VALUE=DATE;VALUE=DATE:20230531
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R4 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=05&year=2023#calendar_event_285384
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T190100Z
+UID:event-calendar-event-285385
+DTSTART;VALUE=DATE;VALUE=DATE:20230601
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R3 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=06&year=2023#calendar_event_285385
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T193100Z
+UID:event-calendar-event-285387
+DTSTART;VALUE=DATE;VALUE=DATE:20230602
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:R2 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=06&year=2023#calendar_event_285387
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T152400Z
+UID:event-calendar-event-284819
+DTSTART;VALUE=DATE;VALUE=DATE:20230603
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:SAT Exam [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=06&year=2023#calendar_event_284819
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T193200Z
+UID:event-calendar-event-285388
+DTSTART;VALUE=DATE;VALUE=DATE:20230605
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=06&year=2023#calendar_event_285388
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T152400Z
+UID:event-calendar-event-284820
+DTSTART:20230605T130000Z
+DTEND:20230605T150000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:PFA Meeting [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=06&year=2023#calendar_event_284820
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T193200Z
+UID:event-calendar-event-285389
+DTSTART;VALUE=DATE;VALUE=DATE:20230606
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=06&year=2023#calendar_event_285389
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220802T193200Z
+UID:event-calendar-event-285390
+DTSTART;VALUE=DATE;VALUE=DATE:20230607
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:ALL [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=06&year=2023#calendar_event_285390
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T152500Z
+UID:event-calendar-event-284821
+DTSTART;VALUE=DATE;VALUE=DATE:20230607
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Senior Awards [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=06&year=2023#calendar_event_284821
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135800Z
+UID:event-calendar-event-285665
+DTSTART;VALUE=DATE;VALUE=DATE:20230608
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Finals - 4/8 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=06&year=2023#calendar_event_285665
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T152500Z
+UID:event-calendar-event-284822
+DTSTART;VALUE=DATE;VALUE=DATE:20230608
+CLASS:PUBLIC
+LOCATION:Rockleigh Country Club
+SEQUENCE:0
+SUMMARY:Senior Prom [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=06&year=2023#calendar_event_284822
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135800Z
+UID:event-calendar-event-285666
+DTSTART;VALUE=DATE;VALUE=DATE:20230609
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Finals - 3/7 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=06&year=2023#calendar_event_285666
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135800Z
+UID:event-calendar-event-285667
+DTSTART;VALUE=DATE;VALUE=DATE:20230612
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Finals - 2/6 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=06&year=2023#calendar_event_285667
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T152700Z
+UID:event-calendar-event-284823
+DTSTART:20230612T163000Z
+DTEND:20230613T000000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Class of 2024 - Senior Portraits [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=06&year=2023#calendar_event_284823
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T135900Z
+UID:event-calendar-event-285668
+DTSTART;VALUE=DATE;VALUE=DATE:20230613
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Finals - 1/5 [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=06&year=2023#calendar_event_285668
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T152800Z
+UID:event-calendar-event-284824
+DTSTART:20230613T163000Z
+DTEND:20230614T000000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Class of 2024 - Senior Portraits [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=06&year=2023#calendar_event_284824
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220804T140000Z
+UID:event-calendar-event-285669
+DTSTART;VALUE=DATE;VALUE=DATE:20230614
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Finals - Make Ups [HillsRotation]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2965&m
+ onth=06&year=2023#calendar_event_285669
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20220728T152800Z
+UID:event-calendar-event-284825
+DTSTART:20230614T163000Z
+DTEND:20230615T000000Z
+CLASS:PUBLIC
+LOCATION:
+SEQUENCE:0
+SUMMARY:Class of 2024 - Senior Portraits [Hills]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_2962&m
+ onth=06&year=2023#calendar_event_284825
 END:VEVENT
 END:VCALENDAR
