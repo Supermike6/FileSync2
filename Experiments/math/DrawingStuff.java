@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.util.Scanner;
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
@@ -11,12 +12,17 @@ import javax.swing.JFrame;
 
 public class DrawingStuff extends JComponent implements MouseListener, MouseMotionListener{
 	private static final long serialVersionUID = 1L;
-	String eq = "y=x^2+2x+0";
-	Integer scale = 10;
+	private static String eq;
+	private Integer scale = 10;
 	
 public static void main(String[] args)
 {
-	
+	Scanner sc = new Scanner(System.in);
+     
+     System.out.print("Type the equation: ");
+     eq=sc.nextLine();
+
+
     JFrame frame = new JFrame();
     frame.setSize(800, 800);
     frame.setTitle("Graphs");
