@@ -6,15 +6,15 @@ public class russianRoulet
     public static int maxHits = 0;
     public static void main(String[] args)
     {
-        for(int i = 0; i<1000; i++)
+        for(int i = 0; i<1; i++)
             emptyClip();
-        System.out.println(maxHits);
+        System.out.println(maxHits); 
     }
     public static void emptyClip()
     {
         int shots = 0;
         int num = (int)(Math.random()*6);
-        while(num!=3)
+        while(num!=3&&shots!=6)
         {
             shots++;
             System.out.println("You didn't die :) "+num);

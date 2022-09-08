@@ -37,7 +37,11 @@ public class launchCalendar extends JPanel implements KeyListener{
 	private String message = "";
 	private boolean sp;
 	private Scanner sc;
-	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0),v = new ArrayList<>(0);
+	private static ArrayList<String> cls = new ArrayList<>(8);
+	public static ArrayList<String> fileLines = new ArrayList<>(1);
+	private ArrayList<String> rotation = new ArrayList<>(1);
+	private ArrayList<String> times = new ArrayList<>(1);
+	private ArrayList<String> v = new ArrayList<>(1);
 	private LocalTime tempTime;
 	private int i = 0, ticks = 0, tickCount = 14;
 	private static Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
@@ -59,7 +63,7 @@ public class launchCalendar extends JPanel implements KeyListener{
 			
 			sc.reset();
 			
-			sc = new Scanner(new File("Calendar/Canvas.ics")); 
+			sc = new Scanner(new File("Calendar/test.ics")); 
 			i=0;
 			while(sc.hasNextLine())
 			{
@@ -72,36 +76,16 @@ public class launchCalendar extends JPanel implements KeyListener{
 
 		for(int k = 0; k<fileLines.size();k++)
 		{
-			if(fileLines.get(k).contains("DTSTART;VALUE=DATE:"))
+			if(fileLines.get(k).contains("BEGIN:")&&fileLines.get(k+3).contains("2022"))
 			{
-				if(fileLines.get(k+4).contains("[HillsRotation]"))
-				{
-					rotation.add(""+fileLines.get(k+4).subSequence(8, fileLines.get(k+4).indexOf(" ")));
-					times.add(fileLines.get(k).subSequence(21, 23)+"/"+fileLines.get(k).subSequence(23, 25)+"/"+fileLines.get(k).subSequence(17, 21));
-				}
+				// for(i = 0;i<11;i++)
+				// {
+				// 	System.out.println(fileLines.get(k+i));
+				// }
 			}
-			System.out.println(times.get(k));
+			
 		}
-		for(int x = 0; x<cls.size();x++)
-		{
-			for(int y = 0; y<cls.get(x).split(" ").length;y++)
-			{
-				for(int z = 0; z<cls.get(x).split(" ")[y].split("-").length;z++)
-				{
-					if(cls.get(x).split(" ")[y].split("-")[z].contains(":"))
-					{
-						String t = cls.get(x).split(" ")[y].split("-")[z].split(":")[0];
-						int ti = Integer.parseInt(t);
-						if(ti<8) ti+=12;
-						String u = cls.get(x).split(" ")[y].split("-")[z].split(":")[1];
-						String s = fix0(ti)+":"+fix0(Integer.parseInt(u));
-						v.add(s);
-					}
-				}
-			}
-		}
-
-		// tempString = rotation.get(times.indexOf(tempString));
+		
 		timer = new Timer(1000, new ActionListener()
 		{
 			@Override
@@ -112,6 +96,8 @@ public class launchCalendar extends JPanel implements KeyListener{
 			}
 		});
 		timer.start();
+		// for(String s:cls) System.out.println(s);
+		System.out.println(event("09/01/2022"));	
 	}
 
 	public void paintComponent(Graphics g) {
@@ -123,81 +109,7 @@ public class launchCalendar extends JPanel implements KeyListener{
 		
 		g2.setColor(Color.black);
 		
-		g2.fillRect(0,0,PREF_W,PREF_H);
 		
-		g2.setColor(new Color(219,200,175));
-		
-		g2.drawOval(PREF_W/2-100, PREF_H/2-100, 200, 200);
-		if(ticks == 1) {
-			for(int t = 0;t<4; t++)
-			{
-				g2.drawLine((int)(125+90*Math.cos((t*Math.PI)/2)),(int)(125+90*Math.sin((t*Math.PI)/2)),(int)(125+100*Math.cos((t*Math.PI)/2)),(int)(125+100*Math.sin((t*Math.PI)/2)));
-			}
-		} else if(ticks == 3) {
-			for(int t = 0;t<tickCount; t++)
-			{
-				if(Math.cos((t*Math.PI)/(tickCount/2))==1||Math.cos((t*Math.PI)/(tickCount/2))==-1||Math.sin((t*Math.PI)/(tickCount/2))==1||Math.sin((t*Math.PI)/(tickCount/2))==-1) {
-					g2.setStroke(new BasicStroke(3));
-					g2.drawLine((int)(125+90*Math.cos((t*Math.PI)/(tickCount/2))),(int)(125+90*Math.sin((t*Math.PI)/(tickCount/2))),(int)(125+99*Math.cos((t*Math.PI)/(tickCount/2))),(int)(125+99*Math.sin((t*Math.PI)/(tickCount/2))));
-				} else {
-					g2.setStroke(new BasicStroke(1));
-					g2.drawLine((int)(PREF_W/2+90*Math.cos((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+90*Math.sin((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+99*Math.cos((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+99*Math.sin((t*Math.PI)/(tickCount/2))));
-				}
-				
-			}
-		} else if(ticks == 2) {
-			tickCount = 12;
-			for(int t = 0;t<tickCount; t++)
-			{
-				if(Math.cos((t*Math.PI)/(tickCount/2))==1||Math.cos((t*Math.PI)/(tickCount/2))==-1||Math.sin((t*Math.PI)/(tickCount/2))==1||Math.sin((t*Math.PI)/(tickCount/2))==-1) {
-					g2.setStroke(new BasicStroke(3));
-					g2.drawLine((int)(125+90*Math.cos((t*Math.PI)/(tickCount/2))),(int)(125+90*Math.sin((t*Math.PI)/(tickCount/2))),(int)(125+99*Math.cos((t*Math.PI)/(tickCount/2))),(int)(125+99*Math.sin((t*Math.PI)/(tickCount/2))));
-				} else {
-					g2.setStroke(new BasicStroke(1));
-					g2.drawLine((int)(PREF_W/2+90*Math.cos((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+90*Math.sin((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+99*Math.cos((t*Math.PI)/(tickCount/2))),(int)(PREF_W/2+99*Math.sin((t*Math.PI)/(tickCount/2))));
-				}
-				
-			}
-		}
-		g2.setStroke(new BasicStroke(3));
-		// g2.setColor(Color.black);
-		// g2.fillOval(PREF_W/2-90, PREF_H/2-90, 180, 180);
-
-		//put schedule code here
-		int num = 0;
-		for(i=0;i<v.size();i++)
-		{
-			if(LocalTime.parse(v.get(i)+":00").compareTo(rn.toLocalTime())<0)
-			{
-				if(i>=v.size()-1) {
-					tempTime = LocalTime.parse("00:00:00");
-					message = "Out Of School";
-				} else {
-				tempTime = LocalTime.parse(v.get(i+1)+":00");
-				}
-				num = i;
-			}
-		}
-		if(i<=v.size())
-		for(i = 0; i<cls.size();i++)
-		{
-			if(cls.get(i).contains(v.get(num).substring(1)))
-			{
-				message = cls.get(i).split(" ")[0];
-				if(cls.get(i).split(" ")[1].split(":")[0].equals(v.get(num).substring(1))) {
-					message = "Inbetween "+cls.get(i).split(" ")[0]+" and "+cls.get(i).split(" ")[0];
-				} else {
-					message = "In "+cls.get(i).split(" ")[0];
-				}
-
-			}
-		}
-		
-		if(sp)
-		{
-			
-			
-		}
 	}
 
 	public Dimension getPreferredSize() {
@@ -215,12 +127,15 @@ public class launchCalendar extends JPanel implements KeyListener{
 		frame.setVisible(true);
 		frame.setAlwaysOnTop(true);
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
+		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					createAndShowGUI();
-				} catch (IOException e) {
+				} catch (IOException e)
+				{
 				}
 			}
 		});
@@ -248,7 +163,7 @@ public class launchCalendar extends JPanel implements KeyListener{
 		if(e.getKeyCode() == KeyEvent.VK_T)
 		{
 
-			
+
 		}
 		repaint();	
 	}
@@ -258,4 +173,67 @@ public class launchCalendar extends JPanel implements KeyListener{
         if(num<10) return "0"+num;
         return ""+num;
     }
+	public static String fix0s(CharSequence num)
+    {
+        if(Integer.parseInt((String)num)<10) return "0"+num;
+        return ""+num;
+    }
+	public static String fixYear(int num)
+	{
+		String numS = num+"";
+		if(numS.length()>=2)
+			return "20"+num;
+		return num+"";
+	}
+	public static String event(String date)
+	{
+		//9/8/22
+		String dump = "";
+		String output = "";
+		String month = fix0s(date.subSequence(0, date.indexOf("/")));
+		String day = fix0s(date.subSequence(date.indexOf("/")+1, date.indexOf("/", date.indexOf("/")+2)));
+		String year = fixYear(Integer.parseInt(date.substring(date.indexOf("/", date.indexOf("/", date.indexOf("/")+3))+3,date.length())));
+		String aioFileLines = "";
+		for(String s:fileLines) aioFileLines+=s;
+		if(day.contains("00"))
+			day = day.substring(1);
+		if(month.contains("00"))
+			month = month.substring(1);
+		
+			for(int i = 0;i<fileLines.size()-4;i++)
+			{
+				if(fileLines.get(i).contains(year+month+day)&&fileLines.get(i).contains("START"))
+				{
+					for(int j=0; j<fileLines.indexOf("END:VEVENT");j++)
+						dump+=fileLines.get(i+j);
+
+					if(dump.length()>0)return dump;
+					output+="Event Date: "+month+"/"+day+"/"+year+"\n";
+					//Title and class
+
+					output+=("Class: "+dump.substring(dump.indexOf("[")+1,dump.indexOf("]")))+"\n";
+
+					output+=("Title: "+dump.substring(dump.indexOf("SUMMARY:")+8,dump.indexOf("[")))+"\n";
+					
+					//Description
+					if(dump.contains("DESCRIPTION:"))
+						output+="Description: "+dump.substring(dump.indexOf("DESCRIPTION:")+"DESCRIPTION".length(),dump.indexOf("["));
+					
+					//Location
+					if(dump.subSequence(dump.indexOf("LOCATION:")+9, dump.indexOf("SEQUENCE:")).length()==0)
+					{
+						output+="Location: None\n";
+					} else {
+						output+="Location: "+dump.subSequence(dump.indexOf("LOCATION:")+9, dump.indexOf("SEQUENCE:"));
+					}
+					
+
+					return output;
+				}
+			}
+
+		System.out.println("_"+year+"_"+month+"_"+day+"_");
+		System.out.println(year+month+day);
+		return "Nothing on date";
+	}
 }
