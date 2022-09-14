@@ -2,12 +2,16 @@ package Homework;
 
 public class Product
 {
+    public static void main(String[] args)
+    {
+        System.out.println(new Product().toString());
+    }
     private String name;
     private double price;
     Product()
     {
-        name = "";
-        price = 0.0;
+        name = (char)(int)(Math.random()*26+65)+"";
+        price = (double)((int)((Math.random()*90)*100))/100+10;
     }
     Product(String name, double price)
     {
@@ -38,10 +42,9 @@ public class Product
     }
 
 
-    public void printCard()
+    public String toString()
     {
-        System.out.println("Name: " + name);
-        System.out.println("Price: " + price);
+        return "Name: " + name+", Price: " + price;
     }
     
 }
