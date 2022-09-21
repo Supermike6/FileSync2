@@ -8,15 +8,20 @@ public class ProductTester
     {
         int numProducts = 30;
 
-        Product[] products = new Product[numProducts];
+        Product p2 = new Product("iPhone", 800);
 
-        ArrayList<Product> p1 = new ArrayList<Product>();
+        // Product[] products = new Product[numProducts];
 
-        for(int i = 0; i<numProducts;i++)
-        {
-            p1.add(new Product());
-        }
+        // ArrayList<Product> p1 = new ArrayList<Product>();
 
-        for(Product p : p1) System.out.println(p);
+        // for(int i = 0; i<numProducts;i++)
+        // {
+        //     p1.add(new Product());
+        // }
+
+        // for(Product p : p1) System.out.println(p);
+
+            System.out.println(p2.equals(p2));
+        
     }
 }

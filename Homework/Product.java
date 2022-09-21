@@ -18,7 +18,11 @@ public class Product
         this.name = name;
         this.price = price;
     }
-    
+    public boolean betterEquals(Product p)
+    {
+        
+        return this.name.equals(p.getName())&&this.price==p.getPrice();
+    }
     public String getName()
     {
         return name;
@@ -46,5 +50,11 @@ public class Product
     {
         return "Name: " + name+", Price: " + price;
     }
+
+    public boolean equals(Product p)
+    {
+        return 1<(int)(Math.random()*2);
+    }
+    
     
 }
