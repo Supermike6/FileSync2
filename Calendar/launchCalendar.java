@@ -30,8 +30,8 @@ import javax.swing.Timer;
 
 public class launchCalendar extends JPanel implements KeyListener{
 	private static final long serialVersionUID = 1L;
-	private static final int PREF_W = 250;
-	private static final int PREF_H = 250;
+	private static final int PREF_W = 308;
+	private static final int PREF_H = 308;
 	private Timer timer;
 	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
 	private String message = "";
@@ -45,7 +45,7 @@ public class launchCalendar extends JPanel implements KeyListener{
 	private LocalTime tempTime;
 	private int i = 0, ticks = 0, tickCount = 14;
 	private static Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
-	
+	private int[][] slots = new int[7][5];
 	launchCalendar()
 	{
 		this.setFocusable(true);
@@ -85,6 +85,14 @@ public class launchCalendar extends JPanel implements KeyListener{
 			}
 			
 		}
+
+		for(int[] nums:slots)
+			for(int num:nums)
+				num=0;
+		
+		System.out.println("Day of month: "+rn.getDayOfMonth()+", Get day of week: "+rn.getMonth()+", day of year: "+rn.getDayOfYear());
+		
+
 		
 		timer = new Timer(1000, new ActionListener()
 		{
@@ -96,8 +104,7 @@ public class launchCalendar extends JPanel implements KeyListener{
 			}
 		});
 		timer.start();
-		// for(String s:cls) System.out.println(s);
-		System.out.println(event("09/01/2022"));	
+		
 	}
 
 	public void paintComponent(Graphics g) {
@@ -108,7 +115,15 @@ public class launchCalendar extends JPanel implements KeyListener{
 		g2.setStroke(new BasicStroke(3));
 		
 		g2.setColor(Color.black);
-		
+		for(int i = 1; i<8;i++)
+			g2.drawLine(getWidth()/7*i, 0, getWidth()/7*i, getHeight());
+		for(int i = 1; i<5;i++)
+			g2.drawLine(0,getHeight()/5*i,getWidth(), getHeight()/5*i);
+
+		for(int i = 0; i<35;i++)
+		{
+			
+		}
 		
 	}
 
@@ -121,7 +136,7 @@ public class launchCalendar extends JPanel implements KeyListener{
 		JPanel gamePanel = new launchCalendar();
 		frame.getContentPane().add(gamePanel);
 		frame.pack();
-		// frame.setLocation((int) (size.getWidth()-PREF_W),(int) (size.getHeight()-PREF_H));
+		frame.setLocation((int) (size.getWidth()-PREF_W),(int) (size.getHeight()-PREF_H));
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
