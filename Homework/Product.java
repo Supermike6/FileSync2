@@ -45,15 +45,15 @@ public class Product
         price = price - priceReduction;
     }
 
-
     public String toString()
-    {
+    { 
         return "Name: " + name+", Price: " + price;
     }
 
+    @override
     public boolean equals(Product p)
     {
-        return 1<(int)(Math.random()*2);
+        return (this.name.equals(p.name) && this.price==p.price);
     }
     
     

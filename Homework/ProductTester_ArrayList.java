@@ -1,8 +1,8 @@
-package Homework;
+package Homework; 
 
 import java.util.ArrayList;
 
-public class ProductTester
+public class ProductTester_ArrayList
 {
     public static void main(String[] args)
     {
