@@ -1,6 +1,8 @@
 package Homework; 
 
 import java.util.ArrayList;
+import java.util.Collections;
+import Homework.Product;
 
 public class ProductTester_ArrayList
 {
@@ -8,20 +10,18 @@ public class ProductTester_ArrayList
     {
         int numProducts = 30;
 
+        Product p1 = new Product("iPhone", 800);
         Product p2 = new Product("iPhone", 800);
+        Product p3 = new Product();
 
-        // Product[] products = new Product[numProducts];
-
-        // ArrayList<Product> p1 = new ArrayList<Product>();
-
-        // for(int i = 0; i<numProducts;i++)
-        // {
-        //     p1.add(new Product());
-        // }
-
-        // for(Product p : p1) System.out.println(p);
-
-            System.out.println(p2.equals(p2));
-        
+        ArrayList<Product> products = new ArrayList<Product>();
+        for (int i = 0; i < numProducts; i++)
+        {
+            products.add(new Product());
+        }
+        for(int i = 0; i<products.size(); i++)
+        {
+            System.out.println(p1.sortByNameA(products).get(i).toString());
+        }
     }
 }
