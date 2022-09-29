@@ -45,7 +45,8 @@ public class Product
 
     public String toString()
     { 
-        return "Name: " + name+", Price: " + price;
+        return "Name: " + name + " Price: " + price;
+
     }
 
     public boolean equals(Product p)
@@ -53,7 +54,25 @@ public class Product
         return (this.name.equals(p.name) && this.price==p.price);
     }
 
-    //sort by name
+    //sort by name using standard array
+    public Product[] sortByNameS(Product[] products)
+    {
+        Product temp;
+        for(int i = 0; i<products.length; i++)
+        {
+            for(int j = i+1; j<products.length; j++)
+            {
+                if(products[i].getName().compareTo(products[j].getName())>0)
+                {
+                    temp = products[i];
+                    products[i] = products[j];
+                    products[j] = temp;
+                }
+            }
+        }
+        return products;
+    }
+    //sort by name using ArrayList
     public ArrayList<Product> sortByNameA(ArrayList<Product> products)
     {
         ArrayList<Product> sorted = products;
@@ -73,4 +92,51 @@ public class Product
         return sorted;
     }
     
+    
+    public ArrayList<Product> removeDuplicatesA(ArrayList<Product> products)
+    {
+        ArrayList<Product> noDuplicates = new ArrayList<Product>();
+        ArrayList<Product> sorted = sortByNameA(products);
+        for(int i = 0; i<sorted.size(); i++)
+        {
+            if(i==0)
+            {
+                noDuplicates.add(sorted.get(i));
+            }
+            else if(!sorted.get(i).equals(sorted.get(i-1)))
+            {
+                noDuplicates.add(sorted.get(i));
+            }
+        }
+        return noDuplicates;
+    }
+
+
+
+
+
+
+
+    //remove duplicates from standard array
+    public Product[] removeDuplicatesS(Product[] products)
+    {
+        Product[] noDuplicates = new Product[products.length];
+        Product[] sorted = sortByNameS(products);
+        int count = 0;
+        for(int i = 0; i<sorted.length; i++)
+        {
+            if(i==0)
+            {
+                noDuplicates[count] = sorted[i];
+                count++;
+            }
+            else if(!sorted[i].equals(sorted[i-1]))
+            {
+                noDuplicates[count] = sorted[i];
+                count++;
+            }
+        }
+        return noDuplicates;
+    }
+
 }

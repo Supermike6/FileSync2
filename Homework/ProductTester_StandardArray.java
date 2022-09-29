@@ -17,7 +17,11 @@ public class ProductTester_StandardArray
 
         for(int i = 0; i<products.length; i++)
         {
-            System.out.println(products.sortByName().get(i).toString());
+            if(p1.removeDuplicatesS(products)[i] != null)
+            {
+                System.out.println(p1.removeDuplicatesS(products)[i].toString());
+            }
         }
+
     }
 }
