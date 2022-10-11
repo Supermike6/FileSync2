@@ -6,12 +6,26 @@ public class NumberShiz
 {
     public static void main(String[] args)
     {
-        ArrayList<int> nums = new ArrayList<int>();
+        int limit = 20;
+        ArrayList<Integer> out = new ArrayList<Integer>();
+        ArrayList<ArrayList<Integer>> lists = new ArrayList<ArrayList<Integer>>();
+        for(int i = 0;i<limit;i++)
+        lists.add(factors(i));
+
+        System.out.println(lists);
         
     }
-    public static ArrayList<> factors(int num)
+    public static ArrayList<Integer> factors(int num)
     {
-
-        return new ArrayList<>();
+        ArrayList<Integer> factors = new ArrayList<Integer>();
+        for(double i = 1; i<=Math.sqrt(num)+1;i++)
+        {
+            if(num%i==0)
+            {
+                factors.add((int)i);
+                factors.add(num/(int)i);
+            }
+        }
+        return factors;
     }
 }
