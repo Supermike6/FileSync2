@@ -31,7 +31,7 @@ public DrawingStuff()
      // System.out.print("Type the equation: ");
      // eq=sc.nextLine();
 
-     eq = "y=x^2+0x+4";
+     eq = "y=20x^2-5x+7";
 
     JFrame frame = new JFrame();
     frame.pack();
