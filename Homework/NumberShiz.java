@@ -6,14 +6,14 @@ public class NumberShiz
 {
     public static void main(String[] args)
     {
-        int limit = 20;
-        ArrayList<Integer> out = new ArrayList<Integer>();
-        ArrayList<ArrayList<Integer>> lists = new ArrayList<ArrayList<Integer>>();
-        for(int i = 0;i<limit;i++)
-        lists.add(factors(i));
+        // int limit = 1000;
+        // ArrayList<Integer> out = new ArrayList<Integer>();
+        // ArrayList<ArrayList<Integer>> lists = new ArrayList<ArrayList<Integer>>();
+        // for(int i = 0;i<limit;i++)
+        // lists.add(factors(i));
 
-        System.out.println(lists);
-        
+        // System.out.println(lists);
+        System.out.println(factors(100000001));
     }
     public static ArrayList<Integer> factors(int num)
     {
@@ -28,4 +28,11 @@ public class NumberShiz
         }
         return factors;
     }
+
+    public int reverseOrder(int num)
+    {
+        
+        return num;
+    }
+
 }

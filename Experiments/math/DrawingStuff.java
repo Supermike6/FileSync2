@@ -14,18 +14,29 @@ public class DrawingStuff extends JComponent implements MouseListener, MouseMoti
 	private static final long serialVersionUID = 1L;
 	private static String eq;
 	private Integer scale = 10;
-	
-public static void main(String[] args)
-{
-	Scanner sc = new Scanner(System.in);
-     
-     System.out.print("Type the equation: ");
-     eq=sc.nextLine();
+     private Integer mx=0,my=0;
 
+	
+public DrawingStuff()
+{
+     setFocusable(true);
+     requestFocus();
+     this.addMouseListener(this);
+	this.addMouseMotionListener(this);
+}
+     public static void main(String[] args)
+{
+	// Scanner sc = new Scanner(System.in);
+     
+     // System.out.print("Type the equation: ");
+     // eq=sc.nextLine();
+
+     eq = "y=x^2+0x+4";
 
     JFrame frame = new JFrame();
+    frame.pack();
     frame.setSize(800, 800);
-    frame.setTitle("Graphs");
+    frame.setTitle("Graph");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setLocationRelativeTo(null);  
     DrawingStuff draw = new DrawingStuff();
@@ -62,6 +73,9 @@ public void paintComponent(Graphics g)
      g2.setStroke(new BasicStroke(2));
      g2.setColor(Color.red);
      
+     Quadratics.drawQudratic(g2, w, h, eq, scale);
+
+     g2.setColor(Color.black);
      
      g2.drawString("Equation: "+eq, 10, 20);
   
@@ -74,9 +88,14 @@ public void paintComponent(Graphics g)
   
      g2.drawString("Vertex: ("+Quadratics.vertX(eq)+", "+Quadratics.vertY(eq)+")", 10, 80);
   
-     Quadratics.drawQudratic(g2, w, h, eq, scale);
+     g2.setColor(Color.blue);
+
+     g2.drawString("Mouse Loaction: ("+(mx+getWidth())/(scale*2.0)+", "+my+")", 10, 100);
+     
+     g2.drawLine(mx, 0, mx, getHeight());
+     g2.drawLine(0,my,getWidth(),my);
+     repaint();
   
-     g2.setColor(Color.gray);
      //vertX verticle line
 //     Polygon xvert = new Polygon();
 //     for (int i = w*-1; i <= this.getWidth(); i++)
@@ -92,8 +111,6 @@ public void paintComponent(Graphics g)
 //    	 yvert.addPoint(i, (int) (h-(Quadratics.vertY(eq)*this.getHeight()/(Double)(scale*2+0.0/this.getHeight()))));
 //     }
 //     g2.drawPolyline(yvert.xpoints, yvert.ypoints, yvert.npoints); 
-  
-     
  }
 
 @Override
@@ -135,7 +152,10 @@ public void mouseDragged(MouseEvent e) {
 @Override
 public void mouseMoved(MouseEvent e) {
 	// TODO Auto-generated method stub
+     mx=e.getX();
+     my=e.getY();
 	repaint();
+     System.out.println(e.getX());
 }
 
 
