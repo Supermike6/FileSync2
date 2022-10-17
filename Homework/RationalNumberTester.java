@@ -1,7 +1,5 @@
 package Homework;
 
-
-'']]]
 //Mr. Uhl
 //Program description: A class to test the RationalNumber class.
 

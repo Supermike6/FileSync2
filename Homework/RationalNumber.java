@@ -24,7 +24,7 @@ public class RationalNumber
     {
         int num1 = this.getB()*r2.getA();
         int num2 = this.getA()*r2.getB();
-        this.setA(num1*num2);
+        this.setA(num1+num2);
         this.setB(this.getB()*r2.getB());
     }
 
@@ -47,16 +47,14 @@ public class RationalNumber
     public void subtract(RationalNumber r2)
     {
         int num1 = this.getB()*r2.getA();
-        int num2 = this.getA()*r2.getB();
-        this.setA(num1*num2);
+        int num2 = this.getA()*r2.getB ();
+        this.setA(num2-num1);
         this.setB(this.getB()*r2.getB());
     }
 
     public void multiply(RationalNumber r2)
     {
-        int num1 = this.getB()*r2.getA();
-        int num2 = this.getA()*r2.getB();
-        this.setA(num1*num2);
+        this.setA(this.getA()*r2.getA());
         this.setB(this.getB()*r2.getB());
     }
 
@@ -64,8 +62,8 @@ public class RationalNumber
     {
         int num1 = this.getB()*r2.getA();
         int num2 = this.getA()*r2.getB();
-        this.setA(num1/num2);
-        this.setB(this.getB()*r2.getB());
+        this.setA(num2);
+        this.setB(num1);
     }
 
 }
