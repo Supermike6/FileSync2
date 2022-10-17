@@ -1,5 +1,8 @@
+package Homework;
+
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 //Mr. Uhl
 //Program description: A class to test the RationalNumber class.
