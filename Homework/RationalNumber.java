@@ -97,6 +97,7 @@ public class RationalNumber implements Comparable<RationalNumber>
         if (b==0) return a;
         return GCD(b,a%b);
     }
+
     
     public boolean equals(RationalNumber rn)
     {

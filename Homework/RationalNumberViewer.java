@@ -1,3 +1,5 @@
+package Homework;
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -16,8 +18,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.LineBorder;
-import javax.swing.event.CaretEvent;
-import javax.swing.event.CaretListener;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
@@ -60,8 +60,33 @@ public class RationalNumberViewer extends JPanel
       RationalNumber r1 = new RationalNumber(Integer.parseInt(n1.getText()), Integer.parseInt(d1.getText()));
       RationalNumber r2 = new RationalNumber(Integer.parseInt(n2.getText()), Integer.parseInt(d2.getText()));
       
+      //add, suntract, multiply, and divide, and then set the text of the result fields
       if(opBox.getSelectedItem().equals("+"))
-         System.out.println("Add the fractions");
+      {
+         r1.add(r2);
+         nResult1.setText(r1.getA() + "");
+         dResult1.setText(r1.getB() + "");
+      }
+      else if(opBox.getSelectedItem().equals("–"))
+      {
+         r1.subtract(r2);
+         nResult1.setText(r1.getA() + "");
+         dResult1.setText(r1.getB() + "");
+      }
+      else if(opBox.getSelectedItem().equals("x"))
+      {
+         r1.multiply(r2);
+         nResult1.setText(r1.getA() + "");
+         dResult1.setText(r1.getB() + "");
+      }
+      else if(opBox.getSelectedItem().equals("÷"))
+      {
+         r1.divide(r2);
+         nResult1.setText(r1.getA() + "");
+         dResult1.setText(r1.getB() + "");
+      }
+      
+      
    }
    
    /**
@@ -81,11 +106,30 @@ public class RationalNumberViewer extends JPanel
       
       if(showVinculum) {
          if(functionBox.getSelectedItem().equals("simplified"))
-            System.out.println("Simplify the fraction");
-      }
+         {
+            r3.simplify();
+            nResult2.setText(r3.getA() + "");
+            dResult2.setText(r3.getB() + "");
+         }
+
+         if(functionBox.getSelectedItem().equals("squared"))
+         {
+            r3.multiply(r3);
+            nResult2.setText(r3.getA() + "");
+            dResult2.setText(r3.getB() + "");
+         }
+         if(functionBox.getSelectedItem().equals("reciprocal"))
+         {
+            RationalNumber r4 = r3.getReciprocal();
+            nResult2.setText(r4.getA() + "");
+            dResult2.setText(r4.getB() + "");
+
+         }
+         }
       else {
          if(functionBox.getSelectedItem().equals("as a decimal"))
-            answer = "pi";
+            answer = r3.asDecimal() + "";
+         
          repaint();
       }
    }
@@ -271,6 +315,7 @@ public class RationalNumberViewer extends JPanel
       
       g2.setFont(new Font("Cooper Black", Font.PLAIN, 40));
       g2.drawString("is", leftMargin + 335, topMargin + 350);
+      repaint();
    }
    
    //returns a text field with sizing and formatting for numerator and denominator areas
