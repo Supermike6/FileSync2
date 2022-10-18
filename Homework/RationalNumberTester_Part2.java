@@ -89,7 +89,10 @@ public class RationalNumberTester_Part2
          System.out.print(r.getRationalForm() + " ");
       System.out.println();
       
+      
       Collections.sort(fractionList);
+
+
       System.out.println("\nSorted List of Rational Numbers:");
       for(RationalNumber r : fractionList)
          System.out.print(r.getRationalForm() + " ");
