@@ -1,6 +1,5 @@
 package Homework;
 
-
 public class RationalNumber implements Comparable<RationalNumber>
 {
     private Integer a;
