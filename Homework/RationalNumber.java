@@ -98,9 +98,6 @@ public class RationalNumber implements Comparable<RationalNumber>
         return GCD(b,a%b);
     }
     
-    
-    
-    
     public boolean equals(RationalNumber rn)
     {
         //checks if the simplified fractions are equal
