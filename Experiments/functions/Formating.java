@@ -74,6 +74,10 @@ public class Formating {
     private static String CYAN_BACKGROUND_BRIGHT = "\033[0;106m";  // CYAN
     private static String WHITE_BACKGROUND_BRIGHT = "\033[0;107m";   // WHITE
     
+    public static void textRed()
+    {
+        System.out.println(RED);
+    }
     public static void textBlack()
     {
         System.out.println(BLACK);
@@ -106,6 +110,302 @@ public class Formating {
     {
         System.out.println(RESET);
     }
+    //make methods that will change the background colors of the text
+    public static void backgroundRed()
+    {
+        System.out.println(RED_BACKGROUND);
+    }
+    public static void backgroundBlack()
+    {
+        System.out.println(BLACK_BACKGROUND);
+    }
+    public static void backgroundYellow()
+    {
+        System.out.println(YELLOW_BACKGROUND);
+    }
+    public static void backgroundGreen()
+    {
+        System.out.println(GREEN_BACKGROUND);
+    }
+    public static void backgroundBlue()
+    {
+        System.out.println(BLUE_BACKGROUND);
+    }
+    public static void backgroundPurple()
+    {
+        System.out.println(PURPLE_BACKGROUND);
+    }
+    public static void backgroundCyan()
+    {
+        System.out.println(CYAN_BACKGROUND);
+    }
+    public static void backgroundWhite()
+    {
+        System.out.println(WHITE_BACKGROUND);
+    }
+    public static void backgroundReset()
+    {
+        System.out.println(RESET);
+    }
+    //make methods that will change the text to bold
+    public static void textBoldRed()
+    {
+        System.out.println(RED_BOLD);
+    }
+    public static void textBoldBlack()
+    {
+        System.out.println(BLACK_BOLD);
+    }
+    public static void textBoldYellow()
+    {
+        System.out.println(YELLOW_BOLD);
+    }
+    public static void textBoldGreen()
+    {
+        System.out.println(GREEN_BOLD);
+    }
+    public static void textBoldBlue()
+    {
+        System.out.println(BLUE_BOLD);
+    }
+    public static void textBoldPurple()
+    {
+        System.out.println(PURPLE_BOLD);
+    }
+    public static void textBoldCyan()
+    {
+        System.out.println(CYAN_BOLD);
+    }
+    public static void textBoldWhite()
+    {
+        System.out.println(WHITE_BOLD);
+    }
+    public static void textBoldReset()
+    {
+        System.out.println(RESET);
+    }
+    //make methods that will change the text to bold and bright
+    public static void textBoldBrightRed()
+    {
+        System.out.println(RED_BOLD_BRIGHT);
+    }
+    public static void textBoldBrightBlack()
+    {
+        System.out.println(BLACK_BOLD_BRIGHT);
+    }
+    public static void textBoldBrightYellow()
+    {
+        System.out.println(YELLOW_BOLD_BRIGHT);
+    }
+    public static void textBoldBrightGreen()
+    {
+        System.out.println(GREEN_BOLD_BRIGHT);
+    }
+    public static void textBoldBrightBlue()
+    {
+        System.out.println(BLUE_BOLD_BRIGHT);
+    }
+    public static void textBoldBrightPurple()
+    {
+        System.out.println(PURPLE_BOLD_BRIGHT);
+    }
+    public static void textBoldBrightCyan()
+    {
+        System.out.println(CYAN_BOLD_BRIGHT);
+    }
+    public static void textBoldBrightWhite()
+    {
+        System.out.println(WHITE_BOLD_BRIGHT);
+    }
+    public static void textBoldBrightReset()
+    {
+        System.out.println(RESET);
+    }
+    //make methods that will change the background to bold
+    public static void backgroundBoldRed()
+    {
+        System.out.println(RED_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldBlack()
+    {
+        System.out.println(BLACK_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldYellow()
+    {
+        System.out.println(YELLOW_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldGreen()
+    {
+        System.out.println(GREEN_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldBlue()
+    {
+        System.out.println(BLUE_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldPurple()
+    {
+        System.out.println(PURPLE_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldCyan()
+    {
+        System.out.println(CYAN_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldWhite()
+    {
+        System.out.println(WHITE_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldReset()
+    {
+        System.out.println(RESET);
+    }
+    //make methods that will change the background to bold and bright
+    public static void backgroundBoldBrightRed()
+    {
+        System.out.println(RED_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldBrightBlack()
+    {
+        System.out.println(BLACK_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldBrightYellow()
+    {
+        System.out.println(YELLOW_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldBrightGreen()
+    {
+        System.out.println(GREEN_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldBrightBlue()
+    {
+        System.out.println(BLUE_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldBrightPurple()
+    {
+        System.out.println(PURPLE_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldBrightCyan()
+    {
+        System.out.println(CYAN_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldBrightWhite()
+    {
+        System.out.println(WHITE_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBoldBrightReset()
+    {
+        System.out.println(RESET);
+    }
 
+    //make methods that will change the text to underline
+    public static void textUnderlineRed()
+    {
+        System.out.println(RED_UNDERLINED);
+    }
+    public static void textUnderlineBlack()
+    {
+        System.out.println(BLACK_UNDERLINED);
+    }
+    public static void textUnderlineYellow()
+    {
+        System.out.println(YELLOW_UNDERLINED);
+    }
+    public static void textUnderlineGreen()
+    {
+        System.out.println(GREEN_UNDERLINED);
+    }
+    public static void textUnderlineBlue()
+    {
+        System.out.println(BLUE_UNDERLINED);
+    }
+    public static void textUnderlinePurple()
+    {
+        System.out.println(PURPLE_UNDERLINED);
+    }
+    public static void textUnderlineCyan()
+    {
+        System.out.println(CYAN_UNDERLINED);
+    }
+    public static void textUnderlineWhite()
+    {
+        System.out.println(WHITE_UNDERLINED);
+    }
+    public static void textUnderlineReset()
+    {
+        System.out.println(RESET);
+    }
+    //make methods that will change the text to bright
 
+    public static void textBrightRed()
+    {
+        System.out.println(RED_BRIGHT);
+    }
+    public static void textBrightBlack()
+    {
+        System.out.println(BLACK_BRIGHT);
+    }
+    public static void textBrightYellow()
+    {
+        System.out.println(YELLOW_BRIGHT);
+    }
+    public static void textBrightGreen()
+    {
+        System.out.println(GREEN_BRIGHT);
+    }
+    public static void textBrightBlue()
+    {
+        System.out.println(BLUE_BRIGHT);
+    }
+    public static void textBrightPurple()
+    {
+        System.out.println(PURPLE_BRIGHT);
+    }
+    public static void textBrightCyan()
+    {
+        System.out.println(CYAN_BRIGHT);
+    }
+    public static void textBrightWhite()
+    {
+        System.out.println(WHITE_BRIGHT);
+    }
+    public static void textBrightReset()
+    {
+        System.out.println(RESET);
+    }
+    //make methods that will change the background to bright
+    public static void backgroundBrightRed()
+    {
+        System.out.println(RED_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBrightBlack()
+    {
+        System.out.println(BLACK_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBrightYellow()
+    {
+        System.out.println(YELLOW_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBrightGreen()
+    {
+        System.out.println(GREEN_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBrightBlue()
+    {
+        System.out.println(BLUE_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBrightPurple()
+    {
+        System.out.println(PURPLE_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBrightCyan()
+    {
+        System.out.println(CYAN_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBrightWhite()
+    {
+        System.out.println(WHITE_BACKGROUND_BRIGHT);
+    }
+    public static void backgroundBrightReset()
+    {
+        System.out.println(RESET);
+    }
 }
