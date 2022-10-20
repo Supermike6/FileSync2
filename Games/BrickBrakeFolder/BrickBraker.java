@@ -1,4 +1,4 @@
-package Games.BrickBrakeFolder;
+package BrickBrakeFolder;
 
 import java.awt.Color;
 import java.awt.Dimension;
