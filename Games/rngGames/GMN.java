@@ -1,4 +1,4 @@
-package Games.rngGames;
+package rngGames;
 
 import java.util.Scanner;
 

@@ -1,4 +1,6 @@
-package Games.rngGames;
+package rngGames;
+
+
 
 import java.awt.Color;
 import java.awt.Font;
