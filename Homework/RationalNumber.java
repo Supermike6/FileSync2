@@ -85,7 +85,6 @@ public class RationalNumber implements Comparable<RationalNumber>
 
     public void simplify()
     {
-        //sumplifies the fraction
         int num = this.getA();
         int denom = this.getB();
         int gcd = GCD(num, denom);
