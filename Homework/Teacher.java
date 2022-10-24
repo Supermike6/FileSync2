@@ -33,6 +33,8 @@ public class Teacher
         this.schedule = schedule;
     }
 
+    public Teacher() {
+    }
     public String getFisrtName() {
         return this.fisrtName;
     }

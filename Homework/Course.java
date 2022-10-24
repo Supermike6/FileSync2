@@ -24,6 +24,10 @@ public class Course
         this.endTime = "00:00";
     }
 
+    public Course(String string, String name2, int i, int j)
+    {
+        
+    }
     public Integer getRoomNumber() {
         return this.roomNumber;
     }
