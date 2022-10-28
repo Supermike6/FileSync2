@@ -1,3 +1,5 @@
+package Homework;
+
 //AP Computer Science
 //Program description: Complete each of the methods defined in the class
 
@@ -18,7 +20,19 @@ public class StringStuff
     */
    public static boolean equalStrings(String s1, String s2)
    {
+      int num = 0;
+      if(s1.length()!=s2.length())
+      {
+         return false;
+      } else {
+         for(int i = 0; i < s1.length();i++)
+         {
+            if(s1.substring(i, i+1).equals(s2.substring(i, i+1))) num++;
+         }
+      }
+      if(num==s1.length()) return true;
       return false;
+
    }
    
    /**
