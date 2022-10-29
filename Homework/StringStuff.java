@@ -20,18 +20,16 @@ public class StringStuff
     */
    public static boolean equalStrings(String s1, String s2)
    {
-      int num = 0;
-      if(s1.length()!=s2.length())
-      {
+      
+      if(s1.length() != s2.length())
          return false;
-      } else {
-         for(int i = 0; i < s1.length();i++)
-         {
-            if(s1.substring(i, i+1).equals(s2.substring(i, i+1))) num++;
-         }
+      
+      for(int i = 0; i < s1.length(); i++)
+      {
+         if(s1.charAt(i) != s2.charAt(i))
+            return false;
       }
-      if(num==s1.length()) return true;
-      return false;
+      return true;
 
    }
    
@@ -53,7 +51,36 @@ public class StringStuff
     */
    public static int compareStrings(String s1, String s2)
    {
-      return 0;
+      //compare them lexographicaly
+      //return the result
+      int result = 0;
+      int length = 0;
+      if(s1.length()-s2.length()!=0)
+      {
+         return s1.length()-s2.length();
+      } else {
+         for(int i = 0; i < s1.length(); i++)
+         {
+            if(s1.charAt(i) != s2.charAt(i))
+            {
+               result = s1.charAt(i) - s2.charAt(i);
+               break;
+            }
+         }
+      }
+        
+
+
+      for(int i = 0; i < length; i++)
+      {
+         if(s1.charAt(i) < s2.charAt(i))
+            result--;
+         else if(s1.charAt(i) > s2.charAt(i))
+            result++;
+      }
+
+      return result;
+
    }
    
    /**
@@ -70,7 +97,10 @@ public class StringStuff
     */
    public static String removeString(String text, String target)
    {
-      return "removeString is  not yet implemented.";
+      if(text.indexOf(target) == -1)
+         return text;
+      else
+         return text.substring(0, text.indexOf(target)) + text.substring(text.indexOf(target) + target.length());
    }
    
    /**
@@ -90,7 +120,15 @@ public class StringStuff
     */
    public static String replaceString(String text, String target, String repl)
    {
-      return "removeString is  not yet implemented.";
+      String out = "";
+      if(text.indexOf(target) == -1)
+         return text;
+      else
+      {
+         out = text.substring(0, text.indexOf(target)) + repl + text.substring(text.indexOf(target) + target.length());
+         return out;
+      }
+
    }
    
    /**
@@ -107,7 +145,14 @@ public class StringStuff
     */
    public static String removeAllString(String text, String target)
    {
-      return "removeString is  not yet implemented.";
+      String out = "";
+      if(text.indexOf(target) == -1)
+         return text;
+      else
+      {
+         out = text.substring(0, text.indexOf(target)) + text.substring(text.indexOf(target) + target.length());
+         return removeAllString(out, target);
+      }    
    }
    
    /**
@@ -128,7 +173,14 @@ public class StringStuff
     */
    public static String getRandomText(int numLetters)
    {
-      return "removeString is  not yet implemented.";
+      String out = "";
+      for(int i = 0; i < numLetters; i++)
+      {
+         int rand = (int)(Math.random()*26);
+         char c = (char)(rand + 97);
+         out+=c;
+      }
+      return out;
    }
    
    /**
@@ -144,7 +196,14 @@ public class StringStuff
     */
    public static int countVowels(String text)
    {
-      return -1;
+      int count = 0;
+      for(int i = 0; i < text.length(); i++)
+      {
+         if(text.charAt(i) == 'a' || text.charAt(i) == 'e' || text.charAt(i) == 'i' || text.charAt(i) == 'o' || text.charAt(i) == 'u'||
+         text.charAt(i) == 'A' || text.charAt(i) == 'E' || text.charAt(i) == 'I' || text.charAt(i) == 'O' || text.charAt(i) == 'U')
+            count++;
+      }
+      return count;
    }
    
 }
