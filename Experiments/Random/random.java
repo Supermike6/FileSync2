@@ -1,26 +1,20 @@
 package Experiments.Random;
 
-
+import Experiments.functions.Formating;
 
 public class random
 {
     public static void main(String[] args)
     {
-        int coinsFlipped = 200000000;
-        int heads = 0;
-        int tails = 0;
+        Formating.textRed();
+        System.out.println("Hello in red");
 
-        for(int i = 0; i<coinsFlipped; i++)
-        {
-            int num = (int)(2*Math.random());
-            if(num>=1)
-            {
-                heads++;
-            } else {
-                tails++;
-            }
-        }
-        System.out.println("Heads: "+heads+", Tails: "+tails);
+        Formating.textUnderlineGreen();
+        System.out.println("Hello with green underline");
+
+        Formating.textReset();
+        System.out.println("Hello");
+
 
 
     }    
