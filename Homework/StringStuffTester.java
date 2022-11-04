@@ -12,7 +12,7 @@ public class StringStuffTester
       String s1 = "cat";
       String s2 = "dog";
       System.out.println("Text: " + s1 + " vs. " + s2 + ":");
-      System.out.println("compareTo results: " + s1.compareTo(s2) + " vs. " + StringStuff.compareStrings(s1, s2));
+      System.  out.println("compareTo results: " + s1.compareTo(s2) + " vs. " + StringStuff.compareStrings(s1, s2));
       System.out.println("equals results: " + s1.equals(s2)  + " vs. " + StringStuff.equalStrings(s1, s2));
       System.out.println();
       
