@@ -15,18 +15,14 @@ public class Desmosus
         System.out.println(leftSide+", "+rightSide);
         for(String step:breakNumbers(eq)) System.out.println(step);
     }
+
     private static ArrayList<String> breakNumbers(String eq)
     {
         ArrayList<String> out = new ArrayList<String>();
-        for(int i = 0;i<eq.length();i++)
+        for(int i = 0;i<eq.length()-1;i++)
         {
-            out.add(eq.substring(i, eq.indexOf("+")));
-            out.add(eq.substring(i, eq.indexOf("-")));
-            out.add(eq.substring(i, eq.indexOf("*")));
-            out.add(eq.substring(i, eq.indexOf("/")));
-            out.add(eq.substring(i, eq.indexOf("=")));
-            out.add(eq.substring(i, eq.indexOf("(")));
-            out.add(eq.substring(i, eq.indexOf(")")));
+            
+            
         }
 
 

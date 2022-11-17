@@ -137,7 +137,7 @@ public class allClock extends JPanel implements KeyListener{
 
 			messageWidth = fm.stringWidth("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2);
 			startX = PREF_W/2-messageWidth/2;
-			g2.drawString("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2, startX, PREF_H-7);
+			g2.drawString("Time Lef`t: Minutes "+tempInt3+", Seconds "+tempInt2, startX, PREF_H-7);
 			
 		}
 
