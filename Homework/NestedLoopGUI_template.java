@@ -158,7 +158,7 @@ public class NestedLoopGUI_template extends JPanel implements MouseListener, Key
 
 /*9*/ for(int r=0 ; r<5; r++)   //MUST USE r HERE...just change values/conditions
       {
-/*10*/   for(int c=0; c<(5-r); c++) //MUST USE c HERE...just change values/conditions
+/*10*/   for(int c=0; c<5-r; c++) //MUST USE c HERE...just change values/conditions
          {
             if(loop < click)
                drawBox(g2, r, c);
@@ -191,12 +191,12 @@ public class NestedLoopGUI_template extends JPanel implements MouseListener, Key
    
    public void lowerLeftTri(Graphics2D g2)
    {
-      ((JFrame)this.getTopLevelAncestor()).setTitle("lowerLeftTri");
+      ((JFrame)this.getTopLevelAncestor()).setTitle("lowerLe ftTri");
       g2.drawString("lowerLeftTri", 300, 100);
 
-/*13*/for(int r=5 ; r>=0; r--)   //MUST USE r HERE...just change values/conditions
+/*13*/for(int r=4 ; r>=0; r--)   //MUST USE r HERE...just change values/conditions
       {
-/*14*/   for(int c=0; c<5-r; c++) //MUST USE c HERE...just change values/conditions
+/*14*/   for(int c=0; c<=r; c++) //MUST USE c HERE...just change values/conditions
          {
             if(loop < click)
                drawBox(g2, r, c);
@@ -213,9 +213,9 @@ public class NestedLoopGUI_template extends JPanel implements MouseListener, Key
       ((JFrame)this.getTopLevelAncestor()).setTitle("lowerRightTri");
       g2.drawString("lowerRightTri", 50, 100);
 
-/*15*/for(int r=0 ; r<2; r++)   //MUST USE r HERE...just change values/conditions
+/*15*/for(int r=4 ; r>=0; r--)   //MUST USE r HERE...just change values/conditions
       {
-/*16*/   for(int c=0; c<2; c++) //MUST USE c HERE...just change values/conditions
+/*16*/   for(int c=4; c>=4-r; c--) //MUST USE c HERE...just change values/conditions
          {
             if(loop < click)
                drawBox(g2, r, c);
