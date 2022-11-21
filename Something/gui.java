@@ -26,10 +26,12 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
+import Something.Clock;
+
 public class gui extends JPanel implements KeyListener{
 	private static final long serialVersionUID = 1L;
-	private static final int PREF_W = 275;
-	private static final int PREF_H = 250;
+	private static final int PREF_W = 300;
+	private static final int PREF_H = 300;
 	private Timer timer;
 	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
 	private String message = "", tempString = "", today = rn.getDayOfWeek()+"";
@@ -46,6 +48,7 @@ public class gui extends JPanel implements KeyListener{
 	private JButton b5 = new JButton("I am a button 5");
 	private JButton b6 = new JButton("I am a button 6");
 	private ArrayList<JButton> bs = new ArrayList<>(6);
+	private JPanel clock = Clock.giveClock();
 	
 	gui()
 	{
@@ -74,6 +77,7 @@ public class gui extends JPanel implements KeyListener{
 		this.add(b2, BorderLayout.NORTH);
 		this.add(right, BorderLayout.EAST);
 		this.add(left, BorderLayout.WEST);
+		this.add(clock, BorderLayout.WEST);
 
 
 		b1.addActionListener(new ActionListener() {
@@ -124,6 +128,7 @@ public class gui extends JPanel implements KeyListener{
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
+		
     }
 
 	public Dimension getPreferredSize() {

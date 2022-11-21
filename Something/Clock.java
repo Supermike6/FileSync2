@@ -39,13 +39,12 @@ public class Clock extends JPanel implements KeyListener{
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0);
 	private LocalTime tempTime;
 	private int i = 0;
-    private JButton b = new JButton("I am a button");
+	private int x = 0;
 
 	
 	
 	Clock()
 	{
-        this.add(b);
 		this.setFocusable(true);
 		this.setBackground(Color.WHITE);
 		this.addKeyListener(this);
@@ -94,6 +93,7 @@ public class Clock extends JPanel implements KeyListener{
 			{
 				rn = Instant.now().atZone(ZoneId.systemDefault());
 				today = ""+rn.getDayOfWeek();
+				repaint();
 			}
 		});
 		timer.start();
@@ -116,7 +116,7 @@ public class Clock extends JPanel implements KeyListener{
 
 		//put schedule code here
 
-
+		x++;
 		
 		FontMetrics fm = g2.getFontMetrics(); 
 		int messageWidth = fm.stringWidth(message);
@@ -144,7 +144,7 @@ public class Clock extends JPanel implements KeyListener{
 			
 		}
 
-		
+		sec = (double) rn.getSecond()%60;
 		min = rn.getMinute()%60+((double)rn.getSecond()/60);
 		hr = rn.getHour()%12+(min/60);
 		
@@ -153,6 +153,9 @@ public class Clock extends JPanel implements KeyListener{
 
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
+		g2.setColor(Color.red);
+		g2.drawLine(PREF_W/2, PREF_H/2, -(int)((Math.sin(Math.toRadians(sec*6+180)))*90)+125, (int)((Math.cos(Math.toRadians(sec*6+180)))*90)+125);
+		g2.drawString(x+"", 20, 40);
 	}
 
 	public Dimension getPreferredSize() {
@@ -206,4 +209,8 @@ public class Clock extends JPanel implements KeyListener{
         if(num<10) return "0"+num;
         return ""+num;
     }
+	public static JPanel giveClock()
+	{
+		return new Clock();
+	}
 }
