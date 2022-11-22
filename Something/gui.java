@@ -30,8 +30,8 @@ import Something.Clock;
 
 public class gui extends JPanel implements KeyListener{
 	private static final long serialVersionUID = 1L;
-	private static final int PREF_W = 300;
-	private static final int PREF_H = 300;
+	private static final int PREF_W = 530;
+	private static final int PREF_H = 310;
 	private Timer timer;
 	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
 	private String message = "", tempString = "", today = rn.getDayOfWeek()+"";
@@ -77,7 +77,7 @@ public class gui extends JPanel implements KeyListener{
 		this.add(b2, BorderLayout.NORTH);
 		this.add(right, BorderLayout.EAST);
 		this.add(left, BorderLayout.WEST);
-		this.add(clock, BorderLayout.WEST);
+		this.add(clock, BorderLayout.CENTER);
 
 
 		b1.addActionListener(new ActionListener() {
