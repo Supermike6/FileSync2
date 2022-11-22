@@ -104,13 +104,9 @@ public class Clock extends JPanel implements KeyListener{
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
 
-			g2.setStroke(new BasicStroke(3));
+		g2.setStroke(new BasicStroke(3));
 		
-		g2.setColor(Color.black);
-		
-		g2.fillRect(0,0,PREF_W,PREF_H);
-		
-		g2.setColor(new Color(219,200,175));
+		g2.setColor(Color.BLACK);
 		
 		g2.drawOval(PREF_W/2-100, PREF_H/2-100, 200, 200);
 
@@ -140,7 +136,7 @@ public class Clock extends JPanel implements KeyListener{
 
 			messageWidth = fm.stringWidth("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2);
 			startX = PREF_W/2-messageWidth/2;
-			g2.drawString("Time Lef`t: Minutes "+tempInt3+", Seconds "+tempInt2, startX, PREF_H-7);
+			g2.drawString("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2, startX, PREF_H-7);
 			
 		}
 
@@ -149,13 +145,13 @@ public class Clock extends JPanel implements KeyListener{
 		hr = rn.getHour()%12+(min/60);
 		
 
-		g2.setColor(new Color(219,200,175));
+		g2.setColor(Color.black);
 
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
 		g2.setColor(Color.red);
+		g2.setStroke(new BasicStroke(2));
 		g2.drawLine(PREF_W/2, PREF_H/2, -(int)((Math.sin(Math.toRadians(sec*6+180)))*90)+125, (int)((Math.cos(Math.toRadians(sec*6+180)))*90)+125);
-		g2.drawString(x+"", 20, 40);
 	}
 
 	public Dimension getPreferredSize() {

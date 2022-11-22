@@ -22,6 +22,7 @@ import java.util.Scanner;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
@@ -47,6 +48,8 @@ public class gui extends JPanel implements KeyListener{
 	private JButton b4 = new JButton("I am a button 4");
 	private JButton b5 = new JButton("I am a button 5");
 	private JButton b6 = new JButton("I am a button 6");
+
+
 	private ArrayList<JButton> bs = new ArrayList<>(6);
 	private JPanel clock = Clock.giveClock();
 	
