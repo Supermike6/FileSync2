@@ -46,7 +46,6 @@ public class blackJack
             dealTo(dealer, deck);
         }
         
-        
         while(sumList(player)<=21)
         {
             System.out.println("Your Hand: ");
