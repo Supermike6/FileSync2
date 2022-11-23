@@ -1,4 +1,4 @@
-package Clock;
+package Something;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -20,12 +20,13 @@ import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
-public class allClock extends JPanel implements KeyListener{
+public class Clock extends JPanel implements KeyListener{
 	private static final long serialVersionUID = 1L;
 	private static final int PREF_W = 250;
 	private static final int PREF_H = 250;
@@ -38,10 +39,11 @@ public class allClock extends JPanel implements KeyListener{
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0);
 	private LocalTime tempTime;
 	private int i = 0;
+	private int x = 0;
 
 	
 	
-	allClock()
+	Clock()
 	{
 		this.setFocusable(true);
 		this.setBackground(Color.WHITE);
@@ -79,7 +81,7 @@ public class allClock extends JPanel implements KeyListener{
 			}
 		}
 
-
+        
 
 		tempString = fix0(rn.getMonthValue())+"/"+fix0(rn.getDayOfMonth())+"/"+rn.getYear();
 		
@@ -91,6 +93,7 @@ public class allClock extends JPanel implements KeyListener{
 			{
 				rn = Instant.now().atZone(ZoneId.systemDefault());
 				today = ""+rn.getDayOfWeek();
+				repaint();
 			}
 		});
 		timer.start();
@@ -101,19 +104,15 @@ public class allClock extends JPanel implements KeyListener{
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
 
-			g2.setStroke(new BasicStroke(3));
+		g2.setStroke(new BasicStroke(3));
 		
-		g2.setColor(Color.black);
-		
-		g2.fillRect(0,0,PREF_W,PREF_H);
-		
-		g2.setColor(new Color(219,200,175));
+		g2.setColor(Color.BLACK);
 		
 		g2.drawOval(PREF_W/2-100, PREF_H/2-100, 200, 200);
 
 		//put schedule code here
 
-
+		x++;
 		
 		FontMetrics fm = g2.getFontMetrics(); 
 		int messageWidth = fm.stringWidth(message);
@@ -137,19 +136,22 @@ public class allClock extends JPanel implements KeyListener{
 
 			messageWidth = fm.stringWidth("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2);
 			startX = PREF_W/2-messageWidth/2;
-			g2.drawString("Time Lef`t: Minutes "+tempInt3+", Seconds "+tempInt2, startX, PREF_H-7);
+			g2.drawString("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2, startX, PREF_H-7);
 			
 		}
 
-		
+		sec = (double) rn.getSecond()%60;
 		min = rn.getMinute()%60+((double)rn.getSecond()/60);
 		hr = rn.getHour()%12+(min/60);
 		
 
-		g2.setColor(new Color(219,200,175));
+		g2.setColor(Color.black);
 
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((min)*6))*85+125), (int)(Math.cos(Math.toRadians((min)*6+180))*85+125));
 		g2.drawLine(PREF_W/2, PREF_H/2, (int)(Math.sin(Math.toRadians((double)(hr*30)))*60+125), (int)(Math.cos(Math.toRadians((double)(hr*30)+180))*60+125));
+		g2.setColor(Color.red);
+		g2.setStroke(new BasicStroke(2));
+		g2.drawLine(PREF_W/2, PREF_H/2, -(int)((Math.sin(Math.toRadians(sec*6+180)))*90)+125, (int)((Math.cos(Math.toRadians(sec*6+180)))*90)+125);
 	}
 
 	public Dimension getPreferredSize() {
@@ -158,7 +160,7 @@ public class allClock extends JPanel implements KeyListener{
 
 	public static void createAndShowGUI() throws IOException {
 		JFrame frame = new JFrame("Clock");
-		JPanel gamePanel = new allClock();
+		JPanel gamePanel = new Clock();
 		frame.getContentPane().add(gamePanel);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
@@ -203,4 +205,8 @@ public class allClock extends JPanel implements KeyListener{
         if(num<10) return "0"+num;
         return ""+num;
     }
+	public static JPanel giveClock()
+	{
+		return new Clock();
+	}
 }

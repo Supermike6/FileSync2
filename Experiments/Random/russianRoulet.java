@@ -6,26 +6,15 @@ public class russianRoulet
     public static int maxHits = 0;
     public static void main(String[] args)
     {
-        for(int i = 0; i<10000000; i++)
-            emptyClip();
-        System.out.println(maxHits); 
+        emptyClip(); 
     }
     public static void emptyClip()
     {
-        int shots = 0;
-        int num = (int)(Math.random()*6);
-        while(num!=3)
-        {
-            shots++;
-            System.out.println("You didn't die :) "+num);
-            num = (int)(Math.random()*6);
-        }
-        if(shots>maxHits)
-        {
-            maxHits=shots;
-            System.out.println("BANG! You are have dead now "+num);
-            System.out.println("Shots: "+shots);
-            System.out.println("Chance(%): "+100*(1/Math.pow(6, shots)));
-        }
+        boolean go = true;
+        if(go==true&&!false) System.out.println("H𝐞𝐥𝐥𝐨 𝐖o𝐫𝐥𝐝");
+
+
+        // int randnum = (int) (Math.random()*6);
+        // if(randnum == 3) System.out.println("Dead");
     }
 }
