@@ -75,7 +75,11 @@ public class noise extends JPanel implements MouseInputListener
       timer = new Timer(timerSpeed, new ActionListener() {
          public void actionPerformed(ActionEvent e)
          {
-            if(click) playSound(collisionSound);
+            if(click)
+            {
+               playSound(collisionSound);
+               click = false;
+            }
             repaint();
          }
       });
@@ -124,7 +128,7 @@ public class noise extends JPanel implements MouseInputListener
     @Override
     public void mouseClicked(MouseEvent e) {
         // TODO Auto-generated method stub
-        click = !click;
+        click = true;
         
     }
 
