@@ -49,7 +49,7 @@ public class blackJack{
                     } else if(choice.equalsIgnoreCase("stand"))
             {
                 while(sumList(dealer)<21)
-                    if(Math.random()<(21-sumList(dealer))/21) {
+                    if(Math.random()<((21-sumList(dealer))/21)) {
                         dealToDealer();
                         System.out.println("Dealer hits!");
 
