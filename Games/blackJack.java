@@ -11,7 +11,6 @@ public class blackJack
     public static void main(String[] args)
     {
         System.out.println("Welcome to Blackjack! If you are reading this then the author assumes you know how to play blackjack. (ace counts as 1)");
-        if(bet>=points) bet = points;
         while(points!=0)
         {
             System.out.println();
