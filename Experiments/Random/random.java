@@ -6,13 +6,10 @@ public class random
 {
     public static void main(String[] args)
     {
-        for(int i = 0;i<12;i++)
-            System.out.println();
+        ArrayList<String> strs = new ArrayList<String>();
+        for(int i = 0;i<100;i++)
+            
 
-
-        
-        Formating.textBoldRed();
-        System.out.println("( ͡° ͜ʖ ͡°)");
-        Formating.textReset();
+        for(String s:strs)System.out.println(s);
     }
 }
