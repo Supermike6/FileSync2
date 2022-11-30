@@ -1,25 +1,29 @@
 package Experiments.Graphics.ddd;
 
+import java.awt.Graphics2D;
+
 public class cube
 {
     int l;
     int w;
     int h;
-    int x;
-    int y;
-    int z;
-    cube(int length, int width, int height, int x, int y, int z)
+    vector3 v;
+    cube(int length, int width, int height, vector3 v3)
     {
-        length = this.l;
-        width = this.w;
-        height = this.h;
-        x = this.x;
-        y = this.y;
-        z = this.z;
+        this.l = length;
+        this.w = width;
+        this.h = height;
+        this.v = v3;
     }
 
     @Override
     public String toString() {
-        return "["+
+        
+        return "cube[length="+l+",width="+w+",height="+h+",v3="+v+"]";
+    }
+    
+    public void drawCube(Graphics2D g2)
+    {
+        // g2.drawLine(x, y, x, y);
     }
 }
