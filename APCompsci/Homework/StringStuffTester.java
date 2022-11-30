@@ -1,4 +1,4 @@
-package Homework;
+package APCompsci.Homework;
 
 //Mr. Uhl
 //Program description: A tester class for methods in the StringStuff class.

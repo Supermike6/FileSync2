@@ -1,4 +1,4 @@
-package Homework;
+package APCompsci.Homework;
 
 //AP Computer Science
 //Program description: Complete each of the methods defined in the class

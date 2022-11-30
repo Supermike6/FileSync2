@@ -1,4 +1,4 @@
-package Homework;
+package APCompsci.Homework;
 
 public class RationalNumber implements Comparable<RationalNumber>
 {

@@ -1,4 +1,4 @@
-package Homework; 
+package APCompsci.Homework; 
 
 public class ProductTester_StandardArray
 {

@@ -1,4 +1,4 @@
-package Homework;
+package APCompsci.Homework;
 
 //Mr. Uhl
 //Program description: A class to test the RationalNumber class.

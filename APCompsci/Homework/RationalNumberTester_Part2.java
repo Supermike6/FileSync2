@@ -1,4 +1,4 @@
-package Homework;
+package APCompsci.Homework;
 
 import java.util.ArrayList;
 import java.util.Collections;

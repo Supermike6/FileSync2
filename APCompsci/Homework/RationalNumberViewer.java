@@ -1,4 +1,4 @@
-package Homework;
+package APCompsci.Homework;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
