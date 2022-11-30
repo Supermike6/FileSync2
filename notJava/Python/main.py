@@ -1,2 +1,2 @@
 stringinginging = input()
-print(stringinginging+"")
+print(stringinginging)
