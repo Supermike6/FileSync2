@@ -22,37 +22,29 @@ import java.util.Scanner;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
-import Something.Clock;
+import Clock.*;
 
 public class gui extends JPanel implements KeyListener{
 	private static final long serialVersionUID = 1L;
 	private static final int PREF_W = 530;
 	private static final int PREF_H = 310;
 	private Timer timer;
-	private ZonedDateTime rn = Instant.now().atZone(ZoneId.systemDefault());
-	private String message = "", tempString = "", today = rn.getDayOfWeek()+"";
-	private boolean sp;
-	private Scanner sc,sc1;
-	private Double hr, min, sec;
-	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0);
-	private LocalTime tempTime;
-	private int i = 0;
+	private static JPanel right = new JPanel(new BorderLayout());
     private JButton b1 = new JButton("I am a button 1");
 	private JButton b2 = new JButton("I am a button 2");
-	private JButton b3 = new JButton("I am a button 3");
+	private static JButton b3 = new JButton("I am a button 3");
 	private JButton b4 = new JButton("I am a button 4");
 	private JButton b5 = new JButton("I am a button 5");
 	private JButton b6 = new JButton("I am a button 6");
+	private boolean toggled = false;
 
 
 	private ArrayList<JButton> bs = new ArrayList<>(6);
-	private JPanel clock = Clock.giveClock();
-	
+	private JPanel clock = new 
 	gui()
 	{
 
@@ -82,6 +74,7 @@ public class gui extends JPanel implements KeyListener{
 		this.add(left, BorderLayout.WEST);
 		this.add(clock, BorderLayout.CENTER);
 
+		
 
 		b1.addActionListener(new ActionListener() {
 			@Override
@@ -95,6 +88,7 @@ public class gui extends JPanel implements KeyListener{
 			public void actionPerformed(ActionEvent e)
 			{
 			   System.out.println(2);
+			
 			}
 		}); 
 		b3.addActionListener(new ActionListener() {
@@ -114,13 +108,14 @@ public class gui extends JPanel implements KeyListener{
 			   System.out.println(6);
 			}}); 
 
-
+			
 		timer = new Timer(1000, new ActionListener()
 		  {
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-
+				
+				repaint();
 			}
 		});
 		timer.start();
@@ -172,11 +167,6 @@ public class gui extends JPanel implements KeyListener{
 	@Override
 	public void keyReleased(KeyEvent e)
 	{
-		if(e.getKeyCode() == KeyEvent.VK_SPACE) sp = !sp;
-		if(e.getKeyCode() == KeyEvent.VK_R)
-		{
 			
-		}
-		repaint();	
 	}
 }

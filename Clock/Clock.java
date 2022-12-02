@@ -26,7 +26,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
-import javax.swing.plaf.synth.SynthSpinnerUI;
 
 public class Clock extends JPanel implements KeyListener{
 	private static final long serialVersionUID = 1L;
@@ -80,7 +79,7 @@ public class Clock extends JPanel implements KeyListener{
 					times.add(fileLines.get(k).subSequence(21, 23)+"/"+fileLines.get(k).subSequence(23, 25)+"/"+fileLines.get(k).subSequence(17, 21));
 				}
 			}
-			System.out.println(times.get(k));
+			// System.out.println(times.get(k));
 		}
 		for(int x = 0; x<cls.size();x++)
 		{
