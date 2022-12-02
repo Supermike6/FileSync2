@@ -18,7 +18,7 @@ public class brainUnfuck
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter string: ");
         char[] in = sc.nextLine().toCharArray();
-
+        
 
         sc.close();
     }
