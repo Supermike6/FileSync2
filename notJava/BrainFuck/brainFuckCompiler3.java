@@ -5,19 +5,34 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class brainFuckCompiler2 
+public class brainFuckCompiler3
 {
     static String line="";
     static Integer[] memory = new Integer[32];
     static int memoryHead = 0;
     static ArrayList<String> instructions = new ArrayList<>(0);
-    String instruction = "";
+    static String instruction = "";
     public static void main(String[] args) throws FileNotFoundException
     {
         File file = new File("notJava/BrainFuck/testcode.bf");
         Scanner sc = new Scanner(file);
         //initializing variables
-        
+
+        // int num = 0;
+        // for(int i = 8; i!=0;i--)
+        // {
+        //     num++;
+        //     num++;
+        //     num++;
+        //     num++;
+        //     num++;
+        //     num++;
+        //     num++;
+        //     num++;
+        //     num++;
+        // }
+        // System.out.println((char)num);
+
         //populating memory array
         for(int i = 0; i<32; i++)
         {
@@ -35,6 +50,7 @@ public class brainFuckCompiler2
         // printMemory(memory, memoryHead);
         
         System.out.println();
+        sc.close();
     }
     public static void printMemory(Integer[] memory, int memoryHead)
     {
@@ -72,7 +88,6 @@ public class brainFuckCompiler2
     
     public static void runTask(String in)
     {
-        int instIndex = 0;
         int startHead = 0;
         char[] insts = in.toCharArray();
         for(int i = 0;i<insts.length;i++)
@@ -109,6 +124,7 @@ public class brainFuckCompiler2
             {
                 Scanner sc = new Scanner(System.in);
                 memory[memoryHead] = (int) sc.nextLine().toCharArray()[0];
+                sc.close();
             }
             // in.substring(instIndex, in.indexOf("]", instIndex));
             
