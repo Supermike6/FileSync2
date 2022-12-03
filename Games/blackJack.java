@@ -19,12 +19,15 @@ public class blackJack
             int bet = sc.nextInt();
             if(bet>=points) bet = points;
             if(bet<1) bet = 1;
+            
+            
             for(int i = 1; i<=10;i++)
                 for(int j = 0; j<4; j++) 
                     deck.add(i);
             for(int i = 0;i<2;i++) {
                 dealToPlayer();
                 dealToDealer();
+
             }
             System.out.println("Your hand: " + player);
             System.out.println("Dealer's hand: [" +dealer.get(dealer.size()-1) + ", ...]");
@@ -83,6 +86,7 @@ public class blackJack
             }
             System.out.println("You have " + points + " points."); 
         }
+        sc.close();
     }
     public static int sumList(ArrayList<Integer> nums)
     {

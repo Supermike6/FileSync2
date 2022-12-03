@@ -162,10 +162,10 @@ public class Clock2 extends JPanel implements KeyListener{
 			}else{message = "Before School";tempTime = LocalTime.parse("08:00:00");}
 		}
 		if(tempString.equals("R4")){
-			if(current.compareTo(LocalTime.parse("08:00:00"))>0){
-				if(current.compareTo(LocalTime.parse("08:56:00"))>0){
-					if(current.compareTo(LocalTime.parse("09:00:00"))>0){
-						if(current.compareTo(LocalTime.parse("09:58:00"))>0){
+					if(current.compareTo(LocalTime.parse("08:00:00"))>0){
+								if(current.compareTo(LocalTime.parse("08:56:00"))>0){
+											if(current.compareTo(LocalTime.parse("09:00:00"))>0){
+														if(current.compareTo(LocalTime.parse("09:58:00"))>0){
 							if(current.compareTo(LocalTime.parse("10:02:00"))>0){
 								if(current.compareTo(LocalTime.parse("10:58:00"))>0){
 									if(current.compareTo(LocalTime.parse("11:02:00"))>0){
