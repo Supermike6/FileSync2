@@ -6,7 +6,7 @@ public class Desmosus
 {
     public static void main(String[] args)
     {
-        String eq = "20=5x";
+        String eq = "y=5x";
         int yLoc = eq.indexOf("y");
         int eLoc = eq.indexOf("=");
         int xLoc = eq.indexOf("x");
@@ -21,7 +21,7 @@ public class Desmosus
         ArrayList<String> out = new ArrayList<String>();
         for(int i = 0;i<eq.length()-1;i++)
         {
-            
+            System.out.println(eq.substring(i, eq.indexOf("+",i)));
             
         }
 
