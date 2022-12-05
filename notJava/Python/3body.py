@@ -51,6 +51,8 @@ def animate(i):
     scat.set_offsets(r[i])
 
 ani = animation.FuncAnimation(fig, animate, frames=N)
-plt.close()
 ## this function will create a lot of *.png files in a folder '3Body_frames'
-ani.save('3body.html', writer=animation.HTMLWriter(fps= 1//dt))
+# ani.save('3body.html', writer=animation.HTMLWriter(fps= 1//dt))
+
+plt.show()
+plt.close()

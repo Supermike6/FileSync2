@@ -50,5 +50,6 @@ def animate(i):
 ani = animation.FuncAnimation(fig, func=animate, frames=N)
 ## this function will create a lot of *.png files in a folder 'CNtower_frames'
 ## and create an HTML page with a simulation
-ani.save('CNtower.html', writer=animation.HTMLWriter(fps= 1//dt))
+# ani.save('CNtower.html', writer=animation.HTMLWriter(fps= 1//dt))
+plt.show()
 plt.close()
