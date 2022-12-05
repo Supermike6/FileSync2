@@ -6,8 +6,6 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Scanner;
-
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
