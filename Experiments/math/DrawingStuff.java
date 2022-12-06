@@ -31,7 +31,7 @@ public DrawingStuff()
      // System.out.print("Type the equation: ");
      // eq=sc.nextLine();
 
-     eq = "y=20x^2-5x+7";
+     eq = "y=3x^2+0x-8";
 
     JFrame frame = new JFrame();
     frame.pack();
@@ -155,7 +155,6 @@ public void mouseMoved(MouseEvent e) {
      mx=e.getX();
      my=e.getY();
 	repaint();
-     System.out.println(e.getX());
 }
 public static double round(double value, int places) {
      if (places < 0) throw new IllegalArgumentException();
