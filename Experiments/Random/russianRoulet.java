@@ -8,7 +8,7 @@ public class russianRoulet
     }
     public static void emptyClip()
     {
-        double ran = new Math.random();
+        double ran = Math.random();
         System.out.println("You died");
     }
 }

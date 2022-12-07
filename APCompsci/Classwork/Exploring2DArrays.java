@@ -6,8 +6,9 @@ public class Exploring2DArrays
     public static void main(String[] args)
     {
         
-        int[][] nums = new int[3][5];
+        int[][] nums = new int[5][5];
         initialize2DArray(nums);
+        zeroesOnDiagonal(nums);
         print2DArray(nums);
     
     
@@ -49,12 +50,20 @@ public class Exploring2DArrays
     public static double getColumbAverage(int[][] a, int col)
     {
         double out = 0.0;
-        for(int i =0;i<a[col].length;i++)
-            out+=a[col][i];
-
-        out/=a[col].length;
+        
         return out;
-
+    }
+    public static double getRowAverage(int[][] a, int row)
+    {
+        double out = 0.0;
+        
+        return out;
+    }
+    public static void zeroesOnDiagonal(int[][] a)
+    {
+        for(int i =0; i< a.length;i++){
+            a[i][i] = 0;
+        }
     }
 
 }
