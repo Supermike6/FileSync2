@@ -37,6 +37,7 @@ public class keythings extends JPanel implements KeyListener, MouseMotionListene
         setFocusable(true);
         requestFocus();
 
+        int[] out = new int[3];
 
 
     }

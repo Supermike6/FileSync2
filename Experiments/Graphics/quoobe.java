@@ -54,16 +54,24 @@ public class quoobe extends JPanel implements MouseListener, MouseMotionListener
 		g2.drawString(mainSideLength+"",50,50);
 
 		mainRect = new Rectangle(mainX,mainY,mainSideLength,mainSideLength);
+
 		g2.drawLine(PREF_W/2, PREF_H/2,(int)mainRect.getX(),(int)mainRect.getY());
 		g2.drawLine(PREF_W/2, PREF_H/2,(int)(mainRect.getX()+mainRect.getWidth()),(int)(mainRect.getY()));
 		g2.drawLine(PREF_W/2, PREF_H/2,(int)(mainRect.getX()),(int)(mainRect.getY()+mainRect.getHeight()));
 		g2.drawLine(PREF_W/2, PREF_H/2,(int)(mainRect.getX()+mainRect.getWidth()),(int)(mainRect.getY()+mainRect.getHeight()));
+		g2.drawLine((int)mainRect.getX(),(int)mainRect.getY(), (int)(mainRect.getX()+mainRect.getWidth()),(int)(mainRect.getY()));
+		g2.drawLine((int)(mainRect.getX()),(int)(mainRect.getY()+mainRect.getHeight()), (int)(mainRect.getX()+mainRect.getWidth()),(int)(mainRect.getY()));
+		g2.drawLine((int)(mainRect.getX()),(int)(mainRect.getY()+mainRect.getHeight()), (int)(mainRect.getX()+mainRect.getWidth()),(int)(mainRect.getY()+mainRect.getHeight()));
+		g2.drawLine((int)mainRect.getX(),(int)mainRect.getY(), (int)(mainRect.getX()+mainRect.getWidth()),(int)(mainRect.getY()+mainRect.getHeight()));
+		
+
+
 		g2.rotate(rotation*(Math.PI/180),rX,rY);
-		g2.draw(mainRect);
-		g2.drawImage(guide, mainX, mainY, mainSideLength, mainSideLength, this);
+		// g2.draw(mainRect);
+		// g2.drawImage(guide, mainX, mainY, mainSideLength, mainSideLength, this);
 		g2.rotate(-rotation*(Math.PI/180),rX,rY);
 		
-		g2.drawOval(rX-mainSideLength,rY-mainSideLength,(int) Math.sqrt(2*(Math.pow(mainSideLength,2))),(int) Math.sqrt(2*(Math.pow(mainSideLength,2))));
+		// g2.drawOval(rX-mainSideLength,rY-mainSideLength,(int) Math.sqrt(2*(Math.pow(mainSideLength,2))),(int) Math.sqrt(2*(Math.pow(mainSideLength,2))));
 
 		repaint();
 	}

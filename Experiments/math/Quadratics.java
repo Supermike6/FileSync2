@@ -165,14 +165,14 @@ public class Quadratics {
 	public static void drawQudratic(Graphics2D g2, int w, int h, String eq, int scale)
 	{
 		Polygon q = new Polygon();
-	     for (Double i = (double) (w*-1); i <= 2*w; i+=0.01)
-	     {
+	    for (Double i = (double) (w*-1); i <= 2*w; i+=0.01)
+	    {
 	    	 
-	    	 q.addPoint((int) (w+i*2*w/(scale*2.0)),
-						(int) (h-(Quadratics.a(eq)*i*i+Quadratics.b(eq)*i+Quadratics.c(eq))*2*h/(scale*2)));
+	    	q.addPoint((int) (w+i*2*w/(scale*2.0)),
+				(int) (h-(Quadratics.a(eq)*i*i+Quadratics.b(eq)*i+Quadratics.c(eq))*2*h/(scale*2)));
 	    	 
-	     }
-	     g2.drawPolyline(q.xpoints, q.ypoints, q.npoints);
+	    }
+	    g2.drawPolyline(q.xpoints, q.ypoints, q.npoints);
 		
 		
 	}

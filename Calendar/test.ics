@@ -1,0 +1,22 @@
+BEGIN:VEVENT
+DTSTAMP:20220830T163000Z
+UID:event-assignment-390148
+DTSTART:20220901T115900Z
+DTEND:20220901T115900Z
+CLASS:PUBLIC
+DESCRIPTION:Precalculus (Yellow Textbook)\n\n* Page 13-14 #73\, 79-82\n\nAd
+ vanced Math (Purple Textbook)\n\n* Page 5 #18\, 29\n\n* Page 16 #16\, 22\n
+ \n \n\n[Solutions to check] (https://pascack.instructure.com/courses/6952
+ /assignments/399071)
+SEQUENCE:0
+SUMMARY:PRF HW 1 [Pre-Calculus]
+URL:https://pascack.instructure.com/calendar?include_contexts=course_6952&m
+ onth=09&year=2022#assignment_390148
+X-ALT-DESC;FMTTYPE=text/html:<p>Precalculus (Yellow Textbook)</p>\n<ul>\n<l
+ i>Page 13-14 #73\, 79-82</li>\n</ul>\n<p>Advanced Math (Purple Textbook)</
+ p>\n<ul>\n<li>Page 5 #18\, 29</li>\n<li>Page 16 #16\, 22</li>\n</ul>\n<p>&
+ nbsp\;</p>\n<p><a title="SOL PRF HW 1" href="https://pascack.instructure.c
+ om/courses/6952/assignments/399071" data-api-endpoint="https://pascack.ins
+ tructure.com/api/v1/courses/6952/assignments/399071" data-api-returntype="
+ Assignment">Solutions to check</a></p>
+END:VEVENT

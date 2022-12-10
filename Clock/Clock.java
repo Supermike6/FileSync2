@@ -71,7 +71,7 @@ public class Clock extends JPanel implements KeyListener{
 
 		for(int k = 0; k<fileLines.size();k++)
 		{
-			if(fileLines.get(k).contains("DTEND;VALUE=DATE:"))
+			if(fileLines.get(k).contains("DTSTART;VALUE=DATE:"))
 			{
 				if(fileLines.get(k+4).contains("[HillsRotation]"))
 				{
@@ -79,6 +79,7 @@ public class Clock extends JPanel implements KeyListener{
 					times.add(fileLines.get(k).subSequence(21, 23)+"/"+fileLines.get(k).subSequence(23, 25)+"/"+fileLines.get(k).subSequence(17, 21));
 				}
 			}
+			// System.out.println(times.get(k));
 		}
 		for(int x = 0; x<cls.size();x++)
 		{
@@ -194,7 +195,7 @@ public class Clock extends JPanel implements KeyListener{
 		int messageWidth = fm.stringWidth(message);
 		int startX = PREF_W/2-messageWidth/2;
 		g2.drawString(message, startX, 17);
-
+		
 		if(sp)
 		{
 			g2.setColor(Color.RED);
@@ -205,10 +206,29 @@ public class Clock extends JPanel implements KeyListener{
 			int tempInt1 = (tempTime.getHour()-rn.getHour())*3600+(tempTime.getMinute()-rn.getMinute())*60+(-tempTime.getSecond()-rn.getSecond());
 			int tempInt2 = tempInt1%60;
 			int tempInt3 = (tempInt1-tempInt2)/60;
+
+			num = 0;
+			for(i=0;i<v.size();i++)
+		{
+			if(LocalTime.parse(v.get(i)+":00").compareTo(rn.toLocalTime())<0)
+			{
+				if(i>=v.size()-1) {
+					tempTime = LocalTime.parse("00:00:00");
+					message = "Out Of School";
+				} else {
+				tempTime = LocalTime.parse(v.get(i+1)+":00");
+				}
+				num = i;
+			}
+		}
+
+			int tempInt4 = (Integer.parseInt(times.get(0).substring(0,2))*60)+((24*60)-tempInt3);
+			
+
 			fm = g2.getFontMetrics(); 
 
-			messageWidth = fm.stringWidth("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2);
-			g2.drawString("Time Left: Minutes "+tempInt3+", Seconds "+tempInt2, PREF_W/2-messageWidth/2, PREF_H-7);
+			messageWidth = fm.stringWidth("Time Left: Minutes "+tempInt4+", Seconds "+tempInt2);
+			g2.drawString("Time Left: Minutes "+tempInt4+", Seconds "+tempInt2, PREF_W/2-messageWidth/2, PREF_H-7);
 			
 		}
 		

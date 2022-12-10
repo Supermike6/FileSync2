@@ -103,14 +103,7 @@ public class bruteForce extends JPanel
                 endTime = System.currentTimeMillis()+0.0;
                 Double timeneeded = (endTime - startTime);
                 System.out.println("Time taken(s): "+timeneeded/1000);
-                String s = "LLLLLLLLLLLLL";
-                // SwingUtilities.invokeLater(new Runnable() {
-                //     public void run() {
-                //        createAndShowGUI();
-                //     }
-                // });
-
-                while(true)s+=s;
+                break;
             }
         }
     

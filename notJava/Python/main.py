@@ -1,0 +1,2 @@
+stringinginging = input()
+print(stringinginging)

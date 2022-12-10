@@ -1,4 +1,6 @@
-package Games.SpaceEnvadersFolder;
+package SpaceEnvadersFolder;
+
+
 
 import java.awt.Color;
 import java.awt.Dimension;
