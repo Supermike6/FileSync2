@@ -86,7 +86,7 @@ public class blackJack
             }
             System.out.println("You have " + points + " points."); 
         }
-        sc.close();
+
     }
     public static int sumList(ArrayList<Integer> nums)
     {
