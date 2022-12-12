@@ -1,10 +1,7 @@
 package notJava.BrainFuck;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -21,16 +18,7 @@ public class brainUnfuck
 
     public static void main(String[] args) throws FileNotFoundException
     {
-        File points = new File("Experiments/Graphics/points.txt");
-
-        FileReader fr = new FileReader(points);
-        BufferedReader br = new BufferedReader(fr);
-        FileWriter fw = null;
-        BufferedWriter bw = null;
-        PrintWriter pw = null;
-
         makeFile("", "notJava/BrainFuck/testcode.bf");
-
 
         String out = "";
         Scanner sc = new Scanner(System.in);
