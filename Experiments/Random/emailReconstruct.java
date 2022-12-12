@@ -4,6 +4,6 @@ public class emailReconstruct
 {
     public static void main(String[] args)
     {
-        System.out.println("hello i am setup right ");
+        System.out.println("hello i am sßetup right ");
     }    
 }
