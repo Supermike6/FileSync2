@@ -175,7 +175,13 @@ public class Picture
 
   public void photoNegative()
   {
-     
+   Pixel temp = new Pixel(0, 0, 0,0);
+   for(int i = 0; i<pix.length;i++)
+      for(int j = 0; j<pix[i].length;j++)
+      {
+         temp = new Pixel(255-pix[i][j].Red, 255-pix[i][j].Green, 255-pix[i][j].Blue, 255-pix[i][j].Alpha);
+         pix[i][j] = temp;
+      }
   }
   
 }

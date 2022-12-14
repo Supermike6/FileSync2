@@ -156,7 +156,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-           upic.photoNegative();
+            upic.photoNegative();
             gui.update();
          }
       });
