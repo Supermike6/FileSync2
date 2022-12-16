@@ -50,7 +50,7 @@ public class Clock extends JPanel implements KeyListener{
 		this.addKeyListener(this);
 		
 		try {
-			sc = new Scanner(new File("Clock/Schedules/Monday.txt"));
+			sc = new Scanner(new File("Clock/Schedules/Temp.txt"));
 			sc1 = new Scanner(new File("Clock/calendar.ics")); 
 		} catch (Exception e){e.printStackTrace();}
 		
@@ -93,6 +93,7 @@ public class Clock extends JPanel implements KeyListener{
 			{
 				rn = Instant.now().atZone(ZoneId.systemDefault());
 				today = ""+rn.getDayOfWeek();
+				message = fileLines.get(0);
 				repaint();
 			}
 		});
@@ -131,6 +132,7 @@ public class Clock extends JPanel implements KeyListener{
 		g2.setColor(Color.red);
 		g2.setStroke(new BasicStroke(2));
 		g2.drawLine(PREF_W/2, PREF_H/2, -(int)((Math.sin(Math.toRadians(sec*6+180)))*90)+125, (int)((Math.cos(Math.toRadians(sec*6+180)))*90)+125);
+		
 	}
 
 	public Dimension getPreferredSize() {

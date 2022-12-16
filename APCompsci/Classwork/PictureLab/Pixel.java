@@ -72,7 +72,7 @@ public class Pixel
     public void setAlpha(int a) {
         this.Alpha = a;
     }
-    public void getPhotoNegative()
+    public void photoNegative()
     {
         Pixel temp = new Pixel(0, 0, 0,0);
         for(int i = 0; i<pix.length;i++)
