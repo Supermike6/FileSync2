@@ -38,7 +38,7 @@ public class Picture
       pix = getPixels2D(pic);
    }
    
-   public static Pixel[][] getPixels2D(BufferedImage image)
+   public Pixel[][] getPixels2D(BufferedImage image)
    {
       final byte[] pixels = ((DataBufferByte) image.getRaster().getDataBuffer()).getData();
       final int width = image.getWidth();
@@ -304,6 +304,32 @@ public class Picture
       {
          pix[i][j] = pix[pix.length-i-1][j];
       }
+   }
+
+   public void encodeUsingRed(Picture picture)
+   {
+      Pixel[][] msg = picture.pix;
+      for(int i = 0; i<msg.length;i++)
+         for(int j = 0; j<msg[i].length;j++)
+         {
+            if(msg[i][j].colorDistance(Color.black)<8 && msg[i][j].Red%2==1)
+               msg[i][j].Red--;
+         }
+   }
+
+   public void decodeUsingRed()
+   {
+      for(int i = 0; i<pix.length;i++)
+         for(int j = 0; j<pix[i].length;j++)
+         {
+            if(pix[i][j].Red%2==0)
+            {
+               pix[i][j] = new Pixel(0, 0, 0, 255);
+            } else {
+               pix[i][j] = new Pixel(255, 255, 255, 255);
+            }
+
+         }
    }
 
    }
