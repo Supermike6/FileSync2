@@ -16,9 +16,11 @@ public class Pixel
         this.Green = g;
         this.Blue = b;
     }
+
     public Color getColor() {
         return new Color(Red,Green,Blue,Alpha);
     }
+
     public void setColor(int r, int g, int b) {
         this.Red = r;
         this.Green = g;
@@ -39,8 +41,7 @@ public class Pixel
     {
         return Math.sqrt(Math.pow(c.getRed()-this.Red,2)+Math.pow(c.getGreen()-this.Green,2)+Math.pow(c.getBlue()-this.Blue,2));
     }
-
-
+    
     public int getRed() {
         return this.Red;
     }
@@ -71,16 +72,6 @@ public class Pixel
 
     public void setAlpha(int a) {
         this.Alpha = a;
-    }
-    public void photoNegative()
-    {
-        Pixel temp = new Pixel(0, 0, 0,0);
-        for(int i = 0; i<pix.length;i++)
-         for(int j = 0; j<pix[i].length;j++)
-         {
-            temp = new Pixel(255-pix[i][j].Red, 255-pix[i][j].Green, 255-pix[i][j].Blue, 255-pix[i][j].Alpha);
-            pix[i][j] = temp;
-         }
     }
 
 
