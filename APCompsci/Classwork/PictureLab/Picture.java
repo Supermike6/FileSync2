@@ -299,21 +299,33 @@ public class Picture
 
    public void blur()
    {
-      for(int i = 0; i<pix.length/2;i++)
+      for(int i = 0; i<pix.length;i++)
       for(int j = 0; j<pix[i].length;j++)
       {
-         pix[i][j] = pix[pix.length-i-1][j];
+
       }
    }
 
    public void encodeUsingRed(Picture picture)
    {
-      Pixel[][] msg = picture.pix;
+      Pixel[][] msg = getPixels2D(picture.pic);
+
+      for (int i = 0; i < pix.length; i++)
+      {
+         for (int j = 0; j < pix[i].length; j++)
+         {
+            pix[i][j].Red = (pix[i][j].Red%2==1) ? pix[i][j].Red : pix[i][j].Red+1;
+         }
+      }
+
       for(int i = 0; i<msg.length;i++)
          for(int j = 0; j<msg[i].length;j++)
          {
-            if(msg[i][j].colorDistance(Color.black)<8 && msg[i][j].Red%2==1)
-               msg[i][j].Red--;
+            if(msg[i][j].colorDistance(Color.black)<20&&pix[i][j].Red%2==1)
+            {
+               pix[i][j].Red--;
+            } else {
+            }
          }
    }
 
@@ -322,7 +334,7 @@ public class Picture
       for(int i = 0; i<pix.length;i++)
          for(int j = 0; j<pix[i].length;j++)
          {
-            if(pix[i][j].Red%2==0)
+            if(pix[i][j].Red%2==1)
             {
                pix[i][j] = new Pixel(0, 0, 0, 255);
             } else {
