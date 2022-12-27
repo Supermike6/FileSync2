@@ -343,5 +343,39 @@ public class Picture
 
          }
    }
+   public void decodeUsingGreen()
+   {
+      for(int i = 0; i<pix.length;i++)
+         for(int j = 0; j<pix[i].length;j++)
+         {
+            if(pix[i][j].Green%2==1)
+            {
+               pix[i][j] = new Pixel(0, 0, 0, 255);
+            } else {
+               pix[i][j] = new Pixel(255, 255, 255, 255);
+            }
+
+         }
+   }
+   public void decodeUsingBlue()
+   {
+      for(int i = 0; i<pix.length;i++)
+         for(int j = 0; j<pix[i].length;j++)
+         {
+            if(pix[i][j].Blue%2==1)
+            {
+               pix[i][j] = new Pixel(0, 0, 0, 255);
+            } else {
+               pix[i][j] = new Pixel(255, 255, 255, 255);
+            }
+
+         }
+   }
+
+   public void chromakey(Picture picture, int i, int j)
+   {
+      
+   }
+   
 
    }

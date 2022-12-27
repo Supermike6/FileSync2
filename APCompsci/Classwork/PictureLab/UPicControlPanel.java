@@ -379,7 +379,7 @@ public class UPicControlPanel extends JPanel
          {
          //    Picture p = new Picture("/Users/gbancroft25/Documents/GitHub/FileSync2/APCompsci/Classwork/PictureLab/message.jpg");
          //   upic.encodeUsingRed(p);
-           upic.encodeUsingRed(getSecondPic());
+            upic.encodeUsingRed(getSecondPic());
             gui.update();
          }
       });
@@ -413,7 +413,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.decodeUsingGreen();
+           upic.decodeUsingGreen();
             gui.update();
          }
       });
@@ -430,7 +430,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.decodeUsingBlue();
+           upic.decodeUsingBlue();
             gui.update();
          }
       });
@@ -464,7 +464,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.chromakey(new Picture("snowman_greenscreen.png"), 120, 100);
+           upic.chromakey(getSecondPic(), 120, 100);
             gui.update();
          }
       });
