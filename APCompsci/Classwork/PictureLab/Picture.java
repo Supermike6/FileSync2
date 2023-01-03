@@ -371,10 +371,14 @@ public class Picture
 
          }
    }
-
-   public void chromakey(Picture picture, int i, int j)
+   public void chromakey(Picture picture, int x, int y)
    {
-      
+      for(int i = 0; i < picture.pix.length; i++){
+         for(int j = 0; j < picture.pix[j].length; j++)
+         {
+            
+         }
+      }
    }
    
 
