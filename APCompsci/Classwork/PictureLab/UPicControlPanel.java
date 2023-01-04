@@ -499,7 +499,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.magnify(gui.getSelRow(), gui.getSelCol(), 100, 2);
+           upic.magnify(gui.getSelRow(), gui.getSelCol(), 100, 2);
             gui.update();
          }
       });

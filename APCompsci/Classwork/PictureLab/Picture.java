@@ -128,12 +128,12 @@ public class Picture
       g2.setColor(new Color(50, 0, 150));
       int fontSize = 40;
       g2.setFont(new Font("Cooper Black", Font.BOLD, fontSize));
-//      int messageWidth = g2.getFontMetrics().stringWidth(message);
-//      while(messageWidth > width - 40) {
-//         fontSize--;
-//         g2.setFont(new Font("Cooper Black", Font.BOLD, fontSize));
-//         messageWidth = g2.getFontMetrics().stringWidth(message);
-//      }
+     int messageWidth = g2.getFontMetrics().stringWidth(message);
+     while(messageWidth > width - 40) {
+        fontSize--;
+        g2.setFont(new Font("Cooper Black", Font.BOLD, fontSize));
+        messageWidth = g2.getFontMetrics().stringWidth(message);
+     }
       String[] messageList = message.split("~");
       int gap = 42;
       int heightOfMessage = messageList.length * gap;
