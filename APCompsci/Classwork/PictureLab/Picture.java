@@ -373,12 +373,16 @@ public class Picture
    }
    public void chromakey(Picture picture, int x, int y)
    {
-      for(int i = 0; i < picture.pix.length; i++){
-         for(int j = 0; j < picture.pix[j].length; j++)
+      for(int i = 0; i < Math.min(picture.pix.length,pix.length); i++){
+         for(int j = 0; j < Math.min(picture.pix[i].length,pix[i].length); j++)
          {
-            
+            if(pix[i][j].colorDistance(Color.green)<200)
+            {
+               pix[i][j] = picture.pix[i][j];
+            }
          }
-      }
+     }
+     System.out.println(pix[429][392].colorDistance(Color.green));
    }
    
 
