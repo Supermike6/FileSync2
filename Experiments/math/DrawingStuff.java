@@ -4,8 +4,8 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import java.util.Scanner;
-
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
@@ -31,7 +31,7 @@ public DrawingStuff()
      // System.out.print("Type the equation: ");
      // eq=sc.nextLine();
 
-     eq = "y=20x^2-5x+7";
+     eq = "y=3x^2+0x-8";
 
     JFrame frame = new JFrame();
     frame.pack();
@@ -90,7 +90,7 @@ public void paintComponent(Graphics g)
   
      g2.setColor(Color.blue);
 
-     g2.drawString("Mouse Loaction: ("+(mx+getWidth())/(scale*2.0)+", "+my+")", 10, 100);
+     g2.drawString("Mouse Loaction: ("+round((mx+getWidth())/(scale*4.0)-30,2)+", "+round(-(my+getWidth())/(scale*4.0)+30,3)+")", 10, 100);
      
      g2.drawLine(mx, 0, mx, getHeight());
      g2.drawLine(0,my,getWidth(),my);
@@ -128,7 +128,7 @@ public void mousePressed(MouseEvent e) {
 @Override
 public void mouseReleased(MouseEvent e) {
 	// TODO Auto-generated method stub
-	
+
 }
 
 @Override
@@ -155,8 +155,14 @@ public void mouseMoved(MouseEvent e) {
      mx=e.getX();
      my=e.getY();
 	repaint();
-     System.out.println(e.getX());
 }
+public static double round(double value, int places) {
+     if (places < 0) throw new IllegalArgumentException();
+ 
+     BigDecimal bd = BigDecimal.valueOf(value);
+     bd = bd.setScale(places, RoundingMode.HALF_UP);
+     return bd.doubleValue();
+ }
 
 
 }

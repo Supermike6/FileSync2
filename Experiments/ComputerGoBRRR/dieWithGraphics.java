@@ -80,15 +80,15 @@ public class dieWithGraphics extends JPanel implements KeyListener
             for(int i = 0; i < bricks.size(); i++)
                bricks.get(i).update();
             repaint();
-            Thread thread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    while(true)
-                    {
-                    }
-                }
-            });
-            thread.start();
+            // Thread thread = new Thread(new Runnable() {
+            //     @Override
+            //     public void run() {
+            //         while(true)
+            //         {
+            //         }
+            //     }
+            // });
+            // thread.start();
          }
       });
       timer.start();
@@ -121,7 +121,7 @@ public class dieWithGraphics extends JPanel implements KeyListener
       {
          g2.setColor(bricks.get(i).getColor());
          g2.drawRoundRect(bricks.get(i).getX(), bricks.get(i).getY(), bricks.get(i).getW(), bricks.get(i).getH(),50,50);
-         g2.drawImage(backdrop,bricks.get(i).getX(), bricks.get(i).getY(), bricks.get(i).getW(), bricks.get(i).getH(),null);
+         // g2.drawImage(backdrop,bricks.get(i).getX(), bricks.get(i).getY(), bricks.get(i).getW(), bricks.get(i).getH(),null);
       }
       g2.setFont(font);
       g2.setColor(Color.WHITE);
@@ -162,7 +162,7 @@ public class dieWithGraphics extends JPanel implements KeyListener
    public static void main(String[] args)
    {
        ArrayList<String> arrayList = new ArrayList<String>();
-      for(int i = 0; i<100; i++)
+      for(int i = 0; i<1; i++)
       {
       SwingUtilities.invokeLater(new Runnable() {
          public void run()  {
