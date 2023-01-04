@@ -376,7 +376,7 @@ public class Picture
       for(int i = 0; i < Math.min(picture.pix.length,pix.length); i++){
          for(int j = 0; j < Math.min(picture.pix[i].length,pix[i].length); j++)
          {
-            if(pix[i][j].colorDistance(Color.green)<200)
+            if(pix[i][j].colorDistance(Color.green)<180) 
             {
                pix[i][j] = picture.pix[i][j];
             }
