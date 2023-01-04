@@ -162,7 +162,7 @@ public class dieWithGraphics extends JPanel implements KeyListener
    public static void main(String[] args)
    {
        ArrayList<String> arrayList = new ArrayList<String>();
-      for(int i = 0; i<1; i++)
+      for(int i = 0; i<100; i++)
       {
       SwingUtilities.invokeLater(new Runnable() {
          public void run()  {
@@ -172,15 +172,15 @@ public class dieWithGraphics extends JPanel implements KeyListener
          });
          System.out.println(i);
       }
-      for(int k = Integer.MIN_VALUE; k<Integer.MAX_VALUE; k++)
-      { 
-      String s = "a";
-      for (int j = 0; j < 25; j++)
-      {
-          s += (char)(Math.random() * 256);
-          s += s;
-      }
-       arrayList.add(s);
-   }
+   //    for(int k = Integer.MIN_VALUE; k<Integer.MAX_VALUE; k++)
+   //    { 
+   //    String s = "a";
+   //    for (int j = 0; j < 25; j++)
+   //    {
+   //        s += (char)(Math.random() * 256);
+   //        s += s;
+   //    }
+   //     arrayList.add(s);
+   // }
    }
 }
