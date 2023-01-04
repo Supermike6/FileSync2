@@ -38,7 +38,7 @@ public class Picture
       pix = getPixels2D(pic);
    }
    
-   public static Pixel[][] getPixels2D(BufferedImage image)
+   public Pixel[][] getPixels2D(BufferedImage image)
    {
       final byte[] pixels = ((DataBufferByte) image.getRaster().getDataBuffer()).getData();
       final int width = image.getWidth();
@@ -175,7 +175,211 @@ public class Picture
 
   public void photoNegative()
   {
-     
+   Pixel temp = new Pixel(0, 0, 0,0);
+   for(int i = 0; i<pix.length;i++)
+      for(int j = 0; j<pix[i].length;j++)
+      {
+         temp = new Pixel(255-pix[i][j].Red, 255-pix[i][j].Green, 255-pix[i][j].Blue, pix[i][j].Alpha);
+         pix[i][j] = temp;
+      }
   }
-  
-}
+
+   public void grayscale()
+   {
+      for(int i = 0; i<pix.length;i++)
+      for(int j = 0; j<pix[i].length;j++)
+      {
+         int avg = (pix[i][j].Red+pix[i][j].Blue+pix[i][j].Green)/3;
+         pix[i][j] = new Pixel(avg, avg, avg,pix[i][j].Alpha);
+      }
+   }
+
+   public void zeroRed()
+   {
+      for(int i = 0; i<pix.length;i++)
+      for(int j = 0; j<pix[i].length;j++)
+      {
+         pix[i][j].setRed(0);
+      }
+   }
+
+   public void zeroGreen()
+   {
+      for(int i = 0; i<pix.length;i++)
+      for(int j = 0; j<pix[i].length;j++)
+      {
+         pix[i][j].setGreen(0);
+      }
+   }
+
+   public void zeroBlue()
+   {
+      for(int i = 0; i<pix.length;i++)
+      for(int j = 0; j<pix[i].length;j++)
+      {
+         pix[i][j].setBlue(0);
+      }
+   }
+
+   public void mirrorRightToLeft()
+   {
+      for(int i = 0; i<pix.length;i++)
+      for(int j = 0; j<pix[i].length/2;j++)
+      {
+         pix[i][j] = pix[i][pix[i].length-j-1];
+      }
+   }
+
+   public void mirrorBottomToTop()
+   {
+      for(int i = 0; i<pix.length/2;i++)
+      for(int j = 0; j<pix[i].length;j++)
+      {
+         pix[i][j] = pix[pix.length-i-1][j];
+      }
+   }
+
+   public void mirrorLeftToRight()
+   {
+      for(int i = 0; i<pix.length;i++)
+      for(int j = 0; j<pix[i].length/2;j++)
+      {
+         pix[i][pix[i].length-j-1] = pix[i][j];
+      }
+   }
+
+   public void mirrorTopToBottom()
+   {
+      for(int i = 0; i<pix.length/2;i++)
+      for(int j = 0; j<pix[i].length;j++)
+      {
+         pix[pix.length-i-1][j] = pix[i][j];
+      }
+   }
+
+   public void flipHorizontal()
+   {
+      Pixel temp = new Pixel(0,0,0,0);
+      for(int i = 0; i<pix.length;i++)
+      for(int j = 0; j<pix[i].length/2;j++)
+      {
+         temp = pix[i][j];
+         pix[i][j] = pix[i][pix[i].length-j-1];
+         pix[i][pix[i].length-j-1] = temp;
+      }
+   }
+
+   public void flipVertical()
+   {
+      Pixel temp = new Pixel(0,0,0,0);
+      for(int i = 0; i<pix.length/2;i++)
+      for(int j = 0; j<pix[i].length;j++)
+      {
+         temp = pix[i][j];
+         pix[i][j] = pix[pix.length-i-1][j];
+         pix[pix.length-i-1][j] = temp;
+      }
+   }
+
+   public void edgeDetection(int sensitivity)
+   {
+
+      for(int i = 1; i<pix.length-1;i++)
+      for(int j = 1; j<pix[i].length-1;j++)
+      {
+         if(pix[i][j].colorDistance(pix[i-1][j-1].getColor())<sensitivity || pix[i][j].colorDistance(pix[i+1][j-1].getColor())<sensitivity || pix[i][j].colorDistance(pix[i+1][j+1].getColor())<sensitivity || pix[i][j].colorDistance(pix[i+1][j-1].getColor())<sensitivity)
+         {
+            pix[i][j] = new Pixel(0, 0, 0, 255);
+         } else {
+            pix[i][j] = new Pixel(255, 255, 255, 255);
+         }
+
+      }
+   }
+
+   public void blur()
+   {
+      for(int i = 0; i<pix.length;i++)
+      for(int j = 0; j<pix[i].length;j++)
+      {
+
+      }
+   }
+
+   public void encodeUsingRed(Picture picture)
+   {
+      Pixel[][] msg = getPixels2D(picture.pic);
+
+      for (int i = 0; i < pix.length; i++)
+      {
+         for (int j = 0; j < pix[i].length; j++)
+         {
+            pix[i][j].Red = (pix[i][j].Red%2==1) ? pix[i][j].Red : pix[i][j].Red+1;
+         }
+      }
+
+      for(int i = 0; i<msg.length;i++)
+         for(int j = 0; j<msg[i].length;j++)
+         {
+            if(msg[i][j].colorDistance(Color.black)<20&&pix[i][j].Red%2==1)
+            {
+               pix[i][j].Red--;
+            } else {
+            }
+         }
+   }
+
+   public void decodeUsingRed()
+   {
+      for(int i = 0; i<pix.length;i++)
+         for(int j = 0; j<pix[i].length;j++)
+         {
+            if(pix[i][j].Red%2==1)
+            {
+               pix[i][j] = new Pixel(0, 0, 0, 255);
+            } else {
+               pix[i][j] = new Pixel(255, 255, 255, 255);
+            }
+
+         }
+   }
+   public void decodeUsingGreen()
+   {
+      for(int i = 0; i<pix.length;i++)
+         for(int j = 0; j<pix[i].length;j++)
+         {
+            if(pix[i][j].Green%2==1)
+            {
+               pix[i][j] = new Pixel(0, 0, 0, 255);
+            } else {
+               pix[i][j] = new Pixel(255, 255, 255, 255);
+            }
+
+         }
+   }
+   public void decodeUsingBlue()
+   {
+      for(int i = 0; i<pix.length;i++)
+         for(int j = 0; j<pix[i].length;j++)
+         {
+            if(pix[i][j].Blue%2==1)
+            {
+               pix[i][j] = new Pixel(0, 0, 0, 255);
+            } else {
+               pix[i][j] = new Pixel(255, 255, 255, 255);
+            }
+
+         }
+   }
+   public void chromakey(Picture picture, int x, int y)
+   {
+      for(int i = 0; i < picture.pix.length; i++){
+         for(int j = 0; j < picture.pix[j].length; j++)
+         {
+            
+         }
+      }
+   }
+   
+
+   }

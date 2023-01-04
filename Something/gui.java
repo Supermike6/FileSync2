@@ -30,8 +30,10 @@ import Clock.*;
 
 public class gui extends JPanel implements KeyListener{
 	private static final long serialVersionUID = 1L;
-	private static final int PREF_W = 530;
-	private static final int PREF_H = 310;
+	// private static final int PREF_W = 530;
+	// private static final int PREF_H = 310;
+	private static final int PREF_W = 250;
+	private static final int PREF_H = 250;
 	private Timer timer;
 	private static JPanel right = new JPanel(new BorderLayout());
     private JButton b1 = new JButton("I am a button 1");
@@ -44,10 +46,9 @@ public class gui extends JPanel implements KeyListener{
 
 
 	private ArrayList<JButton> bs = new ArrayList<>(6);
-	private JPanel clock = new 
+	private JPanel clock = new Clock();
 	gui()
 	{
-
 		bs.add(b1);
 		bs.add(b2);
 		bs.add(b3);
@@ -68,10 +69,10 @@ public class gui extends JPanel implements KeyListener{
 
 
 		this.setLayout(new BorderLayout());
-      	this.add(b1, BorderLayout.SOUTH);
-		this.add(b2, BorderLayout.NORTH);
-		this.add(right, BorderLayout.EAST);
-		this.add(left, BorderLayout.WEST);
+      	// this.add(b1, BorderLayout.SOUTH);
+		// this.add(b2, BorderLayout.NORTH);
+		// this.add(right, BorderLayout.EAST);
+		// this.add(left, BorderLayout.WEST);
 		this.add(clock, BorderLayout.CENTER);
 
 		

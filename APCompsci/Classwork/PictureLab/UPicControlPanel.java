@@ -156,7 +156,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-           upic.photoNegative();
+            upic.photoNegative();
             gui.update();
          }
       });
@@ -173,7 +173,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.grayscale();
+           upic.grayscale();
             gui.update();
          }
       });
@@ -190,7 +190,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.zeroRed();
+           upic.zeroRed();
             gui.update();
          }
       });
@@ -207,7 +207,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.zeroGreen();
+           upic.zeroGreen();
             gui.update();
          }
       });
@@ -224,7 +224,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.zeroBlue();
+           upic.zeroBlue();
             gui.update();
          }
       });
@@ -241,7 +241,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-            //upic.mirrorRightToLeft();
+            upic.mirrorRightToLeft();
             gui.update();
          }
       });
@@ -258,7 +258,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-            //upic.mirrorLeftToRight();
+            upic.mirrorLeftToRight();
             gui.update();
          }
       });
@@ -275,7 +275,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-            //upic.mirrorBottomToTop();
+            upic.mirrorBottomToTop();
             gui.update();
          }
       });
@@ -292,7 +292,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-            //upic.mirrorTopToBottom();
+            upic.mirrorTopToBottom();
             gui.update();
          }
       });
@@ -309,7 +309,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.flipHorizontal();
+           upic.flipHorizontal();
             gui.update();
          }
       });
@@ -326,7 +326,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-            //upic.flipVertical();
+            upic.flipVertical();
             gui.update();
          }
       });
@@ -343,7 +343,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.edgeDetection(15);
+           upic.edgeDetection(15);
             gui.update();
          }
       });
@@ -360,7 +360,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.blur();
+           upic.blur();
             gui.update();
          }
       });
@@ -377,8 +377,9 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.encodeUsingRed(new Picture("Upic_testmessage.png"));
-//            upic.encodeUsingRed(getSecondPic());
+         //    Picture p = new Picture("/Users/gbancroft25/Documents/GitHub/FileSync2/APCompsci/Classwork/PictureLab/message.jpg");
+         //   upic.encodeUsingRed(p);
+            upic.encodeUsingRed(getSecondPic());
             gui.update();
          }
       });
@@ -395,7 +396,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.decodeUsingRed();
+           upic.decodeUsingRed();
             gui.update();
          }
       });
@@ -412,7 +413,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.decodeUsingGreen();
+           upic.decodeUsingGreen();
             gui.update();
          }
       });
@@ -429,7 +430,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.decodeUsingBlue();
+           upic.decodeUsingBlue();
             gui.update();
          }
       });
@@ -463,7 +464,7 @@ public class UPicControlPanel extends JPanel
          @Override
          public void actionPerformed(ActionEvent e)
          {
-//            upic.chromakey(new Picture("snowman_greenscreen.png"), 120, 100);
+           upic.chromakey(getSecondPic(), 120, 100);
             gui.update();
          }
       });
