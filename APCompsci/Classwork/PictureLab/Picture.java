@@ -299,11 +299,19 @@ public class Picture
 
    public void blur()
    {
-      for(int i = 0; i<pix.length;i++)
-      for(int j = 0; j<pix[i].length;j++)
-      {
-
-      }
+      for(int i = 1; i<pix.length-1;i++)
+         for(int j = 1; j<pix[i].length-1;j++)
+         {
+            int red = (pix[i][j].Red+pix[i-1][j].Red+pix[i][j-1].Red+pix[i+1][j].Red+pix[i][j+1].Red+pix[i-1][j-1].Red+pix[i-1][j+1].Red+pix[i+1][j-1].Red+pix[i+1][j+1].Red)/9;
+            int green = (pix[i][j].Green+pix[i-1][j].Green+pix[i][j-1].Green+pix[i+1][j].Green+pix[i][j+1].Green+pix[i-1][j-1].Green+pix[i-1][j+1].Green+pix[i+1][j-1].Green+pix[i+1][j+1].Green)/9;
+            int blue = (pix[i][j].Blue+pix[i-1][j].Blue+pix[i][j-1].Blue+pix[i+1][j].Blue+pix[i][j+1].Blue+pix[i-1][j-1].Blue+pix[i-1][j+1].Blue+pix[i+1][j-1].Blue+pix[i+1][j+1].Blue)/9;
+            pix[i][j] = new Pixel(red, green, blue, 255);
+         }
+      // for(int i = 1; i<pix.length-1;i++)
+      //    for(int  j = 1; j<pix[i].length-1;j++)
+      //    {
+      //       pix[i][j] = new Pixel(red, green, blue, 255);
+      //    }
    }
 
    public void encodeUsingRed(Picture picture)
@@ -383,6 +391,11 @@ public class Picture
          }
      }
      System.out.println(pix[429][392].colorDistance(Color.green));
+   }
+
+   public void magnify(int selRow, int selCol, int i, int j)
+   {
+      
    }
    
 
