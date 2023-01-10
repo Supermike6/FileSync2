@@ -187,11 +187,10 @@ public class Picture
    public void grayscale()
    {
       for(int i = 0; i<pix.length;i++)
-      for(int j = 0; j<pix[i].length;j++)
-      {
-         int avg = (pix[i][j].Red+pix[i][j].Blue+pix[i][j].Green)/3;
-         pix[i][j] = new Pixel(avg, avg, avg,pix[i][j].Alpha);
-      }
+         for(int j = 0; j<pix[i].length;j++)
+         {
+            setToGray(j, i);
+         }
    }
 
    public void zeroRed()
@@ -261,23 +260,23 @@ public class Picture
    {
       Pixel temp = new Pixel(0,0,0,0);
       for(int i = 0; i<pix.length;i++)
-      for(int j = 0; j<pix[i].length/2;j++)
-      {
-         temp = pix[i][j];
-         pix[i][j] = pix[i][pix[i].length-j-1];
-         pix[i][pix[i].length-j-1] = temp;
-      }
+         for(int j = 0; j<pix[i].length/2;j++)
+         {
+            temp = pix[i][j];
+            pix[i][j] = pix[i][pix[i].length-j-1];
+            pix[i][pix[i].length-j-1] = temp;
+         }
    }
 
    public void flipVertical()
    {
       Pixel temp = new Pixel(0,0,0,0);
       for(int i = 0; i<pix.length/2;i++)
-      for(int j = 0; j<pix[i].length;j++)
-      {
-         temp = pix[i][j];
-         pix[i][j] = pix[pix.length-i-1][j];
-         pix[pix.length-i-1][j] = temp;
+         for(int j = 0; j<pix[i].length;j++)
+         {
+            temp = pix[i][j];
+            pix[i][j] = pix[pix.length-i-1][j];
+            pix[pix.length-i-1][j] = temp;
       }
    }
 
@@ -285,16 +284,16 @@ public class Picture
    {
 
       for(int i = 1; i<pix.length-1;i++)
-      for(int j = 1; j<pix[i].length-1;j++)
-      {
-         if(pix[i][j].colorDistance(pix[i-1][j-1].getColor())<sensitivity || pix[i][j].colorDistance(pix[i+1][j-1].getColor())<sensitivity || pix[i][j].colorDistance(pix[i+1][j+1].getColor())<sensitivity || pix[i][j].colorDistance(pix[i+1][j-1].getColor())<sensitivity)
+         for(int j = 1; j<pix[i].length-1;j++)
          {
-            pix[i][j] = new Pixel(0, 0, 0, 255);
-         } else {
-            pix[i][j] = new Pixel(255, 255, 255, 255);
-         }
+            if(pix[i][j].colorDistance(pix[i-1][j-1].getColor())<sensitivity || pix[i][j].colorDistance(pix[i+1][j-1].getColor())<sensitivity || pix[i][j].colorDistance(pix[i+1][j+1].getColor())<sensitivity || pix[i][j].colorDistance(pix[i+1][j-1].getColor())<sensitivity)
+            {
+               pix[i][j] = new Pixel(0, 0, 0, 255);
+            } else {
+               pix[i][j] = new Pixel(255, 255, 255, 255);
+            }
 
-      }
+         }  
    }
 
    public void blur()
@@ -323,16 +322,16 @@ public class Picture
          for (int j = 0; j < pix[i].length; j++)
          {
             pix[i][j].Red = (pix[i][j].Red%2==1) ? pix[i][j].Red : pix[i][j].Red+1;
+            
+         
          }
       }
-
       for(int i = 0; i<msg.length;i++)
          for(int j = 0; j<msg[i].length;j++)
          {
             if(msg[i][j].colorDistance(Color.black)<20&&pix[i][j].Red%2==1)
             {
                pix[i][j].Red--;
-            } else {
             }
          }
    }
@@ -394,6 +393,14 @@ public class Picture
    }
 
    public void magnify(int selRow, int selCol, int i, int j)
+   {
+      
+   }
+   public void setToEven(int x, int y)
+   {
+
+   }
+   public void setToGray(int x, int y)
    {
       
    }

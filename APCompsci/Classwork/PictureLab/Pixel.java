@@ -32,6 +32,12 @@ public class Pixel
         this.Green = avg;
         this.Blue = avg;
     }
+    public void setToEven() {
+        if(Red%2==1) Red--;
+        if(Green%2==1) Green--;
+        if(Blue%2==1) Blue--;
+        Red = Red - Red % 2;
+    }
     public void setNegative() {
         this.Red = 255-Red;
         this.Green = 255-Green;
