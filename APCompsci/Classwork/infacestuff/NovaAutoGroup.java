@@ -4,9 +4,10 @@ public class NovaAutoGroup implements Driveable
 {
     private int starPower;
 
+
     @Override
     public void accelerate(int rate) {
-        System.out.println("Vroooom");
+        // TODO Auto-generated method stub
         
     }
 
@@ -24,6 +25,9 @@ public class NovaAutoGroup implements Driveable
     public void setStarPower(int starPower) {
         this.starPower = starPower;
     }
+
+
+    
 
     
 }

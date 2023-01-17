@@ -7,6 +7,8 @@ public class TrafficManager
     public static void main(String[] args)
     {
         Driveable cw = new ChuckWagon();
+        Driveable gm = new GlazerMobile();
+        gm = cw;
         // cw.setHorsePowers(10);
         // System.out.println(cw.getHorsePowers());
         cw.accelerate(5);
@@ -18,7 +20,7 @@ public class TrafficManager
         traffic.add(new Zoomeez());
         traffic.add(new Zoomeez());
         traffic.add(new ChuckWagon());
-        
+    
     
     }    
 }
