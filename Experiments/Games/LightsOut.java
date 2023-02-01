@@ -1,7 +1,3 @@
-
-
-
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -24,15 +20,15 @@ public class LightsOut extends JPanel
    private JPanel other;
    private JPanel game;
    private static final long serialVersionUID = 1L;
-   private static int rows = 20;
-   private static int cols = 20;
+   private static int rows = 6;
+   private static int cols = 6;
    private static final int PREF_W = cols*102;
    private static final int PREF_H = rows*102;
    private int r = 0;
    private int c = 0;
    private int j = 0;
    
-   private static int ranMove = 5;
+   private static int ranMove = 6;
    private JButton[][] b;
 
    public LightsOut()

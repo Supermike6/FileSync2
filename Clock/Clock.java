@@ -38,7 +38,7 @@ public class Clock extends JPanel implements KeyListener{
 	private Scanner sc;
 	private ArrayList<String> cls = new ArrayList<>(8), fileLines = new ArrayList<>(0), rotation = new ArrayList<>(0), times = new ArrayList<>(0),v = new ArrayList<>(0);
 	private LocalTime tempTime;
-	private int i = 0, ticks = 0, tickCount = 14;
+	private int i = 0, ticks = 0, tickCount = 20;
 	private static Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
 	
 	Clock()
@@ -95,6 +95,7 @@ public class Clock extends JPanel implements KeyListener{
 						String u = cls.get(x).split(" ")[y].split("-")[z].split(":")[1];
 						String s = fix0(ti)+":"+fix0(Integer.parseInt(u));
 						v.add(s);
+						System.out.println(v);
 					}
 				}
 			}
@@ -221,8 +222,8 @@ public class Clock extends JPanel implements KeyListener{
 				num = i;
 			}
 		}
-
-			int tempInt4 = (Integer.parseInt(times.get(0).substring(0,2))*60)+((24*60)-tempInt3);
+			System.out.println(times);
+			int tempInt4 = (Integer.parseInt(v.get(0).substring(0,2))*60)+((24*60)-tempInt3);
 			
 
 			fm = g2.getFontMetrics(); 

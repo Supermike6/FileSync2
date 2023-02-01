@@ -12,11 +12,15 @@ public class FORLOOOOPS {
 		
 
 		
-		int [] years = {2021, 2022, 2023, 2024, 2025};
+		int[] years = {2021, 2022, 2023, 2024, 2025};
 		
-		for( int i = 0; i< Array.getLength(years); i++)
-			if(i < years.length-1) System.out.print(years[i]+ ", ");
-			else System.out.print(years[i] + ".");
+		for( int i = 0; i<years.length; i++)
+			if(i < years.length-1)
+			{
+				System.out.print(years[i]+ ", ");
+			} else {
+				System.out.println(years[i] + ".");
+			}
 	}
 
 }
