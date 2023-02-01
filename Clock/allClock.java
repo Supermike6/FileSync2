@@ -50,6 +50,7 @@ public class allClock extends JPanel implements KeyListener{
 				setSize(PREF_W, PREF_H);
 				repaint();
 			}
+			
 		});
 		timer.start();
 	}
