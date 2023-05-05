@@ -14,7 +14,7 @@ public class brainFuckCompiler3
     static String instruction = "";
     public static void main(String[] args) throws FileNotFoundException
     {
-        File file = new File("notJava/BrainFuck/testcode.bf");
+        File file = new File("Experiments/notJava/BrainFuck/testcode.bf");
         Scanner sc = new Scanner(file);
         //initializing variables
 

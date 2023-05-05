@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 public class MadLibsPanel {
-
+// Written by Grant Bancroft in 2021
 	public static void main(String[] args) 
 	{
 		

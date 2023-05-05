@@ -1,4 +1,4 @@
-package APCompsci.Classwork.PictureLab;
+   package APCompsci.Classwork.PictureLab;
 
 //RUN THIS CLASS TO RUN THE PROJECT!
 //DO NOT EDIT ANY CODE HERE!

@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class Sprite
 {
-    private double x,y,dx,dy;
-    private int w,h;
+    protected double x,y,dx,dy;
+    protected int w,h;
 
     public Sprite(double x, double y, int w, int h, double dx, double dy) {
         this.x = x;
@@ -83,19 +83,19 @@ public class Sprite
 
     @Override
     public String toString() {
-        return "{" +
+        return super.getClass().getName()+" [" +
             " x='" + getX() + "'" +
             ", y='" + getY() + "'" +
             ", dx='" + getDx() + "'" +
             ", dy='" + getDy() + "'" +
             ", w='" + getW() + "'" +
             ", h='" + getH() + "'" +
-            "}";
+            "]";
     }
 
     public void update()
     {
-        y+=dy;
+        
     }
 
     public void draw(Graphics2D g2)

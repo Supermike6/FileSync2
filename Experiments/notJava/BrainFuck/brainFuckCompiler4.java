@@ -1,10 +1,12 @@
 package notJava.BrainFuck;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class brainFuckCompiler4 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner scanner = new Scanner(new File("Experiments/notJava/BrainFuck/testcode.bf"));
 
         // Read the BrainFuck code from the input
         String code = scanner.nextLine();
@@ -66,5 +68,6 @@ public class brainFuckCompiler4 {
                     break;
             }
         }
+        System.out.println();
     }
 }

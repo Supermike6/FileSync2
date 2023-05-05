@@ -50,7 +50,7 @@ public class Clock extends JPanel implements KeyListener{
 		this.addKeyListener(this);
 		
 		try {
-			sc = new Scanner(new File("Clock/Schedules/Temp.txt"));
+			sc = new Scanner(new File("Clock/Schedules/Friday.txt"));
 			sc1 = new Scanner(new File("Clock/calendar.ics")); 
 		} catch (Exception e){e.printStackTrace();}
 		

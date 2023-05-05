@@ -2,7 +2,7 @@ package DND;
 
 import java.util.Scanner;
 
-public class runSimH
+public class runSimG
 {
     private static String choice = "";
     public static void main(String[] args)

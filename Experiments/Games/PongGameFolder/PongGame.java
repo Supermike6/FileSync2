@@ -1,5 +1,7 @@
 package PongGameFolder;
 
+
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -24,7 +26,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
-import Experiments.Classes.Ball;
+import Classes.Ball;
 
 public class PongGame extends JPanel implements KeyListener
 {

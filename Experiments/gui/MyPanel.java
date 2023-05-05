@@ -2,7 +2,7 @@
 //Program description: 
 //Nov 28, 2021
 
-package Experiments.gui;
+package gui;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

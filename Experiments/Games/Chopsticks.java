@@ -2,8 +2,6 @@
 
 import java.util.Scanner;
 
-import Experiments.functions.Formating;
-
 public class Chopsticks
 {
     int p11 = 0;
@@ -14,7 +12,7 @@ public class Chopsticks
     
     public static void main(String[] args)
     {
-        Formating.textRed();
+        Experiments.functions.Formating.textRed();
         String mode = "default";
         Scanner sc = new Scanner(System.in);
         int p11 = 1;

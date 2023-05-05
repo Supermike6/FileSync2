@@ -18,7 +18,7 @@ public class brainUnfuck
 
     public static void main(String[] args) throws FileNotFoundException
     {
-        makeFile("", "notJava/BrainFuck/testcode.bf");
+        makeFile("", "Experiments/notJava/BrainFuck/testcode.bf");
 
         String out = "";
         Scanner sc = new Scanner(System.in);
@@ -48,7 +48,7 @@ public class brainUnfuck
             
         
         
-        makeFile(out,"notJava/BrainFuck/testcode.bf");
+        makeFile(out,"Experiments/notJava/BrainFuck/testcode.bf");
         sc.close();
     }
 
@@ -60,7 +60,6 @@ public class brainUnfuck
             PrintWriter pw = new PrintWriter(bw);
             
             pw.print(s);
-            
             pw.flush();
             pw.close();
         } catch (IOException e) {

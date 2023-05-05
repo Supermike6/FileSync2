@@ -18,7 +18,9 @@ public class Dinosaur extends Sprite
 
     public static void main(String[] args)
     {
-        Dinosaur d = new Dinosaur();
+        Sprite d = new Dinosaur();
+        d.update();
+        System.out.println(d);
     }
 
     public void keyWasPressed(int key)
@@ -35,5 +37,28 @@ public class Dinosaur extends Sprite
             this.setDy(0);
     else if(key == duckKey)
         System.out.println("DUCK!");
+    }
+
+    @Override
+    public void update()
+    {
+        if(jumping)
+        {
+            dy = -1;
+            jumping = false;
+            falling = true;
+        } else if(falling)
+        {
+            dy+= 0.5;
+        }
+
+        if(y>200)
+        {
+            y=200;
+            falling = false;
+            dy=0;
+        }
+
+        y+=dy;
     }
 }

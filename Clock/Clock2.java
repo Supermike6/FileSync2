@@ -87,7 +87,7 @@ public class Clock2 extends JPanel implements KeyListener{
 				if(rn.getMonthValue()<10)
 					tempString = "0"+rn.getMonthValue()+"/"+rn.getDayOfMonth()+"/"+rn.getYear();
 		}
-		tempString = rotation.get(times.indexOf(tempString));
+		// tempString = rotation.get(times.indexOf(tempString));
 		timer = new Timer(1000, new ActionListener()
 		{
 			@Override

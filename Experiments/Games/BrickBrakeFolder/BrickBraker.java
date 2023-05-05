@@ -1,5 +1,6 @@
 package BrickBrakeFolder;
 
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -26,7 +27,7 @@ import javax.swing.Timer;
 
 
 
-import Experiments.Classes.Brick;
+import Classes.Brick;
 
 public class BrickBraker extends JPanel implements KeyListener
 {

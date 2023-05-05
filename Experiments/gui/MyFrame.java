@@ -1,8 +1,8 @@
+package gui;
+
 //Victor Urumov
 //Program description: 
 //Nov 28, 2021
-
-package Experiments.gui;
 
 import javax.swing.JFrame;
 
