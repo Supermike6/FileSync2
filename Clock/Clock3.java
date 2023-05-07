@@ -26,8 +26,8 @@ import javax.swing.Timer;
 
 public class Clock3 extends JPanel{
 	private static final long serialVersionUID = 1L;
-	private static final int PREF_W = 250;
-	private static final int PREF_H = 250;
+	public static final int PREF_W = 250;
+	public static final int PREF_H = 250;
 	private int margin = (PREF_W+PREF_H)/2/10;
 	private Timer timer;
 	private LocalTime now = LocalDateTime.now(ZoneId.systemDefault()).toLocalTime();
@@ -63,9 +63,8 @@ public class Clock3 extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				
-				System.out.println(Math.round((double) 1000 / 1000 /frames));
-                frames = 0;
+				now = LocalDateTime.now(ZoneId.systemDefault()).toLocalTime();
+				repaint();
 			}
 			
 		});
@@ -73,8 +72,6 @@ public class Clock3 extends JPanel{
 	}
 
 	public void paintComponent(Graphics g) {
-		long nano = System.nanoTime();
-		now = LocalDateTime.now(ZoneId.systemDefault()).toLocalTime();
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
@@ -124,8 +121,6 @@ public class Clock3 extends JPanel{
 			int yEnd2 = (int)((100*getHeight()/PREF_H)*Math.sin(Math.toRadians(i-90)))+getHeight()/2;
 			g2.drawLine(xEnd2, yEnd2, xEnd1, yEnd1);
 		}
-		repaint();
-		frames = (System.nanoTime()-nano)/1_000_000_000.0;
 	}
 
 	public Dimension getPreferredSize() {

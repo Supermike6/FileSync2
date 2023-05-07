@@ -13,6 +13,7 @@ public class PasswordExample {
         int result = JOptionPane.showConfirmDialog(null, passwordField, "Enter the password", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
         if (result == JOptionPane.OK_OPTION) {
             char[] enteredPassword = passwordField.getPassword();
+            
 
             // Check if the entered password is correct
             if (Arrays.equals(enteredPassword, correctPassword)) {

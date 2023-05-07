@@ -1,4 +1,6 @@
-package Experiments.Graphics;
+package Graphics;
+
+
 
 import java.awt.BasicStroke;
 import java.awt.Color;
