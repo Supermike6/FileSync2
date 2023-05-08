@@ -62,14 +62,15 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
         
         this.add(menuBar, BorderLayout.NORTH);
         this.add(new Clock3(), BorderLayout.WEST);
-        //add a timer with an action listener
-        //timer will update the clock every second
         
         Timer timer = new Timer(16, new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                menuBar.setSize(frame.getWidth(), 23);
-                
+                for(int i = 0; i<menus;i++)
+                {
+                    JMenu menu = (JMenu) menuBar.getMenu(i);
+                    menu.setPreferredSize(new Dimension(PREF_W/menus, 23));
+                }
             }
          });
    
