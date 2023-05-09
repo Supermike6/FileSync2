@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class PasswordExample {
     public static void main(String[] args) {
         // Define the correct password
-        char[] correctPassword = { 'p', 'a', 's', 's', 'w', 'o', 'r', 'd' };
+        char[] correctPassword = "password".toCharArray();
 
         // Show a password input dialog and get the entered password
         JPasswordField passwordField = new JPasswordField();

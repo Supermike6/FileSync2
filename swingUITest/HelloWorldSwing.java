@@ -1,6 +1,7 @@
 package swingUITest;
  
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,19 +23,21 @@ import Clock.Clock3;
 public class HelloWorldSwing extends JPanel implements ActionListener{
     protected JMenuBar menuBar = new JMenuBar();
     protected JToolBar toolBar = new JToolBar();
+    protected JColorChooser cc = new JColorChooser();
     protected Clock3 c3 = new Clock3();
     protected int menus = 4, itemsPerMenu = 10;
     protected static JFrame frame;
     protected static JPanel panel;
     private int PREF_W = Clock3.PREF_W+(new JColorChooser().getPreferredSize().width);
     private int PREF_H = Clock3.PREF_H+23;
+    private Dimension currentSize;
     
     protected int num = 0;
     
     public HelloWorldSwing()
     {
         super(new BorderLayout(),true);
-
+        currentSize = getSize();
         menuBar = new JMenuBar();
         
 
@@ -61,22 +64,21 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
             menuBar.add(menu);
         }
         
-        this.add(menuBar, BorderLayout.NORTH);
-        this.add(new Clock3(), BorderLayout.WEST);
-        this.add(new JColorChooser(), BorderLayout.CENTER);
         
-        // Timer timer = new Timer(16, new ActionListener() {
-        //     public void actionPerformed(ActionEvent e)
-        //     {
-        //         for(int i = 0; i<menus;i++)
-        //         {
-        //             JMenu menu = (JMenu) menuBar.getMenu(i);
-        //             menu.setPreferredSize(new Dimension(PREF_W/menus, 23));
-        //         }
-        //     }
-        //  });
+        this.add(menuBar, BorderLayout.NORTH);
+        this.add(c3, BorderLayout.WEST);
+        this.add(cc, BorderLayout.EAST);
+        
+        Timer timer = new Timer(16, new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                c3.setColorOfClock(cc.getColor());
+                doLayout();
+                System.out.println(getCurrentSize());
+            }
+         });
    
-        // timer.start();
+        timer.start();
         
     } 
     
@@ -89,8 +91,7 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
         panel = new HelloWorldSwing();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(panel);
-        frame.setResizable(false);
-
+        frame.setResizable(true);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -110,4 +111,26 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         System.out.println("HelloWorldSwing Action Preformed");
     }
+
+
+    @Override
+    public Dimension getSize() {
+        return super.getSize();
+    }
+    
+    @Override
+    public void doLayout() {
+        super.doLayout();
+        if (!getSize().equals(currentSize)) {
+            currentSize = getSize();
+            // Panel size has changed, do something here if needed
+        }
+    }
+    
+    public Dimension getCurrentSize() {
+        return currentSize;
+    }
+
+
+
 }

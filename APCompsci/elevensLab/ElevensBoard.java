@@ -45,7 +45,7 @@ public class ElevensBoard {
 	/**
 	 * Flag used to control debugging print statements.
 	 */
-	private static final boolean I_AM_DEBUGGING = false;
+	private static final boolean I_AM_DEBUGGING = true;
 
 
 	/**
@@ -243,6 +243,12 @@ public class ElevensBoard {
 	 */
 	private boolean containsJQK(List<Integer> selectedCards) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
-		return true; 
+		int num = 0;
+		for(int i = 0; i<selectedCards.size(); i++)
+		{
+			if(cards[selectedCards.get(i)].rank().equals("jack")||cards[selectedCards.get(i)].rank().equals("queen")||cards[selectedCards.get(i)].rank().equals("king"))
+				num++;
+		}
+		return num==3;
 	}
 }
