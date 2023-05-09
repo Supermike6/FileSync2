@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JColorChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -25,7 +26,7 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
     protected int menus = 4, itemsPerMenu = 10;
     protected static JFrame frame;
     protected static JPanel panel;
-    private int PREF_W = Clock3.PREF_W+350;
+    private int PREF_W = Clock3.PREF_W+(new JColorChooser().getPreferredSize().width);
     private int PREF_H = Clock3.PREF_H+23;
     
     protected int num = 0;
@@ -62,19 +63,20 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
         
         this.add(menuBar, BorderLayout.NORTH);
         this.add(new Clock3(), BorderLayout.WEST);
+        this.add(new JColorChooser(), BorderLayout.CENTER);
         
-        Timer timer = new Timer(16, new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                for(int i = 0; i<menus;i++)
-                {
-                    JMenu menu = (JMenu) menuBar.getMenu(i);
-                    menu.setPreferredSize(new Dimension(PREF_W/menus, 23));
-                }
-            }
-         });
+        // Timer timer = new Timer(16, new ActionListener() {
+        //     public void actionPerformed(ActionEvent e)
+        //     {
+        //         for(int i = 0; i<menus;i++)
+        //         {
+        //             JMenu menu = (JMenu) menuBar.getMenu(i);
+        //             menu.setPreferredSize(new Dimension(PREF_W/menus, 23));
+        //         }
+        //     }
+        //  });
    
-        timer.start();
+        // timer.start();
         
     } 
     
@@ -87,6 +89,7 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
         panel = new HelloWorldSwing();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(panel);
+        frame.setResizable(false);
 
         frame.pack();
         frame.setLocationRelativeTo(null);
