@@ -1,4 +1,4 @@
-package Experiments.math;
+package math;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -31,7 +31,7 @@ public DrawingStuff()
      // System.out.print("Type the equation: ");
      // eq=sc.nextLine();
 
-     eq = "y=3x^2+0x-8";
+     eq = "y=x^2+0x+0";
 
     JFrame frame = new JFrame();
     frame.pack();

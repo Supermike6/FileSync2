@@ -127,21 +127,15 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	}
 
 	/**
-	 * Draw the display (cards and messages).
+	 * Draw the display (cards and messages).--
 	 */
 	public void repaint() {
 		for (int k = 0; k < board.size(); k++) {
-			String cardImageFileName =
-				imageFileName(board.cardAt(k), selections[k]);
-			URL imageURL = getClass().getResource(cardImageFileName);
-			if (imageURL != null) {
-				ImageIcon icon = new ImageIcon(imageURL);
-				displayCards[k].setIcon(icon);
-				displayCards[k].setVisible(true);
-			} else {
-				throw new RuntimeException(
-					"Card image not found: \"" + cardImageFileName + "\"");
-			}
+			String cardImageFileName = imageFileName(board.cardAt(k), selections[k]);
+			ImageIcon icon = new ImageIcon(this.getClass().getResource(cardImageFileName));
+			displayCards[k].setIcon(icon);
+			displayCards[k].setVisible(true);
+			
 		}
 		statusMsg.setText(board.deckSize()
 			+ " undealt cards remain.");

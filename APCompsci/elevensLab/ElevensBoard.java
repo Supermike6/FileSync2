@@ -187,12 +187,7 @@ public class ElevensBoard {
 	 */
 	public boolean isLegal(List<Integer> selectedCards) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
-		if(selectedCards.size()==2)
-			return containsPairSum11(selectedCards);
-		if(selectedCards.size()==3)
-			return containsJQK(selectedCards);
-		return false;
-
+		return containsJQK(selectedCards) || containsPairSum11(selectedCards);
 	}
 
 	/**
@@ -246,7 +241,7 @@ public class ElevensBoard {
 		int num = 0;
 		for(int i = 0; i<selectedCards.size(); i++)
 		{
-			if(cards[selectedCards.get(i)].rank().equals("jack")||cards[selectedCards.get(i)].rank().equals("queen")||cards[selectedCards.get(i)].rank().equals("king"))
+			if(cardAt(selectedCards.get(i)).rank().equals("jack")||cardAt(selectedCards.get(i)).rank().equals("queen")||cardAt(selectedCards.get(i)).rank().equals("king"))
 				num++;
 		}
 		return num==3;

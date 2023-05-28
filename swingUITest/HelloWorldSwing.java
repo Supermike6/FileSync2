@@ -6,30 +6,32 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JColorChooser;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JToolBar;
-import javax.swing.SwingConstants;
-import javax.swing.Timer;
+import javax.swing.plaf.basic.*;
+import javax.swing.*;
+
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Rectangle;
 
 import Clock.Clock3;
 
 
  
 public class HelloWorldSwing extends JPanel implements ActionListener{
-    protected JMenuBar menuBar = new JMenuBar();
+    protected static JMenuBar menuBar = new JMenuBar();
     protected JToolBar toolBar = new JToolBar();
     protected JColorChooser cc = new JColorChooser();
     protected Clock3 c3 = new Clock3();
-    protected int menus = 4, itemsPerMenu = 10;
+    protected int menus = 4, itemsPerMenu = 7;
     protected static JFrame frame;
     protected static JPanel panel;
-    private int PREF_W = Clock3.PREF_W+(new JColorChooser().getPreferredSize().width);
-    private int PREF_H = Clock3.PREF_H+23;
+    // private int PREF_W = Clock3.PREF_W+(new JColorChooser().getPreferredSize().width);
+    // private int PREF_H = Clock3.PREF_H+23;
+    private int PREF_W = 800;
+    private int PREF_H = 600;
     private Dimension currentSize;
     
     protected int num = 0;
@@ -40,16 +42,18 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
         currentSize = getSize();
         menuBar = new JMenuBar();
         
-
+        
+        
         for(int i = 1; i<=menus;i++)
         {
-            JMenu menu = new JMenu("Menu "+i);
-            menu.setHorizontalAlignment(SwingConstants.CENTER);
+            JMenu menu = new JMenu("<html><div style='text-align: center;'>Menu "+i+"</div></html>");
+
+            
 
             for(int j = 1; j<=itemsPerMenu;j++)
             {
                 JMenuItem item = new JMenuItem("Item "+i+"."+j);
-                item.setHorizontalAlignment(SwingConstants.CENTER);
+                item.setHorizontalAlignment(SwingConstants.RIGHT);
                 item.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -59,12 +63,13 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
                 });
                 menu.add(item);
             }
-            menu.setPreferredSize(new Dimension(PREF_W/menus, 23));
+            menu.setPreferredSize(new Dimension(200, 23));
             
             menuBar.add(menu);
         }
         
-        
+
+
         this.add(menuBar, BorderLayout.NORTH);
         this.add(c3, BorderLayout.WEST);
         this.add(cc, BorderLayout.EAST);
@@ -74,7 +79,6 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
             {
                 c3.setColorOfClock(cc.getColor());
                 doLayout();
-                System.out.println(getCurrentSize());
             }
          });
    
@@ -92,6 +96,8 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(panel);
         frame.setResizable(true);
+        // System.setProperty("apple.laf.useScreenMenuBar", "true");
+        // frame.setJMenuBar(menuBar);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -130,7 +136,5 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
     public Dimension getCurrentSize() {
         return currentSize;
     }
-
-
 
 }

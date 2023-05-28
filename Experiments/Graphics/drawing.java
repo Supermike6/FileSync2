@@ -1,5 +1,5 @@
 package Graphics;
-
+// Base drawing system by Grant Bancroft
 
 
 import java.awt.BasicStroke;

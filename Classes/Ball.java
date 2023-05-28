@@ -102,11 +102,20 @@ public class Ball
 
         g2.setColor(prevColor);
     }
+    public void drawCircle(Graphics2D g2)
+    {   
+        Color prevColor = g2.getColor();
+
+        g2.setColor(this.color);
+        g2.drawOval(this.x, this.y, this.w, this.h);
+
+        g2.setColor(prevColor);
+    }
     public void update()
     {
         this.x+=this.dx;
         if(this.x+this.w>this.xmax || x<xmin)
-            this.dx = 0;
+            this.dx = -this.dx;
         this.y+=this.dy;
         if(this.y+this.h>this.ymax || y<ymin)
             this.dy = -this.dy;

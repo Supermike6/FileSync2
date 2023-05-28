@@ -9,6 +9,7 @@ public class Brick
 // Variables for the class's object (instance variables)
     private int x, y, w, h, dx, dy, xmin, xmax, ymin, ymax, health, Enum;
     private Color color;
+    public boolean air;
 
     //This is the constructor... it allows us to define values to the brick object
     public Brick(int x, int y)
@@ -143,7 +144,7 @@ public class Brick
         if(this.y+this.h>this.ymax || y<ymin)
             this.y -= this.dy;
     }
-    public void updateList(ArrayList<Brick> bricks)
+    public static void updateList(ArrayList<Brick> bricks)
     {
 
         for(int i = 0; i<bricks.size(); i++)

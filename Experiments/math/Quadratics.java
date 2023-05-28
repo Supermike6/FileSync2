@@ -1,4 +1,4 @@
-package Experiments.math;
+package math;
 
 import java.awt.Graphics2D;
 import java.awt.Polygon;

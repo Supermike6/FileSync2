@@ -35,12 +35,11 @@ public class Deck {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		cards = new ArrayList<Card>();
 		for(int i = 0; i<ranks.length;i++)
-			for(int j = 0; j<suits.length; j++)
-				for(int k = 0; k<values.length; k++)
-				{
-				cards.add(new Card(ranks[i], suits[j],  values[k]));
+			for(int j = 0; j<suits.length; j++){
+				cards.add(new Card(ranks[i], suits[j],  values[i]));
 				size++;
-				}
+			}
+				
 	}
 
 
@@ -68,6 +67,10 @@ public class Deck {
 	 */
 	public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		for(int i  = 0; i<cards.size(); i++)
+		{
+			cards.set(i, cards.get((int)(cards.size()*Math.random())));
+		}
 	}
 
 	/**
