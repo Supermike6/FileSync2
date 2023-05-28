@@ -8,6 +8,8 @@ import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.math.BigInteger;
+
+import javax.swing.JColorChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -29,6 +31,8 @@ import javax.imageio.ImageIO;
 public class Drawing extends JPanel implements ActionListener{
     protected JMenuBar menuBar = new JMenuBar();
     protected Clock3 c3 = new Clock3();
+    protected Clock3 c4 = new Clock3();
+    protected JColorChooser cc = new JColorChooser();
     protected int menus = 4, itemsPerMenu = 10;
     private int PREF_W = Clock3.PREF_W*3;
     private int PREF_H = Clock3.PREF_H+23;
@@ -54,6 +58,7 @@ public class Drawing extends JPanel implements ActionListener{
         this.add(menuBar, BorderLayout.NORTH);
         this.add(new Clock3(), BorderLayout.WEST);
         this.add(new Clock3(), BorderLayout.EAST);
+        
 
     } 
     
