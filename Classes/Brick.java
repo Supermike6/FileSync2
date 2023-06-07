@@ -7,9 +7,10 @@ import java.util.ArrayList;
 public class Brick
 {
 // Variables for the class's object (instance variables)
-    private int x, y, w, h, dx, dy, xmin, xmax, ymin, ymax, health, Enum;
+    private int x, y, w, h, dx, dy, xmin, xmax, ymin, ymax, health, Enum, ballPower,arcSize = 12;
     private Color color;
     public boolean air;
+
 
     //This is the constructor... it allows us to define values to the brick object
     public Brick(int x, int y)
@@ -76,7 +77,7 @@ public class Brick
         this.ymin = ymin;
         this.ymax = ymax;
     }
-    public Brick(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color, int health)
+    public Brick(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color, int health, int Enum)
     {
         this.x = x;
         this.y = y;
@@ -90,6 +91,24 @@ public class Brick
         this.ymin = ymin;
         this.ymax = ymax;
         this.health = health;
+        this.Enum = Enum;
+    }
+    public Brick(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color, int health, int Enum,  int ballPower)
+    {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.dx = dx;
+        this.dy = dy;
+        this.color = color;
+        this.xmin = xmin;
+        this.xmax = xmax;
+        this.ymin = ymin;
+        this.ymax = ymax;
+        this.health = health;
+        this.Enum = Enum;
+        this.ballPower = ballPower;
     }
 
     //Methods for brick
@@ -104,7 +123,7 @@ public class Brick
         Color prevColor = g2.getColor();
 
         g2.setColor(this.color);
-        g2.drawRect(this.x, this.y, this.w, this.h);
+        g2.drawRoundRect(this.x, this.y, this.w, this.h,arcSize,arcSize);
 
         g2.setColor(prevColor);
     }
@@ -113,7 +132,7 @@ public class Brick
         Color prevColor = g2.getColor();
 
         g2.setColor(this.color);
-        g2.fillRect(this.x, this.y, this.w, this.h);
+        g2.fillRoundRect(this.x, this.y, this.w, this.h,arcSize,arcSize);
 
         g2.setColor(prevColor);
     }
@@ -263,6 +282,7 @@ public class Brick
     {
         return this.Enum;
     }
+    
 
     /** Determines the intersecting side for the brick in relation to another brick
 *  return true for a collision and false otherwise
@@ -352,7 +372,7 @@ public class Brick
    
    if(x + w > r.x && x < r.x + r.w) {
       if(y < r.y + r.h) {
-         dy = -Math.abs(dx);
+         dy = -dy;
          y = r.y + r.h;
          if(y + h >= ymax) { //don't let the brick get bumped off the panel
             y = ymax - h;
@@ -381,4 +401,26 @@ public class Brick
    }
    return collision;
 }
+    public int getBallPower() {
+        return ballPower;
+    }
+    public int getArcSize() {
+        return arcSize;
+    }
+    public boolean isAir() {
+        return air;
+    }
+    public void setEnum(int enum1) {
+        Enum = enum1;
+    }
+    public void setBallPower(int ballPower) {
+        this.ballPower = ballPower;
+    }
+    public void setArcSize(int arcSize) {
+        this.arcSize = arcSize;
+    }
+    public void setAir(boolean air) {
+        this.air = air;
+    }
+    
 }

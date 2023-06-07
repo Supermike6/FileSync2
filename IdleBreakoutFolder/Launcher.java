@@ -1,114 +1,82 @@
 package IdleBreakoutFolder;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.LayoutManager;
 import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.net.URL;
-import java.util.ArrayList;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
-import javax.swing.border.Border;
 
-import IdleBreakoutFolder.IdleBreakout;
-
-public class Launcher extends JPanel implements KeyListener
+public class Launcher extends JPanel implements KeyListener, MouseListener, MouseMotionListener
 {
     static final long serialVersionUID = 1L;
     static final int PREF_W = 800;
     static final int PREF_H = 600;
-   
     RenderingHints hints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
     Timer timer;
-    JButton button = new JButton("Hello");
+    IdleBreakout ib = new IdleBreakout();
+    TopBar tb = new TopBar();
 
     public Launcher()
     {
         super(new BorderLayout(),true);
-        addKeyListener(this);
+        this.addKeyListener(this);
+        this.addMouseListener(this);
+        this.addMouseMotionListener(this);
         setFocusable(true);
         requestFocus();
-        
-        this.add(new IdleBreakout(), BorderLayout.CENTER);
-        this.add(new TopBar(), BorderLayout.NORTH);
+
+        this.add(ib, BorderLayout.CENTER);
+        this.add(tb, BorderLayout.NORTH); 
         this.add(new LeftBar(), BorderLayout.WEST);
         this.add(new RightBar(), BorderLayout.EAST);
         this.add(new BottomBar(), BorderLayout.SOUTH);
 
 
-
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            }
-        });
     }
    
-    
     @Override
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
-       
+
     }
     
     @Override
     public void keyPressed(KeyEvent e)
     {
+        ib.keyPressed(e);
+        if(e.getKeyCode()==KeyEvent.VK_E)
+        {
+
+        }
     }
     
     @Override
     public void keyReleased(KeyEvent e)
     {
-        int key = e.getKeyCode();
-        
-        if(key == KeyEvent.VK_A)
-        {
-            
-        }
-        if(key == KeyEvent.VK_D)
-        {
-            
-        }
-        if(key == KeyEvent.VK_UP)
-        {
-            timer.setDelay(10);
-        }
-        if(key == KeyEvent.VK_DOWN)
-        {
-            timer.setDelay(10);
-        }
+        ib.keyReleased(e);
     }
     
     @Override
     public void keyTyped(KeyEvent e)
     {
+        ib.keyTyped(e);
     }
     
     public static void main(String[] args)
@@ -139,4 +107,45 @@ public class Launcher extends JPanel implements KeyListener
     {
         return new Dimension(PREF_W, PREF_H);
     }
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        // TODO Auto-generated method stub
+    }
+    @Override
+    public void mouseMoved(MouseEvent e) {
+        // TODO Auto-generated method stub
+    }
+
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        // TODO Auto-generated method stub
+    }
+
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        // TODO Auto-generated method stub
+    }
+
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        // TODO Auto-generated method stub
+    }
+
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        // TODO Auto-generated method stub
+    }
+
+    
+    
 }
