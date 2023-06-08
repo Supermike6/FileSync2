@@ -146,6 +146,4 @@ public class Launcher extends JPanel implements KeyListener, MouseListener, Mous
         // TODO Auto-generated method stub
     }
 
-    
-    
 }
