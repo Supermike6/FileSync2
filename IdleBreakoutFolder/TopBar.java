@@ -93,7 +93,7 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
         
-        g2.setFont(new Font("Sylfaen", Font.PLAIN, 20));
+        g2.setFont(new Font("Seven Segment", Font.PLAIN, 15));
 
 
         g2.setColor(new Color(231, 221, 180));
