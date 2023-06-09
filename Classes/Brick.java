@@ -477,7 +477,6 @@ public class Brick
         if(bricks.size()==0)
         {
             System.out.println("Error avoided");
-            IdleBreakout.bs = 0;
         }
         Brick closestBrick = bricks.get(0);
         int closestBrickX = closestBrick.getX()+closestBrick.getW()/2;

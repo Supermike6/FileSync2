@@ -66,9 +66,9 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
         timer = new Timer(1000/60, new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                regenerateBricks(level);
+                regenerateBricks();
                 calculatePhysics();
-                regenerateBricks(level);
+                regenerateBricks();
                 repaint();
                 TopBar.correctValues(money, level);
                 money = 0;
@@ -275,7 +275,8 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
         }
         if(key == KeyEvent.VK_BACK_SPACE)
         {
-            bs = 0;
+            bricks.clear();
+            regenerateBricks();
         }
         if(key == KeyEvent.VK_1)
         {
@@ -412,10 +413,10 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
         if(i == 3)
             balls.add(new Brick(PREF_W/2-9, PREF_H/2-9, 18, 18, -1, 1, 0, PREF_W, 0, PREF_H, Color.WHITE,20,3,4));
     }
-    public static void regenerateBricks(int level)
+    public static void regenerateBricks()
     {
         System.out.println(level);
-        if(bs==0 || bricks.size()==0)
+        if(bricks.size()==0)
         {
             level++;
             System.out.println(level);

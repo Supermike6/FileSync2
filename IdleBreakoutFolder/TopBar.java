@@ -244,10 +244,8 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         if(myMoney<0)
         {
             System.out.println("Terminating program due to negative money: "+myMoney);
-            // System.exit(0);
-        } else {
-            repaint();
         }
+        repaint();
     }
     public static void main(String[] args) 
     {
