@@ -11,6 +11,7 @@ public class scientificNotation
         System.out.println();
         for(int i = 0; i<Integer.parseInt(in.substring(in.indexOf("e")+1));i++) System.out.print("0");
         System.out.println();
+
         System.out.println(in);
 
     }    
