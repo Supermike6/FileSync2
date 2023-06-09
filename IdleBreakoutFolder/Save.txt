@@ -1,5 +1,0 @@
-package IdleBreakoutFolder;
-
-public class Save {
-    
-}
