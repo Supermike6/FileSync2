@@ -12,6 +12,10 @@ import java.awt.event.MouseEvent;
 import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.io.File;
+import java.io.IOException;
 
 
 import javax.sound.sampled.AudioInputStream;
@@ -30,7 +34,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 
-public class TopBar extends JPanel implements MouseListener, MouseMotionListener
+public class TopBar extends JPanel implements MouseListener, MouseMotionListener 
 {
     static final long serialVersionUID = 1L;
     static final int PREF_W = 800;
@@ -56,18 +60,17 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
     private static Rectangle buyScatterBox = new Rectangle(160,5,50,50);
     private static Rectangle buyCanonBox = new Rectangle(210,5,50,50);
     private static Rectangle buyVirusBox = new Rectangle(260,5,50,50);
-
     private static int mouseX = 0, mouseY = 0;
     int num = 0;
     
-    public TopBar() 
+    public TopBar()
     {
         this.setLayout(new GridLayout());
         this.addMouseListener(this);
         this.addMouseMotionListener(this);
         setFocusable(true);
         requestFocus(); 
-
+        
         // this.add(button);
         // this.add(new JButton("2"));
         // this.add(new JButton("3"));
@@ -76,26 +79,28 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         // this.add(new JButton("6"));
         // this.add(new JButton("7"));
         // this.add(new JButton("8"));
-
+        
         String fonts[] = 
         GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
-  
         for (int i = 0; i < fonts.length; i++) {
             System.out.println(fonts[i]);
         }
+        
     }
-   
+    
     
     @Override
-    public void paintComponent(Graphics g)
+    public void paintComponent(Graphics g) 
     {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
-        
-        g2.setFont(new Font("Seven Segment", Font.PLAIN, 15));
-
-
+        try {
+            Font f = Font.createFont(Font.TRUETYPE_FONT, new File("Seven Segment.ttf")).deriveFont(Font.BOLD, 15);
+            g2.setFont(f);
+        } catch (FontFormatException | IOException e) {
+            e.printStackTrace();
+        }
         g2.setColor(new Color(231, 221, 180));
         g2.fillRect(0, 0, PREF_W, PREF_H);
 
@@ -248,7 +253,7 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         }
         repaint();
     }
-    public static void main(String[] args)
+    public static void main(String[] args) 
     {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {

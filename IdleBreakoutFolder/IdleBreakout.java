@@ -16,6 +16,10 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.net.URL;
 import java.util.ArrayList;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.io.File;
+import java.io.IOException;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -90,13 +94,20 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setRenderingHints(hints);
         
+        try {
+            Font f = Font.createFont(Font.TRUETYPE_FONT, new File("Seven Segment.ttf")).deriveFont(Font.BOLD, 20);
+            g2.setFont(f);
+        } catch (FontFormatException | IOException e) {
+            e.printStackTrace();
+        }
+
         if(!render)
         {
-            // g2.drawString("No Render",10, 20);
+            g2.drawString("No Render",10, 20);
         } else {
-            Graphics2D g2 = (Graphics2D) g;
-            g2.setRenderingHints(hints);
             g2.setColor(new Color(243,239,217));
             g2.fillRect(0, 0, PREF_W, PREF_H);
             g2.setStroke(new BasicStroke(2));
@@ -147,7 +158,7 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                     FontMetrics fm = g2.getFontMetrics(); 
                     int messageWidth = fm.stringWidth(bricks.get(i).getHealth()+"");
                     int startX = bricks.get(i).getX() + bricks.get(i).getW()/2 - messageWidth/2;
-                    g2.drawString(bricks.get(i).getHealth()+"", startX, (int) (bricks.get(i).getY()+bricks.get(i).getH()/1.7));
+                    g2.drawString(bricks.get(i).getHealth()+"", startX, (int) (bricks.get(i).getY()+20));
                 }
             }
             if(debug)
@@ -174,17 +185,6 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                     { 
                         g2.setColor(Color.RED);
                         g2.fillRect(balls.get(j).findClosestBrick(IdleBreakout.bricks).getX(), balls.get(j).findClosestBrick(IdleBreakout.bricks).getY(), balls.get(j).findClosestBrick(IdleBreakout.bricks).getW(), balls.get(j).findClosestBrick(IdleBreakout.bricks).getH());
-                        
-                         //set the dx and dy to head towards the closest Brick
-                        // Brick closestBrick = balls.get(j).findClosestBrick(IdleBreakout.bricks);
-                        // int closestBrickX = closestBrick.getX()+closestBrick.getW()/2;
-                        // int closestBrickY = closestBrick.getY()+closestBrick.getH()/2;
-                        // int ballX = balls.get(j).getX()+balls.get(j).getW()/2;
-                        // int ballY = balls.get(j).getY()+balls.get(j).getY()/2;
-                        // int closestDistance = (int)Math.sqrt(Math.pow(ballX-closestBrickX,2)+Math.pow(ballY-closestBrickY,2));
-                        // System.out.println("new dx: "+((ballX-closestBrickX+0.0)/closestDistance)+" new dy: "+((ballY-closestBrickY+0.0)/closestDistance));
-                        // balls.get(j).sniperDx = ((ballX-closestBrickX)/closestDistance);
-                        // balls.get(j).sniperDy = ((ballY-closestBrickY)/closestDistance);
                     }
                 }
 
