@@ -4,10 +4,13 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
+import IdleBreakoutFolder.IdleBreakout;
+
 public class Brick
 {
 // Variables for the class's object (instance variables)
     private int x, y, w, h, dx, dy, xmin, xmax, ymin, ymax, health, Enum, ballPower,arcSize = 12;
+    public double sniperDx = -1, sniperDy = 1;
     private Color color;
     public boolean air;
 
@@ -154,6 +157,39 @@ public class Brick
         if(this.y+this.h>this.ymax || y<=0)
             this.dy = -this.dy;
     }
+
+    public void sniperUpdate()
+    {
+        //when the brick is a sniper brick, it will hit a wall and move towards the closest brick
+        this.x+=this.sniperDx;
+        if(this.x+this.w>this.xmax || x<=0)
+        {
+            //set the sniperDx and sniperDy to the direction of the closest brick
+            Brick closestBrick = findClosestBrick(IdleBreakout.bricks);
+            int closestBrickX = closestBrick.getX()+closestBrick.getW()/2;
+            int closestBrickY = closestBrick.getY()+closestBrick.getH()/2;
+            int ballX = this.x+this.w/2;
+            int ballY = this.y+this.h/2;
+            double closestDistance = Math.sqrt(Math.pow(ballX-closestBrickX,2)+Math.pow(ballY-closestBrickY,2));
+            this.sniperDx = (0.0+closestBrickX-ballX)/closestDistance*health;
+            this.sniperDy = (0.0+closestBrickY-ballY)/closestDistance*health;
+        }
+        this.y+=this.sniperDy;
+        if(this.y+this.h>this.ymax || y<=0)
+        {
+            //set the sniperDx and sniperDy to the direction of the closest brick
+            Brick closestBrick = findClosestBrick(IdleBreakout.bricks);
+            int closestBrickX = closestBrick.getX()+closestBrick.getW()/2;
+            int closestBrickY = closestBrick.getY()+closestBrick.getH()/2;
+            int ballX = this.x+this.w/2;
+            int ballY = this.y+this.h/2;
+            int closestDistance = (int)Math.sqrt(Math.pow(ballX-closestBrickX,2)+Math.pow(ballY-closestBrickY,2));
+            this.sniperDx = (0.0+closestBrickX-ballX)/closestDistance*health;
+            this.sniperDy = (0.0+closestBrickY-ballY)/closestDistance*health;
+        }
+
+    }
+
     public void noBounceUpdate()
     {
         this.x+=this.dx;
@@ -336,7 +372,8 @@ public class Brick
    
    if(y + h > r.y && y < r.y + r.h) {
       if(x + w > r.x) {
-         dx = -Math.abs(dy);
+         dx = -dx;
+         sniperDx = -sniperDx;
          x = r.x - w;
          if(x <= xmin) {  //don't let the brick get bumped off the panel
             x = xmin;
@@ -354,7 +391,8 @@ public class Brick
    
    if(y + h > r.y && y < r.y + r.h) {
    if(x < r.x + r.w) {
-         dx = Math.abs(dy);
+         dx = -dx;
+         sniperDx = -sniperDx;
          x = r.x + r.w;
          if(x + w >= xmax) {  //don't let the brick get bumped off the panel
             x = xmax - w;
@@ -368,20 +406,21 @@ public class Brick
 
     private boolean checkCollisionBottomOfRectangle(Brick r)
 {
-   boolean collision = false;
+    boolean collision = false;
    
-   if(x + w > r.x && x < r.x + r.w) {
-      if(y < r.y + r.h) {
-         dy = -dy;
-         y = r.y + r.h;
-         if(y + h >= ymax) { //don't let the brick get bumped off the panel
-            y = ymax - h;
-            r.y = y - r.h;   //in case the colliding brick is moving, stop it from overlapping this brick the the edges of the panel
-         }
-         collision = true;
-      }
-   }
-   return collision;
+    if(x + w > r.x && x < r.x + r.w) {
+        if(y < r.y + r.h) {
+            dy = -dy;
+            sniperDy = -sniperDy;
+            y = r.y + r.h;
+            if(y + h >= ymax) { //don't let the brick get bumped off the panel
+                y = ymax - h;
+                r.y = y - r.h;   //in case the colliding brick is moving, stop it from overlapping this brick the the edges of the panel
+            }
+            collision = true;
+        }
+    }
+    return collision;
 }
 
     private boolean checkCollisionTopOfRectangle(Brick r)
@@ -390,7 +429,8 @@ public class Brick
    
    if(x + w > r.x && x < r.x + r.w) {
       if(y + h > r.y) {
-         dy = -Math.abs(dx);
+         dy = -dy;
+         sniperDy = -sniperDy;
          y = r.y - h;
          if(y <= ymin) {  //don't let the brick get bumped off the panel
             y = ymin;
@@ -422,5 +462,42 @@ public class Brick
     public void setAir(boolean air) {
         this.air = air;
     }
+
+    public Brick findClosestBrick(ArrayList<Brick> bricks)
+    {
+        //using the list of bircks find the birck that a center closest to the player's center
+        if(bricks.size()==0)
+        {
+            System.out.println("Error avoided");
+            return new Brick(0, 0, 2, 2, 0, 0, 0, 0, 0, 0, Color.WHITE, 2, 0, 0);
+        }
+        Brick closestBrick = bricks.get(0);
+        int closestBrickX = closestBrick.getX()+closestBrick.getW()/2;
+        int closestBrickY = closestBrick.getY()+closestBrick.getH()/2;
+        int ballX = this.x+this.w/2;
+        int ballY = this.y+this.h/2;
+        int closestDistance = (int)Math.sqrt(Math.pow(ballX-closestBrickX,2)+Math.pow(ballY-closestBrickY,2));
+        for(int i = 0; i<bricks.size();i++)
+        {
+            Brick tempBrick = bricks.get(i);
+            int tempBrickX = tempBrick.getX()+tempBrick.getW()/2;
+            int tempBrickY = tempBrick.getY()+tempBrick.getH()/2;
+            int tempDistance = (int)Math.sqrt(Math.pow(ballX-tempBrickX,2)+Math.pow(ballY-tempBrickY,2));
+            if(tempDistance<closestDistance)
+            {
+                closestBrick = tempBrick;
+                closestDistance = tempDistance;
+            }
+        }
+        return closestBrick;        
+    }
+    @Override
+    public String toString() {
+        return "Brick [x=" + x + ", y=" + y + ", w=" + w + ", h=" + h + ", dx=" + dx + ", dy=" + dy + ", xmin=" + xmin
+                + ", xmax=" + xmax + ", ymin=" + ymin + ", ymax=" + ymax + ", health=" + health + ", Enum=" + Enum
+                + ", ballPower=" + ballPower + ", arcSize=" + arcSize + ", color=" + color + ", air=" + air + "]";
+    }
+
     
+
 }

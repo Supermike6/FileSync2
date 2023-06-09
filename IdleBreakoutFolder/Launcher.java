@@ -81,6 +81,7 @@ public class Launcher extends JPanel implements KeyListener, MouseListener, Mous
     
     public static void main(String[] args)
     {
+        // System.setProperty("sun.java2d.opengl", "true");
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 createAndShowGUI();
@@ -96,7 +97,7 @@ public class Launcher extends JPanel implements KeyListener, MouseListener, Mous
         frame.setLocationRelativeTo(null);
         frame.setBackground(Color.WHITE);
         frame.setVisible(true);
-        frame.setResizable(false);
+        frame.setResizable(false); 
     }
     public int getSign(int num)
     {
