@@ -53,7 +53,7 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
     private static boolean render = true;
     private static Rectangle toggleRenderBox = new Rectangle(740,18,50,25);
     private static Rectangle moneyOuterBox = new Rectangle(610,18,125,25);
-    private static Rectangle moneyInnerBox = new Rectangle(613+25,21,119-25,19);
+    private static Rectangle moneyInnerBox = new Rectangle(613+15,21,119-15,19);
     private static Rectangle buyBasicBox = new Rectangle(10,5,50,50);
     private static Rectangle buyPlasmaBox = new Rectangle(60,5,50,50);
     private static Rectangle buySniperBox = new Rectangle(110,5,50,50);
@@ -70,16 +70,7 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         this.addMouseMotionListener(this);
         setFocusable(true);
         requestFocus(); 
-        
-        // this.add(button);
-        // this.add(new JButton("2"));
-        // this.add(new JButton("3"));
-        // this.add(new JButton("4"));
-        // this.add(new JButton("5"));
-        // this.add(new JButton("6"));
-        // this.add(new JButton("7"));
-        // this.add(new JButton("8"));
-        
+
     }
     
     
@@ -89,12 +80,13 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
-        // try {
-        //     Font f = Font.createFont(Font.TRUETYPE_FONT, new File("Seven Segment.ttf")).deriveFont(Font.BOLD, 15);
-        //     g2.setFont(f);
-        // } catch (FontFormatException | IOException e) {
-        //     e.printStackTrace();
-        // }
+        
+        try {
+            Font f = Font.createFont(Font.TRUETYPE_FONT, new File("Seven Segment.ttf")).deriveFont(Font.BOLD, 15);
+            g2.setFont(f);
+        } catch (FontFormatException | IOException e) {
+            e.printStackTrace();
+        }
         g2.setColor(new Color(231, 221, 180));
         g2.fillRect(0, 0, PREF_W, PREF_H);
 
@@ -134,6 +126,17 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         g2.setColor(Color.BLACK);
         g2.draw(moneyOuterBox);
         g2.draw(moneyInnerBox);
+        message = "$";
+        fm = g2.getFontMetrics(); 
+        messageWidth = fm.stringWidth(message);
+        startX = (int)(moneyOuterBox.getX()+9) - messageWidth/2;
+        g2.drawString(message, startX, (int)moneyOuterBox.getY()+18);
+        
+        message = myMoney+"";
+        fm = g2.getFontMetrics(); 
+        messageWidth = fm.stringWidth(message);
+        startX = (int)(moneyInnerBox.getX()+moneyInnerBox.getWidth()/2) - messageWidth/2;
+        g2.drawString(message, startX, (int)moneyOuterBox.getY()+18);
 
         // g2.setStroke(new BasicStroke(2));
         g2.setColor(new Color(243,242,242));
@@ -238,12 +241,9 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         startX = (int)(buyVirusBox.getX()+buyVirusBox.getWidth()/2) - messageWidth/2;
         g2.drawString(message, startX, 50);
 
-        g2.drawString(myMoney+"", 500, 20);
-
         if(myMoney<0)
         {
             System.out.println("Terminating program due to negative money: "+myMoney);
-            System.exit(0);
         }
         repaint();
     }

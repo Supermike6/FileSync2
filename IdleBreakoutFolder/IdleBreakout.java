@@ -47,13 +47,11 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
     static ArrayList<Brick> balls = new ArrayList<Brick>(1);
     public static ArrayList<Brick> bricks = new ArrayList<Brick>(300);
     static int money = 0, level = 0;
-    static int bs = 0;
     static int mouseX = 0, mouseY = 0;
     static int clickPower = 1;
     static int fps = 30;
     TopBar tb;
     static boolean render = true;
-    int tim = 0;
 
     public IdleBreakout()
     {
@@ -68,23 +66,12 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
         timer = new Timer(1000/60, new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                if(tim%1==0)
-                    calculatePhysics();
-                if(bs==0)
-                {
-                    bricks = new ArrayList<Brick>(bs);
-                    level++;
-                    for(int j = 0; j<20;j++)
-                        for(int i = 0; i<15;i++)
-                        {
-                            bs++;
-                            bricks.add(new Brick(i*(PREF_W/15), j * (PREF_H/20), (PREF_W/15), (PREF_H/20), 0, 0, 0, 0, 0, 0, getBrickColor(level), level, 0));
-                        }
-                }
+                regenerateBricks();
+                calculatePhysics();
+                regenerateBricks();
                 repaint();
                 TopBar.correctValues(money, level);
                 money = 0;
-                tim++;
             }
         });
         timer.start();
@@ -140,8 +127,6 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                     g2.setStroke(new BasicStroke(2));
                     g2.drawLine((int)(balls.get(i).getX()+balls.get(i).getW()/2-5), (int)(balls.get(i).getY()+balls.get(i).getH()/3-1), (int)(balls.get(i).getX()+balls.get(i).getW()/2+5), (int)(balls.get(i).getY()+balls.get(i).getH()/3-1));
                     g2.drawLine((int)(balls.get(i).getX()+balls.get(i).getW()/2), (int)(balls.get(i).getY()+balls.get(i).getH()/3-6), (int)(balls.get(i).getX()+balls.get(i).getW()/2), (int)(balls.get(i).getY()+balls.get(i).getH()/3+4));
-                    g2.setColor(Color.RED);
-                    g2.fillRect(balls.get(i).findClosestBrick(IdleBreakout.bricks).getX(), balls.get(i).findClosestBrick(IdleBreakout.bricks).getY(), balls.get(i).findClosestBrick(IdleBreakout.bricks).getW(), balls.get(i).findClosestBrick(IdleBreakout.bricks).getH());
                 }
                 
             }
@@ -159,6 +144,9 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                     int messageWidth = fm.stringWidth(bricks.get(i).getHealth()+"");
                     int startX = bricks.get(i).getX() + bricks.get(i).getW()/2 - messageWidth/2;
                     g2.drawString(bricks.get(i).getHealth()+"", startX, (int) (bricks.get(i).getY()+20));
+                } else {
+                    bricks.get(i).setColor(Color.BLACK);
+                    bricks.get(i).fill(g2);
                 }
             }
             if(debug)
@@ -272,7 +260,6 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
             if(bricks.get(i).getHealth()<=0)
             {
                 bricks.remove(i);
-                bs--;
             }
 
         }
@@ -288,7 +275,32 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
         }
         if(key == KeyEvent.VK_BACK_SPACE)
         {
-            bs = 0;
+            bricks.clear();
+            regenerateBricks();
+        }
+        if(key == KeyEvent.VK_1)
+        {
+            spawnBall(1);
+        }
+        if(key == KeyEvent.VK_2)
+        {
+            spawnBall(2);
+        }
+        if(key == KeyEvent.VK_3)
+        {
+            spawnBall(3);
+        }
+        if(key == KeyEvent.VK_4)
+        {
+            spawnBall(4);
+        }
+        if(key == KeyEvent.VK_5)
+        {
+            spawnBall(5);
+        }
+        if(key == KeyEvent.VK_6)
+        {
+            spawnBall(6);
         }
     }
     
@@ -351,7 +363,7 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
         mouseY = e.getY();
     }
 
-    public Color getBrickColor(int health)
+    public static Color getBrickColor(int health)
     {
         if(health<1)
             return new Color(243,239,217);
@@ -381,6 +393,10 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                     }
                 }
                 bricks.get(i).setHealth(bricks.get(i).getHealth()-damageAmount);
+                if(bricks.get(i).getHealth()<=0)
+                {
+                    bricks.remove(i);
+                }
             }
         }
     }
@@ -396,5 +412,21 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
             balls.add(new Brick(PREF_W/2-9, PREF_H/2-9, 18, 18, 1, -1, 0, PREF_W, 0, PREF_H, Color.MAGENTA,3,2,4));
         if(i == 3)
             balls.add(new Brick(PREF_W/2-9, PREF_H/2-9, 18, 18, -1, 1, 0, PREF_W, 0, PREF_H, Color.WHITE,20,3,4));
+    }
+    public static void regenerateBricks()
+    {
+        System.out.println(level);
+        if(bricks.size()==0)
+        {
+            level++;
+            System.out.println(level);
+            for(int a = 0; a<2; a++)
+                for(int b = 0; b<2; b++)
+                    for(int j = 0; j<6;j++)
+                        for(int i = 0; i<5;i++)
+                        {
+                            bricks.add(new Brick(75+i*50 + a*7*(PREF_W/15), 50+j*25 + b*9*(PREF_H/20), (PREF_W/15), (PREF_H/20), 0, 0, 0, 0, 0, 0, getBrickColor(level), level, 0));
+                        }
         }
+    }
 }

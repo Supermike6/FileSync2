@@ -465,11 +465,18 @@ public class Brick
 
     public Brick findClosestBrick(ArrayList<Brick> bricks)
     {
+        for(int i = 0; i<bricks.size();i++)
+        {
+            if(bricks.get(i).getHealth()<1)
+            {
+                bricks.remove(i);
+                i--;
+            }
+        }
         //using the list of bircks find the birck that a center closest to the player's center
         if(bricks.size()==0)
         {
             System.out.println("Error avoided");
-            return new Brick(0, 0, 2, 2, 0, 0, 0, 0, 0, 0, Color.WHITE, 2, 0, 0);
         }
         Brick closestBrick = bricks.get(0);
         int closestBrickX = closestBrick.getX()+closestBrick.getW()/2;
