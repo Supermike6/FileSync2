@@ -80,12 +80,6 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         // this.add(new JButton("7"));
         // this.add(new JButton("8"));
         
-        String fonts[] = 
-        GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
-        for (int i = 0; i < fonts.length; i++) {
-            System.out.println(fonts[i]);
-        }
-        
     }
     
     
@@ -95,12 +89,12 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
-        try {
-            Font f = Font.createFont(Font.TRUETYPE_FONT, new File("Seven Segment.ttf")).deriveFont(Font.BOLD, 15);
-            g2.setFont(f);
-        } catch (FontFormatException | IOException e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     Font f = Font.createFont(Font.TRUETYPE_FONT, new File("Seven Segment.ttf")).deriveFont(Font.BOLD, 15);
+        //     g2.setFont(f);
+        // } catch (FontFormatException | IOException e) {
+        //     e.printStackTrace();
+        // }
         g2.setColor(new Color(231, 221, 180));
         g2.fillRect(0, 0, PREF_W, PREF_H);
 

@@ -97,12 +97,12 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
         
-        try {
-            Font f = Font.createFont(Font.TRUETYPE_FONT, new File("Seven Segment.ttf")).deriveFont(Font.BOLD, 20);
-            g2.setFont(f);
-        } catch (FontFormatException | IOException e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     Font f = Font.createFont(Font.TRUETYPE_FONT, new File("Seven Segment.ttf")).deriveFont(Font.BOLD, 20);
+        //     g2.setFont(f);
+        // } catch (FontFormatException | IOException e) {
+        //     e.printStackTrace();
+        // }
 
         if(!render)
         {
