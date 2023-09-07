@@ -30,6 +30,8 @@ public class GMN_Panel
 		
 		UIManager.put("OptionPane.messageFont", font1); 
       
+      
+      
 		ImageIcon icon = new ImageIcon(GMN_Panel.class.getResource("ezgif.com-gif-maker.gif"));
 		
       do {

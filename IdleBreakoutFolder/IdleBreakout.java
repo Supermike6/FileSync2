@@ -48,7 +48,7 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
     public static ArrayList<Brick> bricks = new ArrayList<Brick>(300);
     static int money = 0, level = 0;
     static int mouseX = 0, mouseY = 0;
-    static int clickPower = 1;
+    public static int clickPower = 1;
     static int fps = 30;
     TopBar tb;
     static boolean render = true;
@@ -125,12 +125,12 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                     g2.setColor(Color.BLACK);
                     g2.drawOval(balls.get(i).getX()+balls.get(i).getW()/2-9, balls.get(i).getY()+balls.get(i).getH()/2-9, 18, 18);
                     g2.setStroke(new BasicStroke(2));
-                    g2.drawLine((int)(balls.get(i).getX()+balls.get(i).getW()/2-5), (int)(balls.get(i).getY()+balls.get(i).getH()/3-1), (int)(balls.get(i).getX()+balls.get(i).getW()/2+5), (int)(balls.get(i).getY()+balls.get(i).getH()/3-1));
-                    g2.drawLine((int)(balls.get(i).getX()+balls.get(i).getW()/2), (int)(balls.get(i).getY()+balls.get(i).getH()/3-6), (int)(balls.get(i).getX()+balls.get(i).getW()/2), (int)(balls.get(i).getY()+balls.get(i).getH()/3+4));
+                    g2.drawLine((int)(balls.get(i).getX()+balls.get(i).getW()/2-5), (int)(balls.get(i).getY()+balls.get(i).getH()/2), (int)(balls.get(i).getX()+balls.get(i).getW()/2+5), (int)(balls.get(i).getY()+balls.get(i).getH()/2));
+                    g2.drawLine((int)(balls.get(i).getX()+balls.get(i).getW()/2), (int)(balls.get(i).getY()+balls.get(i).getH()/2-5), (int)(balls.get(i).getX()+balls.get(i).getW()/2), (int)(balls.get(i).getY()+balls.get(i).getH()/2+5));
                 }
                 
             }
-                
+               
             for(int i = 0; i<bricks.size(); i++)
             { 
                 if(bricks.get(i).getHealth()>0)
@@ -149,11 +149,11 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                     bricks.get(i).fill(g2);
                 }
             }
+            g2.drawLine(mouseX-6, mouseY+6, mouseX+6, mouseY-6);
+            g2.drawLine(mouseX-6, mouseY-6, mouseX+6, mouseY+6);
             if(debug)
             {
                 g2.setColor(Color.BLACK);
-                g2.drawString(mouseX+", "+mouseY, mouseX, mouseY);
-                clickPower = Short.MAX_VALUE;
 
                 for(int j = 0; j<balls.size();j++){
                     //Plasma ball debug
@@ -176,13 +176,8 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                     }
                 }
 
-            } else 
-            {
-                clickPower = 1;
             }
-
         }
-
     }
     
     public static void main(String[] args)
@@ -221,8 +216,8 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                 balls.get(i).update();
             }
         }
-
-        for(int i = 0; i<bricks.size();i++)
+        int i = 0;
+        while(i<bricks.size())
         {
             for(int j = 0; j<balls.size();j++){
 
@@ -252,14 +247,16 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                         findAndDamageBox(balls.get(j).getX()+balls.get(j).getW()/2+bricks.get(0).getW()/2, balls.get(j).getY()+balls.get(j).getH()/2+bricks.get(0).getW()/2, balls.get(j).getBallPower()/4);
                         findAndDamageBox(balls.get(j).getX()+balls.get(j).getW()/2-bricks.get(0).getW()/2, balls.get(j).getY()+balls.get(j).getH()/2+bricks.get(0).getW()/2, balls.get(j).getBallPower()/4);
                         findAndDamageBox(balls.get(j).getX()+balls.get(j).getW()/2+bricks.get(0).getW()/2, balls.get(j).getY()+balls.get(j).getH()/2-bricks.get(0).getW()/2, balls.get(j).getBallPower()/4);
+                        if(i!=0)
+                            i--;
                     }
-                    
-                    
                 }
             }
             if(bricks.get(i).getHealth()<=0)
             {
                 bricks.remove(i);
+            } else {
+                i++;
             }
 
         }
@@ -377,10 +374,11 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
         if(num<0) return -1;
         return 1;
     }
-
+    
     private void findAndDamageBox(int x, int y, int damageAmount)
     {
-        for(int i = 0; i<bricks.size();i++){
+        int i = 0;
+        while(i<bricks.size()){
             if((x>bricks.get(i).getX() && x<bricks.get(i).getX()+bricks.get(i).getW()) && (y>bricks.get(i).getY() && y<bricks.get(i).getY()+bricks.get(i).getH()))
             {
                 if(bricks.get(i).getHealth()>0)
@@ -396,8 +394,11 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
                 if(bricks.get(i).getHealth()<=0)
                 {
                     bricks.remove(i);
+                    if(i!=0)
+                        i--;
                 }
             }
+            i++;
         }
     }
     public static void setRender(boolean val)
@@ -411,15 +412,15 @@ public class IdleBreakout extends JPanel implements KeyListener, MouseListener, 
         if(i == 2)
             balls.add(new Brick(PREF_W/2-9, PREF_H/2-9, 18, 18, 1, -1, 0, PREF_W, 0, PREF_H, Color.MAGENTA,3,2,4));
         if(i == 3)
-            balls.add(new Brick(PREF_W/2-9, PREF_H/2-9, 18, 18, -1, 1, 0, PREF_W, 0, PREF_H, Color.WHITE,20,3,4));
+            balls.add(new Brick(PREF_W/2-9, PREF_H/2-9, 18, 18, -5, 5, 0, PREF_W, 0, PREF_H, Color.WHITE,3,3,4));
+        if(i == 7)
+            clickPower+=1;
     }
     public static void regenerateBricks()
     {
-        System.out.println(level);
         if(bricks.size()==0)
         {
             level++;
-            System.out.println(level);
             for(int a = 0; a<2; a++)
                 for(int b = 0; b<2; b++)
                     for(int j = 0; j<6;j++)

@@ -12,8 +12,6 @@ import java.awt.event.MouseEvent;
 import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
-import java.awt.Font;
-import java.awt.FontFormatException;
 import java.io.File;
 import java.io.IOException;
 
@@ -47,19 +45,23 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
     private static int numScatter = 0;
     private static int numCanon = 0;
     private static int numVirus = 0;
-    private static int ballsAllowed = 1000;
+    private static int numMouse = 0;
+    private static int ballsAllowed = Integer.MAX_VALUE-1;
     private static int myLevel = 1;
     private static int myMoney = 24;
     private static boolean render = true;
-    private static Rectangle toggleRenderBox = new Rectangle(740,18,50,25);
-    private static Rectangle moneyOuterBox = new Rectangle(610,18,125,25);
-    private static Rectangle moneyInnerBox = new Rectangle(613+15,21,119-15,19);
+    private static Rectangle toggleRenderBox = new Rectangle(700,18,50,25);
+    private static Rectangle moneyOuterBox = new Rectangle(555,18,125,25);
+    private static Rectangle moneyInnerBox = new Rectangle(555+15,21,119-12,19);
+    private static Rectangle levelOuterBox = new Rectangle(435,18,105,25);
+    private static Rectangle levelInnerBox = new Rectangle(435+41,21,60,19);
     private static Rectangle buyBasicBox = new Rectangle(10,5,50,50);
-    private static Rectangle buyPlasmaBox = new Rectangle(60,5,50,50);
-    private static Rectangle buySniperBox = new Rectangle(110,5,50,50);
-    private static Rectangle buyScatterBox = new Rectangle(160,5,50,50);
-    private static Rectangle buyCanonBox = new Rectangle(210,5,50,50);
-    private static Rectangle buyVirusBox = new Rectangle(260,5,50,50);
+    private static Rectangle buyPlasmaBox = new Rectangle(10+60,5,50,50);
+    private static Rectangle buySniperBox = new Rectangle(10+60+60,5,50,50);
+    private static Rectangle buyScatterBox = new Rectangle(10+60+60+60,5,50,50);
+    private static Rectangle buyCanonBox = new Rectangle(10+60+60+60+60,5,50,50);
+    private static Rectangle buyVirusBox = new Rectangle(10+60+60+60+60+60,5,50,50);
+    private static Rectangle upgradeMouse = new  Rectangle(10+60+60+60+60+60+60, 5, 50, 50);
     private static int mouseX = 0, mouseY = 0;
     int num = 0;
     
@@ -121,22 +123,43 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         // g2.setStroke(new BasicStroke(1));
         g2.setColor(Color.WHITE);
         g2.fill(moneyOuterBox);
+        g2.fill(levelOuterBox);
         g2.setColor(new Color(110, 210, 60));
         g2.fill(moneyInnerBox);
+        g2.setColor(IdleBreakout.getBrickColor(myLevel));
+        g2.fill(levelInnerBox);
         g2.setColor(Color.BLACK);
         g2.draw(moneyOuterBox);
         g2.draw(moneyInnerBox);
+        g2.draw(levelOuterBox);
+        g2.draw(levelInnerBox);
         message = "$";
         fm = g2.getFontMetrics(); 
         messageWidth = fm.stringWidth(message);
-        startX = (int)(moneyOuterBox.getX()+9) - messageWidth/2;
+        startX = (int)(moneyOuterBox.getX()+8) - messageWidth/2;
         g2.drawString(message, startX, (int)moneyOuterBox.getY()+18);
+
+        message = "Level";
+        fm = g2.getFontMetrics();
+        messageWidth = fm.stringWidth(message);
+        startX = (int)(levelOuterBox.getX()+21) - messageWidth/2;
+        g2.drawString(message, startX, (int)levelOuterBox.getY()+18);
         
         message = myMoney+"";
         fm = g2.getFontMetrics(); 
         messageWidth = fm.stringWidth(message);
         startX = (int)(moneyInnerBox.getX()+moneyInnerBox.getWidth()/2) - messageWidth/2;
         g2.drawString(message, startX, (int)moneyOuterBox.getY()+18);
+
+        message = myLevel+"";
+        fm = g2.getFontMetrics();
+        messageWidth = fm.stringWidth(message);
+        startX = (int)(levelInnerBox.getX()+levelInnerBox.getWidth()/2) - messageWidth/2;
+        g2.drawString(message, startX, (int)levelOuterBox.getY()+18);
+
+        
+
+
 
         // g2.setStroke(new BasicStroke(2));
         g2.setColor(new Color(243,242,242));
@@ -146,6 +169,8 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         g2.fill(buyScatterBox);
         g2.fill(buyCanonBox);
         g2.fill(buyVirusBox);
+        g2.fill(upgradeMouse);
+
         
         g2.setColor(new Color(110, 210, 60));
         g2.fillRect((int) buyBasicBox.getX(), (int)buyBasicBox.getY()+30, (int)buyBasicBox.getWidth(), (int)buyBasicBox.getHeight()-30);
@@ -154,6 +179,7 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         g2.fillRect((int) buyScatterBox.getX(), (int)buyScatterBox.getY()+30, (int)buyScatterBox.getWidth(), (int)buyScatterBox.getHeight()-30);
         g2.fillRect((int) buyCanonBox.getX(), (int)buyCanonBox.getY()+30, (int)buyCanonBox.getWidth(), (int)buyCanonBox.getHeight()-30);
         g2.fillRect((int) buyVirusBox.getX(), (int)buyVirusBox.getY()+30, (int)buyVirusBox.getWidth(), (int)buyVirusBox.getHeight()-30);
+        g2.fillRect((int) upgradeMouse.getX(), (int)upgradeMouse.getY()+30, (int)upgradeMouse.getWidth(), (int)upgradeMouse.getHeight()-30);
         
         g2.setColor(Color.BLACK);
         g2.draw(buyBasicBox);
@@ -162,12 +188,14 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         g2.draw(buyScatterBox);
         g2.draw(buyCanonBox);
         g2.draw(buyVirusBox);
+        g2.draw(upgradeMouse);
         g2.drawRect((int) buyBasicBox.getX(), (int)buyBasicBox.getY()+30, (int)buyBasicBox.getWidth(), (int)buyBasicBox.getHeight()-30);
         g2.drawRect((int) buyPlasmaBox.getX(), (int)buyPlasmaBox.getY()+30, (int)buyPlasmaBox.getWidth(), (int)buyPlasmaBox.getHeight()-30);
         g2.drawRect((int) buySniperBox.getX(), (int)buySniperBox.getY()+30, (int)buySniperBox.getWidth(), (int)buySniperBox.getHeight()-30);
         g2.drawRect((int) buyScatterBox.getX(), (int)buyScatterBox.getY()+30, (int)buyScatterBox.getWidth(), (int)buyScatterBox.getHeight()-30);
         g2.drawRect((int) buyCanonBox.getX(), (int)buyCanonBox.getY()+30, (int)buyCanonBox.getWidth(), (int)buyCanonBox.getHeight()-30);
         g2.drawRect((int) buyVirusBox.getX(), (int)buyVirusBox.getY()+30, (int)buyVirusBox.getWidth(), (int)buyVirusBox.getHeight()-30);
+        g2.drawRect((int) upgradeMouse.getX(), (int)upgradeMouse.getY()+30, (int)upgradeMouse.getWidth(), (int)upgradeMouse.getHeight()-30);
         
         g2.setColor(Color.YELLOW);
         g2.fillOval((int)(buyBasicBox.getX()+buyBasicBox.getWidth()/2-9), (int)(buyBasicBox.getY()+buyBasicBox.getHeight()/3-10), 18, 18);
@@ -241,9 +269,23 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         startX = (int)(buyVirusBox.getX()+buyVirusBox.getWidth()/2) - messageWidth/2;
         g2.drawString(message, startX, 50);
 
+        //draw the mouse
+        g2.setColor(Color.BLACK);
+        int topX = (int)(upgradeMouse.getX()+upgradeMouse.getWidth()/2);
+        int topY = (int)(upgradeMouse.getY()+upgradeMouse.getHeight()*2/7);
+        g2.drawLine(topX-7, topY+7, topX+7, topY-7);
+        g2.drawLine(topX-7, topY-7, topX+7, topY+7);
+        message = "$"+ballCost(7, numMouse);
+        fm = g2.getFontMetrics();
+        messageWidth = fm.stringWidth(message);
+        startX = (int)(upgradeMouse.getX()+upgradeMouse.getWidth()/2) - messageWidth/2;
+        g2.drawString(message, startX, 50);
+
+
         if(myMoney<0)
         {
             System.out.println("Terminating program due to negative money: "+myMoney);
+            // System.exit(0);
         }
         repaint();
     }
@@ -361,6 +403,18 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
             }
         }
 
+        //upgrade mouse
+        if((x>upgradeMouse.getX() && x<upgradeMouse.getX()+upgradeMouse.getWidth()) && (y>upgradeMouse.getY() && y<upgradeMouse.getY()+upgradeMouse.getHeight()))
+        {
+            System.out.println("upgrade mouse");
+            if(myMoney>=ballCost(7, numMouse))
+            {
+                IdleBreakout.spawnBall(7);
+                myMoney -= ballCost(7, numMouse);
+                numMouse++;
+            }
+        }
+
     
     
         
@@ -441,6 +495,10 @@ public class TopBar extends JPanel implements MouseListener, MouseMotionListener
         {
             return (int)Math.round(90000*Math.pow(1.25, numOfBall));
         }
-        return 0;
+        if(ballType==7)
+        {
+            return (int)Math.round(50*Math.pow(1.2, numOfBall));
+        }
+        return 0; 
     }
 }

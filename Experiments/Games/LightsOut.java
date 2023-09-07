@@ -22,8 +22,8 @@ public class LightsOut extends JPanel
    private JPanel other;
    private JPanel game;
    private static final long serialVersionUID = 1L;
-   private static int rows = 20;
-   private static int cols = 20;
+   private static int rows = 5;
+   private static int cols = 5;
    private static int squareSize = 40;
 
    private static final int PREF_W = cols*squareSize;
@@ -32,7 +32,7 @@ public class LightsOut extends JPanel
    private int c = 0;
    private int j = 0;
    
-   private static int ranMove =  0;
+   private static int ranMove =  10;
    private JButton[][] b;
 
    public LightsOut()
