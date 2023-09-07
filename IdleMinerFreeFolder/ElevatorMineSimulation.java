@@ -43,13 +43,11 @@ public class ElevatorMineSimulation {
         };
 
         Runnable transportSimulation = () -> {
-            try {
-                transportation.run();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-
+            // try {
+            //     transportation.run();
+            // } catch (InterruptedException e) {
+            //     e.printStackTrace();
+            // }
             System.out.println("Transport simulation completed.");
         };
         

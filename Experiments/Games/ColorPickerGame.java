@@ -1,5 +1,3 @@
-package Games;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -13,7 +11,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -34,7 +33,11 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
    private int mousey = 0;
    private Color tc = new Color(255,255,255);
    private Color cc = new Color(255,255,255);
-   private int smoothness = 50;
+   private int smoothness = 20;
+   private boolean click = false;
+   private long frameCount = 0;
+   private int CCrdiff = 0; int CCgdiff = 0; int CCbdiff = 0; int temp = 0;
+   
    
    
    public ColorPickerGame()
@@ -47,28 +50,53 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         this.addKeyListener(this);
       
       
-    //     Timer timer= new Timer((int)(1000/60), new ActionListener() {
-    //      public void actionPerformed(ActionEvent e)
-    //      {
-    //         repaint();
-    //      }
-    //   });
-    //  timer.start();
+        Timer timer= new Timer((int)(1000/60), new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                repaint();
+            }
+        });
+        timer.start();
    }
-
 
    public Dimension getPreferredSize() {
       return new Dimension(PREF_W, PREF_H);
    }
 
-    @Override
-    public void paintComponent(Graphics g) {
+    
+   
+   @Override
+   public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
-      
-        smootheBKGChange(g2, cc, tc, smoothness);
+        
+        if(click == true)
+        {
+            
+            CCrdiff = (cc.getRed()-tc.getRed())/smoothness;
+            CCgdiff = (cc.getGreen()-tc.getGreen())/smoothness;
+            CCbdiff = (cc.getBlue()-tc.getBlue())/smoothness;
+            temp = (int) (frameCount+smoothness);
+            click = false;
+        }
+        System.out.println(frameCount+", "+temp);
+        if(frameCount<temp)
+        {
+            cc = new Color(cc.getRed()-CCrdiff,cc.getGreen()-CCgdiff,cc.getBlue()-CCbdiff);
+        } else {
+            cc = tc;
+        }
+        g2.setColor(cc);
+        g2.fillRect(0, 0, PREF_W, PREF_H);
 
+        
+
+        g2.setColor(Color.white);
+        g2.fillRect(0, 0, PREF_W/2, PREF_H/2);
+        g2.setColor(tc);
+        g2.fillRect(PREF_W/2, 0, PREF_W, PREF_H/2);
+        
         g2.setColor(Color.black);
         String message = "#888888";
         FontMetrics fm = g2.getFontMetrics();
@@ -76,7 +104,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         int startX = getWidth()/2 - messageWidth/2;
         g2.drawString(message, startX, getHeight()/2);
         
-   
+        frameCount++;
    }
 
    @Override
@@ -130,6 +158,8 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
 @Override
 public void mouseClicked(MouseEvent e) {
     tc = new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+    System.out.println(tc.toString());
+    click = true;
     repaint();
 }
 
@@ -167,28 +197,6 @@ public void mouseDragged(MouseEvent e) {
 @Override
 public void mouseMoved(MouseEvent e) {
 
-}
-
-public void smootheBKGChange(Graphics2D g2, Color CC, Color TC, int smoothness)
-{
-    double ccr = CC.getRed();
-    double ccg = CC.getGreen();
-    double ccb = CC.getBlue();
-    for(int i = 0; i<smoothness;i++)
-    {
-        if(CC.getRed()!=TC.getRed())
-            ccr+=(TC.getRed()-CC.getRed())/smoothness;
-        if(CC.getGreen()!=TC.getGreen())
-            ccg+=(TC.getGreen()-CC.getGreen())/smoothness;
-        if(CC.getBlue()!=TC.getBlue())
-            ccb+=(TC.getBlue()-CC.getBlue())/smoothness;
-        CC = new Color((int)ccr, (int)ccg, (int) ccb);
-        System.out.println("Color changed");
-        g2.setColor(CC);
-        g2.fillRect(0, 0, PREF_W, PREF_H);
-        repaint();
-    }
-    cc = TC;
 }
 
 public int giveOneWSign(int num)
