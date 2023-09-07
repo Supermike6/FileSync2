@@ -18,7 +18,7 @@ public class GMN_Panel
      
       String playAgain;
       
-      Font font1 = new Font("Courier",Font.PLAIN,35);
+      Font font1 = new Font("Cooper Black",Font.PLAIN,35);
       
       UIManager.put("TextField.font", font1);
 		  
@@ -36,14 +36,14 @@ public class GMN_Panel
 		
       do {
     	  
-         int upperLimit = Integer.parseInt((String) JOptionPane.showInputDialog(null, "Enter the maximum number to guess up to", "Pick guessing range", 0, icon, null, 10));
+         long upperLimit = Integer.parseInt((String) JOptionPane.showInputDialog(null, "Enter the maximum number to guess up to", "Pick guessing range", 0, icon, null, 10));
    
          
-         int maxGuesses = (int)(Math.log(upperLimit) / Math.log(2)); //calulate number of guesses to give player
+         long maxGuesses = (long)(Math.log(upperLimit) / Math.log(2)); //calulate number of guesses to give player
          
-         int guess;
-         int totalGuesses = 0;
-         int winningNumber = (int)(Math.random()*upperLimit) + 1;
+         long guess;
+         long totalGuesses = 0;
+         long winningNumber = (long)(Math.random()*upperLimit) + 1;
          
          guess = Integer.parseInt((String) JOptionPane.showInputDialog(null, "You will have " + maxGuesses + " guess(es).\nGuess a number from 1 to " + upperLimit, "Guess a Number",-1));
          
