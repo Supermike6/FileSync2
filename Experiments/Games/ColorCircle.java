@@ -10,6 +10,16 @@ public class ColorCircle {
     public int y;
     public int radius;
     
+    public ColorCircle()
+    {
+        this.c = new Color(0,0,0);
+        this.r = c.getRed();
+        this.g = c.getGreen();
+        this.b = c.getBlue();
+        this.x = 0;
+        this.y = 0;
+        this.radius = 0;
+    }
     public ColorCircle(Color c, int x, int y, int radius)
     {
         this.c = c;
