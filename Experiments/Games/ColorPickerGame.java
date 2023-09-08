@@ -31,12 +31,15 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
    private RenderingHints hints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
    private int mousex = 0;
    private int mousey = 0;
-   private Color tc = new Color(255,255,255);
+   private Color tc = new Color(8*16+8,8*16+8,8*16+8);
    private Color cc = new Color(255,255,255);
-   private int smoothness = 20;
+   private int smoothness = 10   ;
    private boolean click = false;
    private long frameCount = 0;
    private int CCrdiff = 0; int CCgdiff = 0; int CCbdiff = 0; int temp = 0;
+   private int numColors = 6;
+   private int closeness = 10;
+   ArrayList<Color> colorArray = makeColorArray(numColors);
    
    
    
@@ -48,6 +51,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         this.addMouseListener(this);
         this.addMouseMotionListener(this);
         this.addKeyListener(this);
+        
       
       
         Timer timer= new Timer((int)(1000/60), new ActionListener() {
@@ -63,27 +67,24 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
       return new Dimension(PREF_W, PREF_H);
    }
 
-    
-   
    @Override
    public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
-        
+
         if(click == true)
         {
-            
-            CCrdiff = (cc.getRed()-tc.getRed())/smoothness;
-            CCgdiff = (cc.getGreen()-tc.getGreen())/smoothness;
-            CCbdiff = (cc.getBlue()-tc.getBlue())/smoothness;
-            temp = (int) (frameCount+smoothness);
+            CCrdiff = (cc.getRed()-tc.getRed())/(smoothness);
+            CCgdiff = (cc.getGreen()-tc.getGreen())/(smoothness);
+            CCbdiff = (cc.getBlue()-tc.getBlue())/(smoothness);
+            temp = (int) frameCount+smoothness;
             click = false;
         }
-        System.out.println(frameCount+", "+temp);
+        System.out.println(numColors);
         if(frameCount<temp)
         {
-            cc = new Color(cc.getRed()-CCrdiff,cc.getGreen()-CCgdiff,cc.getBlue()-CCbdiff);
+            cc = new Color((int)(cc.getRed()-CCrdiff),(int)(cc.getGreen()-CCgdiff),(int)(cc.getBlue()-CCbdiff));
         } else {
             cc = tc;
         }
@@ -96,6 +97,12 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         g2.fillRect(0, 0, PREF_W/2, PREF_H/2);
         g2.setColor(tc);
         g2.fillRect(PREF_W/2, 0, PREF_W, PREF_H/2);
+        
+        for(int i = 0; i<colorArray.size();i++)
+        {
+            g2.setColor(colorArray.get(i));
+            g2.fillOval((PREF_W-200)/colorArray.size()*i, PREF_H/2-(PREF_W/colorArray.size()-(PREF_W/2/numColors)), PREF_W/colorArray.size()-(PREF_W/2/numColors), (PREF_W/colorArray.size()-(PREF_W/2/numColors)));
+        }
         
         g2.setColor(Color.black);
         String message = "#888888";
@@ -121,19 +128,25 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
    @Override
    public void keyReleased(KeyEvent e)
    {
-      int key = e.getKeyCode();
-      if(key == KeyEvent.VK_RIGHT)
-      {
-
-      }
-
+        int key = e.getKeyChar();
+        if(key == 'a')
+        {
+            numColors++;
+        }
+        
+        if(key == 's')
+        {
+            numColors--;
+        }
+        colorArray = makeColorArray(numColors);
+        repaint();
    }
 
-   @Override
-   public void keyTyped(KeyEvent e)
-   {
-      
-   }
+    @Override
+    public void keyTyped(KeyEvent e)
+    {        
+        
+    }
 
    private static void createAndShowGUI() {
       ColorPickerGame gamePanel = new ColorPickerGame();
@@ -155,54 +168,65 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
    }
 
 
-@Override
-public void mouseClicked(MouseEvent e) {
-    tc = new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
-    System.out.println(tc.toString());
-    click = true;
-    repaint();
-}
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        tc = new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+        System.out.println(tc.toString());
+        click = true;
+        repaint();
+    }
 
 
-@Override
-public void mousePressed(MouseEvent e) {
+    @Override
+    public void mousePressed(MouseEvent e) {
 
-}
-
-
-@Override
-public void mouseReleased(MouseEvent e) {
-
-}
+    }
 
 
-@Override
-public void mouseEntered(MouseEvent e) {
+    @Override
+    public void mouseReleased(MouseEvent e) {
 
-}
-
-
-@Override
-public void mouseExited(MouseEvent e) {
-
-}
+    }
 
 
-@Override
-public void mouseDragged(MouseEvent e) {
+    @Override
+    public void mouseEntered(MouseEvent e) {
 
-}
+    }
 
 
-@Override
-public void mouseMoved(MouseEvent e) {
+    @Override
+    public void mouseExited(MouseEvent e) {
 
-}
+    }
 
-public int giveOneWSign(int num)
-{
-    if(num<0) return -1;
-    return 1;
-}
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+
+    }
+
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+        mousex = e.getX();
+        mousey = e.getY();
+    }
+
+    public int giveOneWSign(int num)
+    {
+        if(num<0) return -1;
+        return 1;
+    }
+
+    public ArrayList<Color> makeColorArray(int numColors)
+    {
+        ArrayList<Color> colorArray = new ArrayList<Color>();
+        for(int i = 0; i<numColors;i++)
+        {
+            colorArray.add(new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255)));
+        }
+        return colorArray;
+    }
 
 }
