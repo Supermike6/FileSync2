@@ -1,15 +1,21 @@
+import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.MouseInfo;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.awt.RenderingHints;
+import java.awt.Robot;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -25,21 +31,24 @@ import javax.swing.event.MouseInputListener;
 
 public class ColorPickerGame extends JPanel implements KeyListener, MouseInputListener
 {
-   private static final long serialVersionUID = 1L;
-   private static final int PREF_W = 1300;
-   private static final int PREF_H = PREF_W/16*9;
-   private RenderingHints hints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-   private int mousex = 0;
-   private int mousey = 0;
-   private Color tc = new Color(8*16+8,8*16+8,8*16+8);
-   private Color cc = new Color(255,255,255);
-   private int smoothness = 10   ;
-   private boolean click = false;
-   private long frameCount = 0;
-   private int CCrdiff = 0; int CCgdiff = 0; int CCbdiff = 0; int temp = 0;
-   private int numColors = 6;
-   private int closeness = 10;
-   ArrayList<Color> colorArray = makeColorArray(numColors);
+    private static final long serialVersionUID = 1L;
+    private static final int PREF_W = 1300;
+    private static final int PREF_H = PREF_W/16*9;
+    private RenderingHints hints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+    private int mousex = 0;
+    private int mousey = 0;
+    private Color tc = new Color(8*16+8,8*16+8,8*16+8);
+    private Color cc = new Color(255,255,255);
+    private int smoothness = 10   ;
+    private boolean click = false;
+    private long frameCount = 0;
+    private int CCrdiff = 0; int CCgdiff = 0; int CCbdiff = 0; int temp = 0;
+    private int numColors = 6;
+    private int closeness = 10;
+    ArrayList<ColorCircle> colorArray = makeColorArray(numColors);
+    private boolean hoverColor = true;
+    
+    
    
    
    
@@ -52,11 +61,12 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         this.addMouseMotionListener(this);
         this.addKeyListener(this);
         
-      
+       
       
         Timer timer= new Timer((int)(1000/60), new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
+                
                 repaint();
             }
         });
@@ -73,15 +83,8 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
 
-        if(click == true)
-        {
-            CCrdiff = (cc.getRed()-tc.getRed())/(smoothness);
-            CCgdiff = (cc.getGreen()-tc.getGreen())/(smoothness);
-            CCbdiff = (cc.getBlue()-tc.getBlue())/(smoothness);
-            temp = (int) frameCount+smoothness;
-            click = false;
-        }
-        System.out.println(numColors);
+        
+        
         if(frameCount<temp)
         {
             cc = new Color((int)(cc.getRed()-CCrdiff),(int)(cc.getGreen()-CCgdiff),(int)(cc.getBlue()-CCbdiff));
@@ -100,8 +103,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         
         for(int i = 0; i<colorArray.size();i++)
         {
-            g2.setColor(colorArray.get(i));
-            g2.fillOval((PREF_W-200)/colorArray.size()*i, PREF_H/2-(PREF_W/colorArray.size()-(PREF_W/2/numColors)), PREF_W/colorArray.size()-(PREF_W/2/numColors), (PREF_W/colorArray.size()-(PREF_W/2/numColors)));
+            colorArray.get(i).fillCircle(g2);
         }
         
         g2.setColor(Color.black);
@@ -159,19 +161,18 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
       frame.setVisible(true);
    }
 
-   public static void main(String[] args) {
-      SwingUtilities.invokeLater(new Runnable() {
-         public void run() {
-            createAndShowGUI();
-         }
-      });
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });
+         
    }
 
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        tc = new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
-        System.out.println(tc.toString());
         click = true;
         repaint();
     }
@@ -209,8 +210,28 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
 
     @Override
     public void mouseMoved(MouseEvent e) {
+        
+        Robot robot;
+        try {
+            robot = new Robot();
+            Point point = MouseInfo.getPointerInfo().getLocation();
+            BufferedImage screen = robot.createScreenCapture(new Rectangle(point.x, point.y, 1, 1));
+            Color color = new Color(screen.getRGB(0, 0));
+            
+            // tc = color;
+        } catch (AWTException ex) {
+            ex.printStackTrace();
+        }
+        
         mousex = e.getX();
         mousey = e.getY();
+
+        if(getIntersectingColorCircle(mousex,mousey)!=null)
+        {
+            tc = getIntersectingColorCircle(mousex,mousey).getC();
+        } else tc = Color.white;
+        beginAnim();
+        
     }
 
     public int giveOneWSign(int num)
@@ -219,14 +240,42 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         return 1;
     }
 
-    public ArrayList<Color> makeColorArray(int numColors)
+    public ArrayList<ColorCircle> makeColorArray(int numColors)
     {
-        ArrayList<Color> colorArray = new ArrayList<Color>();
+        ArrayList<ColorCircle> colorArray = new ArrayList<ColorCircle>();
         for(int i = 0; i<numColors;i++)
         {
-            colorArray.add(new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255)));
+            colorArray.add(new ColorCircle(new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255)),0,0,0));
         }
+        for(int i = 0; i<colorArray.size();i++)
+        {
+            colorArray.get(i).setX((PREF_W-200)/colorArray.size()*i); 
+            colorArray.get(i).setY((PREF_H/2-(PREF_W/colorArray.size()-(PREF_W/2/numColors))));
+            colorArray.get(i).setRadius((PREF_W/colorArray.size()-(PREF_W/2/numColors))/2);
+        }
+
         return colorArray;
+    }
+
+    //return the ColorCircle object that intersects a point
+    public ColorCircle getIntersectingColorCircle(int x, int y)
+    {
+        for(int i = 0; i<colorArray.size();i++)
+        {
+            if(colorArray.get(i).intersects(x, y))
+            {
+                return colorArray.get(i);
+            }
+        }
+        return null;
+    }
+    
+    public void beginAnim()
+    {
+        CCrdiff = (cc.getRed()-tc.getRed())/(smoothness);
+        CCgdiff = (cc.getGreen()-tc.getGreen())/(smoothness);
+        CCbdiff = (cc.getBlue()-tc.getBlue())/(smoothness);
+        temp = (int) frameCount+smoothness;
     }
 
 }
