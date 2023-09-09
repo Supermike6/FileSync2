@@ -43,7 +43,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     private boolean click = false;
     private long frameCount = 0;
     private double CCrdiff = 0; double CCgdiff = 0; double CCbdiff = 0; double temp = 0; double CCrd = 0; double CCgd = 0; double CCbd = 0;
-    private int numColors = 10;
+    private int numColors = 3;
     private int closeness = 10;
     ArrayList<ColorCircle> colorArray = makeColorArray(numColors);
     private boolean hoverColor = true;
@@ -83,7 +83,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
 
-        System.out.println(correctColor);
+        
         
         if(frameCount<temp)
         {
@@ -102,10 +102,9 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
 
         
 
-        g2.setColor(Color.green);
-        g2.fillRect(0, 0, PREF_W, PREF_H/2);
-        // g2.setColor(tc);
-        // g2.fillRect(PREF_W/2, 0, PREF_W, PREF_H/2);
+        // g2.setColor(Color.green);
+        // g2.fillRect(0, 0, PREF_W, PREF_H/2);
+        
         
         for(int i = 0; i<colorArray.size();i++)
         {
@@ -237,13 +236,18 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     {
         ArrayList<ColorCircle> colorArray = new ArrayList<ColorCircle>(numColors);
         
-        for(int i = 0; i<numColors+1;i++)
+        for(int i = 0; i<numColors;i++)
         {
             colorArray.add(new ColorCircle());
             colorArray.get(i).setC(new Color((255/numColors)*i, (255/numColors)*i, (255/numColors)*i));
             colorArray.get(i).setRadius(40);
-            colorArray.get(i).setX(PREF_W/2+(colorArray.get(i).getRadius()*2+10)*(i-numColors/2));
-            colorArray.get(i).setY(PREF_H/2);
+            if(numColors%2==1)
+            {
+                colorArray.get(i).setX(PREF_W/2+(colorArray.get(i).getRadius()*2+10)*(i-numColors/2));
+            } else {
+                colorArray.get(i).setX(PREF_W/2+(colorArray.get(i).getRadius()*2+10)*(i-numColors/2)+colorArray.get(i).getRadius()+5);
+            }
+                colorArray.get(i).setY(PREF_H/2);
         }
 
         return colorArray;
