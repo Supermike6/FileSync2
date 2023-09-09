@@ -1,3 +1,4 @@
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
@@ -92,10 +93,65 @@ public class ColorCircle {
         this.radius = radius;
     }
     
-    public void fillCircle(Graphics2D g2)
+    public void fillCircle(Graphics2D g2) 
     {
         g2.setColor(c);
         g2.fillOval(x-radius, y-radius, radius*2, radius*2);
+        
+    }
+    public void outlineCircle(Graphics2D g2) 
+    {
+        int borderDiff = 8;
+        g2.setStroke(new BasicStroke(3));
+        g2.setColor(new Color(c.getRed()/(borderDiff+1)*borderDiff, c.getGreen()/(borderDiff+1)*borderDiff, c.getBlue()/(borderDiff+1)*borderDiff));
+        g2.drawOval(x-radius, y-radius, radius*2, radius*2);
     }
     
+    @Override
+    public String toString() {
+        return "ColorCircle [c=" + c + ", x=" + x + ", y=" + y + ", radius=" + radius + "]";
+    }
+    
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((c == null) ? 0 : c.hashCode());
+        result = prime * result + r;
+        result = prime * result + g;
+        result = prime * result + b;
+        result = prime * result + x;
+        result = prime * result + y;
+        result = prime * result + radius;
+        return result;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        ColorCircle other = (ColorCircle) obj;
+        if (c == null) {
+            if (other.c != null)
+                return false;
+        } else if (!c.equals(other.c))
+            return false;
+        if (r != other.r)
+            return false;
+        if (g != other.g)
+            return false;
+        if (b != other.b)
+            return false;
+        if (x != other.x)
+            return false;
+        if (y != other.y)
+            return false;
+        if (radius != other.radius)
+            return false;
+        return true;
+    }
 }
