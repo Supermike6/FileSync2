@@ -149,8 +149,9 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             }
             colorArray.get(i).outlineCircle(g2);
         }
-        
-
+        g2.setColor(Color.black);
+        g2.setStroke(new BasicStroke(2));
+        g2.drawLine(PREF_W/2,0,PREF_W/2,PREF_H);
 
         g2.setColor(Color.black);
         String message = "";
@@ -166,9 +167,9 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     public void keyPressed(KeyEvent e)
     {
         int key = e.getKeyCode();
-        if(key == KeyEvent.VK_SPACE)
+        if(key == KeyEvent.VK_Q)
         {
-
+            state = "menu";
         }
     }
 
@@ -312,39 +313,37 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     int circlesPerRow = 14;  // Maximum number of circles in a row
     int circleSpacing = 10;  // Spacing between circles
     int rowSpacing = 20;     // Spacing between rows
-    int circleRadius = 40;   // Radius of each circle
+    int circleDiam = 80;   // Radius of each circle
 
-    int totalWidth = circlesPerRow * (circleRadius * 2 + circleSpacing);
-    int startX = (PREF_W - totalWidth) / 2;
-    int startY = (PREF_H - ((numColors - 1) / circlesPerRow + 1) * (circleRadius * 2 + rowSpacing)) / 2+150; 
+    
+
+
+
 
     for(int i = 0; i < numColors; i++)
     {
-        int col = i % circlesPerRow;
-        int row = i / circlesPerRow;
-        int x = startX + col * (circleRadius * 2 + circleSpacing) + circleRadius; // Adjusted x calculation
-        int y = startY + row * (circleRadius * 2 + rowSpacing);
-
         ColorCircle circle = new ColorCircle();
+        int x = 0;
+        
+        if(i>=numColors-numColors%14)
+        {
+            x=(PREF_W/2+circleDiam/2+(circleDiam+circleSpacing)*(i%14))-((circleDiam+circleSpacing)*(numColors%14)/2)+circleSpacing/2;
+        } else {
+            x=(PREF_W/2+circleDiam/2+(circleDiam+circleSpacing)*(i%14))-((circleDiam+circleSpacing)*(circlesPerRow)/2)+circleSpacing/2;
+        }
+        int y = PREF_H/3+(circleDiam+rowSpacing)*(i/circlesPerRow);
+        
         int ranR = (int)(Math.random() * 253) + 1;
         int ranG = (int)(Math.random() * 253) + 1;
         int ranB = (int)(Math.random() * 253) + 1;
         circle.setC(new Color(ranR, ranG, ranB));
-        circle.setRadius(circleRadius);
+        circle.setRadius(circleDiam/2);
         circle.setX(x);
         circle.setY(y);
-
         colorArrayT.add(circle);
     }
 
-    if (numColors % circlesPerRow != 0) {
-        startX = (PREF_W - ((numColors % circlesPerRow) * (circleRadius * 2 + circleSpacing))) / 2;
-        for (int i = numColors - circlesPerRow; i < numColors; i++) {
-            int col = i % circlesPerRow;
-            int x = startX + col * (circleRadius * 2 + circleSpacing) + circleRadius;
-            colorArrayT.get(i).setX(x);
-        }
-    }
+    
 
     return colorArrayT;
 }
