@@ -1,6 +1,7 @@
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -10,8 +11,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -35,11 +36,12 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     private long frameCount = 0;
     private double CCrdiff = 0; double CCgdiff = 0; double CCbdiff = 0; long temp = 0; double CCrd = 0; double CCgd = 0; double CCbd = 0;
     private int numColors = 2;
-    private int closeness = 10;
+    private int closeness = 253;
+    private Font font = new Font("Lekton", Font.PLAIN, 67);
     private ArrayList<ColorCircle> colorArray = makeColorArray(numColors);
     private ArrayList<ColorCircle> flagged = makeColorArray(0);
-    private ColorCircle correctColor = colorArray.get((int)(Math.random()*numColors)).seperate();
     private ArrayList<ColorCircle> menuArray = makeColorArray(6);
+    private ColorCircle correctColor = colorArray.get((int)(Math.random()*numColors)).seperate();
     
     private String state = "menu";
     
@@ -87,32 +89,35 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
         
+        String message = "";
+        FontMetrics fm = g2.getFontMetrics();
+        int messageWidth = 0;
+        int startX = 0;
+
+        
+
+        //Games menu
         if(state.equals("menu"))
         {
-            //create equaly spaced circles that say 2,4,8,16,32,64
-            //if mouse is over one of the circles, make it a different color
-            //if mouse is clicked, set numColors to the number of the circle
-            //if space is pressed, start the game
-            //if game is started, set state to "game"
-
-            //draw circles
-
-            for(int i = 0; i<6;i++)
+            for(int i = 0; i<menuArray.size();i++)
             {
                 menuArray.get(i).fillCircle(g2);
                 menuArray.get(i).outlineCircle(g2);
+                message = "Back to menu";
+                fm = g2.getFontMetrics();
+                messageWidth = fm.stringWidth(message);
+                startX = getWidth()/3*2 - messageWidth/2;
+                g2.drawString(message, startX, getHeight()/5);
+                g2.setColor(correctColor.getC());
+                g2.drawString(message, startX, i);
             }
-
-            g2.setColor(Color.black);
-            String message = "Press Space to Start";
-            FontMetrics fm = g2.getFontMetrics();
-            int messageWidth = fm.stringWidth(message);
-            int startX = getWidth()/2 - messageWidth/2;
-            g2.drawString(message, startX, getHeight()/2);
+            
             return;
         }
 
-
+        
+        
+        
         //bkg
         if(frameCount<temp)
         {
@@ -126,16 +131,28 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             if(CCgd>255)CCgd = 255;
             if(CCbd>255)CCbd = 255;
             cc = new Color((int)(CCrd),(int)(CCgd),(int)(CCbd));
+            g2.setColor(cc);
+            g2.fillRect(0, 0, PREF_W, PREF_H);
         } else {
             cc = tc;
             CCrd = cc.getRed();
             CCgd = cc.getGreen();
             CCbd = cc.getBlue();
+            g2.setColor(cc);
+            g2.fillRect(0, 0, PREF_W, PREF_H);
         }
-        g2.setColor(cc);
-        g2.fillRect(0, 0, PREF_W, PREF_H);
         
-
+        ;
+        int sBase = 10;
+        int dBase = 16;
+        String number = correctColor.getC().getRed()+"";
+        String display = "#"+Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
+        number = correctColor.getC().getGreen()+"";
+        display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
+        number = correctColor.getC().getBlue()+"";
+        display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
+        
+        //Draw Circle
         for(int i = 0; i<colorArray.size();i++)
         {
             colorArray.get(i).fillCircle(g2);
@@ -149,20 +166,42 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             }
             colorArray.get(i).outlineCircle(g2);
         }
+        
         g2.setColor(Color.black);
-        g2.setStroke(new BasicStroke(2));
-        g2.drawLine(PREF_W/2,0,PREF_W/2,PREF_H);
-
-        g2.setColor(Color.black);
-        String message = "";
-        FontMetrics fm = g2.getFontMetrics();
-        int messageWidth = fm.stringWidth(message);
-        int startX = getWidth()/2 - messageWidth/2;
-        g2.drawString(message, startX, getHeight()/2);
+        if(state.equals("Over"))
+        {
+            message = "Play Again";
+            fm = g2.getFontMetrics();
+            messageWidth = fm.stringWidth(message);
+            startX = getWidth()/3 - messageWidth/2;
+            g2.drawString(message, startX, getHeight()/5);
+            message = "Back to menu";
+            fm = g2.getFontMetrics();
+            messageWidth = fm.stringWidth(message);
+            startX = getWidth()/3*2 - messageWidth/2;
+            g2.drawString(message, startX, getHeight()/5);
+            g2.setColor(correctColor.getC());
+            
+        }
+        g2.setFont(font);
+        message = display;
+        fm = g2.getFontMetrics();
+        messageWidth = fm.stringWidth(message);
+        startX = getWidth()/2 - messageWidth/2;
+        g2.drawString(message, startX, getHeight()/5);
+        
+        //Template - remove
+        // g2.setColor(Color.black);
+        // String message = "";
+        // FontMetrics fm = g2.getFontMetrics();
+        // int messageWidth = fm.stringWidth(message);
+        // int startX = getWidth()/2 - messageWidth/2;
+        // g2.drawString(message, startX, getHeight()/2);
+        
         
         frameCount++;
-   }
-
+    }
+    
     @Override
     public void keyPressed(KeyEvent e)
     {
@@ -231,25 +270,36 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             if(state.equals("menu"))
             {
                 if(menuArray.indexOf(getIntersectingColorCircle(mousex,mousey,menuArray))!=-1)
-                    numColors = (int)Math.pow(2, menuArray.indexOf(getIntersectingColorCircle(mousex,mousey,menuArray))+1);
+                    numColors = (int) Math.pow(2, menuArray.indexOf(getIntersectingColorCircle(mousex,mousey,menuArray))+1);
                 System.out.println(numColors);
                 colorArray = makeColorArray(numColors);
                 state = "game";
-                correctColor = colorArray.get((int)(Math.random()*numColors)).seperate();
-                System.out.println(numColors);
+                // correctColor = colorArray.get((int)(Math.random()*numColors)).seperate();
+                correctColor = colorArray.get(0).seperate();
+                System.out.println(correctColor);
                 return;
             }
 
             switch(e.getButton())
             {
                 case 1:
-                    System.out.println("left");
+                    System.out.println(getIntersectingColorCircle(mousex,mousey,colorArray));
+                    if(getIntersectingColorCircle(mousex,mousey,colorArray).getX()==correctColor.getX() && getIntersectingColorCircle(mousex,mousey,colorArray).getY()==correctColor.getY())
+                    {
+                        for(int i = 0; i<colorArray.size();i++)
+                        {
+                            colorArray.remove(i);
+                            i--;
+                        }
+                        colorArray.add(correctColor);
+                        state = "Over";
+                    }
                     break;
                 case 2:
-                    System.out.println("middle");
+
                     break;
                 case 3:
-                    System.out.println("right");
+
                     if(!flagged.contains(getIntersectingColorCircle(mousex,mousey,colorArray)))
                         flagged.add(getIntersectingColorCircle(mousex,mousey,colorArray));
                     else flagged.remove(getIntersectingColorCircle(mousex,mousey,colorArray));
@@ -307,56 +357,42 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     }
 
     public ArrayList<ColorCircle> makeColorArray(int numColors)
-{
-    ArrayList<ColorCircle> colorArrayT = new ArrayList<ColorCircle>(numColors);
-    
-    int circlesPerRow = 14;  // Maximum number of circles in a row
-    int circleSpacing = 10;  // Spacing between circles
-    int rowSpacing = 20;     // Spacing between rows
-    int circleDiam = 80;   // Radius of each circle
-
-    
-
-
-
-
-    for(int i = 0; i < numColors; i++)
     {
-        ColorCircle circle = new ColorCircle();
-        int x = 0;
+        ArrayList<ColorCircle> colorArrayT = new ArrayList<ColorCircle>(numColors);
         
-        if(i>=numColors-numColors%14)
+        int circlesPerRow = 14;  // Maximum number of circles in a row
+        int circleSpacing = 10;  // Spacing between circles
+        int rowSpacing = 20;     // Spacing between rows
+        int circleDiam = 80;   // Radius of each circle
+
+        for(int i = 0; i < numColors; i++)
         {
-            x=(PREF_W/2+circleDiam/2+(circleDiam+circleSpacing)*(i%14))-((circleDiam+circleSpacing)*(numColors%14)/2)+circleSpacing/2;
-        } else {
-            x=(PREF_W/2+circleDiam/2+(circleDiam+circleSpacing)*(i%14))-((circleDiam+circleSpacing)*(circlesPerRow)/2)+circleSpacing/2;
+            ColorCircle circle = new ColorCircle();
+            int x = 0;
+            
+            if(i>=numColors-numColors%14)
+            {
+                x=(PREF_W/2+circleDiam/2+(circleDiam+circleSpacing)*(i%14))-((circleDiam+circleSpacing)*(numColors%14)/2)+circleSpacing/2;
+            } else {
+                x=(PREF_W/2+circleDiam/2+(circleDiam+circleSpacing)*(i%14))-((circleDiam+circleSpacing)*(circlesPerRow)/2)+circleSpacing/2;
+            }
+            int y = PREF_H/3+(circleDiam+rowSpacing)*(i/circlesPerRow);
+            
+            if(closeness<numColors)
+                closeness = numColors+2;
+            int ranR = (int)(Math.random() * closeness) + (254-closeness);
+            int ranG = (int)(Math.random() * closeness) + (254-closeness);
+            int ranB = (int)(Math.random() * closeness) + (254-closeness);
+            circle.setC(new Color(ranR, ranG, ranB));
+            circle.setRadius(circleDiam/2);
+            circle.setX(x);
+            circle.setY(y);
+            colorArrayT.add(circle);
         }
-        int y = PREF_H/3+(circleDiam+rowSpacing)*(i/circlesPerRow);
-        
-        int ranR = (int)(Math.random() * 253) + 1;
-        int ranG = (int)(Math.random() * 253) + 1;
-        int ranB = (int)(Math.random() * 253) + 1;
-        circle.setC(new Color(ranR, ranG, ranB));
-        circle.setRadius(circleDiam/2);
-        circle.setX(x);
-        circle.setY(y);
-        colorArrayT.add(circle);
+
+        return colorArrayT;
     }
 
-    
-
-    return colorArrayT;
-}
-
-        
-
-
-
-
-
-
-
-    
     public ColorCircle getIntersectingColorCircle(int x, int y, ArrayList<ColorCircle> arrayUsed)
     {
         for(int i = 0; i<arrayUsed.size();i++)

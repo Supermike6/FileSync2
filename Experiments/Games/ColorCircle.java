@@ -155,6 +155,6 @@ public class ColorCircle {
         return true;
     }
     public ColorCircle seperate() {
-        return new ColorCircle(new Color(r,g,b),x,y,radius);
+        return new ColorCircle(c,x,y,radius);
     }
 }
