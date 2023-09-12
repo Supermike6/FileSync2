@@ -1,16 +1,26 @@
+import java.awt.AWTException;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.MouseInfo;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.awt.RenderingHints;
+import java.awt.Robot;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -37,7 +47,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     private int closeness = 10;
     ArrayList<ColorCircle> colorArray = makeColorArray(numColors);
     ArrayList<ColorCircle> flagged = makeColorArray(0);
-    private ColorCircle correctColor = colorArray.get((int)(Math.random()*numColors)).seperate();
+    private Color correctColor = new Color((int) (Math.random()*255), (int) (Math.random()*255), (int) (Math.random()*255));
     
     
    
@@ -235,18 +245,10 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
 
     }
 
-
     @Override
     public void mouseMoved(MouseEvent e) {
         mousex = e.getX();
         mousey = e.getY();
-
-        if(!flagged.contains(getIntersectingColorCircle(mousex,mousey))&&getIntersectingColorCircle(mousex,mousey)!=null)
-        {
-            tc = getIntersectingColorCircle(mousex,mousey).getC();
-        } else tc = Color.white;
-        beginAnim();
-        
     }
 
     public int giveOneWSign(int num)
@@ -254,53 +256,4 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         if(num<0) return -1;
         return 1;
     }
-
-    public ArrayList<ColorCircle> makeColorArray(int numColors)
-    {
-        ArrayList<ColorCircle> colorArrayT = new ArrayList<ColorCircle>(numColors);
-        int minval = 15;
-        for(int i = 0; i<numColors;i++)
-        {
-            colorArrayT.add(new ColorCircle());
-            int ranR = (int)(Math.random()*253)+1;
-            int ranG = (int)(Math.random()*253)+1;
-            int ranB = (int)(Math.random()*253)+1;
-            // if(colorArray.contains(colorArray)
-                colorArrayT.get(i).setC(new Color(ranR,ranG,ranB));
-            colorArrayT.get(i).setRadius(40);
-            if(numColors%2==1)
-            {
-                colorArrayT.get(i).setX(PREF_W/2+(colorArrayT.get(i).getRadius()*2+10)*(i-numColors/2));
-            } else {
-                colorArrayT.get(i).setX(PREF_W/2+(colorArrayT.get(i).getRadius()*2+10)*(i-numColors/2)+colorArrayT.get(i).getRadius()+5);
-            }
-                colorArrayT.get(i).setY(PREF_H/2);
-        }
-        System.out.println(colorArrayT.size());
-        
-
-        return colorArrayT;
-    }
-
-    
-    public ColorCircle getIntersectingColorCircle(int x, int y)
-    {
-        for(int i = 0; i<colorArray.size();i++)
-        {
-            if(colorArray.get(i).intersects(x, y))
-            {
-                return colorArray.get(i);
-            }
-        }
-        return null;
-    }
-    
-    public void beginAnim()
-    {
-        CCrdiff = (cc.getRed()-tc.getRed()+0.0)/(smoothness+0.0);
-        CCgdiff = (cc.getGreen()-tc.getGreen()+0.0)/(smoothness+0.0);
-        CCbdiff = (cc.getBlue()-tc.getBlue()+0.0)/(smoothness+0.0);
-        temp = frameCount+smoothness;
-    }
-
 }

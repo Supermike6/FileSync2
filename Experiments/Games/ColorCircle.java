@@ -154,4 +154,7 @@ public class ColorCircle {
             return false;
         return true;
     }
+    public ColorCircle seperate() {
+        return null;
+    }
 }
