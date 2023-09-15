@@ -42,9 +42,10 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     private ArrayList<ColorCircle> flagged = makeColorArray(0);
     private ArrayList<ColorCircle> menuArray = makeColorArray(6);
     private ColorCircle correctColor = colorArray.get((int)(Math.random()*numColors)).seperate();
-    private boolean doAnim = true;
+    private boolean doAnim = false;
     private boolean doFlagging = true;
-    private String display = "";
+    private boolean darkmode = false;
+    private String display = "#111111";
 
     
     private String state = "menu";
@@ -120,9 +121,12 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             return;
         }
 
-        // g2.setColor(new Color(40, 44, 52));
-        // g2.fillRect(0, 0, PREF_W, PREF_H);
-        // g2.setColor(Color.BLACK);
+
+        if(darkmode){
+        g2.setColor(new Color(40, 44, 52));
+        g2.fillRect(0, 0, PREF_W, PREF_H);
+        g2.setColor(Color.BLACK);
+        }
         
         //bkg
         if(doAnim)
@@ -152,14 +156,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         }
         
         
-        int sBase = 10;
-        int dBase = 16;
-        String number = correctColor.getC().getRed()+"";
-        display = "#"+Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
-        number = correctColor.getC().getGreen()+"";
-        display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
-        number = correctColor.getC().getBlue()+"";
-        display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
+        
         
         //Draw Circle
         for(int i = 0; i<colorArray.size();i++)
@@ -237,7 +234,29 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         }
         if(key == ' ')
         {
-            colorArray = makeColorArray(numColors);
+            while(display.length()==7)
+            {
+                colorArray = makeColorArray(numColors);
+                correctColor = colorArray.get((int)(colorArray.size()*Math.random())).seperate();
+                int sBase = 10;
+                int dBase = 16;
+                String s1 = Integer.toString(Integer.parseInt(correctColor.getC().getRed()+"", sBase), dBase).toUpperCase();
+                String s2 = Integer.toString(Integer.parseInt(correctColor.getC().getGreen()+"", sBase), dBase).toUpperCase();
+                String s3 = Integer.toString(Integer.parseInt(correctColor.getC().getBlue()+"", sBase), dBase).toUpperCase();
+                if(s1.length()==1)
+                    s1 = "0"+s1;
+                if(s2.length()==1)
+                    s2 = "0"+s2;
+                if(s3.length()==1)
+                    s3 = "0"+s3;
+                // if(s1.length()==0)
+                //     s1 = "00";
+                // if(s2.length()==0)
+                //     s2 = "00";
+                // if(s3.length()==0)
+                //     s3 = "00";
+                display = "#"+s1+s2+s3;
+            }
             state = "Game";
         }
 
@@ -292,6 +311,15 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
                 colorArray = makeColorArray(numColors);
                 state = "game";
                 correctColor = colorArray.get((int)(colorArray.size()*Math.random())).seperate();
+
+                int sBase = 10;
+                int dBase = 16;
+                String number = correctColor.getC().getRed()+"";
+                display = "#"+Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
+                number = correctColor.getC().getGreen()+"";
+                display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
+                number = correctColor.getC().getBlue()+"";
+                display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
                 return;
             }
 
@@ -423,14 +451,8 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             }
         }
 
-        int sBase = 10;
-        int dBase = 16;
-        String number = correctColor.getC().getRed()+"";
-        display = "#"+Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
-        number = correctColor.getC().getGreen()+"";
-        display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
-        number = correctColor.getC().getBlue()+"";
-        display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
+        
+        
         
         return colorArrayT;
     }
