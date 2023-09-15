@@ -36,7 +36,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     private long frameCount = 0;
     private double CCrdiff = 0; double CCgdiff = 0; double CCbdiff = 0; long temp = 0; double CCrd = 0; double CCgd = 0; double CCbd = 0;
     private int numColors = 2;
-    private int closeness = 72;
+    private int closeness = 0;
     private Font font = new Font("Lekton", Font.PLAIN, 67);
     private ArrayList<ColorCircle> colorArray = makeColorArray(numColors);
     private ArrayList<ColorCircle> flagged = makeColorArray(0);
@@ -398,10 +398,11 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             if(closeness<numColors)
                 closeness = numColors+2;
             if(closeness>255)
-                closeness = 253;
-            int ranR = (int)(Math.random() * closeness) + (int)((254-closeness)*ran1);
-            int ranG = (int)(Math.random() * closeness) + (int)((254-closeness)*ran2);
-            int ranB = (int)(Math.random() * closeness) + (int)((254-closeness)*ran3);
+                closeness = 255;
+            int ranR = (int)(Math.random() * closeness) + (int)((255-closeness)*ran1);
+            int ranG = (int)(Math.random() * closeness) + (int)((255-closeness)*ran2);
+            int ranB = (int)(Math.random() * closeness) + (int)((255-closeness)*ran3);
+            System.out.println(closeness+", "+ranR);
             circle.setC(new Color(ranR, ranG, ranB));
             circle.setRadius(circleDiam/2);
             circle.setX(x);
