@@ -36,14 +36,15 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     private long frameCount = 0;
     private double CCrdiff = 0; double CCgdiff = 0; double CCbdiff = 0; long temp = 0; double CCrd = 0; double CCgd = 0; double CCbd = 0;
     private int numColors = 2;
-    private int closeness = 0;
+    private int closeness = 255;
     private Font font = new Font("Lekton", Font.PLAIN, 67);
     private ArrayList<ColorCircle> colorArray = makeColorArray(numColors);
     private ArrayList<ColorCircle> flagged = makeColorArray(0);
     private ArrayList<ColorCircle> menuArray = makeColorArray(6);
     private ColorCircle correctColor = colorArray.get((int)(Math.random()*numColors)).seperate();
-    private boolean doAnim = false;
+    private boolean doAnim = true;
     private boolean doFlagging = true;
+    private String display = "";
 
     
     private String state = "menu";
@@ -154,7 +155,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         int sBase = 10;
         int dBase = 16;
         String number = correctColor.getC().getRed()+"";
-        String display = "#"+Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
+        display = "#"+Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
         number = correctColor.getC().getGreen()+"";
         display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
         number = correctColor.getC().getBlue()+"";
@@ -421,6 +422,15 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
                 colorArrayT.add(ccccc);
             }
         }
+
+        int sBase = 10;
+        int dBase = 16;
+        String number = correctColor.getC().getRed()+"";
+        display = "#"+Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
+        number = correctColor.getC().getGreen()+"";
+        display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
+        number = correctColor.getC().getBlue()+"";
+        display+=Integer.toString(Integer.parseInt(number, sBase), dBase).toUpperCase();
         
         return colorArrayT;
     }

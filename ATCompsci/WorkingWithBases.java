@@ -6,14 +6,19 @@ public class WorkingWithBases
     {
         // System.out.println(convert10toX("58",2));
         System.out.println(convertXtoY1("58", 16, 2));
-        System.out.println(convertXtoY3("58",16, 2));
+        // System.out.println(convertXtoY3("58",16, 2));
         
     }
+
+
 
     public static String convertXtoY1(String number, int currentBase, int targetBase)
     {
         return Integer.toString(Integer.parseInt(number,currentBase), targetBase);
     }
+
+
+
 
     public static String convertXtoY2(String number, int currentBase, int targetBase)
     {
