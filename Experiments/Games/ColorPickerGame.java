@@ -119,8 +119,9 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             return;
         }
 
-        
-        
+        // g2.setColor(new Color(40, 44, 52));
+        // g2.fillRect(0, 0, PREF_W, PREF_H);
+        // g2.setColor(Color.BLACK);
         
         //bkg
         if(doAnim)
@@ -322,7 +323,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
                     System.out.println("unknown");
                     break;
             }
-        } else System.out.println("not over circle");
+        }
         mouseMoved(e);
     }
 
@@ -402,7 +403,6 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             int ranR = (int)(Math.random() * closeness) + (int)((255-closeness)*ran1);
             int ranG = (int)(Math.random() * closeness) + (int)((255-closeness)*ran2);
             int ranB = (int)(Math.random() * closeness) + (int)((255-closeness)*ran3);
-            System.out.println(closeness+", "+ranR);
             circle.setC(new Color(ranR, ranG, ranB));
             circle.setRadius(circleDiam/2);
             circle.setX(x);
