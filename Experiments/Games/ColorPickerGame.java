@@ -172,27 +172,21 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         }
         
         g2.setColor(Color.black);
-        if(state.equals("Over"))
-        {
-            message = "Play Again";
-            fm = g2.getFontMetrics();
-            messageWidth = fm.stringWidth(message);
-            startX = getWidth()/3 - messageWidth/2;
-            g2.drawString(message, startX, getHeight()/5);
-            message = "Back to menu";
-            fm = g2.getFontMetrics();
-            messageWidth = fm.stringWidth(message);
-            startX = getWidth()/3*2 - messageWidth/2;
-            g2.drawString(message, startX, getHeight()/5);
-            g2.setColor(correctColor.getC());
-            
-        }
+        
         g2.setFont(font);
         message = display;
         fm = g2.getFontMetrics();
         messageWidth = fm.stringWidth(message);
         startX = getWidth()/2 - messageWidth/2;
-        g2.drawString(message, startX, getHeight()/5);
+        g2.drawString(message, startX, getHeight()/6);
+        
+        //set the font to the default font
+        g2.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 20));
+        message = "Guess the color. Press space for a new color. Press Q to go back to the menu.";
+        fm = g2.getFontMetrics();
+        messageWidth = fm.stringWidth(message);
+        startX = getWidth()/2 - messageWidth/2;
+        g2.drawString(message, startX, colorArray.get(colorArray.size()-1).getY()+80+10);
         
         //Template - remove
         // g2.setColor(Color.black);
@@ -232,7 +226,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         }
         if(key == ' ')
         {
-            // while(display.length()==7)
+            // while(display.length()==6)
             {
                 colorArray = makeColorArray(numColors);
                 correctColor = colorArray.get((int)(colorArray.size()*Math.random())).seperate();
@@ -421,7 +415,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             } else {
                 x=(PREF_W/2+circleDiam/2+(circleDiam+circleSpacing)*(i%14))-((circleDiam+circleSpacing)*(circlesPerRow)/2)+circleSpacing/2;
             }
-            int y = PREF_H/3+(circleDiam+rowSpacing)*(i/circlesPerRow);
+            int y = (PREF_H/4)+(circleDiam+rowSpacing)*(i/circlesPerRow);
             
             if(closeness<numColors)
                 closeness = numColors+2;
