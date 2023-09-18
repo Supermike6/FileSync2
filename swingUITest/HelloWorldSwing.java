@@ -24,6 +24,7 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
     protected static JMenuBar menuBar = new JMenuBar();
     protected JToolBar toolBar = new JToolBar();
     protected JColorChooser cc = new JColorChooser();
+    protected JFileChooser fc = new JFileChooser();
     protected Clock3 c3 = new Clock3();
     protected int menus = 4, itemsPerMenu = 7;
     protected static JFrame frame;
@@ -69,10 +70,10 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
         }
         
 
-
+        this.add(fc, BorderLayout.EAST);
         this.add(menuBar, BorderLayout.NORTH);
         this.add(c3, BorderLayout.WEST);
-        this.add(cc, BorderLayout.EAST);
+        // this.add(cc, BorderLayout.EAST);
         
         Timer timer = new Timer(16, new ActionListener() {
             public void actionPerformed(ActionEvent e)

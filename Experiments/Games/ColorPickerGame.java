@@ -36,7 +36,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     private long frameCount = 0;
     private double CCrdiff = 0; double CCgdiff = 0; double CCbdiff = 0; long temp = 0; double CCrd = 0; double CCgd = 0; double CCbd = 0;
     private int numColors = 2;
-    private int closeness = 255;
+    private int closeness = 72;
     private Font font = new Font("Lekton", Font.PLAIN, 67);
     private ArrayList<ColorCircle> colorArray = makeColorArray(numColors);
     private ArrayList<ColorCircle> flagged = makeColorArray(0);
@@ -46,8 +46,6 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     private boolean doFlagging = true;
     private boolean darkmode = false;
     private String display = "#111111";
-
-    
     private String state = "menu";
     
 
@@ -234,7 +232,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         }
         if(key == ' ')
         {
-            while(display.length()==7)
+            // while(display.length()==7)
             {
                 colorArray = makeColorArray(numColors);
                 correctColor = colorArray.get((int)(colorArray.size()*Math.random())).seperate();
@@ -249,12 +247,12 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
                     s2 = "0"+s2;
                 if(s3.length()==1)
                     s3 = "0"+s3;
-                // if(s1.length()==0)
-                //     s1 = "00";
-                // if(s2.length()==0)
-                //     s2 = "00";
-                // if(s3.length()==0)
-                //     s3 = "00";
+                if(s1.length()==0)
+                    s1 = "00";
+                if(s2.length()==0)
+                    s2 = "00";
+                if(s3.length()==0)
+                    s3 = "00";
                 display = "#"+s1+s2+s3;
             }
             state = "Game";
@@ -451,9 +449,6 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             }
         }
 
-        
-        
-        
         return colorArrayT;
     }
 
