@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.plaf.basic.*;
 import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
 
 import java.awt.Component;
 import java.awt.Container;
@@ -79,6 +80,7 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
             public void actionPerformed(ActionEvent e)
             {
                 c3.setColorOfClock(cc.getColor());
+                System.out.println(fc.getUI());
                 doLayout();
             }
          });

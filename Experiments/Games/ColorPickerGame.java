@@ -1,3 +1,5 @@
+package Games;
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -46,7 +48,9 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     private boolean doFlagging = true;
     private boolean darkmode = false;
     private String display = "#111111";
+    private String bottomMessage = "Guess the color. Press space for a new color. Press Q to go back to the menu.";
     private String state = "menu";
+    private boolean d = true;
     
 
    
@@ -100,11 +104,17 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         int startX = 0;
 
         
-
+        if(darkmode){
+        g2.setColor(new Color(40, 44, 52));
+        g2.fillRect(0, 0, PREF_W, PREF_H);
+        g2.setColor(Color.BLACK);
+        }
+        
         //Games menu
         if(state.equals("menu"))
         {
             g2.setColor(Color.black);
+            g2.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 15));
             for(int i = 0; i<menuArray.size();i++)
             {
                 menuArray.get(i).fillCircle(g2);
@@ -114,17 +124,21 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
                 fm = g2.getFontMetrics();
                 messageWidth = fm.stringWidth(message);
                 startX = menuArray.get(i).getX() - messageWidth/2;
-                g2.drawString(message, startX, getHeight()/2+5);
+                g2.drawString(message, startX, getHeight()/2+6);
             }
+            if(darkmode)
+                g2.setColor(Color.WHITE);
+            g2.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 20));
+            message = "Select the number of circles";
+            fm = g2.getFontMetrics();
+            messageWidth = fm.stringWidth(message);
+            startX = getWidth()/2 - messageWidth/2;
+            g2.drawString(message, startX, (PREF_H/4)+(80+20)*((6)/14+1));
+            g2.setColor(Color.BLACK);
             return;
         }
 
 
-        if(darkmode){
-        g2.setColor(new Color(40, 44, 52));
-        g2.fillRect(0, 0, PREF_W, PREF_H);
-        g2.setColor(Color.BLACK);
-        }
         
         //bkg
         if(doAnim)
@@ -182,11 +196,11 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         
         //set the font to the default font
         g2.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 20));
-        message = "Guess the color. Press space for a new color. Press Q to go back to the menu.";
+        message = bottomMessage;
         fm = g2.getFontMetrics();
         messageWidth = fm.stringWidth(message);
         startX = getWidth()/2 - messageWidth/2;
-        g2.drawString(message, startX, colorArray.get(colorArray.size()-1).getY()+80+10);
+        g2.drawString(message, startX, (PREF_H/4)+(80+20)*((numColors)/14+1));
         
         //Template - remove
         // g2.setColor(Color.black);
@@ -209,6 +223,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         {
             state = "menu";
         }
+        repaint();
     }
 
     @Override
@@ -226,10 +241,11 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         }
         if(key == ' ')
         {
-            // while(display.length()==6)
+            while(!display.contains("ABCDEF"))
             {
                 colorArray = makeColorArray(numColors);
-                correctColor = colorArray.get((int)(colorArray.size()*Math.random())).seperate();
+                // correctColor = colorArray.get((int)(colorArray.size()*Math.random())).seperate();
+                correctColor = colorArray.get(2).seperate();
                 int sBase = 10;
                 int dBase = 16;
                 String s1 = Integer.toString(Integer.parseInt(correctColor.getC().getRed()+"", sBase), dBase).toUpperCase();
@@ -251,7 +267,6 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             }
             state = "Game";
         }
-
         if(key=='z')
             closeness-=8;
         if(key=='x')
