@@ -4,7 +4,7 @@ public class Course
 {
     private String classID;    
     private String description;    
-    private String requirement;    
+    private String requirement;
 
     public Course()
     {
@@ -42,5 +42,6 @@ public class Course
     public void setRequirement(String requirement) {
         this.requirement = requirement;
     }
+
     
 }

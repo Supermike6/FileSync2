@@ -241,8 +241,8 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         }
         if(key == ' ')
         {
-            while(!display.contains("ABCDEF"))
-            {
+            // while(!display.contains("ABCDEF"))
+            // {
                 colorArray = makeColorArray(numColors);
                 // correctColor = colorArray.get((int)(colorArray.size()*Math.random())).seperate();
                 correctColor = colorArray.get(2).seperate();
@@ -264,7 +264,7 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
                 if(s3.length()==0)
                     s3 = "00";
                 display = "#"+s1+s2+s3;
-            }
+            // }
             state = "Game";
         }
         if(key=='z')

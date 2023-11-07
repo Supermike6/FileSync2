@@ -1,4 +1,4 @@
-package swingUITest;
+
 
 /*
  * Copyright (c) 1995, 2017, Oracle and/or its affiliates. All rights reserved.
@@ -50,7 +50,7 @@ import javax.swing.Action;
 
 import javax.swing.JToolBar;
 
-import Clock.Clock3;
+
 
 import javax.swing.JButton;
 import javax.swing.ImageIcon;

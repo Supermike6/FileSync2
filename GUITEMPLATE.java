@@ -70,6 +70,8 @@ public class GUITEMPLATE extends JPanel implements KeyListener, MouseInputListen
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
         
+        for(int i = 0; i<
+
    }
 
     @Override
@@ -123,36 +125,28 @@ public class GUITEMPLATE extends JPanel implements KeyListener, MouseInputListen
 
     @Override
     public void mousePressed(MouseEvent e) {
-        if(getIntersectingColorCircle(mousex,mousey)!=null)
+
+        switch(e.getButton())
         {
-            switch(e.getButton())
-            {
-                case 1:
-                    System.out.println("left");
-                    break;
-                case 2:
-                    System.out.println("middle");
-                    break;
-                case 3:
-                    System.out.println("right");
-                    if(!flagged.contains(getIntersectingColorCircle(mousex,mousey)))
-                        flagged.add(getIntersectingColorCircle(mousex,mousey));
-                    else flagged.remove(getIntersectingColorCircle(mousex,mousey));
-                    break;
-                default:
-                    System.out.println("unknown");
-                    break;
-            }
-        } else System.out.println("not over circle");
-        mouseMoved(e);
+            case 1:
+                System.out.println("left");
+                break;
+            case 2:
+                System.out.println("middle");
+                break;
+            case 3:
+                System.out.println("right");
+                break;
+            default:
+                System.out.println("unknown");
+                break;
+        }
     }
 
 
     @Override
     public void mouseReleased(MouseEvent e) {
         System.out.println("release");
-        for(int i = 0; i<flagged.size();i++)
-            System.out.println(flagged.get(i).toString());
     }
 
 

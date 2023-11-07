@@ -1,3 +1,4 @@
+   package APCompsci.Classwork.PictureLab;
 
 //RUN THIS CLASS TO RUN THE PROJECT!
 //DO NOT EDIT ANY CODE HERE!
@@ -39,7 +40,7 @@ public class UPicGUI extends JPanel implements KeyListener, MouseListener
    private RenderingHints hints = new RenderingHints(
            RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 //   public static final String FILE_PATH = "/Users/"+ System.getProperty("user.name") +"/Desktop/AP-PicLabImages/";
-   public static String FILE_PATH = "/Users/gbancroft25/Documents/GitHub/FileSync2/APCompsci/Classwork/PictureLab/";
+   public static final String FILE_PATH = "APCompsci/Classwork/PictureLab/";
    private Font font = new Font("Cooper Black", Font.PLAIN, 15);
    private Picture upic;
    private UPicControlPanel controlPanel;

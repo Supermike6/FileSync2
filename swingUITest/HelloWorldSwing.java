@@ -5,10 +5,14 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
+import javax.swing.plaf.FileChooserUI;
 import javax.swing.plaf.basic.*;
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileSystemView;
+import javax.swing.filechooser.FileView;
 
 import java.awt.Component;
 import java.awt.Container;
@@ -26,6 +30,45 @@ public class HelloWorldSwing extends JPanel implements ActionListener{
     protected JToolBar toolBar = new JToolBar();
     protected JColorChooser cc = new JColorChooser();
     protected JFileChooser fc = new JFileChooser();
+    protected FileChooserUI FCU = new FileChooserUI() {
+
+        @Override
+        public FileFilter getAcceptAllFileFilter(JFileChooser fc) {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'getAcceptAllFileFilter'");
+        }
+
+        @Override
+        public FileView getFileView(JFileChooser fc) {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'getFileView'");
+        }
+
+        @Override
+        public String getApproveButtonText(JFileChooser fc) {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'getApproveButtonText'");
+        }
+
+        @Override
+        public String getDialogTitle(JFileChooser fc) {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'getDialogTitle'");
+        }
+
+        @Override
+        public void rescanCurrentDirectory(JFileChooser fc) {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'rescanCurrentDirectory'");
+        }
+
+        @Override
+        public void ensureFileIsVisible(JFileChooser fc, File f) {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'ensureFileIsVisible'");
+        }
+        
+    };
     protected Clock3 c3 = new Clock3();
     protected int menus = 4, itemsPerMenu = 7;
     protected static JFrame frame;

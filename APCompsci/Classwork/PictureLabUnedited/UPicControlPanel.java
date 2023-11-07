@@ -1,3 +1,4 @@
+package APCompsci.Classwork.PictureLab;
 
 //THIS IS THE CLASS FOR CREATING BUTTONS THAT CALL THE PICTURE METHODS
 //Changes for 2020:
@@ -105,9 +106,6 @@ public class UPicControlPanel extends JPanel
       //additional buttons need additional methods to add them to the panel
 
       this.add(buttonPanel, BorderLayout.CENTER);
-
-      FileChooserComponent fileChooserComponent = new FileChooserComponent();
-        this.add(fileChooserComponent,BorderLayout.SOUTH);
    }
    
    public void addPixelColorBox()
@@ -247,6 +245,7 @@ public class UPicControlPanel extends JPanel
             gui.update();
          }
       });
+      
       buttonPanel.add(mirrorRightToLeft);
    }
    
