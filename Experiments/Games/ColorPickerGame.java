@@ -1,4 +1,4 @@
-package Games;
+
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -44,13 +44,12 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
     private ArrayList<ColorCircle> flagged = makeColorArray(0);
     private ArrayList<ColorCircle> menuArray = makeColorArray(6);
     private ColorCircle correctColor = colorArray.get((int)(Math.random()*numColors)).seperate();
-    private boolean doAnim = false;
+    private boolean doAnim = true;
     private boolean doFlagging = true;
-    private boolean darkmode = false;
+    private boolean darkmode = true;
     private String display = "#111111";
     private String bottomMessage = "Guess the color. Press space for a new color. Press Q to go back to the menu.";
     private String state = "menu";
-    private boolean d = true;
     
 
    
@@ -223,6 +222,12 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
         {
             state = "menu";
         }
+        if(key == KeyEvent.VK_M)
+        {
+            if(!flagged.contains(getIntersectingColorCircle(mousex,mousey,colorArray)))
+                        flagged.add(getIntersectingColorCircle(mousex,mousey,colorArray));
+            else flagged.remove(getIntersectingColorCircle(mousex,mousey,colorArray));
+        }
         repaint();
     }
 
@@ -244,8 +249,8 @@ public class ColorPickerGame extends JPanel implements KeyListener, MouseInputLi
             // while(!display.contains("ABCDEF"))
             // {
                 colorArray = makeColorArray(numColors);
-                // correctColor = colorArray.get((int)(colorArray.size()*Math.random())).seperate();
-                correctColor = colorArray.get(2).seperate();
+                correctColor = colorArray.get((int)(colorArray.size()*Math.random())).seperate();
+                // correctColor = colorArray.get(2).seperate();
                 int sBase = 10;
                 int dBase = 16;
                 String s1 = Integer.toString(Integer.parseInt(correctColor.getC().getRed()+"", sBase), dBase).toUpperCase();

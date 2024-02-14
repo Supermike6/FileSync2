@@ -1,10 +1,8 @@
-package Classes;
-
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
-import IdleBreakoutFolder.IdleBreakout;
+import Experiments.ComputerGoBRRR.Brick;
 
 public class Brick
 {

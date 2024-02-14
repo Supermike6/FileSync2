@@ -1,6 +1,4 @@
-package ComputerGoBRRR;
-
-
+package Experiments.ComputerGoBRRR;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

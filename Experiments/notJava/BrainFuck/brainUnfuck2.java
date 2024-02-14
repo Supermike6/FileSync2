@@ -25,6 +25,15 @@ public class brainUnfuck
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter string: ");
         char[] in = sc.nextLine().toCharArray();
+        int difZero = (in[0]+"").compareTo(((char)(0)+""));
+
+        if(isPrimeNumber(difZero))
+
+        for(int i = 0; i<in.length; i++)
+        {
+            
+        }
+
 
 
 

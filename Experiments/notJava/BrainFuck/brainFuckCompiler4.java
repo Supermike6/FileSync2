@@ -5,8 +5,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class brainFuckCompiler4 {
+    static String PATH = "/Users/gbancroft25/Documents/GitHub/FileSync2/Experiments/notJava/BrainFuck/testcode.bf";
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("Experiments/notJava/BrainFuck/testcode.bf"));
+        Scanner scanner = new Scanner(new File(PATH));
 
         // Read the BrainFuck code from the input
         String code = scanner.nextLine();

@@ -1,27 +1,31 @@
+package Experiments.ComputerGoBRRR;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
-public class gameObject
+public class Brick
 {
 // Variables for the class's object (instance variables)
-    private int x, y, w, h, dx, dy, xmin, xmax, ymin, ymax, health, Enum;
+    private int x, y, w, h, dx, dy, xmin, xmax, ymin, ymax, health, Enum, ballPower,arcSize = 12;
+    public double sniperDx = -1, sniperDy = 1;
     private Color color;
+    public boolean air;
+
 
     //This is the constructor... it allows us to define values to the brick object
-    public gameObject(int x, int y)
+    public Brick(int x, int y)
     {
         this.x = x;
         this.y = y;
     }
-    public gameObject(int x, int y, int w, int h)
+    public Brick(int x, int y, int w, int h)
     {
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
     }
-    public gameObject(int x, int y, int w, int h, Color color)
+    public Brick(int x, int y, int w, int h, Color color)
     {
         this.x = x;
         this.y = y;
@@ -29,7 +33,7 @@ public class gameObject
         this.h = h;
         this.color = color;
     }
-    public gameObject(int x, int y, int w, int h, int dx, int dy)
+    public Brick(int x, int y, int w, int h, int dx, int dy)
     {
         this.x = x;
         this.y = y;
@@ -38,7 +42,7 @@ public class gameObject
         this.dx = dx;
         this.dy = dy;
     }
-    public gameObject(int x, int y, int w, int h, int dx, int dy, Color color)
+    public Brick(int x, int y, int w, int h, int dx, int dy, Color color)
     {
         this.x = x;
         this.y = y;
@@ -48,7 +52,7 @@ public class gameObject
         this.dy = dy;
         this.color = color;
     }
-    public gameObject(int x, int y, int w, int h, Color color, int health, int Enum)
+    public Brick(int x, int y, int w, int h, Color color, int health, int Enum)
     {
         this.x = x;
         this.y = y;
@@ -59,7 +63,7 @@ public class gameObject
         this.Enum = Enum;
 
     }
-    public gameObject(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color)
+    public Brick(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color)
     {
         this.x = x;
         this.y = y;
@@ -73,7 +77,7 @@ public class gameObject
         this.ymin = ymin;
         this.ymax = ymax;
     }
-    public gameObject(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color, int health)
+    public Brick(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color, int health, int Enum)
     {
         this.x = x;
         this.y = y;
@@ -87,6 +91,24 @@ public class gameObject
         this.ymin = ymin;
         this.ymax = ymax;
         this.health = health;
+        this.Enum = Enum;
+    }
+    public Brick(int x, int y, int w, int h, int dx, int dy, int xmin, int xmax, int ymin, int ymax, Color color, int health, int Enum,  int ballPower)
+    {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.dx = dx;
+        this.dy = dy;
+        this.color = color;
+        this.xmin = xmin;
+        this.xmax = xmax;
+        this.ymin = ymin;
+        this.ymax = ymax;
+        this.health = health;
+        this.Enum = Enum;
+        this.ballPower = ballPower;
     }
 
     //Methods for brick
@@ -101,7 +123,7 @@ public class gameObject
         Color prevColor = g2.getColor();
 
         g2.setColor(this.color);
-        g2.drawRect(this.x, this.y, this.w, this.h);
+        g2.drawRoundRect(this.x, this.y, this.w, this.h,arcSize,arcSize);
 
         g2.setColor(prevColor);
     }
@@ -110,7 +132,7 @@ public class gameObject
         Color prevColor = g2.getColor();
 
         g2.setColor(this.color);
-        g2.fillRect(this.x, this.y, this.w, this.h);
+        g2.fillRoundRect(this.x, this.y, this.w, this.h,arcSize,arcSize);
 
         g2.setColor(prevColor);
     }
@@ -132,6 +154,7 @@ public class gameObject
         if(this.y+this.h>this.ymax || y<=0)
             this.dy = -this.dy;
     }
+
     public void noBounceUpdate()
     {
         this.x+=this.dx;
@@ -141,7 +164,7 @@ public class gameObject
         if(this.y+this.h>this.ymax || y<ymin)
             this.y -= this.dy;
     }
-    public void updateList(ArrayList<gameObject> bricks)
+    public static void updateList(ArrayList<Brick> bricks)
     {
 
         for(int i = 0; i<bricks.size(); i++)
@@ -260,11 +283,12 @@ public class gameObject
     {
         return this.Enum;
     }
+    
 
     /** Determines the intersecting side for the brick in relation to another brick
 *  return true for a collision and false otherwise
 */
-    public boolean checkAndReactToCollisionWith(gameObject r)
+    public boolean checkAndReactToCollisionWith(Brick r)
 {
    int xm = x + w/2; //use the center of the moving brick as a reference
    int ym = y + h/2; //use the center of the moving brick as a reference
@@ -289,7 +313,7 @@ public class gameObject
 *    2 = bottom
 *    3 = left
 */
-    private int getSideForIntersection(gameObject r, int x1, int y1)
+    private int getSideForIntersection(Brick r, int x1, int y1)
 {
    double slopeMajor = (double) r.h / r.w;         //major diagonal slope
    double slopeMinor = (double) -r.h / r.w;        //minor diagonal slope
@@ -307,13 +331,14 @@ public class gameObject
    return -1;   //Should never get here since "not above" is below OR ON a diagonal
 }
 
-    private boolean checkCollisionLeftSideOfRectangle(gameObject r)
+    private boolean checkCollisionLeftSideOfRectangle(Brick r)
 {
    boolean collision = false;
    
    if(y + h > r.y && y < r.y + r.h) {
       if(x + w > r.x) {
-         dx = -Math.abs(dy);
+         dx = -dx;
+         sniperDx = -sniperDx;
          x = r.x - w;
          if(x <= xmin) {  //don't let the brick get bumped off the panel
             x = xmin;
@@ -325,13 +350,14 @@ public class gameObject
    return collision;
 }
 
-    private boolean checkCollisionRightSideOfRectangle(gameObject r)
+    private boolean checkCollisionRightSideOfRectangle(Brick r)
 {
    boolean collision = false;
    
    if(y + h > r.y && y < r.y + r.h) {
    if(x < r.x + r.w) {
-         dx = Math.abs(dy);
+         dx = -dx;
+         sniperDx = -sniperDx;
          x = r.x + r.w;
          if(x + w >= xmax) {  //don't let the brick get bumped off the panel
             x = xmax - w;
@@ -343,31 +369,33 @@ public class gameObject
    return collision;
 }
 
-    private boolean checkCollisionBottomOfRectangle(gameObject r)
+    private boolean checkCollisionBottomOfRectangle(Brick r)
 {
-   boolean collision = false;
+    boolean collision = false;
    
-   if(x + w > r.x && x < r.x + r.w) {
-      if(y < r.y + r.h) {
-         dy = -Math.abs(dx);
-         y = r.y + r.h;
-         if(y + h >= ymax) { //don't let the brick get bumped off the panel
-            y = ymax - h;
-            r.y = y - r.h;   //in case the colliding brick is moving, stop it from overlapping this brick the the edges of the panel
-         }
-         collision = true;
-      }
-   }
-   return collision;
+    if(x + w > r.x && x < r.x + r.w) {
+        if(y < r.y + r.h) {
+            dy = -dy;
+            sniperDy = -sniperDy;
+            y = r.y + r.h;
+            if(y + h >= ymax) { //don't let the brick get bumped off the panel
+                y = ymax - h;
+                r.y = y - r.h;   //in case the colliding brick is moving, stop it from overlapping this brick the the edges of the panel
+            }
+            collision = true;
+        }
+    }
+    return collision;
 }
 
-    private boolean checkCollisionTopOfRectangle(gameObject r)
+    private boolean checkCollisionTopOfRectangle(Brick r)
 {
    boolean collision = false;
    
    if(x + w > r.x && x < r.x + r.w) {
       if(y + h > r.y) {
-         dy = -Math.abs(dx);
+         dy = -dy;
+         sniperDy = -sniperDy;
          y = r.y - h;
          if(y <= ymin) {  //don't let the brick get bumped off the panel
             y = ymin;
@@ -378,4 +406,70 @@ public class gameObject
    }
    return collision;
 }
+    public int getBallPower() {
+        return ballPower;
+    }
+    public int getArcSize() {
+        return arcSize;
+    }
+    public boolean isAir() {
+        return air;
+    }
+    public void setEnum(int enum1) {
+        Enum = enum1;
+    }
+    public void setBallPower(int ballPower) {
+        this.ballPower = ballPower;
+    }
+    public void setArcSize(int arcSize) {
+        this.arcSize = arcSize;
+    }
+    public void setAir(boolean air) {
+        this.air = air;
+    }
+
+    public Brick findClosestBrick(ArrayList<Brick> bricks)
+    {
+        for(int i = 0; i<bricks.size();i++)
+        {
+            if(bricks.get(i).getHealth()<1)
+            {
+                bricks.remove(i);
+                i--;
+            }
+        }
+        //using the list of bircks find the birck that a center closest to the player's center
+        if(bricks.size()==0)
+        {
+            System.out.println("Error avoided");
+        }
+        Brick closestBrick = bricks.get(0);
+        int closestBrickX = closestBrick.getX()+closestBrick.getW()/2;
+        int closestBrickY = closestBrick.getY()+closestBrick.getH()/2;
+        int ballX = this.x+this.w/2;
+        int ballY = this.y+this.h/2;
+        int closestDistance = (int)Math.sqrt(Math.pow(ballX-closestBrickX,2)+Math.pow(ballY-closestBrickY,2));
+        for(int i = 0; i<bricks.size();i++)
+        {
+            Brick tempBrick = bricks.get(i);
+            int tempBrickX = tempBrick.getX()+tempBrick.getW()/2;
+            int tempBrickY = tempBrick.getY()+tempBrick.getH()/2;
+            int tempDistance = (int)Math.sqrt(Math.pow(ballX-tempBrickX,2)+Math.pow(ballY-tempBrickY,2));
+            if(tempDistance<closestDistance)
+            {
+                closestBrick = tempBrick;
+                closestDistance = tempDistance;
+            }
+        }
+        return closestBrick;        
+    }
+    @Override
+    public String toString() {
+        return "Brick [x=" + x + ", y=" + y + ", w=" + w + ", h=" + h + ", dx=" + dx + ", dy=" + dy + ", xmin=" + xmin
+                + ", xmax=" + xmax + ", ymin=" + ymin + ", ymax=" + ymax + ", health=" + health + ", Enum=" + Enum
+                + ", ballPower=" + ballPower + ", arcSize=" + arcSize + ", color=" + color + ", air=" + air + "]";
+    }
+
+    
+
 }
