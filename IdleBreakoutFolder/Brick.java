@@ -2,8 +2,6 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
-import Experiments.ComputerGoBRRR.Brick;
-
 public class Brick
 {
 // Variables for the class's object (instance variables)

@@ -69,8 +69,6 @@ public class GUITEMPLATE extends JPanel implements KeyListener, MouseInputListen
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHints(hints);
-        
-        for(int i = 0; i<
 
    }
 

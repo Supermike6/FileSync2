@@ -35,7 +35,6 @@ public class Clock3 extends JPanel{
 	private LocalTime now = LocalDateTime.now(ZoneId.systemDefault()).toLocalTime();
 	private ArrayList<Reminder> rems = new ArrayList<>();
 	private int ticks = 12;
-	private double frames = 0;
 	private Color bkgColor = new Color(255, 255, 255);
 	private Dimension currentSize;
 	
@@ -64,30 +63,19 @@ public class Clock3 extends JPanel{
 			rems.add(new Reminder(lines.get(i), lines.get(i+1), lines.get(i+2)));
 		}
 
-		timer = new Timer(1000, new ActionListener()
+		timer = new Timer(100, new ActionListener()
 		{
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
 				now = LocalDateTime.now(ZoneId.systemDefault()).toLocalTime();
+				repaint();
 			}
 			
 		});
 		timer.start();
 
-		Timer timer2 = new Timer(1, new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				doLayout();
-				PREF_W = getCurrentSize().width;
-				PREF_H = getCurrentSize().height;
-				repaint();
-			}
-			
-		});
-		timer2.start();
+		
 	}
 
 	public void setColorOfClock(Color c)
@@ -191,16 +179,6 @@ public class Clock3 extends JPanel{
 	@Override
     public Dimension getSize() {
         return super.getSize();
-    }
-    
-    @Override
-    public void doLayout() {
-        super.doLayout();
-        if (!getSize().equals(currentSize)) {
-            currentSize = getSize();
-			repaint();
-            // Panel size has changed, do something here if needed
-        }
     }
     
     public Dimension getCurrentSize() {

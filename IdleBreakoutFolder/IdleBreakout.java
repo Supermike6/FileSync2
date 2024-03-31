@@ -1,4 +1,4 @@
-ximport java.awt.Color;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontMetrics;
@@ -27,8 +27,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
-
-import Experiments.ComputerGoBRRR.Brick;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
