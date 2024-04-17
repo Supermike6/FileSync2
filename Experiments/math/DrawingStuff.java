@@ -17,33 +17,27 @@ public class DrawingStuff extends JComponent implements MouseListener, MouseMoti
      private Integer mx=0,my=0;
 
 	
-public DrawingStuff()
-{
-     setFocusable(true);
-     requestFocus();
-     this.addMouseListener(this);
-	this.addMouseMotionListener(this);
-}
+     public DrawingStuff()
+     {
+          setFocusable(true);
+          requestFocus();
+          this.addMouseListener(this);
+          this.addMouseMotionListener(this);
+     }
      public static void main(String[] args)
-{
-	// Scanner sc = new Scanner(System.in);
-     
-     // System.out.print("Type the equation: ");
-     // eq=sc.nextLine();
+     { 
+          eq = "y=x^2+0x+0";
 
-     eq = "y=x^2+0x+0";
-
-    JFrame frame = new JFrame();
-    frame.pack();
-    frame.setSize(800, 800);
-    frame.setTitle("Graph");
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setLocationRelativeTo(null);  
-    DrawingStuff draw = new DrawingStuff();
-    frame.add(draw);
-    frame.setVisible(true);
-	    
-}
+          JFrame frame = new JFrame();
+          frame.pack();
+          frame.setSize(800, 800);
+          frame.setTitle("Graph");
+          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+          frame.setLocationRelativeTo(null);  
+          DrawingStuff draw = new DrawingStuff();
+          frame.add(draw);
+          frame.setVisible(true);
+     }
 	
 public void paintComponent(Graphics g)
 {   
@@ -90,7 +84,7 @@ public void paintComponent(Graphics g)
   
      g2.setColor(Color.blue);
 
-     g2.drawString("Mouse Loaction: ("+round((mx+getWidth())/(scale*4.0)-30,2)+", "+round(-(my+getWidth())/(scale*4.0)+30,3)+")", 10, 100);
+     g2.drawString("Mouse Loaction: ("+round((mx+getWidth())/(scale*4.0)-30,2)+", "+round(-(my+getWidth())/(scale*4.0)+30,2)+")", 10, 100);
      
      g2.drawLine(mx, 0, mx, getHeight());
      g2.drawLine(0,my,getWidth(),my);
