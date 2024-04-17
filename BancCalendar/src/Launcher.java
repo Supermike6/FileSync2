@@ -26,8 +26,8 @@ public class Launcher extends JFrame implements ActionListener {
         ImageIcon notesIcon = new ImageIcon("notes.png");
 
         // Create toggle buttons with icons
-        JButton clockButton = new JButton(getScaledImage("/Users/gbancroft25/Documents/GitHub/FileSync2/BancCalendar/Icons/Clock.png",50,50));
-        JButton calendarButton = new JButton(getScaledImage("/Users/gbancroft25/Documents/GitHub/FileSync2/BancCalendar/Icons/Calendar.png",50,50));
+        JButton clockButton = new JButton(getScaledImage("Icons/Calendar.png",50,50));
+        JButton calendarButton = new JButton(getScaledImage("Icons/Clock.png",50,50));
         JButton todoButton = new JButton(todoIcon);
         JButton notesButton = new JButton(notesIcon);
 
